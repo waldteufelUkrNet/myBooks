@@ -1,87 +1,3 @@
-"use strict"; // top-book-panel module
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ FULL SCREEN MODE ON/OFF ↓↓↓ */
-
-var isFSOn = false;
-document.querySelector('.top-book-panel__btn').addEventListener('click', function (event) {
-  if (isFSOn) {
-    // close
-    event.currentTarget.classList.remove('top-book-panel__btn_active');
-    document.exitFullscreen();
-  } else {
-    // open
-    event.currentTarget.classList.add('top-book-panel__btn_active');
-    document.documentElement.requestFullscreen();
-  }
-
-  isFSOn = !isFSOn;
-  pagination();
-});
-/* ↑↑↑ /FULL SCREEN MODE ON/OFF ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ SET NAMES AND META-TAGS ↓↓↓ */
-// визначаємо id книги з рядка адреси
-
-var href = location.href;
-var bookPos = href.indexOf('books');
-var indexPos = href.indexOf('index');
-var id = href.slice(bookPos + 6, indexPos - 1); // за отриманим id знаходимо в базі книгу
-
-var dataBaseItem = books.filter(function (item) {
-  return item.id == id;
-})[0]; // вносимо дані про книгу в змінні та вписуємо в теги
-
-var author = dataBaseItem.author;
-var bookName = dataBaseItem.name;
-document.querySelector('.top-book-panel__author').innerHTML = author;
-document.querySelector('.top-book-panel__book-name').innerHTML = bookName;
-document.querySelector('head meta[name="author"]').setAttribute('content', author);
-document.querySelector('head meta[name="book-name"]').setAttribute('content', bookName);
-document.querySelector('head meta[name="book-id"]').setAttribute('content', id);
-document.querySelector('.name-section__author').innerHTML = author;
-document.querySelector('.name-section__book').innerHTML = bookName;
-/* ↑↑↑ /SET NAMES AND META-TAGS ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ PAGINATION ↓↓↓ */
-// затримка - для коректних розрахунків після повного рендерингу
-
-setTimeout(function () {
-  pagination();
-}, 1000);
-document.getElementById('book').onscroll = pagination;
-/* ↑↑↑ /PAGINATION ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
-
-function pagination() {
-  var book = document.getElementById('book');
-  var visibleBookHeight = book.offsetHeight;
-  var fullBookHeight = book.scrollHeight;
-  var bookScrollTop = book.scrollTop;
-  var pageNumber = Math.ceil(bookScrollTop / visibleBookHeight);
-  if (pageNumber == 0) pageNumber = 1;
-  var pagesAmount = Math.floor(fullBookHeight / visibleBookHeight); // вписування значень сторінок
-
-  document.querySelector('.top-book-panel__read').innerHTML = pageNumber;
-  document.querySelector('.top-book-panel__not-read').innerHTML = pagesAmount; // правильні відмінкові закінчення для слова "сторінка"
-
-  if (String(pagesAmount).endsWith('1') && !String(pagesAmount).endsWith('11')) {
-    document.querySelectorAll('.top-book-panel__symbol')[1].innerHTML = 'сторінки';
-  } else {
-    document.querySelectorAll('.top-book-panel__symbol')[1].innerHTML = 'сторінок';
-  } // анімація
-
-
-  var maxLineWidth = document.querySelector('.top-book-panel__read-line-wrapper').offsetWidth;
-  var currentLineWidth = maxLineWidth * pageNumber / pagesAmount;
-  document.querySelector('.top-book-panel__read-line').style.width = currentLineWidth + 'px';
-}
-/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
 "use strict"; // bbp module
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -257,7 +173,7 @@ addEventListenerToObject('click', fontItem, handleFont);
 /* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
 
 /**
- * [showBookmarksBtns створенн кнопок закладки]
+ * [showBookmarksBtns створення кнопок закладки]
  */
 
 function showBookmarksBtns() {
@@ -439,17 +355,61 @@ function setPageColor() {
 
 function markText() {
   var selectedText = window.getSelection();
-  var selectedNode = selectedText.anchorNode.parentNode;
-  var selectType = this.dataset.select;
+  if (!selectedText.anchorNode) return;
+  var markedClass = 'selected_' + this.dataset.select;
   var anchorNode = selectedText.anchorNode,
       anchorOffset = selectedText.anchorOffset,
       focusNode = selectedText.focusNode,
-      focusoffset = selectedText.focusoffset;
-  console.log(selectedText.toString());
-  console.log(selectedText.getRangeAt(0).cloneContents());
-  console.log(selectedText.getRangeAt(0).cloneContents().toString()); // let colorClass   = 'selected_' + selectType;
-  // let newText      = '<span class="' + colorClass + '">' + selectedText + '</span>';
-  // selectedNode.innerHTML = selectedNode.innerHTML.replace(selectedText, newText);
+      focusOffset = selectedText.focusOffset; // знаходимо спільного предка для усіх тегів виділення
+  // через Range не підходить, бо focus може бути перед anchor
+
+  var parentNode = anchorNode.parentNode;
+
+  while (!parentNode.contains(focusNode)) {
+    parentNode = parentNode.parentNode;
+  } // усі вузли виділення огортаємо в окремий не стандартний тег
+
+
+  var nodes = selectedText.getRangeAt(0).cloneContents(); // console.log(nodes);
+
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = nodes.childNodes[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var node = _step.value;
+      var html = void 0;
+
+      if (node.innerHTML) {
+        html = node.innerHTML;
+        node.innerHTML = '<mspan class="' + markedClass + '">' + html + '</mspan>';
+      } else {
+        console.log('data');
+        html = node.data;
+      }
+    } // console.log(nodes);
+    // замінюємо у предку старе виділення на перероблене
+
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  parentNode.innerHTML = parentNode.innerHTML.replace(selectedText, nodes.toString()); // 4 зробити запис в ls: anchorNode, anchorOffset, focusNode, focusOffset + клас
+  // перехресні виділення?
+  // console.log( selectedText.toString() );
+  // console.log( selectedText.getRangeAt(0).cloneContents() );
 }
 
 function handleFont() {
@@ -486,38 +446,14 @@ function setFont(font) {
     case 'arial':
       book.style.fontFamily = 'ar';
       content.style.fontFamily = 'ab';
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
-
-      try {
-        for (var _iterator = boldLinks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var link = _step.value;
-          link.style.fontFamily = 'ab';
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-            _iterator["return"]();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
-          }
-        }
-      }
-
       var _iteratorNormalCompletion2 = true;
       var _didIteratorError2 = false;
       var _iteratorError2 = undefined;
 
       try {
-        for (var _iterator2 = subLinks[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var _link = _step2.value;
-          _link.style.fontFamily = 'ar';
+        for (var _iterator2 = boldLinks[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var link = _step2.value;
+          link.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError2 = true;
@@ -539,9 +475,9 @@ function setFont(font) {
       var _iteratorError3 = undefined;
 
       try {
-        for (var _iterator3 = sub2Links[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var _link2 = _step3.value;
-          _link2.style.fontFamily = 'ar';
+        for (var _iterator3 = subLinks[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+          var _link = _step3.value;
+          _link.style.fontFamily = 'ar';
         }
       } catch (err) {
         _didIteratorError3 = true;
@@ -563,9 +499,9 @@ function setFont(font) {
       var _iteratorError4 = undefined;
 
       try {
-        for (var _iterator4 = sub3Links[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-          var _link3 = _step4.value;
-          _link3.style.fontFamily = 'ar';
+        for (var _iterator4 = sub2Links[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var _link2 = _step4.value;
+          _link2.style.fontFamily = 'ar';
         }
       } catch (err) {
         _didIteratorError4 = true;
@@ -587,9 +523,9 @@ function setFont(font) {
       var _iteratorError5 = undefined;
 
       try {
-        for (var _iterator5 = h1[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-          var h = _step5.value;
-          h.style.fontFamily = 'ab';
+        for (var _iterator5 = sub3Links[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          var _link3 = _step5.value;
+          _link3.style.fontFamily = 'ar';
         }
       } catch (err) {
         _didIteratorError5 = true;
@@ -611,9 +547,9 @@ function setFont(font) {
       var _iteratorError6 = undefined;
 
       try {
-        for (var _iterator6 = h2[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-          var _h = _step6.value;
-          _h.style.fontFamily = 'ab';
+        for (var _iterator6 = h1[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+          var h = _step6.value;
+          h.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError6 = true;
@@ -635,9 +571,9 @@ function setFont(font) {
       var _iteratorError7 = undefined;
 
       try {
-        for (var _iterator7 = h3[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-          var _h2 = _step7.value;
-          _h2.style.fontFamily = 'ab';
+        for (var _iterator7 = h2[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+          var _h = _step7.value;
+          _h.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError7 = true;
@@ -659,9 +595,9 @@ function setFont(font) {
       var _iteratorError8 = undefined;
 
       try {
-        for (var _iterator8 = h4[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
-          var _h3 = _step8.value;
-          _h3.style.fontFamily = 'ab';
+        for (var _iterator8 = h3[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+          var _h2 = _step8.value;
+          _h2.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError8 = true;
@@ -683,9 +619,9 @@ function setFont(font) {
       var _iteratorError9 = undefined;
 
       try {
-        for (var _iterator9 = h5[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
-          var _h4 = _step9.value;
-          _h4.style.fontFamily = 'ab';
+        for (var _iterator9 = h4[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+          var _h3 = _step9.value;
+          _h3.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError9 = true;
@@ -707,9 +643,9 @@ function setFont(font) {
       var _iteratorError10 = undefined;
 
       try {
-        for (var _iterator10 = h6[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
-          var _h5 = _step10.value;
-          _h5.style.fontFamily = 'ab';
+        for (var _iterator10 = h5[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+          var _h4 = _step10.value;
+          _h4.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError10 = true;
@@ -731,9 +667,9 @@ function setFont(font) {
       var _iteratorError11 = undefined;
 
       try {
-        for (var _iterator11 = b[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
-          var _i2 = _step11.value;
-          _i2.style.fontFamily = 'ab';
+        for (var _iterator11 = h6[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+          var _h5 = _step11.value;
+          _h5.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError11 = true;
@@ -755,9 +691,9 @@ function setFont(font) {
       var _iteratorError12 = undefined;
 
       try {
-        for (var _iterator12 = i[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
-          var a = _step12.value;
-          a.style.fontFamily = 'ai';
+        for (var _iterator12 = b[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+          var _i2 = _step12.value;
+          _i2.style.fontFamily = 'ab';
         }
       } catch (err) {
         _didIteratorError12 = true;
@@ -779,9 +715,9 @@ function setFont(font) {
       var _iteratorError13 = undefined;
 
       try {
-        for (var _iterator13 = i2[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
-          var _a = _step13.value;
-          _a.style.fontFamily = 'ai';
+        for (var _iterator13 = i[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
+          var a = _step13.value;
+          a.style.fontFamily = 'ai';
         }
       } catch (err) {
         _didIteratorError13 = true;
@@ -803,9 +739,9 @@ function setFont(font) {
       var _iteratorError14 = undefined;
 
       try {
-        for (var _iterator14 = btext[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
-          var _a2 = _step14.value;
-          _a2.style.fontFamily = 'ar';
+        for (var _iterator14 = i2[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
+          var _a = _step14.value;
+          _a.style.fontFamily = 'ai';
         }
       } catch (err) {
         _didIteratorError14 = true;
@@ -822,21 +758,14 @@ function setFont(font) {
         }
       }
 
-      display.style.fontFamily = 'ar';
-      curName.style.fontFamily = 'ar';
-      break;
-
-    case 'consola':
-      book.style.fontFamily = 'cr';
-      content.style.fontFamily = 'cb';
       var _iteratorNormalCompletion15 = true;
       var _didIteratorError15 = false;
       var _iteratorError15 = undefined;
 
       try {
-        for (var _iterator15 = boldLinks[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
-          var _link4 = _step15.value;
-          _link4.style.fontFamily = 'cb';
+        for (var _iterator15 = btext[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
+          var _a2 = _step15.value;
+          _a2.style.fontFamily = 'ar';
         }
       } catch (err) {
         _didIteratorError15 = true;
@@ -853,14 +782,21 @@ function setFont(font) {
         }
       }
 
+      display.style.fontFamily = 'ar';
+      curName.style.fontFamily = 'ar';
+      break;
+
+    case 'consola':
+      book.style.fontFamily = 'cr';
+      content.style.fontFamily = 'cb';
       var _iteratorNormalCompletion16 = true;
       var _didIteratorError16 = false;
       var _iteratorError16 = undefined;
 
       try {
-        for (var _iterator16 = subLinks[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
-          var _link5 = _step16.value;
-          _link5.style.fontFamily = 'cr';
+        for (var _iterator16 = boldLinks[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
+          var _link4 = _step16.value;
+          _link4.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError16 = true;
@@ -882,9 +818,9 @@ function setFont(font) {
       var _iteratorError17 = undefined;
 
       try {
-        for (var _iterator17 = sub2Links[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
-          var _link6 = _step17.value;
-          _link6.style.fontFamily = 'cr';
+        for (var _iterator17 = subLinks[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
+          var _link5 = _step17.value;
+          _link5.style.fontFamily = 'cr';
         }
       } catch (err) {
         _didIteratorError17 = true;
@@ -906,9 +842,9 @@ function setFont(font) {
       var _iteratorError18 = undefined;
 
       try {
-        for (var _iterator18 = sub3Links[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
-          var _link7 = _step18.value;
-          _link7.style.fontFamily = 'cr';
+        for (var _iterator18 = sub2Links[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
+          var _link6 = _step18.value;
+          _link6.style.fontFamily = 'cr';
         }
       } catch (err) {
         _didIteratorError18 = true;
@@ -930,9 +866,9 @@ function setFont(font) {
       var _iteratorError19 = undefined;
 
       try {
-        for (var _iterator19 = h1[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
-          var _h6 = _step19.value;
-          _h6.style.fontFamily = 'cb';
+        for (var _iterator19 = sub3Links[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
+          var _link7 = _step19.value;
+          _link7.style.fontFamily = 'cr';
         }
       } catch (err) {
         _didIteratorError19 = true;
@@ -954,9 +890,9 @@ function setFont(font) {
       var _iteratorError20 = undefined;
 
       try {
-        for (var _iterator20 = h2[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
-          var _h7 = _step20.value;
-          _h7.style.fontFamily = 'cb';
+        for (var _iterator20 = h1[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
+          var _h6 = _step20.value;
+          _h6.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError20 = true;
@@ -978,9 +914,9 @@ function setFont(font) {
       var _iteratorError21 = undefined;
 
       try {
-        for (var _iterator21 = h3[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
-          var _h8 = _step21.value;
-          _h8.style.fontFamily = 'cb';
+        for (var _iterator21 = h2[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
+          var _h7 = _step21.value;
+          _h7.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError21 = true;
@@ -1002,9 +938,9 @@ function setFont(font) {
       var _iteratorError22 = undefined;
 
       try {
-        for (var _iterator22 = h4[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
-          var _h9 = _step22.value;
-          _h9.style.fontFamily = 'cb';
+        for (var _iterator22 = h3[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
+          var _h8 = _step22.value;
+          _h8.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError22 = true;
@@ -1026,9 +962,9 @@ function setFont(font) {
       var _iteratorError23 = undefined;
 
       try {
-        for (var _iterator23 = h5[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
-          var _h10 = _step23.value;
-          _h10.style.fontFamily = 'cb';
+        for (var _iterator23 = h4[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
+          var _h9 = _step23.value;
+          _h9.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError23 = true;
@@ -1050,9 +986,9 @@ function setFont(font) {
       var _iteratorError24 = undefined;
 
       try {
-        for (var _iterator24 = h6[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
-          var _h11 = _step24.value;
-          _h11.style.fontFamily = 'cb';
+        for (var _iterator24 = h5[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+          var _h10 = _step24.value;
+          _h10.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError24 = true;
@@ -1074,9 +1010,9 @@ function setFont(font) {
       var _iteratorError25 = undefined;
 
       try {
-        for (var _iterator25 = b[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
-          var _i3 = _step25.value;
-          _i3.style.fontFamily = 'cb';
+        for (var _iterator25 = h6[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
+          var _h11 = _step25.value;
+          _h11.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError25 = true;
@@ -1098,9 +1034,9 @@ function setFont(font) {
       var _iteratorError26 = undefined;
 
       try {
-        for (var _iterator26 = i[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
-          var _a3 = _step26.value;
-          _a3.style.fontFamily = 'ci';
+        for (var _iterator26 = b[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
+          var _i3 = _step26.value;
+          _i3.style.fontFamily = 'cb';
         }
       } catch (err) {
         _didIteratorError26 = true;
@@ -1122,9 +1058,9 @@ function setFont(font) {
       var _iteratorError27 = undefined;
 
       try {
-        for (var _iterator27 = i2[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
-          var _a4 = _step27.value;
-          _a4.style.fontFamily = 'ci';
+        for (var _iterator27 = i[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
+          var _a3 = _step27.value;
+          _a3.style.fontFamily = 'ci';
         }
       } catch (err) {
         _didIteratorError27 = true;
@@ -1146,9 +1082,9 @@ function setFont(font) {
       var _iteratorError28 = undefined;
 
       try {
-        for (var _iterator28 = btext[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
-          var _a5 = _step28.value;
-          _a5.style.fontFamily = 'cr';
+        for (var _iterator28 = i2[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+          var _a4 = _step28.value;
+          _a4.style.fontFamily = 'ci';
         }
       } catch (err) {
         _didIteratorError28 = true;
@@ -1165,21 +1101,14 @@ function setFont(font) {
         }
       }
 
-      display.style.fontFamily = 'cr';
-      curName.style.fontFamily = 'cr';
-      break;
-
-    case 'gost':
-      book.style.fontFamily = 'gost';
-      content.style.fontFamily = 'bold';
       var _iteratorNormalCompletion29 = true;
       var _didIteratorError29 = false;
       var _iteratorError29 = undefined;
 
       try {
-        for (var _iterator29 = boldLinks[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
-          var _link8 = _step29.value;
-          _link8.style.fontFamily = 'bold';
+        for (var _iterator29 = btext[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
+          var _a5 = _step29.value;
+          _a5.style.fontFamily = 'cr';
         }
       } catch (err) {
         _didIteratorError29 = true;
@@ -1196,14 +1125,21 @@ function setFont(font) {
         }
       }
 
+      display.style.fontFamily = 'cr';
+      curName.style.fontFamily = 'cr';
+      break;
+
+    case 'gost':
+      book.style.fontFamily = 'gost';
+      content.style.fontFamily = 'bold';
       var _iteratorNormalCompletion30 = true;
       var _didIteratorError30 = false;
       var _iteratorError30 = undefined;
 
       try {
-        for (var _iterator30 = subLinks[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
-          var _link9 = _step30.value;
-          _link9.style.fontFamily = 'gost';
+        for (var _iterator30 = boldLinks[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
+          var _link8 = _step30.value;
+          _link8.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError30 = true;
@@ -1225,9 +1161,9 @@ function setFont(font) {
       var _iteratorError31 = undefined;
 
       try {
-        for (var _iterator31 = sub2Links[Symbol.iterator](), _step31; !(_iteratorNormalCompletion31 = (_step31 = _iterator31.next()).done); _iteratorNormalCompletion31 = true) {
-          var _link10 = _step31.value;
-          _link10.style.fontFamily = 'gost';
+        for (var _iterator31 = subLinks[Symbol.iterator](), _step31; !(_iteratorNormalCompletion31 = (_step31 = _iterator31.next()).done); _iteratorNormalCompletion31 = true) {
+          var _link9 = _step31.value;
+          _link9.style.fontFamily = 'gost';
         }
       } catch (err) {
         _didIteratorError31 = true;
@@ -1249,9 +1185,9 @@ function setFont(font) {
       var _iteratorError32 = undefined;
 
       try {
-        for (var _iterator32 = sub3Links[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
-          var _link11 = _step32.value;
-          _link11.style.fontFamily = 'gost';
+        for (var _iterator32 = sub2Links[Symbol.iterator](), _step32; !(_iteratorNormalCompletion32 = (_step32 = _iterator32.next()).done); _iteratorNormalCompletion32 = true) {
+          var _link10 = _step32.value;
+          _link10.style.fontFamily = 'gost';
         }
       } catch (err) {
         _didIteratorError32 = true;
@@ -1273,9 +1209,9 @@ function setFont(font) {
       var _iteratorError33 = undefined;
 
       try {
-        for (var _iterator33 = h1[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
-          var _h12 = _step33.value;
-          _h12.style.fontFamily = 'bold';
+        for (var _iterator33 = sub3Links[Symbol.iterator](), _step33; !(_iteratorNormalCompletion33 = (_step33 = _iterator33.next()).done); _iteratorNormalCompletion33 = true) {
+          var _link11 = _step33.value;
+          _link11.style.fontFamily = 'gost';
         }
       } catch (err) {
         _didIteratorError33 = true;
@@ -1297,9 +1233,9 @@ function setFont(font) {
       var _iteratorError34 = undefined;
 
       try {
-        for (var _iterator34 = h2[Symbol.iterator](), _step34; !(_iteratorNormalCompletion34 = (_step34 = _iterator34.next()).done); _iteratorNormalCompletion34 = true) {
-          var _h13 = _step34.value;
-          _h13.style.fontFamily = 'bold';
+        for (var _iterator34 = h1[Symbol.iterator](), _step34; !(_iteratorNormalCompletion34 = (_step34 = _iterator34.next()).done); _iteratorNormalCompletion34 = true) {
+          var _h12 = _step34.value;
+          _h12.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError34 = true;
@@ -1321,9 +1257,9 @@ function setFont(font) {
       var _iteratorError35 = undefined;
 
       try {
-        for (var _iterator35 = h3[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
-          var _h14 = _step35.value;
-          _h14.style.fontFamily = 'bold';
+        for (var _iterator35 = h2[Symbol.iterator](), _step35; !(_iteratorNormalCompletion35 = (_step35 = _iterator35.next()).done); _iteratorNormalCompletion35 = true) {
+          var _h13 = _step35.value;
+          _h13.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError35 = true;
@@ -1345,9 +1281,9 @@ function setFont(font) {
       var _iteratorError36 = undefined;
 
       try {
-        for (var _iterator36 = h4[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
-          var _h15 = _step36.value;
-          _h15.style.fontFamily = 'bold';
+        for (var _iterator36 = h3[Symbol.iterator](), _step36; !(_iteratorNormalCompletion36 = (_step36 = _iterator36.next()).done); _iteratorNormalCompletion36 = true) {
+          var _h14 = _step36.value;
+          _h14.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError36 = true;
@@ -1369,9 +1305,9 @@ function setFont(font) {
       var _iteratorError37 = undefined;
 
       try {
-        for (var _iterator37 = h5[Symbol.iterator](), _step37; !(_iteratorNormalCompletion37 = (_step37 = _iterator37.next()).done); _iteratorNormalCompletion37 = true) {
-          var _h16 = _step37.value;
-          _h16.style.fontFamily = 'bold';
+        for (var _iterator37 = h4[Symbol.iterator](), _step37; !(_iteratorNormalCompletion37 = (_step37 = _iterator37.next()).done); _iteratorNormalCompletion37 = true) {
+          var _h15 = _step37.value;
+          _h15.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError37 = true;
@@ -1393,9 +1329,9 @@ function setFont(font) {
       var _iteratorError38 = undefined;
 
       try {
-        for (var _iterator38 = h6[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
-          var _h17 = _step38.value;
-          _h17.style.fontFamily = 'bold';
+        for (var _iterator38 = h5[Symbol.iterator](), _step38; !(_iteratorNormalCompletion38 = (_step38 = _iterator38.next()).done); _iteratorNormalCompletion38 = true) {
+          var _h16 = _step38.value;
+          _h16.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError38 = true;
@@ -1417,9 +1353,9 @@ function setFont(font) {
       var _iteratorError39 = undefined;
 
       try {
-        for (var _iterator39 = b[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
-          var _i4 = _step39.value;
-          _i4.style.fontFamily = 'bold';
+        for (var _iterator39 = h6[Symbol.iterator](), _step39; !(_iteratorNormalCompletion39 = (_step39 = _iterator39.next()).done); _iteratorNormalCompletion39 = true) {
+          var _h17 = _step39.value;
+          _h17.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError39 = true;
@@ -1441,9 +1377,9 @@ function setFont(font) {
       var _iteratorError40 = undefined;
 
       try {
-        for (var _iterator40 = i[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
-          var _a6 = _step40.value;
-          _a6.style.fontFamily = 'condensed_italic';
+        for (var _iterator40 = b[Symbol.iterator](), _step40; !(_iteratorNormalCompletion40 = (_step40 = _iterator40.next()).done); _iteratorNormalCompletion40 = true) {
+          var _i4 = _step40.value;
+          _i4.style.fontFamily = 'bold';
         }
       } catch (err) {
         _didIteratorError40 = true;
@@ -1465,9 +1401,9 @@ function setFont(font) {
       var _iteratorError41 = undefined;
 
       try {
-        for (var _iterator41 = i2[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
-          var _a7 = _step41.value;
-          _a7.style.fontFamily = 'condensed_italic';
+        for (var _iterator41 = i[Symbol.iterator](), _step41; !(_iteratorNormalCompletion41 = (_step41 = _iterator41.next()).done); _iteratorNormalCompletion41 = true) {
+          var _a6 = _step41.value;
+          _a6.style.fontFamily = 'condensed_italic';
         }
       } catch (err) {
         _didIteratorError41 = true;
@@ -1489,9 +1425,9 @@ function setFont(font) {
       var _iteratorError42 = undefined;
 
       try {
-        for (var _iterator42 = btext[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
-          var _a8 = _step42.value;
-          _a8.style.fontFamily = 'gost';
+        for (var _iterator42 = i2[Symbol.iterator](), _step42; !(_iteratorNormalCompletion42 = (_step42 = _iterator42.next()).done); _iteratorNormalCompletion42 = true) {
+          var _a7 = _step42.value;
+          _a7.style.fontFamily = 'condensed_italic';
         }
       } catch (err) {
         _didIteratorError42 = true;
@@ -1508,21 +1444,14 @@ function setFont(font) {
         }
       }
 
-      display.style.fontFamily = 'gost';
-      curName.style.fontFamily = 'gost';
-      break;
-
-    case 'roboto':
-      book.style.fontFamily = 'rr';
-      content.style.fontFamily = 'rb';
       var _iteratorNormalCompletion43 = true;
       var _didIteratorError43 = false;
       var _iteratorError43 = undefined;
 
       try {
-        for (var _iterator43 = boldLinks[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
-          var _link12 = _step43.value;
-          _link12.style.fontFamily = 'rb';
+        for (var _iterator43 = btext[Symbol.iterator](), _step43; !(_iteratorNormalCompletion43 = (_step43 = _iterator43.next()).done); _iteratorNormalCompletion43 = true) {
+          var _a8 = _step43.value;
+          _a8.style.fontFamily = 'gost';
         }
       } catch (err) {
         _didIteratorError43 = true;
@@ -1539,14 +1468,21 @@ function setFont(font) {
         }
       }
 
+      display.style.fontFamily = 'gost';
+      curName.style.fontFamily = 'gost';
+      break;
+
+    case 'roboto':
+      book.style.fontFamily = 'rr';
+      content.style.fontFamily = 'rb';
       var _iteratorNormalCompletion44 = true;
       var _didIteratorError44 = false;
       var _iteratorError44 = undefined;
 
       try {
-        for (var _iterator44 = subLinks[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
-          var _link13 = _step44.value;
-          _link13.style.fontFamily = 'rr';
+        for (var _iterator44 = boldLinks[Symbol.iterator](), _step44; !(_iteratorNormalCompletion44 = (_step44 = _iterator44.next()).done); _iteratorNormalCompletion44 = true) {
+          var _link12 = _step44.value;
+          _link12.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError44 = true;
@@ -1568,9 +1504,9 @@ function setFont(font) {
       var _iteratorError45 = undefined;
 
       try {
-        for (var _iterator45 = sub2Links[Symbol.iterator](), _step45; !(_iteratorNormalCompletion45 = (_step45 = _iterator45.next()).done); _iteratorNormalCompletion45 = true) {
-          var _link14 = _step45.value;
-          _link14.style.fontFamily = 'rr';
+        for (var _iterator45 = subLinks[Symbol.iterator](), _step45; !(_iteratorNormalCompletion45 = (_step45 = _iterator45.next()).done); _iteratorNormalCompletion45 = true) {
+          var _link13 = _step45.value;
+          _link13.style.fontFamily = 'rr';
         }
       } catch (err) {
         _didIteratorError45 = true;
@@ -1592,9 +1528,9 @@ function setFont(font) {
       var _iteratorError46 = undefined;
 
       try {
-        for (var _iterator46 = sub3Links[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
-          var _link15 = _step46.value;
-          _link15.style.fontFamily = 'rr';
+        for (var _iterator46 = sub2Links[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
+          var _link14 = _step46.value;
+          _link14.style.fontFamily = 'rr';
         }
       } catch (err) {
         _didIteratorError46 = true;
@@ -1616,9 +1552,9 @@ function setFont(font) {
       var _iteratorError47 = undefined;
 
       try {
-        for (var _iterator47 = h1[Symbol.iterator](), _step47; !(_iteratorNormalCompletion47 = (_step47 = _iterator47.next()).done); _iteratorNormalCompletion47 = true) {
-          var _h18 = _step47.value;
-          _h18.style.fontFamily = 'rb';
+        for (var _iterator47 = sub3Links[Symbol.iterator](), _step47; !(_iteratorNormalCompletion47 = (_step47 = _iterator47.next()).done); _iteratorNormalCompletion47 = true) {
+          var _link15 = _step47.value;
+          _link15.style.fontFamily = 'rr';
         }
       } catch (err) {
         _didIteratorError47 = true;
@@ -1640,9 +1576,9 @@ function setFont(font) {
       var _iteratorError48 = undefined;
 
       try {
-        for (var _iterator48 = h2[Symbol.iterator](), _step48; !(_iteratorNormalCompletion48 = (_step48 = _iterator48.next()).done); _iteratorNormalCompletion48 = true) {
-          var _h19 = _step48.value;
-          _h19.style.fontFamily = 'rb';
+        for (var _iterator48 = h1[Symbol.iterator](), _step48; !(_iteratorNormalCompletion48 = (_step48 = _iterator48.next()).done); _iteratorNormalCompletion48 = true) {
+          var _h18 = _step48.value;
+          _h18.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError48 = true;
@@ -1664,9 +1600,9 @@ function setFont(font) {
       var _iteratorError49 = undefined;
 
       try {
-        for (var _iterator49 = h3[Symbol.iterator](), _step49; !(_iteratorNormalCompletion49 = (_step49 = _iterator49.next()).done); _iteratorNormalCompletion49 = true) {
-          var _h20 = _step49.value;
-          _h20.style.fontFamily = 'rb';
+        for (var _iterator49 = h2[Symbol.iterator](), _step49; !(_iteratorNormalCompletion49 = (_step49 = _iterator49.next()).done); _iteratorNormalCompletion49 = true) {
+          var _h19 = _step49.value;
+          _h19.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError49 = true;
@@ -1688,9 +1624,9 @@ function setFont(font) {
       var _iteratorError50 = undefined;
 
       try {
-        for (var _iterator50 = h4[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
-          var _h21 = _step50.value;
-          _h21.style.fontFamily = 'rb';
+        for (var _iterator50 = h3[Symbol.iterator](), _step50; !(_iteratorNormalCompletion50 = (_step50 = _iterator50.next()).done); _iteratorNormalCompletion50 = true) {
+          var _h20 = _step50.value;
+          _h20.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError50 = true;
@@ -1712,9 +1648,9 @@ function setFont(font) {
       var _iteratorError51 = undefined;
 
       try {
-        for (var _iterator51 = h5[Symbol.iterator](), _step51; !(_iteratorNormalCompletion51 = (_step51 = _iterator51.next()).done); _iteratorNormalCompletion51 = true) {
-          var _h22 = _step51.value;
-          _h22.style.fontFamily = 'rb';
+        for (var _iterator51 = h4[Symbol.iterator](), _step51; !(_iteratorNormalCompletion51 = (_step51 = _iterator51.next()).done); _iteratorNormalCompletion51 = true) {
+          var _h21 = _step51.value;
+          _h21.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError51 = true;
@@ -1736,9 +1672,9 @@ function setFont(font) {
       var _iteratorError52 = undefined;
 
       try {
-        for (var _iterator52 = h6[Symbol.iterator](), _step52; !(_iteratorNormalCompletion52 = (_step52 = _iterator52.next()).done); _iteratorNormalCompletion52 = true) {
-          var _h23 = _step52.value;
-          _h23.style.fontFamily = 'rb';
+        for (var _iterator52 = h5[Symbol.iterator](), _step52; !(_iteratorNormalCompletion52 = (_step52 = _iterator52.next()).done); _iteratorNormalCompletion52 = true) {
+          var _h22 = _step52.value;
+          _h22.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError52 = true;
@@ -1760,9 +1696,9 @@ function setFont(font) {
       var _iteratorError53 = undefined;
 
       try {
-        for (var _iterator53 = b[Symbol.iterator](), _step53; !(_iteratorNormalCompletion53 = (_step53 = _iterator53.next()).done); _iteratorNormalCompletion53 = true) {
-          var _i5 = _step53.value;
-          _i5.style.fontFamily = 'rb';
+        for (var _iterator53 = h6[Symbol.iterator](), _step53; !(_iteratorNormalCompletion53 = (_step53 = _iterator53.next()).done); _iteratorNormalCompletion53 = true) {
+          var _h23 = _step53.value;
+          _h23.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError53 = true;
@@ -1784,9 +1720,9 @@ function setFont(font) {
       var _iteratorError54 = undefined;
 
       try {
-        for (var _iterator54 = i[Symbol.iterator](), _step54; !(_iteratorNormalCompletion54 = (_step54 = _iterator54.next()).done); _iteratorNormalCompletion54 = true) {
-          var _a9 = _step54.value;
-          _a9.style.fontFamily = 'ri';
+        for (var _iterator54 = b[Symbol.iterator](), _step54; !(_iteratorNormalCompletion54 = (_step54 = _iterator54.next()).done); _iteratorNormalCompletion54 = true) {
+          var _i5 = _step54.value;
+          _i5.style.fontFamily = 'rb';
         }
       } catch (err) {
         _didIteratorError54 = true;
@@ -1808,9 +1744,9 @@ function setFont(font) {
       var _iteratorError55 = undefined;
 
       try {
-        for (var _iterator55 = i2[Symbol.iterator](), _step55; !(_iteratorNormalCompletion55 = (_step55 = _iterator55.next()).done); _iteratorNormalCompletion55 = true) {
-          var _a10 = _step55.value;
-          _a10.style.fontFamily = 'ri';
+        for (var _iterator55 = i[Symbol.iterator](), _step55; !(_iteratorNormalCompletion55 = (_step55 = _iterator55.next()).done); _iteratorNormalCompletion55 = true) {
+          var _a9 = _step55.value;
+          _a9.style.fontFamily = 'ri';
         }
       } catch (err) {
         _didIteratorError55 = true;
@@ -1832,9 +1768,9 @@ function setFont(font) {
       var _iteratorError56 = undefined;
 
       try {
-        for (var _iterator56 = btext[Symbol.iterator](), _step56; !(_iteratorNormalCompletion56 = (_step56 = _iterator56.next()).done); _iteratorNormalCompletion56 = true) {
-          var _a11 = _step56.value;
-          _a11.style.fontFamily = 'rr';
+        for (var _iterator56 = i2[Symbol.iterator](), _step56; !(_iteratorNormalCompletion56 = (_step56 = _iterator56.next()).done); _iteratorNormalCompletion56 = true) {
+          var _a10 = _step56.value;
+          _a10.style.fontFamily = 'ri';
         }
       } catch (err) {
         _didIteratorError56 = true;
@@ -1851,21 +1787,14 @@ function setFont(font) {
         }
       }
 
-      display.style.fontFamily = 'rr';
-      curName.style.fontFamily = 'rr';
-      break;
-
-    case 'segoe':
-      book.style.fontFamily = 'segr';
-      content.style.fontFamily = 'segb';
       var _iteratorNormalCompletion57 = true;
       var _didIteratorError57 = false;
       var _iteratorError57 = undefined;
 
       try {
-        for (var _iterator57 = boldLinks[Symbol.iterator](), _step57; !(_iteratorNormalCompletion57 = (_step57 = _iterator57.next()).done); _iteratorNormalCompletion57 = true) {
-          var _link16 = _step57.value;
-          _link16.style.fontFamily = 'segb';
+        for (var _iterator57 = btext[Symbol.iterator](), _step57; !(_iteratorNormalCompletion57 = (_step57 = _iterator57.next()).done); _iteratorNormalCompletion57 = true) {
+          var _a11 = _step57.value;
+          _a11.style.fontFamily = 'rr';
         }
       } catch (err) {
         _didIteratorError57 = true;
@@ -1882,14 +1811,21 @@ function setFont(font) {
         }
       }
 
+      display.style.fontFamily = 'rr';
+      curName.style.fontFamily = 'rr';
+      break;
+
+    case 'segoe':
+      book.style.fontFamily = 'segr';
+      content.style.fontFamily = 'segb';
       var _iteratorNormalCompletion58 = true;
       var _didIteratorError58 = false;
       var _iteratorError58 = undefined;
 
       try {
-        for (var _iterator58 = subLinks[Symbol.iterator](), _step58; !(_iteratorNormalCompletion58 = (_step58 = _iterator58.next()).done); _iteratorNormalCompletion58 = true) {
-          var _link17 = _step58.value;
-          _link17.style.fontFamily = 'segr';
+        for (var _iterator58 = boldLinks[Symbol.iterator](), _step58; !(_iteratorNormalCompletion58 = (_step58 = _iterator58.next()).done); _iteratorNormalCompletion58 = true) {
+          var _link16 = _step58.value;
+          _link16.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError58 = true;
@@ -1911,9 +1847,9 @@ function setFont(font) {
       var _iteratorError59 = undefined;
 
       try {
-        for (var _iterator59 = sub2Links[Symbol.iterator](), _step59; !(_iteratorNormalCompletion59 = (_step59 = _iterator59.next()).done); _iteratorNormalCompletion59 = true) {
-          var _link18 = _step59.value;
-          _link18.style.fontFamily = 'segr';
+        for (var _iterator59 = subLinks[Symbol.iterator](), _step59; !(_iteratorNormalCompletion59 = (_step59 = _iterator59.next()).done); _iteratorNormalCompletion59 = true) {
+          var _link17 = _step59.value;
+          _link17.style.fontFamily = 'segr';
         }
       } catch (err) {
         _didIteratorError59 = true;
@@ -1935,9 +1871,9 @@ function setFont(font) {
       var _iteratorError60 = undefined;
 
       try {
-        for (var _iterator60 = sub3Links[Symbol.iterator](), _step60; !(_iteratorNormalCompletion60 = (_step60 = _iterator60.next()).done); _iteratorNormalCompletion60 = true) {
-          var _link19 = _step60.value;
-          _link19.style.fontFamily = 'segr';
+        for (var _iterator60 = sub2Links[Symbol.iterator](), _step60; !(_iteratorNormalCompletion60 = (_step60 = _iterator60.next()).done); _iteratorNormalCompletion60 = true) {
+          var _link18 = _step60.value;
+          _link18.style.fontFamily = 'segr';
         }
       } catch (err) {
         _didIteratorError60 = true;
@@ -1959,9 +1895,9 @@ function setFont(font) {
       var _iteratorError61 = undefined;
 
       try {
-        for (var _iterator61 = h1[Symbol.iterator](), _step61; !(_iteratorNormalCompletion61 = (_step61 = _iterator61.next()).done); _iteratorNormalCompletion61 = true) {
-          var _h24 = _step61.value;
-          _h24.style.fontFamily = 'segb';
+        for (var _iterator61 = sub3Links[Symbol.iterator](), _step61; !(_iteratorNormalCompletion61 = (_step61 = _iterator61.next()).done); _iteratorNormalCompletion61 = true) {
+          var _link19 = _step61.value;
+          _link19.style.fontFamily = 'segr';
         }
       } catch (err) {
         _didIteratorError61 = true;
@@ -1983,9 +1919,9 @@ function setFont(font) {
       var _iteratorError62 = undefined;
 
       try {
-        for (var _iterator62 = h2[Symbol.iterator](), _step62; !(_iteratorNormalCompletion62 = (_step62 = _iterator62.next()).done); _iteratorNormalCompletion62 = true) {
-          var _h25 = _step62.value;
-          _h25.style.fontFamily = 'segb';
+        for (var _iterator62 = h1[Symbol.iterator](), _step62; !(_iteratorNormalCompletion62 = (_step62 = _iterator62.next()).done); _iteratorNormalCompletion62 = true) {
+          var _h24 = _step62.value;
+          _h24.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError62 = true;
@@ -2007,9 +1943,9 @@ function setFont(font) {
       var _iteratorError63 = undefined;
 
       try {
-        for (var _iterator63 = h3[Symbol.iterator](), _step63; !(_iteratorNormalCompletion63 = (_step63 = _iterator63.next()).done); _iteratorNormalCompletion63 = true) {
-          var _h26 = _step63.value;
-          _h26.style.fontFamily = 'segb';
+        for (var _iterator63 = h2[Symbol.iterator](), _step63; !(_iteratorNormalCompletion63 = (_step63 = _iterator63.next()).done); _iteratorNormalCompletion63 = true) {
+          var _h25 = _step63.value;
+          _h25.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError63 = true;
@@ -2031,9 +1967,9 @@ function setFont(font) {
       var _iteratorError64 = undefined;
 
       try {
-        for (var _iterator64 = h4[Symbol.iterator](), _step64; !(_iteratorNormalCompletion64 = (_step64 = _iterator64.next()).done); _iteratorNormalCompletion64 = true) {
-          var _h27 = _step64.value;
-          _h27.style.fontFamily = 'segb';
+        for (var _iterator64 = h3[Symbol.iterator](), _step64; !(_iteratorNormalCompletion64 = (_step64 = _iterator64.next()).done); _iteratorNormalCompletion64 = true) {
+          var _h26 = _step64.value;
+          _h26.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError64 = true;
@@ -2055,9 +1991,9 @@ function setFont(font) {
       var _iteratorError65 = undefined;
 
       try {
-        for (var _iterator65 = h5[Symbol.iterator](), _step65; !(_iteratorNormalCompletion65 = (_step65 = _iterator65.next()).done); _iteratorNormalCompletion65 = true) {
-          var _h28 = _step65.value;
-          _h28.style.fontFamily = 'segb';
+        for (var _iterator65 = h4[Symbol.iterator](), _step65; !(_iteratorNormalCompletion65 = (_step65 = _iterator65.next()).done); _iteratorNormalCompletion65 = true) {
+          var _h27 = _step65.value;
+          _h27.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError65 = true;
@@ -2079,9 +2015,9 @@ function setFont(font) {
       var _iteratorError66 = undefined;
 
       try {
-        for (var _iterator66 = h6[Symbol.iterator](), _step66; !(_iteratorNormalCompletion66 = (_step66 = _iterator66.next()).done); _iteratorNormalCompletion66 = true) {
-          var _h29 = _step66.value;
-          _h29.style.fontFamily = 'segb';
+        for (var _iterator66 = h5[Symbol.iterator](), _step66; !(_iteratorNormalCompletion66 = (_step66 = _iterator66.next()).done); _iteratorNormalCompletion66 = true) {
+          var _h28 = _step66.value;
+          _h28.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError66 = true;
@@ -2103,9 +2039,9 @@ function setFont(font) {
       var _iteratorError67 = undefined;
 
       try {
-        for (var _iterator67 = b[Symbol.iterator](), _step67; !(_iteratorNormalCompletion67 = (_step67 = _iterator67.next()).done); _iteratorNormalCompletion67 = true) {
-          var _i6 = _step67.value;
-          _i6.style.fontFamily = 'segb';
+        for (var _iterator67 = h6[Symbol.iterator](), _step67; !(_iteratorNormalCompletion67 = (_step67 = _iterator67.next()).done); _iteratorNormalCompletion67 = true) {
+          var _h29 = _step67.value;
+          _h29.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError67 = true;
@@ -2127,9 +2063,9 @@ function setFont(font) {
       var _iteratorError68 = undefined;
 
       try {
-        for (var _iterator68 = i[Symbol.iterator](), _step68; !(_iteratorNormalCompletion68 = (_step68 = _iterator68.next()).done); _iteratorNormalCompletion68 = true) {
-          var _a12 = _step68.value;
-          _a12.style.fontFamily = 'segi';
+        for (var _iterator68 = b[Symbol.iterator](), _step68; !(_iteratorNormalCompletion68 = (_step68 = _iterator68.next()).done); _iteratorNormalCompletion68 = true) {
+          var _i6 = _step68.value;
+          _i6.style.fontFamily = 'segb';
         }
       } catch (err) {
         _didIteratorError68 = true;
@@ -2151,9 +2087,9 @@ function setFont(font) {
       var _iteratorError69 = undefined;
 
       try {
-        for (var _iterator69 = i2[Symbol.iterator](), _step69; !(_iteratorNormalCompletion69 = (_step69 = _iterator69.next()).done); _iteratorNormalCompletion69 = true) {
-          var _a13 = _step69.value;
-          _a13.style.fontFamily = 'segi';
+        for (var _iterator69 = i[Symbol.iterator](), _step69; !(_iteratorNormalCompletion69 = (_step69 = _iterator69.next()).done); _iteratorNormalCompletion69 = true) {
+          var _a12 = _step69.value;
+          _a12.style.fontFamily = 'segi';
         }
       } catch (err) {
         _didIteratorError69 = true;
@@ -2175,9 +2111,9 @@ function setFont(font) {
       var _iteratorError70 = undefined;
 
       try {
-        for (var _iterator70 = btext[Symbol.iterator](), _step70; !(_iteratorNormalCompletion70 = (_step70 = _iterator70.next()).done); _iteratorNormalCompletion70 = true) {
-          var _a14 = _step70.value;
-          _a14.style.fontFamily = 'serg';
+        for (var _iterator70 = i2[Symbol.iterator](), _step70; !(_iteratorNormalCompletion70 = (_step70 = _iterator70.next()).done); _iteratorNormalCompletion70 = true) {
+          var _a13 = _step70.value;
+          _a13.style.fontFamily = 'segi';
         }
       } catch (err) {
         _didIteratorError70 = true;
@@ -2194,21 +2130,14 @@ function setFont(font) {
         }
       }
 
-      display.style.fontFamily = 'segr';
-      curName.style.fontFamily = 'segr';
-      break;
-
-    case 'times new roman':
-      book.style.fontFamily = 'tnrr';
-      content.style.fontFamily = 'tnrb';
       var _iteratorNormalCompletion71 = true;
       var _didIteratorError71 = false;
       var _iteratorError71 = undefined;
 
       try {
-        for (var _iterator71 = boldLinks[Symbol.iterator](), _step71; !(_iteratorNormalCompletion71 = (_step71 = _iterator71.next()).done); _iteratorNormalCompletion71 = true) {
-          var _link20 = _step71.value;
-          _link20.style.fontFamily = 'tnrb';
+        for (var _iterator71 = btext[Symbol.iterator](), _step71; !(_iteratorNormalCompletion71 = (_step71 = _iterator71.next()).done); _iteratorNormalCompletion71 = true) {
+          var _a14 = _step71.value;
+          _a14.style.fontFamily = 'serg';
         }
       } catch (err) {
         _didIteratorError71 = true;
@@ -2225,14 +2154,21 @@ function setFont(font) {
         }
       }
 
+      display.style.fontFamily = 'segr';
+      curName.style.fontFamily = 'segr';
+      break;
+
+    case 'times new roman':
+      book.style.fontFamily = 'tnrr';
+      content.style.fontFamily = 'tnrb';
       var _iteratorNormalCompletion72 = true;
       var _didIteratorError72 = false;
       var _iteratorError72 = undefined;
 
       try {
-        for (var _iterator72 = subLinks[Symbol.iterator](), _step72; !(_iteratorNormalCompletion72 = (_step72 = _iterator72.next()).done); _iteratorNormalCompletion72 = true) {
-          var _link21 = _step72.value;
-          _link21.style.fontFamily = 'tnrr';
+        for (var _iterator72 = boldLinks[Symbol.iterator](), _step72; !(_iteratorNormalCompletion72 = (_step72 = _iterator72.next()).done); _iteratorNormalCompletion72 = true) {
+          var _link20 = _step72.value;
+          _link20.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError72 = true;
@@ -2254,9 +2190,9 @@ function setFont(font) {
       var _iteratorError73 = undefined;
 
       try {
-        for (var _iterator73 = sub2Links[Symbol.iterator](), _step73; !(_iteratorNormalCompletion73 = (_step73 = _iterator73.next()).done); _iteratorNormalCompletion73 = true) {
-          var _link22 = _step73.value;
-          _link22.style.fontFamily = 'tnrr';
+        for (var _iterator73 = subLinks[Symbol.iterator](), _step73; !(_iteratorNormalCompletion73 = (_step73 = _iterator73.next()).done); _iteratorNormalCompletion73 = true) {
+          var _link21 = _step73.value;
+          _link21.style.fontFamily = 'tnrr';
         }
       } catch (err) {
         _didIteratorError73 = true;
@@ -2278,9 +2214,9 @@ function setFont(font) {
       var _iteratorError74 = undefined;
 
       try {
-        for (var _iterator74 = sub3Links[Symbol.iterator](), _step74; !(_iteratorNormalCompletion74 = (_step74 = _iterator74.next()).done); _iteratorNormalCompletion74 = true) {
-          var _link23 = _step74.value;
-          _link23.style.fontFamily = 'tnrr';
+        for (var _iterator74 = sub2Links[Symbol.iterator](), _step74; !(_iteratorNormalCompletion74 = (_step74 = _iterator74.next()).done); _iteratorNormalCompletion74 = true) {
+          var _link22 = _step74.value;
+          _link22.style.fontFamily = 'tnrr';
         }
       } catch (err) {
         _didIteratorError74 = true;
@@ -2302,9 +2238,9 @@ function setFont(font) {
       var _iteratorError75 = undefined;
 
       try {
-        for (var _iterator75 = h1[Symbol.iterator](), _step75; !(_iteratorNormalCompletion75 = (_step75 = _iterator75.next()).done); _iteratorNormalCompletion75 = true) {
-          var _h30 = _step75.value;
-          _h30.style.fontFamily = 'tnrb';
+        for (var _iterator75 = sub3Links[Symbol.iterator](), _step75; !(_iteratorNormalCompletion75 = (_step75 = _iterator75.next()).done); _iteratorNormalCompletion75 = true) {
+          var _link23 = _step75.value;
+          _link23.style.fontFamily = 'tnrr';
         }
       } catch (err) {
         _didIteratorError75 = true;
@@ -2326,9 +2262,9 @@ function setFont(font) {
       var _iteratorError76 = undefined;
 
       try {
-        for (var _iterator76 = h2[Symbol.iterator](), _step76; !(_iteratorNormalCompletion76 = (_step76 = _iterator76.next()).done); _iteratorNormalCompletion76 = true) {
-          var _h31 = _step76.value;
-          _h31.style.fontFamily = 'tnrb';
+        for (var _iterator76 = h1[Symbol.iterator](), _step76; !(_iteratorNormalCompletion76 = (_step76 = _iterator76.next()).done); _iteratorNormalCompletion76 = true) {
+          var _h30 = _step76.value;
+          _h30.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError76 = true;
@@ -2350,9 +2286,9 @@ function setFont(font) {
       var _iteratorError77 = undefined;
 
       try {
-        for (var _iterator77 = h3[Symbol.iterator](), _step77; !(_iteratorNormalCompletion77 = (_step77 = _iterator77.next()).done); _iteratorNormalCompletion77 = true) {
-          var _h32 = _step77.value;
-          _h32.style.fontFamily = 'tnrb';
+        for (var _iterator77 = h2[Symbol.iterator](), _step77; !(_iteratorNormalCompletion77 = (_step77 = _iterator77.next()).done); _iteratorNormalCompletion77 = true) {
+          var _h31 = _step77.value;
+          _h31.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError77 = true;
@@ -2374,9 +2310,9 @@ function setFont(font) {
       var _iteratorError78 = undefined;
 
       try {
-        for (var _iterator78 = h4[Symbol.iterator](), _step78; !(_iteratorNormalCompletion78 = (_step78 = _iterator78.next()).done); _iteratorNormalCompletion78 = true) {
-          var _h33 = _step78.value;
-          _h33.style.fontFamily = 'tnrb';
+        for (var _iterator78 = h3[Symbol.iterator](), _step78; !(_iteratorNormalCompletion78 = (_step78 = _iterator78.next()).done); _iteratorNormalCompletion78 = true) {
+          var _h32 = _step78.value;
+          _h32.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError78 = true;
@@ -2398,9 +2334,9 @@ function setFont(font) {
       var _iteratorError79 = undefined;
 
       try {
-        for (var _iterator79 = h5[Symbol.iterator](), _step79; !(_iteratorNormalCompletion79 = (_step79 = _iterator79.next()).done); _iteratorNormalCompletion79 = true) {
-          var _h34 = _step79.value;
-          _h34.style.fontFamily = 'tnrb';
+        for (var _iterator79 = h4[Symbol.iterator](), _step79; !(_iteratorNormalCompletion79 = (_step79 = _iterator79.next()).done); _iteratorNormalCompletion79 = true) {
+          var _h33 = _step79.value;
+          _h33.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError79 = true;
@@ -2422,9 +2358,9 @@ function setFont(font) {
       var _iteratorError80 = undefined;
 
       try {
-        for (var _iterator80 = h6[Symbol.iterator](), _step80; !(_iteratorNormalCompletion80 = (_step80 = _iterator80.next()).done); _iteratorNormalCompletion80 = true) {
-          var _h35 = _step80.value;
-          _h35.style.fontFamily = 'tnrb';
+        for (var _iterator80 = h5[Symbol.iterator](), _step80; !(_iteratorNormalCompletion80 = (_step80 = _iterator80.next()).done); _iteratorNormalCompletion80 = true) {
+          var _h34 = _step80.value;
+          _h34.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError80 = true;
@@ -2446,9 +2382,9 @@ function setFont(font) {
       var _iteratorError81 = undefined;
 
       try {
-        for (var _iterator81 = b[Symbol.iterator](), _step81; !(_iteratorNormalCompletion81 = (_step81 = _iterator81.next()).done); _iteratorNormalCompletion81 = true) {
-          var _i7 = _step81.value;
-          _i7.style.fontFamily = 'tnrb';
+        for (var _iterator81 = h6[Symbol.iterator](), _step81; !(_iteratorNormalCompletion81 = (_step81 = _iterator81.next()).done); _iteratorNormalCompletion81 = true) {
+          var _h35 = _step81.value;
+          _h35.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError81 = true;
@@ -2470,9 +2406,9 @@ function setFont(font) {
       var _iteratorError82 = undefined;
 
       try {
-        for (var _iterator82 = i[Symbol.iterator](), _step82; !(_iteratorNormalCompletion82 = (_step82 = _iterator82.next()).done); _iteratorNormalCompletion82 = true) {
-          var _a15 = _step82.value;
-          _a15.style.fontFamily = 'tnri';
+        for (var _iterator82 = b[Symbol.iterator](), _step82; !(_iteratorNormalCompletion82 = (_step82 = _iterator82.next()).done); _iteratorNormalCompletion82 = true) {
+          var _i7 = _step82.value;
+          _i7.style.fontFamily = 'tnrb';
         }
       } catch (err) {
         _didIteratorError82 = true;
@@ -2494,9 +2430,9 @@ function setFont(font) {
       var _iteratorError83 = undefined;
 
       try {
-        for (var _iterator83 = i2[Symbol.iterator](), _step83; !(_iteratorNormalCompletion83 = (_step83 = _iterator83.next()).done); _iteratorNormalCompletion83 = true) {
-          var _a16 = _step83.value;
-          _a16.style.fontFamily = 'tnri';
+        for (var _iterator83 = i[Symbol.iterator](), _step83; !(_iteratorNormalCompletion83 = (_step83 = _iterator83.next()).done); _iteratorNormalCompletion83 = true) {
+          var _a15 = _step83.value;
+          _a15.style.fontFamily = 'tnri';
         }
       } catch (err) {
         _didIteratorError83 = true;
@@ -2518,9 +2454,9 @@ function setFont(font) {
       var _iteratorError84 = undefined;
 
       try {
-        for (var _iterator84 = btext[Symbol.iterator](), _step84; !(_iteratorNormalCompletion84 = (_step84 = _iterator84.next()).done); _iteratorNormalCompletion84 = true) {
-          var _a17 = _step84.value;
-          _a17.style.fontFamily = 'tnrr';
+        for (var _iterator84 = i2[Symbol.iterator](), _step84; !(_iteratorNormalCompletion84 = (_step84 = _iterator84.next()).done); _iteratorNormalCompletion84 = true) {
+          var _a16 = _step84.value;
+          _a16.style.fontFamily = 'tnri';
         }
       } catch (err) {
         _didIteratorError84 = true;
@@ -2537,10 +2473,118 @@ function setFont(font) {
         }
       }
 
+      var _iteratorNormalCompletion85 = true;
+      var _didIteratorError85 = false;
+      var _iteratorError85 = undefined;
+
+      try {
+        for (var _iterator85 = btext[Symbol.iterator](), _step85; !(_iteratorNormalCompletion85 = (_step85 = _iterator85.next()).done); _iteratorNormalCompletion85 = true) {
+          var _a17 = _step85.value;
+          _a17.style.fontFamily = 'tnrr';
+        }
+      } catch (err) {
+        _didIteratorError85 = true;
+        _iteratorError85 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion85 && _iterator85["return"] != null) {
+            _iterator85["return"]();
+          }
+        } finally {
+          if (_didIteratorError85) {
+            throw _iteratorError85;
+          }
+        }
+      }
+
       display.style.fontFamily = 'tnrr';
       curName.style.fontFamily = 'tnrr';
       break;
   }
+}
+/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+"use strict"; // top-book-panel module
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ FULL SCREEN MODE ON/OFF ↓↓↓ */
+
+var isFSOn = false;
+document.querySelector('.top-book-panel__btn').addEventListener('click', function (event) {
+  if (isFSOn) {
+    // close
+    event.currentTarget.classList.remove('top-book-panel__btn_active');
+    document.exitFullscreen();
+  } else {
+    // open
+    event.currentTarget.classList.add('top-book-panel__btn_active');
+    document.documentElement.requestFullscreen();
+  }
+
+  isFSOn = !isFSOn;
+  pagination();
+});
+/* ↑↑↑ /FULL SCREEN MODE ON/OFF ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ SET NAMES AND META-TAGS ↓↓↓ */
+// визначаємо id книги з рядка адреси
+
+var href = location.href;
+var bookPos = href.indexOf('books');
+var indexPos = href.indexOf('index');
+var id = href.slice(bookPos + 6, indexPos - 1); // за отриманим id знаходимо в базі книгу
+
+var dataBaseItem = books.filter(function (item) {
+  return item.id == id;
+})[0]; // вносимо дані про книгу в змінні та вписуємо в теги
+
+var author = dataBaseItem.author;
+var bookName = dataBaseItem.name;
+document.querySelector('.top-book-panel__author').innerHTML = author;
+document.querySelector('.top-book-panel__book-name').innerHTML = bookName;
+document.querySelector('head meta[name="author"]').setAttribute('content', author);
+document.querySelector('head meta[name="book-name"]').setAttribute('content', bookName);
+document.querySelector('head meta[name="book-id"]').setAttribute('content', id);
+document.querySelector('.name-section__author').innerHTML = author;
+document.querySelector('.name-section__book').innerHTML = bookName;
+/* ↑↑↑ /SET NAMES AND META-TAGS ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ PAGINATION ↓↓↓ */
+// затримка - для коректних розрахунків після повного рендерингу
+
+setTimeout(function () {
+  pagination();
+}, 1000);
+document.getElementById('book').onscroll = pagination;
+/* ↑↑↑ /PAGINATION ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
+
+function pagination() {
+  var book = document.getElementById('book');
+  var visibleBookHeight = book.offsetHeight;
+  var fullBookHeight = book.scrollHeight;
+  var bookScrollTop = book.scrollTop;
+  var pageNumber = Math.ceil(bookScrollTop / visibleBookHeight);
+  if (pageNumber == 0) pageNumber = 1;
+  var pagesAmount = Math.floor(fullBookHeight / visibleBookHeight); // вписування значень сторінок
+
+  document.querySelector('.top-book-panel__read').innerHTML = pageNumber;
+  document.querySelector('.top-book-panel__not-read').innerHTML = pagesAmount; // правильні відмінкові закінчення для слова "сторінка"
+
+  if (String(pagesAmount).endsWith('1') && !String(pagesAmount).endsWith('11')) {
+    document.querySelectorAll('.top-book-panel__symbol')[1].innerHTML = 'сторінки';
+  } else {
+    document.querySelectorAll('.top-book-panel__symbol')[1].innerHTML = 'сторінок';
+  } // анімація
+
+
+  var maxLineWidth = document.querySelector('.top-book-panel__read-line-wrapper').offsetWidth;
+  var currentLineWidth = maxLineWidth * pageNumber / pagesAmount;
+  document.querySelector('.top-book-panel__read-line').style.width = currentLineWidth + 'px';
 }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
