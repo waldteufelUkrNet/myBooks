@@ -1,3 +1,27 @@
+// "use strict";
+// // consol module
+// ////////////////////////////////////////////////////////////////////////////////
+// /* ↓↓↓ ??? ↓↓↓ */
+//   let isConsolOpen = false;
+//   document.getElementById('consol-button').onclick = function() {
+//     if (isConsolOpen) {
+//       document.getElementById('consol').style.height = '0px';
+//     } else {
+//       document.getElementById('consol').style.height = '50vh';
+//     }
+//      isConsolOpen = !isConsolOpen;
+//   };
+//   document.getElementById('ls-button').onclick = function() {
+//     localStorage.clear();
+//     conlog('localStorage: ' + JSON.stringify(localStorage));
+//   };
+//   function conlog (value) {
+//     let p = '<p>' + value + '</p>';
+//     document.getElementById('consol').insertAdjacentHTML('beforeEnd',p);
+//   };
+// /* ↑↑↑ /??? ↑↑↑ */
+// ////////////////////////////////////////////////////////////////////////////////
+"use strict";
 "use strict"; // bbp module
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -21,9 +45,9 @@ var bookTag = document.getElementById('book');
 
 if (!('booksFontSettings' in myBooks.generalSettings)) {
   myBooks.generalSettings.booksFontSettings = {};
-  myBooks.generalSettings.booksFontSettings.fontFamily = getComputedStyle(bookTag).fontFamily;
-  myBooks.generalSettings.booksFontSettings.fontSize = getComputedStyle(bookTag).fontSize;
-  myBooks.generalSettings.booksFontSettings.fontColor = getComputedStyle(bookTag).color;
+  myBooks.generalSettings.booksFontSettings.fontFamily = 'gost';
+  myBooks.generalSettings.booksFontSettings.fontSize = '16px';
+  myBooks.generalSettings.booksFontSettings.fontColor = '#000000';
   myBooks.generalSettings.booksFontSettings.bgColor = '#ffffff';
   ls.setItem('myBooks', JSON.stringify(myBooks));
 } else {
@@ -173,7 +197,7 @@ addEventListenerToObject('click', fontItem, setFont); // кольори шриф
 document.querySelector('.textColorInput').oninput = setFontColor;
 document.querySelector('.pageColorInput').oninput = setPageColor;
 var selectedBtns = document.getElementsByClassName('selected');
-addEventListenerToObject('click', selectedBtns, markText);
+addEventListenerToObject('click', selectedBtns, prepareSelection);
 /* ↑↑↑ /навішування обробників ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -355,39 +379,6 @@ function setPageColor() {
   indicator.innerHTML = pageColor;
   myBooks.generalSettings.booksFontSettings.bgColor = pageColor;
   ls.setItem('myBooks', JSON.stringify(myBooks));
-}
-
-function markText() {
-  console.log("markText"); // let selectedText = window.getSelection();
-  // if (!selectedText.anchorNode) return;
-  // let markedClass  = 'selected_' + this.dataset.select;
-  // let {anchorNode, anchorOffset, focusNode, focusOffset} = selectedText;
-  // // знаходимо спільного предка для усіх тегів виділення
-  // // через Range не підходить, бо focus може бути перед anchor
-  // let parentNode = anchorNode.parentNode;
-  // while ( !parentNode.contains(focusNode) ) {
-  //   parentNode = parentNode.parentNode;
-  // }
-  // // усі вузли виділення огортаємо в окремий не стандартний тег
-  // let nodes = selectedText.getRangeAt(0).cloneContents();
-  // // console.log(nodes);
-  // for (let node of nodes.childNodes) {
-  //   let html;
-  //   if (node.innerHTML) {
-  //     html = node.innerHTML;
-  //     node.innerHTML = '<mspan class="' + markedClass + '">' + html + '</mspan>';
-  //   } else {
-  //     console.log('data');
-  //     html = node.data
-  //   }
-  // }
-  // // console.log(nodes);
-  // // замінюємо у предку старе виділення на перероблене
-  // parentNode.innerHTML = parentNode.innerHTML.replace(selectedText, nodes.toString());
-  // // 4 зробити запис в ls: anchorNode, anchorOffset, focusNode, focusOffset + клас
-  // // перехресні виділення?
-  // // console.log( selectedText.toString() );
-  // // console.log( selectedText.getRangeAt(0).cloneContents() );
 }
 
 function setFont() {
@@ -805,8 +796,78 @@ function setFont() {
   display.style.fontFamily = regFont;
   curName.style.fontFamily = regFont;
 }
+
+function prepareSelection() {
+  // 1. відловлюємо виділення,
+  // 2. визначаємо його батька і межі,
+  // 3. вписуємо в ls
+  // 4. викликаємо функцію підсвітки
+  var selectedText = window.getSelection();
+  if (!selectedText.anchorNode) return;
+  var markedClass = 'selected_' + this.dataset.select;
+  var anchorNode = selectedText.anchorNode,
+      anchorOffset = selectedText.anchorOffset,
+      focusNode = selectedText.focusNode,
+      focusOffset = selectedText.focusOffset; // знаходимо спільного предка для усіх тегів виділення
+  // через Range не підходить, бо focus може бути перед anchor
+
+  var parentNode = anchorNode.parentNode;
+
+  while (!parentNode.contains(focusNode)) {
+    parentNode = parentNode.parentNode;
+  } // формуємо мітку предка: [tag, counting number]
+
+
+  var parentMark = [parentNode.tagName.toLowerCase()];
+  var bookElementsList = document.querySelectorAll('#book ' + parentMark[0]);
+
+  for (var _i3 = 0; _i3 < bookElementsList.length; _i3++) {
+    if (bookElementsList[_i3] == parentNode) {
+      parentMark.push(_i3);
+      break;
+    }
+  } // формуємо мітку предка: [tag, counting number] / [tag.children, offset]
+
+
+  var anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
+
+  if (anchorNodeType == 1) {// tag
+  } else if (anchorNodeType == 3) {
+    // text
+    // якщо це текст, то батьком його обов'язково буде елемент.
+    // Піднімаємося до рівня батька і перебираємо дітей на наявність тексту
+    var parentElement = anchorNode.parentElement;
+    console.log("parentElement", parentElement);
+    var childrenNodes = parentElement.children;
+    console.log("childrenNodes", childrenNodes);
+  } // формуємо інфо по виділенню:
+
+
+  var mark = {
+    parent: parentMark,
+    markedClass: markedClass // startMark   : startMark,
+    // endMark     : endMark
+
+  };
+  console.log(mark); // // зробити запис в ls: parentNode, anchorNode, anchorOffset, focusNode, focusOffset + клас
+  // let selection = [];
+  // let anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
+  // // let anchorNodeTag = anchorNode.tagName.toLowerCase();
+  // // console.log(anchorNodeType, anchorNodeTag);
+  // // if ( anchorNodeType == 1 )
+  // let bookNodeList = parentNode.childNodes;
+  // console.log("bookNodeList", bookNodeList);
+  // for (let i of bookNodeList) {
+  //   // if (i == anchorNode) {
+  //     console.log( i );
+  //     break;
+  //   // }
+  // }
+  // // перехресні виділення?
+}
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
+// https://stackoverflow.com/questions/6520192/how-to-get-the-text-node-of-an-element
 "use strict"; // top-book-panel module
 ////////////////////////////////////////////////////////////////////////////////
 
