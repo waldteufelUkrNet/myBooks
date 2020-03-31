@@ -452,27 +452,83 @@
 
     // формуємо мітку предка: [tag, counting number]
     let parentMark = [parentNode.tagName.toLowerCase()];
-    let bookElementsList = document.querySelectorAll('#book ' + parentMark[0]);
-    for (let i = 0; i < bookElementsList.length; i++ ) {
-      if ( bookElementsList[i] == parentNode ) {
-        parentMark.push(i);
-        break
+    if ( parentNode.getAttribute('id') == 'book' ) {
+      // div#book - найвищий елемент, братів не має
+      parentMark.push('book');
+    } else {
+      let bookElementsList = document.querySelectorAll('#book ' + parentMark[0]);
+      for (let i = 0; i < bookElementsList.length; i++ ) {
+        if ( bookElementsList[i] == parentNode ) {
+          parentMark.push(i);
+          break
+        }
       }
     }
 
-    // формуємо мітку предка: [tag, counting number] / [tag.children, offset]
+    // формуємо мітку старту (відносно предка)
+    let startMark;
     let anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
 
     if (anchorNodeType == 1) {
-      // tag
+      // tag - визначаємо його положення відносно parentNode,
+      // мітка виду ['tag', tagName, tagCountingNumber]
+      let parentElement = anchorNode.parentElement;
+      if ( parentElement.getAttribute('id') == 'book' ) {
+        let anchorNodeTagName = anchorNode.tagName.toLowerCase();
+        let arrOfAncestorsChildren = parentElement.querySelectorAll(anchorNodeTagName);
+        for (let i = 0; i < arrOfAncestorsChildren.length; i++) {
+          if (arrOfAncestorsChildren[i] == anchorNode) {
+            startMark = ['tag', anchorNodeTagName, i];
+            break
+          }
+        }
+      } else {
+        let parentElementTagName = parentElement.tagName.toLowerCase();
+        let arrOfAncestorsChildren = parentNode.querySelectorAll(parentElementTagName);
+        for (let i = 0; i < arrOfAncestorsChildren.length; i++) {
+          if (arrOfAncestorsChildren[i] == parentElement) {
+            startMark = ['text', parentElementTagName, i];
+            break
+          }
+        }
+      }
     } else if (anchorNodeType == 3) {
       // text
       // якщо це текст, то батьком його обов'язково буде елемент.
-      // Піднімаємося до рівня батька і перебираємо дітей на наявність тексту
       let parentElement = anchorNode.parentElement;
-      console.log("parentElement", parentElement);
-      let childrenNodes = parentElement.children;
-      console.log("childrenNodes", childrenNodes);
+      if ( parentElement == parentNode) {
+        // якщо батько текстового вузла є предком виділення
+        // мітка виду ['text', textNodeCountingNumber, offset]
+        let childrenNodes = parentElement.childNodes;
+        for (let i = 0; i < childrenNodes.length; i++) {
+          if (childrenNodes[i].data == anchorNode.data) {
+            startMark = ['text', i, anchorOffset];
+            break
+          }
+        }
+      } else {
+        // якщо батько текстового вузла є дочірнім елементом предка виділення
+        // мітка виду ['text', parentTagName, parentTagCountingNumber, textNodeCountingNumber, offset]
+
+        // визначаємо положення батьківського елемента відносно предка виділення
+        let parentElementTagName = parentElement.tagName.toLowerCase();
+        let arrOfAncestorsChildren = parentNode.querySelectorAll(parentElementTagName);
+        for (let i = 0; i < arrOfAncestorsChildren.length; i++) {
+          if (arrOfAncestorsChildren[i] == parentElement) {
+            startMark = ['text', parentElementTagName, i];
+            break
+          }
+        }
+
+        // визначаємо положення текстового вузла відносно батька
+        let childrenNodes = parentElement.childNodes;
+        for (let i = 0; i < childrenNodes.length; i++) {
+          if (childrenNodes[i].data == anchorNode.data) {
+            startMark.push(i, anchorOffset);
+            break
+          }
+        }
+      }
     }
 
 
@@ -481,35 +537,11 @@
     let mark = {
       parent      : parentMark,
       markedClass : markedClass,
-      // startMark   : startMark,
+      startMark   : startMark,
       // endMark     : endMark
     };
 
-console.log(mark);
-
-
-
-
-
-
-
-    // // зробити запис в ls: parentNode, anchorNode, anchorOffset, focusNode, focusOffset + клас
-    // let selection = [];
-    // let anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
-    // // let anchorNodeTag = anchorNode.tagName.toLowerCase();
-    // // console.log(anchorNodeType, anchorNodeTag);
-    // // if ( anchorNodeType == 1 )
-
-    // let bookNodeList = parentNode.childNodes;
-    // console.log("bookNodeList", bookNodeList);
-    // for (let i of bookNodeList) {
-    //   // if (i == anchorNode) {
-    //     console.log( i );
-    //     break;
-    //   // }
-    // }
-
-
+    console.log(mark);
 
     // // перехресні виділення?
   }

@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-/* ↓↓↓ consol module ↓↓↓ */
-
-/* ↑↑↑ consol module ↑↑↑ */
-@charset "UTF-8";
-
 /* ↓↓↓ book-panel module ↓↓↓ */
 
 .bbp {
@@ -504,6 +499,11 @@
 }
 
 /* ↑↑↑ book-panel module ↑↑↑ */
+@charset "UTF-8";
+
+/* ↓↓↓ consol module ↓↓↓ */
+
+/* ↑↑↑ consol module ↑↑↑ */
 @charset "UTF-8";
 
 /* ↓↓↓ top-book-panel module ↓↓↓ */

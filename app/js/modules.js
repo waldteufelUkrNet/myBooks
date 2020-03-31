@@ -1,27 +1,3 @@
-// "use strict";
-// // consol module
-// ////////////////////////////////////////////////////////////////////////////////
-// /* ↓↓↓ ??? ↓↓↓ */
-//   let isConsolOpen = false;
-//   document.getElementById('consol-button').onclick = function() {
-//     if (isConsolOpen) {
-//       document.getElementById('consol').style.height = '0px';
-//     } else {
-//       document.getElementById('consol').style.height = '50vh';
-//     }
-//      isConsolOpen = !isConsolOpen;
-//   };
-//   document.getElementById('ls-button').onclick = function() {
-//     localStorage.clear();
-//     conlog('localStorage: ' + JSON.stringify(localStorage));
-//   };
-//   function conlog (value) {
-//     let p = '<p>' + value + '</p>';
-//     document.getElementById('consol').insertAdjacentHTML('beforeEnd',p);
-//   };
-// /* ↑↑↑ /??? ↑↑↑ */
-// ////////////////////////////////////////////////////////////////////////////////
-"use strict";
 "use strict"; // bbp module
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -819,51 +795,103 @@ function prepareSelection() {
 
 
   var parentMark = [parentNode.tagName.toLowerCase()];
-  var bookElementsList = document.querySelectorAll('#book ' + parentMark[0]);
 
-  for (var _i3 = 0; _i3 < bookElementsList.length; _i3++) {
-    if (bookElementsList[_i3] == parentNode) {
-      parentMark.push(_i3);
-      break;
+  if (parentNode.getAttribute('id') == 'book') {
+    // div#book - найвищий елемент, братів не має
+    parentMark.push('book');
+  } else {
+    var bookElementsList = document.querySelectorAll('#book ' + parentMark[0]);
+
+    for (var _i3 = 0; _i3 < bookElementsList.length; _i3++) {
+      if (bookElementsList[_i3] == parentNode) {
+        parentMark.push(_i3);
+        break;
+      }
     }
-  } // формуємо мітку предка: [tag, counting number] / [tag.children, offset]
+  } // формуємо мітку старту (відносно предка)
 
 
+  var startMark;
   var anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
 
-  if (anchorNodeType == 1) {// tag
+  if (anchorNodeType == 1) {
+    // tag - визначаємо його положення відносно parentNode,
+    // мітка виду ['tag', tagName, tagCountingNumber]
+    var parentElement = anchorNode.parentElement;
+
+    if (parentElement.getAttribute('id') == 'book') {
+      var anchorNodeTagName = anchorNode.tagName.toLowerCase();
+      var arrOfAncestorsChildren = parentElement.querySelectorAll(anchorNodeTagName);
+
+      for (var _i4 = 0; _i4 < arrOfAncestorsChildren.length; _i4++) {
+        if (arrOfAncestorsChildren[_i4] == anchorNode) {
+          startMark = ['tag', anchorNodeTagName, _i4];
+          break;
+        }
+      }
+    } else {
+      var parentElementTagName = parentElement.tagName.toLowerCase();
+
+      var _arrOfAncestorsChildren = parentNode.querySelectorAll(parentElementTagName);
+
+      for (var _i5 = 0; _i5 < _arrOfAncestorsChildren.length; _i5++) {
+        if (_arrOfAncestorsChildren[_i5] == parentElement) {
+          startMark = ['text', parentElementTagName, _i5];
+          break;
+        }
+      }
+    }
   } else if (anchorNodeType == 3) {
     // text
     // якщо це текст, то батьком його обов'язково буде елемент.
-    // Піднімаємося до рівня батька і перебираємо дітей на наявність тексту
-    var parentElement = anchorNode.parentElement;
-    console.log("parentElement", parentElement);
-    var childrenNodes = parentElement.children;
-    console.log("childrenNodes", childrenNodes);
+    var _parentElement = anchorNode.parentElement;
+
+    if (_parentElement == parentNode) {
+      // якщо батько текстового вузла є предком виділення
+      // мітка виду ['text', textNodeCountingNumber, offset]
+      var childrenNodes = _parentElement.childNodes;
+
+      for (var _i6 = 0; _i6 < childrenNodes.length; _i6++) {
+        if (childrenNodes[_i6].data == anchorNode.data) {
+          startMark = ['text', _i6, anchorOffset];
+          break;
+        }
+      }
+    } else {
+      // якщо батько текстового вузла є дочірнім елементом предка виділення
+      // мітка виду ['text', parentTagName, parentTagCountingNumber, textNodeCountingNumber, offset]
+      // визначаємо положення батьківського елемента відносно предка виділення
+      var _parentElementTagName = _parentElement.tagName.toLowerCase();
+
+      var _arrOfAncestorsChildren2 = parentNode.querySelectorAll(_parentElementTagName);
+
+      for (var _i7 = 0; _i7 < _arrOfAncestorsChildren2.length; _i7++) {
+        if (_arrOfAncestorsChildren2[_i7] == _parentElement) {
+          startMark = ['text', _parentElementTagName, _i7];
+          break;
+        }
+      } // визначаємо положення текстового вузла відносно батька
+
+
+      var _childrenNodes = _parentElement.childNodes;
+
+      for (var _i8 = 0; _i8 < _childrenNodes.length; _i8++) {
+        if (_childrenNodes[_i8].data == anchorNode.data) {
+          startMark.push(_i8, anchorOffset);
+          break;
+        }
+      }
+    }
   } // формуємо інфо по виділенню:
 
 
   var mark = {
     parent: parentMark,
-    markedClass: markedClass // startMark   : startMark,
-    // endMark     : endMark
+    markedClass: markedClass,
+    startMark: startMark // endMark     : endMark
 
   };
-  console.log(mark); // // зробити запис в ls: parentNode, anchorNode, anchorOffset, focusNode, focusOffset + клас
-  // let selection = [];
-  // let anchorNodeType = anchorNode.nodeType; // 1 - element; 3 - text
-  // // let anchorNodeTag = anchorNode.tagName.toLowerCase();
-  // // console.log(anchorNodeType, anchorNodeTag);
-  // // if ( anchorNodeType == 1 )
-  // let bookNodeList = parentNode.childNodes;
-  // console.log("bookNodeList", bookNodeList);
-  // for (let i of bookNodeList) {
-  //   // if (i == anchorNode) {
-  //     console.log( i );
-  //     break;
-  //   // }
-  // }
-  // // перехресні виділення?
+  console.log(mark); // // перехресні виділення?
 }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
@@ -952,3 +980,27 @@ function pagination() {
 }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
+// "use strict";
+// // consol module
+// ////////////////////////////////////////////////////////////////////////////////
+// /* ↓↓↓ ??? ↓↓↓ */
+//   let isConsolOpen = false;
+//   document.getElementById('consol-button').onclick = function() {
+//     if (isConsolOpen) {
+//       document.getElementById('consol').style.height = '0px';
+//     } else {
+//       document.getElementById('consol').style.height = '50vh';
+//     }
+//      isConsolOpen = !isConsolOpen;
+//   };
+//   document.getElementById('ls-button').onclick = function() {
+//     localStorage.clear();
+//     conlog('localStorage: ' + JSON.stringify(localStorage));
+//   };
+//   function conlog (value) {
+//     let p = '<p>' + value + '</p>';
+//     document.getElementById('consol').insertAdjacentHTML('beforeEnd',p);
+//   };
+// /* ↑↑↑ /??? ↑↑↑ */
+// ////////////////////////////////////////////////////////////////////////////////
+"use strict";
