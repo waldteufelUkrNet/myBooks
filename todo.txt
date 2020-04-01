@@ -23,15 +23,25 @@ myBooks: {
             generalSettings: {
               bookListType: 'big' / 'small',
               booksFontSettings: {
-                name: '',
-                size: '',
-                color: '',
-                bgColor: ''
+                name    : '',
+                size    : '',
+                color   : '',
+                bgColor : ''
               }
             },
             books: {
               [id]: {
-                bookmark: [tag, number]
+                bookmark   : [tag, number],
+                selections : [{
+                                parent      : [],
+                                markedClass : '',
+                                start       : [],
+                                end         : []
+                              },
+                              {...},
+                              ...,
+                              {}
+                             ]
               }
             }
           }
