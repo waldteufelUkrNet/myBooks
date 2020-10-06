@@ -95,7 +95,7 @@
     },
     {
       id     : '00015',
-      author : '',
+      author : 'author',
       name   : 'Англійська фонетика',
       genre  : ''
     }
