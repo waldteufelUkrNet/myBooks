@@ -277,6 +277,10 @@
   font-family: tnrr;
 }
 
+.bbp__oa-options-font-item:nth-of-type(7) {
+  font-family: bmp;
+}
+
 .selected {
   height: 50px;
   width: 50px;
@@ -511,7 +515,7 @@
 .top-book-panel {
   background-color: black;
   padding: 6px 10px 0;
-  height: 66px;
+  min-height: 66px;
   overflow: hidden;
 }
 
@@ -636,3 +640,24 @@
 }
 
 /* ↑↑↑ top-book-panel module ↑↑↑ */
+@charset "UTF-8";
+
+/* ↓↓↓ loader module ↓↓↓ */
+
+.loader {
+  background-color: #0e111f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loader div {
+  text-align: center;
+  font: 1em gost;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* ↑↑↑ loader module ↑↑↑ */

@@ -33,6 +33,16 @@ const gulp         = require('gulp'),                  //
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ TASKS ↓↓↓ */
 
+// server for live reload
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server : {
+      baseDir : 'app'
+    },
+    notify: false // відключення повідомлень browserSync
+  });
+});
+
 // index.pug -> index.html
 gulp.task('indexPug', function() {
   return gulp.src('app/index.pug')
@@ -48,33 +58,23 @@ gulp.task('indexPug', function() {
 });
 
 // book.pug -> book.html
-// gulp.task('booksPug', function() {
-//   return gulp.src('app/books/*/*.pug')
-//     .pipe(changed('app/books/*/', {extension: '.html'}))
-//     .pipe(pug({
-//       pretty : true
-//     }))
-//     .on('error', notify.onError({
-//       message : 'Error: <%= error.message %>',
-//       title   : 'PUG error'
-//     }))
-//     .pipe(gulp.dest('app/books/'))
-// });
-
-// server for live reload
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server : {
-      baseDir : 'app'
-    },
-    notify: false // відключення повідомлень browserSync
-  });
+gulp.task('booksPug', function() {
+  return gulp.src('app/books/*/*.pug')
+    .pipe(changed('app/books/*/', {extension: '.html'}))
+    .pipe(pug({
+      pretty : true
+    }))
+    .on('error', notify.onError({
+      message : 'Error: <%= error.message %>',
+      title   : 'PUG error'
+    }))
+    .pipe(gulp.dest('app/books/'))
 });
 
 // scss -> css: files
 gulp.task('filesSass', function() {
   return gulp.src(['app/scss/**/*.+(scss|sass)'])
-  .pipe(sass({outputStyle: 'expanded'}))
+  .pipe(sass({outputStyle: 'expanded'})) // nested expanded compact compressed
   .on('error', notify.onError({
     message : 'Error: <%= error.message %>',
     title   : 'SASS error'
@@ -93,67 +93,57 @@ gulp.task('filesSass', function() {
 });
 
 // scss -> css: modules
-// gulp.task('modulesSass', function() {
-//   return gulp.src(['app/modules/**/*.+(scss|sass)'])
-//   .pipe(sass({outputStyle: 'expanded'}))
-//   .on('error', notify.onError({
-//     message : 'Error: <%= error.message %>',
-//     title   : 'SASS error'
-//   }))
-//   .pipe(autoprefixer({
-//     browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
-//     cascade  : true
-//   }))
-//   .pipe(cssconcat("modules.css"))
-//   .pipe(gulp.dest('app/css'))
-//   .pipe(browserSync.reload({stream:true}))
-// });
+gulp.task('modulesSass', function() {
+  return gulp.src(['app/modules/**/*.+(scss|sass)'])
+  .pipe(sass({outputStyle: 'expanded'}))
+  .on('error', notify.onError({
+    message : 'Error: <%= error.message %>',
+    title   : 'SASS error'
+  }))
+  .pipe(autoprefixer({
+    browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
+    cascade  : true
+  }))
+  .pipe(cssconcat("modules.css"))
+  .pipe(gulp.dest('app/css'))
+  .pipe(browserSync.reload({stream:true}))
+});
 
 // ES6 -> ES5: files
-// gulp.task('filesJs', function() {
-//   return gulp.src(['app/js-expanded/*.js'])
-//     .pipe(babel())
-//     // .pipe(uglify())
-//     .pipe(gulp.dest('app/js'))
-//     .pipe(browserSync.reload({stream:true}));
-// });
+gulp.task('filesJs', function() {
+  return gulp.src(['app/js-expanded/*.js'])
+    .pipe(babel())
+    // .pipe(uglify())
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
 // ES6 -> ES5: modules
-// gulp.task('modulesJs', function() {
-//   return gulp.src(['app/modules/**/*.js'])
-//     .pipe(babel())
-//     .pipe(concat({ path: 'modules.js'}))
-//     .pipe(gulp.dest('app/js'))
-//     .pipe(browserSync.reload({stream:true}));
-// });
+gulp.task('modulesJs', function() {
+  return gulp.src(['app/modules/**/*.js'])
+    .pipe(babel())
+    .pipe(concat({ path: 'modules.js'}))
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
 // watching & live reload
 gulp.task('watch', gulp.parallel(
-  gulp.series('filesSass', 'indexPug', 'browser-sync'),
+  gulp.series('modulesSass', 'filesSass', 'modulesJs', 'filesJs', 'booksPug', 'indexPug', 'browser-sync'),
   function() {
     gulp.watch(['app/scss/**/*.+(scss|sass)'], gulp.series('filesSass'));
+    gulp.watch(['app/modules/**/*.scss'], gulp.series('modulesSass'));
+
+    gulp.watch(['app/js-expanded/*.js'], gulp.series('filesJs'));
+    gulp.watch(['app/modules/**/*.js'], gulp.series('modulesJs'));
 
     gulp.watch(['app/index.pug'], gulp.series('indexPug'));
+    gulp.watch(['app/books/*/*.pug', 'app/templates/*.pug', 'app/modules/*/*.pug'], gulp.series('booksPug'));
 
     gulp.watch('app/*.html').on('change',  browserSync.reload);
+    gulp.watch('app/books/*/*.html').on('change',  browserSync.reload);
   }
 ));
-// gulp.task('watch', gulp.parallel(
-//   gulp.series('modulesSass', 'filesSass', 'modulesJs', 'filesJs', 'booksPug', 'indexPug', 'browser-sync'),
-//   function() {
-//     gulp.watch(['app/scss/**/*.+(scss|sass)'], gulp.series('filesSass'));
-//     gulp.watch(['app/modules/**/*.scss'], gulp.series('modulesSass'));
-
-//     gulp.watch(['app/js-expanded/*.js'], gulp.series('filesJs'));
-//     gulp.watch(['app/modules/**/*.js'], gulp.series('modulesJs'));
-
-//     gulp.watch(['app/index.pug'], gulp.series('indexPug'));
-//     gulp.watch(['app/books/*/*.pug', 'app/templates/*.pug', 'app/modules/*/*.pug'], gulp.series('booksPug'));
-
-//     gulp.watch('app/*.html').on('change',  browserSync.reload);
-//     gulp.watch('app/books/*/*.html').on('change',  browserSync.reload);
-//   }
-// ));
 
 // // чищення каталогу dist
 // gulp.task('clean', function(done) {

@@ -148,6 +148,11 @@ table {
 }
 
 @font-face {
+  font-family: bmp;
+  src: url("../fonts/Bulgaria_Moderna_Pro.otf");
+}
+
+@font-face {
   font-family: segb;
   src: url("../fonts/SegoeUIBold.ttf");
 }
@@ -178,7 +183,6 @@ table {
 }
 
 html {
-  border: 3px dotted blue;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +192,6 @@ html {
 }
 
 body {
-  border: 3px dotted red;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -218,6 +221,7 @@ main {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
 html #book {
@@ -225,12 +229,12 @@ html #book {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  height: calc(100vh - 60px - 66px);
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 10px;
   max-width: 1200px;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   font-size: 16px;
@@ -247,7 +251,10 @@ html #book {
 }
 
 .first-screen img {
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 70%;
+  height: auto;
   width: auto;
   margin: auto;
   padding: 20px;

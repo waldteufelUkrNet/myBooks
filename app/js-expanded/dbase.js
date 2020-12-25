@@ -25,7 +25,7 @@
       id     : '00003',
       author : 'Adolf Hitler',
       name   : 'Mein Kampf',
-      genre  : ''
+      genre  : 'genre'
     },
     {
       id     : '00004',
@@ -97,7 +97,7 @@
       id     : '00015',
       author : 'author',
       name   : 'Англійська фонетика',
-      genre  : ''
+      genre  : 'genre'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
