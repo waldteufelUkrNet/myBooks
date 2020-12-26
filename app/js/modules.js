@@ -967,28 +967,6 @@ function markText(mark) {
 // /* ↑↑↑ /??? ↑↑↑ */
 // ////////////////////////////////////////////////////////////////////////////////
 "use strict";
-"use strict"; // loader module
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ LOADER ↓↓↓ */
-
-var loader = document.querySelector('.loader');
-var bookInner = document.querySelector('#book');
-bookInner.style.overflow = 'hidden';
-
-window.onload = function () {
-  setTimeout(function () {
-    loader.classList.remove('loader_active');
-    bookInner.style.overflow = '';
-  }, 1000);
-};
-/* ↑↑↑ /LOADER ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
-
-/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
-
-/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
 "use strict"; // top-book-panel module
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -1071,5 +1049,27 @@ function pagination() {
   var currentLineWidth = maxLineWidth * pageNumber / pagesAmount;
   document.querySelector('.top-book-panel__read-line').style.width = currentLineWidth + 'px';
 }
+/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+"use strict"; // loader module
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ LOADER ↓↓↓ */
+
+var loader = document.querySelector('.loader');
+var bookInner = document.querySelector('#book');
+bookInner.style.overflow = 'hidden';
+
+window.onload = function () {
+  setTimeout(function () {
+    loader.classList.remove('loader_active');
+    bookInner.style.overflow = '';
+  }, 1000);
+};
+/* ↑↑↑ /LOADER ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+
+/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
+
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
