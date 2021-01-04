@@ -4,6 +4,7 @@ html(lang="ua")
     meta(charset="UTF-8")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel="stylesheet", href="../../css/parser.css")
+    link(rel="stylesheet", href="../../css/books.css")
     script(defer src="../../js/parser.js")
     title Мої книги
   body
@@ -17,8 +18,17 @@ html(lang="ua")
           label(for='pugText') pug-formatted text
           textarea#pugText
           button(type='button' onclick='cleanTextArea("pugText")') очистити поле
+        .textarea-wrapper
+          label(for='resultText') result
+          textarea#resultText
+          button(type='button' onclick='cleanTextArea("resultText")') очистити поле
 
       .buttons-wrapper
         button(type='button') вставити з буфера
         button(type='button') конвертувати
         button(type='button') скопіювати в буфер
+        button(type='button' onclick='cleanAllTextArea()') очистити все
+        button(type='button' onclick='test()') тестова кнопка
+
+      .test
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

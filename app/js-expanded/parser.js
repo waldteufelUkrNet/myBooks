@@ -24,9 +24,28 @@
   // function compare( a, b ) {
   //   return a[keyForCompare].localeCompare(b[keyForCompare]);
   // }
-  
+
   function cleanTextArea(id) {
     document.querySelector('#' + id).value = '';
   }
+
+  function cleanAllTextArea() {
+    let tAreas = document.querySelectorAll('main .textarea-wrapper textarea');
+    for (let tArea of tAreas) {
+      tArea.value = '';
+      tArea.contentEditable = "false";
+      console.log("tArea", tArea);
+    }
+  }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
+
+console.log(document.querySelector('.test p').isContentEditable);
+document.querySelector('.test p').contentEditable = "true";
+console.log(document.querySelector('.test p').isContentEditable);
+function test() {
+  console.log('test');
+  document.querySelector('.test p').contentEditable = "false";
+  console.log(document.querySelector('.test p').isContentEditable);
+}
+
