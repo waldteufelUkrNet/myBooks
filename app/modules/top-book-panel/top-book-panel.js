@@ -22,7 +22,7 @@
   document.onfullscreenchange = pagination;
 /* ↑↑↑ /FULL SCREEN MODE ON/OFF ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
-/* ↓↓↓ SET NAMES AND META-TAGS ↓↓↓ */
+{/* ↓↓↓ SET NAMES AND META-TAGS ↓↓↓ */
   // визначаємо id книги з рядка адреси
   let href     = location.href;
   let bookPos  = href.indexOf('books');
@@ -46,7 +46,7 @@
 
   document.querySelector('.name-section__author').innerHTML = author;
   document.querySelector('.name-section__book').innerHTML = bookName;
-/* ↑↑↑ /SET NAMES AND META-TAGS ↑↑↑ */
+}/* ↑↑↑ /SET NAMES AND META-TAGS ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ PAGINATION ↓↓↓ */
   // затримка - для коректних розрахунків після повного рендерингу
