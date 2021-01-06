@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ua" allow="clipboard-read; clipboard-write">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,28 +14,21 @@
         <div class="textarea-wrapper">
           <label for="plainText">plain text</label>
           <textarea id="plainText"></textarea>
-          <button type="button" onclick="cleanTextArea(&quot;plainText&quot;)">очистити поле</button>
         </div>
         <div class="textarea-wrapper">
           <label for="pugText">pug-formatted text</label>
           <textarea id="pugText"></textarea>
-          <button type="button" onclick="cleanTextArea(&quot;pugText&quot;)">очистити поле</button>
         </div>
         <div class="textarea-wrapper">
           <label for="resultText">result</label>
           <textarea id="resultText"></textarea>
-          <button type="button" onclick="cleanTextArea(&quot;resultText&quot;)">очистити поле</button>
         </div>
       </div>
       <div class="buttons-wrapper">
-        <button type="button">вставити з буфера</button>
-        <button type="button">конвертувати</button>
-        <button type="button">скопіювати в буфер</button>
+        <button type="button" disabled>вставити з буфера</button>
+        <button type="button" onclick="convert()">конвертувати</button>
+        <button type="button" onclick="copy()">скопіювати в буфер</button>
         <button type="button" onclick="cleanAllTextArea()">очистити все</button>
-        <button type="button" onclick="test()">тестова кнопка</button>
-      </div>
-      <div class="test">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </main>
   </body>

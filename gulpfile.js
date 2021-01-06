@@ -112,7 +112,7 @@ gulp.task('modulesSass', function() {
 // ES6 -> ES5: files
 gulp.task('filesJs', function() {
   return gulp.src(['app/js-expanded/*.js'])
-    .pipe(babel())
+    // .pipe(babel())
     // .pipe(uglify())
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream:true}));
@@ -121,7 +121,7 @@ gulp.task('filesJs', function() {
 // ES6 -> ES5: modules
 gulp.task('modulesJs', function() {
   return gulp.src(['app/modules/**/*.js'])
-    .pipe(babel())
+    // .pipe(babel())
     .pipe(concat({ path: 'modules.js'}))
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream:true}));
