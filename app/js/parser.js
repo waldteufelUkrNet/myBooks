@@ -1,29 +1,19 @@
 "use strict";
-// dbase.js
+// parser.js
+// Є два підходи:
+// 1. чистий regexp
+// 2. посимвольний перебір рядка
+// зробити тренувальний текст!!!
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ VARIABLES DECLARATION ↓↓↓ */
-  // let keyForCompare    = 'author',
-  //     bookList         = document.querySelector('.books-list'),
-  //     ls               = localStorage,
-  //     isSerchFieldOpen = false,
-  //     bookListType;
 /* ↑↑↑ /VARIABLES DECLARATION ↑↑↑ */
-
-/* ↓↓↓ MAIN LOGIC ↓↓↓ */
-
-/* ↑↑↑ /MAIN LOGIC ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
   /**
-   * здійснює лексикографічне сортування масиву об'єктів phoneBook за ключем,
-   * записаним в змінній keyForCompare
-   * @param  {object} a об'єкт, елемент масиву
-   * @param  {object} b об'єкт, елемент масиву
-   * @return {[number]} результат порівняння
+   * description
+   * @param  {type} name description
+   * @return {type} description
    */
-  // function compare( a, b ) {
-  //   return a[keyForCompare].localeCompare(b[keyForCompare]);
-  // }
 
   function cleanAllTextArea() {
     let tAreas = document.querySelectorAll('main .textarea-wrapper textarea');
@@ -43,7 +33,39 @@
     let str = document.querySelector('#plainText').value;
     if (str == '') return;
 
-    //
+    // console.log("str", str);
+    // console.log("str.length", str.length);
+
+    let pugTextArea = document.getElementById('pugText');
+
+    // початок абзацу
+    pugTextArea.value = '    p\n      span.btext ';
+
+    for (let i = 0; i < str.length; i++) {
+
+      // наступний абзац
+      if ( str[i].match(/\n/) ) {
+        pugTextArea.value += '\n    p\n      span.btext ';
+      }
+
+      // відкривається дужка
+      if ( str[i].match(/\(/) ) {
+        console.log('відкривається дужка');
+        pugTextArea.value += '(\n      |\n      |';
+      }
+
+      // додати символ, якщо це не перевід рядка і не дужка (
+      if ( !str[i].match(/\n/) ) {
+        pugTextArea.value += str[i];
+      }
+
+      // if( char.match(/[([^\\n])\p{P}\w\säüöß]/iu) ) {
+      //   pugTextArea.value += char;
+      // }
+      // if( char.match(/\p{P}/iu) ) {
+
+      // }
+    }
   }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////

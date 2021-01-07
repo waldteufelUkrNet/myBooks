@@ -273,13 +273,7 @@ body {
   width: 100%;
   resize: none;
   padding: 10px;
-  font: 1.2em gost;
-}
-
-.textarea-wrapper button {
-  position: absolute;
-  right: -1px;
-  top: 36px;
+  font: 1em gost;
 }
 
 .buttons-wrapper {
