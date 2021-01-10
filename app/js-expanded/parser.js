@@ -1,40 +1,5 @@
 "use strict";
 // parser.js
-// Є два підходи:
-// 1. чистий regexp
-// 2. посимвольний перебір рядка
-// в дужках можуть бути:
-//   1. тільки мова оригіналу - дужка є частиною оригінального тексту - усе жирне
-//   2. простий переклад (тільки кацапська мова) - не жирний
-//   3. переклад зі словами (переклад, слово - переклад) - переклад не жирний, переклад слів - не жирний курсив
-//   4.слова з перекладом - не жирний курсив
-//
-//   Правила:
-//   1. Після дужки ) спецсимвол - впритул
-//         )
-//         span.btext , lorem
-//   2. Після дужки ) "-" - з відступом
-//         )
-//         |
-//         span.btext - lorem
-//   3. Після дужки ) текст - з відступом
-//         )
-//         |
-//         span.btext - lorem
-//   4. Перед дужкою ) текст - поруч
-//         lorem)
-//   5. Після дужки ( текст - поруч
-//         (lorem
-//   6. Після дужки ( похилий текст - впритул
-//         (
-//         span.f-coni das Fenster,
-//   +7. Перед дужкою ( - з відступом
-//         lorem
-//         |
-//         |(lorem
-//   +8. Перед дужкою ( якщо в дужках тільки латиниця - ігнор
-//         lorem (lorem
-//   9. дужки в дужках ((lorem)) - ігнор
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ VARIABLES DECLARATION ↓↓↓ */
   let testString = `Ich stellte also den Projektor (mein Projektor) (итак, я установила проектор (мой проектор)) auf die Fensterbank (das Fenster, die Bank – скамья, лавка), legte den Drakulafilm ein (вложила = поставила дракула-фильм; einlegen) und besorgte eine Verlängerungsschnur (и достала удлинитель; lang – длинный, verlängern – удлинять, die Schnur, besorgen – доставать, раздобыть), weil ich sonst nicht bis an die Steckdose kam (так как иначе я не доставала до розетки; kommen-kam-gekommen – доходить, stecken – вставлять, die Dose – розетка). Dann konnte ich mühelos (тогда я смогла легко (т.е. без усилий); die Mühe – усилие) Drakulas Gesicht (лицо дракулы; das Gesicht) auf die Fassade des Hochhauses (на фасад высотного здания) werfen (бросить = спроецировать). Drakula war dort (дракула был там) mindestens (по меньшей мере) dreimal so groß (втрое больше) wie in einem echten Kino (чем в настоящем кино; das Kíno). Nur war meine Lampe im Projektor nicht stark genug (только моя лампа в проекторе не была достаточно сильной). Sein Gesicht erschien also (его /дракулы/ лицо появлялось, таким образом; erscheinen-erschien-erschienen) wie im Nebel (как в тумане; der Nebel). Verschwommen (расплывчато; verschwimmen – расплываться, schwimmen-schwamm-geschwommen – плыть).
@@ -55,12 +20,6 @@ Sie musterte mich von oben bis unten (она осмотрела меня с го
 /* ↑↑↑ /VARIABLES DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
-  /**
-   * description
-   * @param  {type} name description
-   * @return {type} description
-   */
-
   function cleanAllTextArea() {
     let tAreas = document.querySelectorAll('main .textarea-wrapper textarea');
     for (let tArea of tAreas) {
@@ -79,73 +38,127 @@ Sie musterte mich von oben bis unten (она осмотрела меня с го
     let str = document.querySelector('#plainText').value;
     if (str == '') return;
 
-    // console.log("str", str);
-    // console.log("str.length", str.length);
-
-    let pugTextArea = document.getElementById('pugText');
-    let isBracketOpen = false;
-    let openedBrakcketsAmount = 0;
+    let resultArea = document.getElementById('pugText');
+    let aT  = 'span.btext';    // activeTag
+    let oBA = 0;               // openedBracketsAmount
+    let startItalicIndex = -1;
 
     // початок абзацу
-    pugTextArea.value = '    p\n      span.btext ';
+    resultArea.value = '    p\n      span.btext ';
 
     for (let i = 0; i < str.length; i++) {
-
       // наступний абзац
       if ( str[i].match(/\n/) ) {
-        pugTextArea.value += '\n    p\n      span.btext ';
+        resultArea.value += '\n    p\n      span.btext ';
+        aT  = 'span.btext';
       }
 
-      // відкривається дужка
+      // відкриття дужок
       if ( str[i].match(/\(/) ) {
+        oBA += 1;
+        if (oBA > 1) {
+          // відкриття внутрішньої дужки
+          resultArea.value += '(';
+        } else {
+          // відкриття зовнішньої дужки
 
-        openedBrakcketsAmount += 1;
+          // пошук вмісту дужок (із урахуванням вкладених)
+          let subStr = '',
+              startPosition,
+              endPosition1,
+              endPosition2;
+
+          // try тут по суті є милицею. Тут наступна логіка: пошук відкриваючої
+          // дужки після закриваючої. В кінці тексту логічно буде помилка, бо
+          // інтерпретарор після останньої закриваючої дужки нічого не знайде.
+          // Можна було б переписати з урахуванням цього і перевірки, чи закри-
+          // ваюча дужка остання, щоб потім не шукати відсутню відкриваючу
+          // дужку. Але try теж канає.
+          try {
+            startPosition = i;
+            let regexp1 = /\)/g,
+                regexp2 = /\(/g;
+
+            regexp1.lastIndex = startPosition + 1;
+            regexp2.lastIndex = startPosition + 2;
+
+            endPosition1 = regexp1.exec(str).index;
+            endPosition2 = regexp2.exec(str).index;
+
+            if (endPosition1>endPosition2) {
+              regexp1.lastIndex = endPosition1 + 1;
+              endPosition1 = regexp1.exec(str).index;
+            }
+          } catch {} finally {
+            subStr = str.slice(startPosition+1,endPosition1);
+          }
 
 
-        // фільтрування вкладених дужкок
-        if (!isBracketOpen) {
-          isBracketOpen = true;
-          let startPosition = i;
-          let regexp = /\)/g;
-          regexp.lastIndex = startPosition + 1;
-          let endPosition = regexp.exec(str).index;
-          let subStr = str.slice(startPosition+1,endPosition);
-
+          // що в дужках?
           if ( subStr.match(/[абвгґдеєжзіїйклмнопрстуфхцчшщьюяёэы]/iu) ) {
             // тут є переклад, значить дужка в адаптованому тексті
-// console.log(subStr);
-            pugTextArea.value += '\n      |\n      |';
+            resultArea.value += '\n      |\n      |(';
+            aT = 'p';
+
+            // у дужках крім перекладу є і слова
+            if ( subStr.match(/[abcdefghijklmnopqrstuvwxyzäüöß]/iu) ) {
+              if ( subStr[0].match(/[abcdefghijklmnopqrstuvwxyzäüöß]/iu) ) {
+                // підрядок зі словами та їх перекладами
+                aT = 'span.f-coni';
+                resultArea.value += '\n      span.f-coni ';
+              } else {
+                let startItalic = subStr.match(/[abcdefghijklmnopqrstuvwxyzäüöß]/iu).index;
+                startItalicIndex = str.indexOf(subStr) + startItalic;
+              }
+            }
+          } else {
+            // тут тільки латиниця, отже це оригінальна дужка в тексті
+            resultArea.value += '(';
           }
         }
       }
 
+      // початок похилого тексту
+      if ( i == startItalicIndex ) {
+        startItalicIndex = -1;
+        aT = 'span.f-coni';
+        resultArea.value += '\n      |\n      span.f-coni ';
+      }
 
-      // Після дужки ) спецсимвол - впритул
-      // "-" - з відступом
-      // текст - з відступом
+      // закриття дужок
       if ( str[i].match(/\)/) ) {
-        isBracketOpen = false;
-        openedBrakcketsAmount -= 1;
-
-        if (openedBrakcketsAmount == 1) {
-          pugTextArea.value += str[i];
-        } else if ( str[i+1].match(/[\.\),:;?!»'"]/iu) ) {
-          pugTextArea.value += ')\n      span.btext ';
+        oBA -= 1;
+        if (oBA > 0) {
+          // закриття внутрішньої дужки
+          resultArea.value += ')';
         } else {
-          pugTextArea.value += ')\n      |\n      span.btext ';
+          // закриття зовнішньої дужки
+          if (aT == 'span.btext') {
+            resultArea.value += ')';
+          } else if (aT == 'p') {
+            aT == 'span.btext';
+            if ( str[i+1].match(/[\.,:;?!»'"]/iu) ) {
+              resultArea.value += ')\n      span.btext ';
+            } else {
+              resultArea.value += ')\n      |\n      span.btext ';
+            }
+          } else if (aT == 'span.f-coni') {
+            aT == 'span.btext';
+            resultArea.value += '\n      |)\n      ';
+            if ( str[i+1].match(/[\.,:;?!»'"]/iu) ) {
+              resultArea.value += 'span.btext ';
+            } else {
+              resultArea.value += '|\n      span.btext ';
+            }
+          }
         }
       }
 
-
-      // додати символ, якщо це не перевід рядка та не дужка
-      if ( !str[i].match(/[\n\)]/) ) {
-        pugTextArea.value += str[i];
+      // додати символ, якщо це не перевід рядка та не дужки
+      if ( !str[i].match(/[\n\)\(]/) ) {
+        resultArea.value += str[i];
       }
-
-      // if( char.match(/[([^\\n])\p{P}\w\säüöß]/iu) )
-      // if( char.match(/\p{P}/iu) )
     }
   }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
-
