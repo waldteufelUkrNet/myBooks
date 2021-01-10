@@ -505,6 +505,11 @@
 /* ↑↑↑ book-panel module ↑↑↑ */
 @charset "UTF-8";
 
+/* ↓↓↓ consol module ↓↓↓ */
+
+/* ↑↑↑ consol module ↑↑↑ */
+@charset "UTF-8";
+
 /* ↓↓↓ loader module ↓↓↓ */
 
 .loader {
@@ -567,11 +572,6 @@
 }
 
 /* ↑↑↑ loader module ↑↑↑ */
-@charset "UTF-8";
-
-/* ↓↓↓ consol module ↓↓↓ */
-
-/* ↑↑↑ consol module ↑↑↑ */
 @charset "UTF-8";
 
 /* ↓↓↓ top-book-panel module ↓↓↓ */
