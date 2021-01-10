@@ -98,6 +98,12 @@
       author : 'author',
       name   : 'Англійська фонетика',
       genre  : 'genre'
+    },
+    {
+      id     : '00016',
+      author : 'Stefan Zweig',
+      name   : 'Schachnovelle',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
