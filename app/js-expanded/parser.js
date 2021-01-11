@@ -29,9 +29,11 @@ Sie musterte mich von oben bis unten (она осмотрела меня с го
   }
 
   function copy() {
-    document.querySelector('#pugText').select();
+    let resultContainer = document.querySelector('#pugText');
+    resultContainer.select();
     document.execCommand('copy');
-    document.querySelector('#pugText').blur();
+    resultContainer.blur();
+    setTimeout( () => {resultContainer.scrollTop = 0}, 100 );
   }
 
   function convert() {
@@ -159,6 +161,11 @@ Sie musterte mich von oben bis unten (она осмотрела меня с го
         resultArea.value += str[i];
       }
     }
+  }
+
+  function convertAndCopy () {
+    copy();
+    convert();
   }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////

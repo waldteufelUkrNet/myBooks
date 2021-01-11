@@ -21,10 +21,9 @@ html(lang="ua" allow="clipboard-read; clipboard-write")
         //-   textarea#resultText
 
       .buttons-wrapper
-        button(type='button' disabled) вставити з буфера
-        button(type='button' onclick='convert()') конвертувати
-        button(type='button' onclick='copy()') скопіювати в буфер
         button(type='button' onclick='cleanAllTextArea()') очистити все
+        button(type='button' onclick='convertAndCopy()') конвертувати та скопіювати в буфер
+        button(type='button' disabled) вставити з буфера
 
       .test(style='display:flex')
         .example(style='margin-right:20px')
