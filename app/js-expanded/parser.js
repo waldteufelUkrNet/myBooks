@@ -1,5 +1,6 @@
 "use strict";
 // parser.js
+// трохи підправити convert(): з неї треба прибрати пошук рядка, а викликат з аргумантом-рядком. Функція повинна вертати новий рядок, а не щось кудись вставляти.
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ VARIABLES DECLARATION ↓↓↓ */
   let testString = `Ich stellte also den Projektor (mein Projektor) (итак, я установила проектор (мой проектор)) auf die Fensterbank (das Fenster, die Bank – скамья, лавка), legte den Drakulafilm ein (вложила = поставила дракула-фильм; einlegen) und besorgte eine Verlängerungsschnur (и достала удлинитель; lang – длинный, verlängern – удлинять, die Schnur, besorgen – доставать, раздобыть), weil ich sonst nicht bis an die Steckdose kam (так как иначе я не доставала до розетки; kommen-kam-gekommen – доходить, stecken – вставлять, die Dose – розетка). Dann konnte ich mühelos (тогда я смогла легко (т.е. без усилий); die Mühe – усилие) Drakulas Gesicht (лицо дракулы; das Gesicht) auf die Fassade des Hochhauses (на фасад высотного здания) werfen (бросить = спроецировать). Drakula war dort (дракула был там) mindestens (по меньшей мере) dreimal so groß (втрое больше) wie in einem echten Kino (чем в настоящем кино; das Kíno). Nur war meine Lampe im Projektor nicht stark genug (только моя лампа в проекторе не была достаточно сильной). Sein Gesicht erschien also (его /дракулы/ лицо появлялось, таким образом; erscheinen-erschien-erschienen) wie im Nebel (как в тумане; der Nebel). Verschwommen (расплывчато; verschwimmen – расплываться, schwimmen-schwamm-geschwommen – плыть).
@@ -164,8 +165,21 @@ Sie musterte mich von oben bis unten (она осмотрела меня с го
   }
 
   function convertAndCopy () {
-    copy();
     convert();
+    copy();
+  }
+
+  function convertAndCopyMyltiple() {
+    multipleConvert();
+    copy();
+  }
+
+  function multipleConvert() {
+    // console.log("multipleConvert");
+    let str = document.querySelector('#plainText').value;
+    if (str == '') return;
+    let a = str.match(/\s{4}p .*\n/gui);
+    console.log("a", a);
   }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////

@@ -19,10 +19,12 @@ html(lang="ua" allow="clipboard-read; clipboard-write")
         //- .textarea-wrapper
         //-   label(for='resultText') result
         //-   textarea#resultText
-
+      b INFO
+      p Одноабзацний конвертер придуманий безпосередньо для конвертації одного масиву адаптованого по методу Франка тексту (один або кілька абзаців), скопійованього безпосередньо з Word'а. Багатоабзацний конверер приймає відформатований текст з pug-файлів. Він шукає в рядку фрагменти від '    p ' до '\n' і конвертує тільки їх.
       .buttons-wrapper
         button(type='button' onclick='cleanAllTextArea()') очистити все
-        button(type='button' onclick='convertAndCopy()') конвертувати та скопіювати в буфер
+        button(type='button' onclick='convertAndCopy()') одноабзацний конвертер
+        button(type='button' onclick='convertAndCopyMyltiple()') багатоабзацний конвертер
         button(type='button' disabled) вставити з буфера
 
       .test(style='display:flex')

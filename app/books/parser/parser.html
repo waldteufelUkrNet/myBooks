@@ -19,10 +19,12 @@
           <label for="pugText">pug-formatted text</label>
           <textarea id="pugText"></textarea>
         </div>
-      </div>
+      </div><b>INFO</b>
+      <p>Одноабзацний конвертер придуманий безпосередньо для конвертації одного масиву адаптованого по методу Франка тексту (один або кілька абзаців), скопійованього безпосередньо з Word'а. Багатоабзацний конверер приймає відформатований текст з pug-файлів. Він шукає в рядку фрагменти від '    p ' до '\n' і конвертує тільки їх.</p>
       <div class="buttons-wrapper">
         <button type="button" onclick="cleanAllTextArea()">очистити все</button>
-        <button type="button" onclick="convertAndCopy()">конвертувати та скопіювати в буфер</button>
+        <button type="button" onclick="convertAndCopy()">одноабзацний конвертер</button>
+        <button type="button" onclick="convertAndCopyMyltiple()">багатоабзацний конвертер</button>
         <button type="button" disabled>вставити з буфера</button>
       </div>
       <div class="test" style="display:flex">
