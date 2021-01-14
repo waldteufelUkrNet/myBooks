@@ -116,6 +116,12 @@
       author : 'Heinrich Böll',
       name   : 'Das Brot der frühen Jahre',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00019',
+      author : 'Friedrich Durrenmatt',
+      name   : 'Der Richter und sein Henker',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
