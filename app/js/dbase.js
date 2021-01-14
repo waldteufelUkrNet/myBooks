@@ -110,6 +110,12 @@
       author : 'Форсайт Фредерик',
       name   : 'День Шакала',
       genre  : 'політичний детектив'
+    },
+    {
+      id     : '00018',
+      author : 'Heinrich Böll',
+      name   : 'Das Brot der frühen Jahre',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
