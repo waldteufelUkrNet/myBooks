@@ -128,6 +128,12 @@
       author : 'Erich Kästner',
       name   : 'Das doppelte Lottchen',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00021',
+      author : 'Erich Kästner',
+      name   : 'Drei Männer im Schnee',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
