@@ -134,6 +134,24 @@
       author : 'Erich Kästner',
       name   : 'Drei Männer im Schnee',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00022',
+      author : 'Hansjorg Martin',
+      name   : 'Meine schone Morderin',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00023',
+      author : 'Annemarie Selinko',
+      name   : 'Heute heiratet mein Mann',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00024',
+      author : 'E. M. Remarque',
+      name   : 'Drei Kameraden',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
