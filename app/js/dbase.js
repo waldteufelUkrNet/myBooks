@@ -206,6 +206,12 @@
       author : 'Ludwig Thoma',
       name   : 'Lausbubengeschichten',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00034',
+      author : 'Erich Kästner',
+      name   : 'Emil und die Detektive',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
