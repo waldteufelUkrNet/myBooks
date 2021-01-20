@@ -212,6 +212,12 @@
       author : 'Erich Kästner',
       name   : 'Emil und die Detektive',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00035',
+      author : 'Otfried Preußler',
+      name   : 'Krabat',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
