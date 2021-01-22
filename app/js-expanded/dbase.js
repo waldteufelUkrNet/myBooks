@@ -248,6 +248,42 @@
       author : 'Irmgard Keun',
       name   : 'Das Mädchen, mit dem die Kinder nicht verkehren durften',
       genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00041',
+      author : 'Jacob und Wilhelm Grimm',
+      name   : 'Grimms Märchen',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00042',
+      author : 'Arthur Schnitzler',
+      name   : 'Traumnovelle',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00043',
+      author : 'Friedrich Glauser',
+      name   : 'Beichte in der Nacht. Erzählungen',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00044',
+      author : 'Wilhelm Hauff',
+      name   : 'Kalif Storch. Der kleine Muck. Der Zwerg Nase',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00045',
+      author : 'Joseph Roth',
+      name   : 'Hotel Savoy',
+      genre  : 'метод Франка: нім.мова'
+    },
+    {
+      id     : '00046',
+      author : 'Gerhard Holtz-Baumert',
+      name   : 'Alfons Zitterbacke. Geschichten eines Pechvogels',
+      genre  : 'метод Франка: нім.мова'
     }
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
