@@ -145,49 +145,50 @@ gulp.task('watch', gulp.parallel(
   }
 ));
 
-// // чищення каталогу dist
-// gulp.task('clean', function(done) {
-//   return del('dist');
-//   done();
-// });
+// чищення каталогу dist
+gulp.task('clean', function(done) {
+  return del('dist');
+  done();
+});
 
-// // обробка зображень
-// gulp.task('img', function() {
-//   return gulp.src('app/assets/img/**/*')
-//     // .pipe(cache(imagemin({
-//     //   interlaced  : true,
-//     //   progressive : true,
-//     //   svgoPlugins : [{removeViewBox: false}],
-//     //   use         : [pngquant()]
-//     // })))
-//     .pipe(gulp.dest('dist/assets/img'));
-// });
+// обробка зображень
+gulp.task('img', function() {
+  return gulp.src('app/img/**/*')
+    // .pipe(cache(imagemin({
+    //   interlaced  : true,
+    //   progressive : true,
+    //   svgoPlugins : [{removeViewBox: false}],
+    //   use         : [pngquant()]
+    // })))
+    .pipe(gulp.dest('dist/img'));
+});
 
-// // очистка кешу
-// gulp.task('clear', function () {
-//     return cache.clearAll();
-// })
+// очистка кешу
+gulp.task('clear', function () {
+    return cache.clearAll();
+})
 
-// // перенесення файлів з каталогу app в dist
-// gulp.task('build', gulp.series(['clean', 'img'], function(done) {
+// перенесення файлів з каталогу app в dist
+gulp.task('build', gulp.series(['clean', 'img'], function(done) {
 
-//   // pug -> html
-//   gulp.src('app/assets/pug/*.pug').pipe(pug({pretty : false})).pipe(gulp.dest('dist/'));
+  // pug -> html
+  gulp.src('app/index.pug').pipe(pug({pretty : false})).pipe(gulp.dest('dist/'));
+  gulp.src('app/books/**/*.pug').pipe(pug({pretty : false})).pipe(gulp.dest('dist/books/'));
 
-//   // fonts
-//   gulp.src('app/assets/fonts/**/*').pipe(gulp.dest('dist/assets/fonts'));
+  // fonts
+  gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 
-//   // libs
-//   gulp.src('app/assets/libs-js/**/*').pipe(uglify()).pipe(gulp.dest('dist/assets/libs-js/'));
-//   gulp.src('app/assets/libs-css/**/*').pipe(csso()).pipe(gulp.dest('dist/assets/libs-css/'));
+  // js
+  // gulp.src('app/js/**/*').pipe(uglify()).pipe(gulp.dest('dist/js/'));
+  gulp.src('app/js/**/*').pipe(gulp.dest('dist/js/'));
 
-//   // js
-//   gulp.src('app/assets/js/**/*').pipe(uglify()).pipe(gulp.dest('dist/assets/js/'));
+  // css
+  gulp.src('app/css/**/*').pipe(csso()).pipe(gulp.dest('dist/css/'));
 
-//   // css
-//   gulp.src('app/assets/css/**/*').pipe(csso()).pipe(gulp.dest('dist/assets/css/'));
+  // img
+  gulp.src('app/books/**/*.jpg').pipe(gulp.dest('dist/books/'));
 
-//   done();
-// }));
+  done();
+}));
 /* ↑↑↑ /TASKS ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
