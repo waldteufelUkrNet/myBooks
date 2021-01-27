@@ -77,7 +77,7 @@
     },
     {
       id     : '00012',
-      author : 'Otfried Preussler',
+      author : 'Otfried Preußler',
       name   : 'Die kleine Hexe', // 94
       genre  : 'метод Франка: нім.мова'
     },
