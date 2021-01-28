@@ -141,11 +141,14 @@
                                         .add('books-panel__btn_active');
       document.getElementById('smallList').classList
                                           .remove('books-panel__btn_active');
+      document.querySelector('.books-list').style.display = 'flex';
     } else if (bookListType == 'small') {
       document.getElementById('smallList').classList
                                           .add('books-panel__btn_active');
       document.getElementById('bigList').classList
                                           .remove('books-panel__btn_active');
+
+      document.querySelector('.books-list').style.display = 'block';
     }
 
     // побудова списку
