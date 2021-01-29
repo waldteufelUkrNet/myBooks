@@ -59,7 +59,7 @@
     },
     {
       id     : '00009',
-      author : 'noname',
+      author : 'I.Frank',
       name   : 'Dies Leben kömmt mir vor als eine Renne-Bahn. Deutsche Gedichte aus dem 17. Jahrhundert.', // 80
       genre  : 'метод Франка: нім.мова'
     },
@@ -221,7 +221,7 @@
     },
     {
       id     : '00036',
-      author : 'noname',
+      author : 'I.Frank',
       name   : 'Wandrers Nachtlied', // 298
       genre  : 'метод Франка: нім.мова'
     },

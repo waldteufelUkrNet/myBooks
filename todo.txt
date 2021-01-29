@@ -6,9 +6,12 @@
     - уникнути перекомпіляції книжок щоразу, переписати gulp file з урахуванням cashe
 
 головна сторінка:
-    - підсвітка співпадінь
+    - initLS();
     - сортування в ls
     - сортування красиво стилізувати (заголовок (жанр, буква тощо) виводити в окремий рядок з поміткою, скільки книжок відповідає типу сортування)
+
+    - підсвітка співпадінь
+
     - доступ до книжок: якщо комусь рекомендувати книги, не всі потрібно рекомендувати, замість адреси books/book0003/index.html потрібно щось на зразок books/hjfckj&kflcdfjdgRTT5hr98/index.html Також пароль для показу усіх книжок у списку
     - qr-code
     - при натисненні на книгу, коротко її підсвічувати (бо на слабких телефонах перехід підтуплює і не ясно, чи клік спрацював)
@@ -35,16 +38,17 @@
 структура LocalStorage:
 ======================
 myBooks: {
-            generalSettings: {
-              bookListType: 'big' / 'small',
-              booksFontSettings: {
-                name    : '',
-                size    : '',
-                color   : '',
-                bgColor : ''
+            gS: {                         // generalSettings
+              bLT: 'b' / 's',             // bookListType: 'big' / 'small'
+              bST: 'a' / 'n' / 'g' / 'i', // bookSortType: 'author' / 'name' / 'genre' / 'id'
+              bFS: {                      // booksFontSettings
+                n   : '',                 // name
+                s   : '',                 // size
+                c   : '',                 // color
+                bgC : ''                  // bgColor
               }
             },
-            books: {
+            b: {                          // books
               [id]: {
                 bookmark   : [tag, number],
                 selections : [{

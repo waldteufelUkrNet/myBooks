@@ -9,20 +9,8 @@
       bookListType;
 /* ↑↑↑ /VARIABLES DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
-/* ↓↓↓ WORK WITH LOCALSTORAGE ↓↓↓ */
-  let myBooks = JSON.parse( ls.getItem('myBooks') ) || {};
-
-  if ( !('generalSettings' in myBooks) ) {
-    myBooks.generalSettings = {bookListType: 'big'}
-  } else {
-    if ( !('bookListType' in myBooks.generalSettings ) ) {
-      myBooks.generalSettings.bookListType = 'big'
-    }
-  }
-  bookListType = myBooks.generalSettings.bookListType;
-/* ↑↑↑ /WORK WITH LOCALSTORAGE ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ MAIN LOGIC ↓↓↓ */
+  initLocalStorage();
   // побудова списку
   buildBooksList();
 
@@ -34,13 +22,13 @@
   // навішування обробників на кнопки вигляду списку
   document.getElementById('bigList').onclick = function() {
     bookListType = 'big';
-    myBooks.generalSettings.bookListType = 'big';
+    myBooks.gS.bLT = 'big';
     ls.setItem( 'myBooks', JSON.stringify(myBooks) );
     buildBooksList();
   };
   document.getElementById('smallList').onclick = function() {
     bookListType = 'small';
-    myBooks.generalSettings.bookListType = 'small';
+    myBooks.gS.bLT = 'small';
     ls.setItem( 'myBooks', JSON.stringify(myBooks) );
     buildBooksList();
   };
@@ -151,6 +139,13 @@
       document.querySelector('.books-list').style.display = 'block';
     }
 
+    let myBooks  = JSON.parse( ls.getItem('myBooks') ) || {};
+    // console.log("myBooks", myBooks);
+    // if (myBooks.generalSettings.bookSortType) {
+    //   let sortType = myBooks.generalSettings.bookSortType;
+    //   console.log("sortType", sortType);
+    // }
+
     // побудова списку
     bookList.innerHTML = '';
     let sortedArr = books.sort(compare);
@@ -174,14 +169,7 @@
     } else if (bookListType == 'small') {
       sortedArr.forEach(function(item){
         let book = '\
-                    <a  class="book-sm" style="display: block;\
-                              text-align: left;\
-                              color: #1c2e3d;\
-                              text-decoration: none;\
-                              padding-bottom: 5px;\
-                              margin-bottom: 5px;\
-                              border-bottom: 1px dotted lightgrey"\
-                        href="books/' + item.id + '/index.html">\
+                    <a  class="book-sm" href="books/' + item.id + '/index.html">\
                       <span style="font-weight: 900">' + item.author + ' - </span>\
                       <span>' + item.name + '</span>\
                     </a>\
@@ -245,10 +233,32 @@
     document.querySelector('.select__field').innerHTML = sortName;
     toggleList();
 
+    let myBooks = JSON.parse( ls.getItem('myBooks') ) || {};
+    myBooks.gS.bST = sortType;
+    ls.setItem( 'myBooks', JSON.stringify(myBooks) );
+
     keyForCompare    = sortType;
-    console.log("keyForCompare", keyForCompare);
     buildBooksList();
 
+  }
+
+  function initLocalStorage() {
+    let myBooks = JSON.parse( ls.getItem('myBooks') ) || {};
+    console.log("myBooks", myBooks);
+
+    if ( !('gS' in myBooks) ) myBooks.gS = {};
+    if ( !('b' in myBooks) ) myBooks.b = {};
+
+    if ( !('bLT' in myBooks.gS) ) myBooks.gS.bLT = 'big';
+    if ( !('bST' in myBooks.gS) ) myBooks.gS.bST = '';
+    if ( !('bFS' in myBooks.gS) ) myBooks.gS.bFS = {};
+
+    if ( !('n' in myBooks.gS.bFS) ) myBooks.gS.bFS.n = '';
+    if ( !('s' in myBooks.gS.bFS) ) myBooks.gS.bFS.s = '';
+    if ( !('c' in myBooks.gS.bFS) ) myBooks.gS.bFS.c = '';
+    if ( !('bgC' in myBooks.gS.bFS) ) myBooks.gS.bFS.bgC = '';
+
+    ls.setItem( 'myBooks', JSON.stringify(myBooks) );
   }
 
   /**
