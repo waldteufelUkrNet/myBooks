@@ -283,7 +283,7 @@
       id     : '00046',
       author : 'waldteufel',
       name   : 'Англійська фонетика',
-      genre  : 'genre'
+      genre  : 'без жанру'
     },
     {
       id     : '00047',

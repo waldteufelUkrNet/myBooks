@@ -16,6 +16,7 @@ html(lang="ua")
         h1 Моя книжкова поличка
           span#booksAmount
         .books-panel
+          span.books-panel__found-quantity
           input(type='text').books-panel__search-field
           button.books-panel__btn.books-panel__search-btn
             svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
@@ -30,7 +31,7 @@ html(lang="ua")
           span сортування:
           .select
             .select__field-wrapper
-              .select__field вибрати
+              .select__field автор
               .select__btn
             .select__list(data-isopen='false')
               .select__list-item(data-value='author') автор
