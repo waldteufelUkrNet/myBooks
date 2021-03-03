@@ -328,130 +328,113 @@
       genre  : 'метод Франка: англ.мова'
     },
     {
-      id     : '00',
+      id     : '00049',
       author : 'Stephen King',
       name   : 'Strawberry Spring',
       genre  : 'метод Франка: англ.мова'
     },
     {
-      id     : '00',
-      author : '',
-      name   : '',
+      id     : '00050',
+      author : 'Stephen King',
+      name   : 'Luckey Quarter',
       genre  : 'метод Франка: англ.мова'
     },
-    King_Luckey_Quarter_M - 37.doc
+    {
+      id     : '00051',
+      author : 'Washington Irving',
+      name   : 'Rip Van Winkle',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00051',
+      author : 'Stephen King',
+      name   : 'The Cat from Hell',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00052',
+      author : 'E. Seton Thompson',
+      name   : 'Lobo, the King of Currumpaw',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00053',
+      author : 'E. Seton Thompson',
+      name   : 'Vixen, the Springfield Fox',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00054',
+      author : 'Mabel G. Taggart',
+      name   : 'The story of the three goblins',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00055',
+      author : 'John Keats',
+      name   : 'Beauty that must die (Selected Poems)',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00056',
+      author : 'E. Seton Thompson',
+      name   : 'Raggylug. The Story of a Cottontail Rabbit',
+      genre  : 'метод Франка: англ.мова'
+    },
+    {
+      id     : '00057',
+      author : 'Edgar Allan Poe',
+      name   : 'The purloined letter',
+      genre  : 'метод Франка: англ.мова'
+    },
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Francis Scott Fitzgerald',
+      name   : 'On schedule',
       genre  : 'метод Франка: англ.мова'
     },
-    Irving_RIP VAN WINKLE_M - 47.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Ernest Hemingway',
+      name   : 'The Snows of Kilimanjaro',
       genre  : 'метод Франка: англ.мова'
     },
-    King_The_Cat_From_Hell_M - 48.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Stephen King',
+      name   : 'The end of the whole mess',
       genre  : 'метод Франка: англ.мова'
     },
-    Thompson_Seton_Lobo_the_King_of_Currumpaw_M - 48.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John Ruskin',
+      name   : 'The King of the Golden River',
       genre  : 'метод Франка: англ.мова'
     },
-    Thompson_Seton_Vixen_the_Springfield_Fox_M - 56.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Robin Hood',
       genre  : 'метод Франка: англ.мова'
     },
-    The_Story_of_the_Three_Goblins_M - 58.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Stephen King',
+      name   : 'Sometimes they come back',
       genre  : 'метод Франка: англ.мова'
     },
-    Keats_Selected_Poems_M - 59.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Joseph Conrad',
+      name   : 'An outpost of progress',
       genre  : 'метод Франка: англ.мова'
     },
-    Thompson_Seton_Raggylug_M - 63.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Cyrus Mac Millan',
+      name   : 'Canadian Wonder Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    Poe_The_Purloined_Letter_M - 64.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Scott_Fitzgerald_On_Schedule_M - 65.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Hemingway_The Snows of Kilimanjaro_M - 71.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    King_The_End_Of_The_Whole_Mess_M - 78.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Ruskin_The King of the Golden River_M - 81.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Robin_Hood_M - 82.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    King_Sometimes_They_Come_Back_M - 86.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Conrad_An_Outpost_Of_Progress_M - 88.doc
-    {
-      id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Canadian_Wonder_Tales - 91.doc
     {
       id     : '00',
       author : '',
@@ -461,7 +444,7 @@
     Wilde_The Canterville Ghost_M - 93.doc
     {
       id     : '00',
-      author : '',
+      author : 'Stephen King',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -510,14 +493,14 @@
     Beowulf_For_Children_M - 109.doc
     {
       id     : '00',
-      author : '',
+      author : 'Stephen King',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
     King_The_Monkey_M - 111.doc
     {
       id     : '00',
-      author : '',
+      author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -559,7 +542,7 @@
     Jerome_K_Jerome_Stories_M - 116.doc
     {
       id     : '00',
-      author : '',
+      author : 'Stephen King',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -573,7 +556,7 @@
     Wilde_Lord_Arthur_Savile_s_crime_and_other_stories_M - 119.doc
     {
       id     : '00',
-      author : '',
+      author : 'Edgar Allan Poe',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -608,7 +591,7 @@
     Smith_Scary_Stories_M - 132.doc
     {
       id     : '00',
-      author : '',
+      author : 'Stephen King',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -636,7 +619,7 @@
     Melville_Bartleby_M - 139.doc
     {
       id     : '00',
-      author : '',
+      author : 'Edgar Allan Poe',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -657,7 +640,7 @@
     Bret_Harte_Stephen_Leacock_Nonsense_M - 150.doc
     {
       id     : '00',
-      author : '',
+      author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -678,7 +661,7 @@
     Conan_Doyle_Tales_of_Pirates_M - 153.doc
     {
       id     : '00',
-      author : '',
+      author : 'Stephen King',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -706,7 +689,7 @@
     Fitzgerald_The Diamond As Big As The Ritz_M - 157.doc
     {
       id     : '00',
-      author : '',
+      author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -755,7 +738,7 @@
     Stoker_Stories_M - 173.doc
     {
       id     : '00',
-      author : '',
+      author : 'Ernest Hemingway',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -832,7 +815,7 @@
     Stevenson_The_Suicide_Club_M - 194.doc
     {
       id     : '00',
-      author : '',
+      author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1280,7 +1263,7 @@
     Doyle_Sherlock_Holmes_Stories_2_M - 430.doc
     {
       id     : '00',
-      author : '',
+      author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
