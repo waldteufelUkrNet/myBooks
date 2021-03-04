@@ -12,223 +12,223 @@
     {
       id     : '00001',
       author : 'Irina Weber',
-      name   : 'Lustige Naturwissenschaft', // 42
+      name   : 'Lustige Naturwissenschaft',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00002',
       author : 'Hanns Heinz Ewers',
-      name   : 'Die Spinne', // 46
+      name   : 'Die Spinne',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00003',
       author : 'Theodor Storm',
-      name   : 'Immensee', // 55
+      name   : 'Immensee',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00004',
       author : 'Theodor Storm',
-      name   : 'Die Regentrude', // 57
+      name   : 'Die Regentrude',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00005',
       author : 'Joseph Roth',
-      name   : 'Die Legende vom heiligen Trinker', // 61
+      name   : 'Die Legende vom heiligen Trinker',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00006',
       author : 'E.T.A. Hoffmann',
-      name   : 'Der Sandmann', // 71
+      name   : 'Der Sandmann',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00007',
       author : 'Klaus-Peter Wolf',
-      name   : 'Total wahre Flunkergeschichten. Erzählt von einem rotzfrechen Mädchen', // 77
+      name   : 'Total wahre Flunkergeschichten. Erzählt von einem rotzfrechen Mädchen',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00008',
       author : 'Wilhelm Hauff',
-      name   : 'Das kalte Herz', // 79
+      name   : 'Das kalte Herz',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00009',
       author : 'I.Frank',
-      name   : 'Dies Leben kömmt mir vor als eine Renne-Bahn. Deutsche Gedichte aus dem 17. Jahrhundert.', // 80
+      name   : 'Dies Leben kömmt mir vor als eine Renne-Bahn. Deutsche Gedichte aus dem 17. Jahrhundert.',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00010',
       author : 'Stefan Zweig',
-      name   : 'Schachnovelle', //89
+      name   : 'Schachnovelle',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00011',
       author : 'Jacob und Wilhelm Grimm',
-      name   : 'Irische Elfenmärchen', // 92
+      name   : 'Irische Elfenmärchen',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00012',
       author : 'Otfried Preußler',
-      name   : 'Die kleine Hexe', // 94
+      name   : 'Die kleine Hexe',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00013',
       author : 'Stefan Zweig',
-      name   : 'Brief einer Unbekannten', // 96
+      name   : 'Brief einer Unbekannten',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00014',
       author : 'Adelbert von Chamisso',
-      name   : 'Peter Schlemihls wundersame Geschichte', // 104
+      name   : 'Peter Schlemihls wundersame Geschichte',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00015',
       author : 'Wilhelm Hauff',
-      name   : 'Kalif Storch. Der kleine Muck. Der Zwerg Nase', // 109
+      name   : 'Kalif Storch. Der kleine Muck. Der Zwerg Nase',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00016',
       author : 'Franz Kafka',
-      name   : 'Die Verwandlung', // 112
+      name   : 'Die Verwandlung',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00017',
       author : 'Heinrich Böll',
-      name   : 'Das Brot der frühen Jahre', // 113
+      name   : 'Das Brot der frühen Jahre',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00018',
       author : 'Wolfgang Borchert',
-      name   : 'Draußen vor der Tür', // 121
+      name   : 'Draußen vor der Tür',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00019',
       author : 'Ludwig Thoma',
-      name   : 'Lausbubengeschichten', // 129
+      name   : 'Lausbubengeschichten',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00020',
       author : 'Ludwig Thoma',
-      name   : 'Tante Frieda', // 143
+      name   : 'Tante Frieda',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00021',
       author : 'Friedrich Durrenmatt',
-      name   : 'Der Richter und sein Henker', // 141
+      name   : 'Der Richter und sein Henker',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00022',
       author : 'Arthur Schnitzler',
-      name   : 'Traumnovelle', // 150
+      name   : 'Traumnovelle',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00023',
       author : 'Erich Kästner',
-      name   : 'Das doppelte Lottchen', // 154
+      name   : 'Das doppelte Lottchen',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00024',
       author : 'Jacob und Wilhelm Grimm',
-      name   : 'Grimms Märchen', // 154
+      name   : 'Grimms Märchen',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00025',
       author : 'Irmgard Keun',
-      name   : 'Das Mädchen, mit dem die Kinder nicht verkehren durften', // 154
+      name   : 'Das Mädchen, mit dem die Kinder nicht verkehren durften',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00026',
       author : 'Hans Fallada',
-      name   : 'Zwei zarte Lämmchen weiß wie Schnee', // 162
+      name   : 'Zwei zarte Lämmchen weiß wie Schnee',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00027',
       author : 'noname',
-      name   : 'Der liebe Augustin (Sagen aus Wien)', // 165
+      name   : 'Der liebe Augustin (Sagen aus Wien)',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00028',
       author : 'Erich Kästner',
-      name   : 'Emil und die Detektive', // 171
+      name   : 'Emil und die Detektive',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00029',
       author : 'Friedrich Glauser',
-      name   : 'Beichte in der Nacht. Erzählungen', // 175
+      name   : 'Beichte in der Nacht. Erzählungen',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00030',
       author : 'Gerhard Holtz-Baumert',
-      name   : 'Alfons Zitterbacke. Geschichten eines Pechvogels', // 199
+      name   : 'Alfons Zitterbacke. Geschichten eines Pechvogels',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00031',
       author : 'Joseph Roth',
-      name   : 'Hotel Savoy', // 201
+      name   : 'Hotel Savoy',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00032',
       author : 'Erich Kästner',
-      name   : 'Drei Männer im Schnee', // 261
+      name   : 'Drei Männer im Schnee',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00033',
       author : 'Annemarie Selinko',
-      name   : 'Heute heiratet mein Mann', // 265
+      name   : 'Heute heiratet mein Mann',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00034',
       author : 'Hansjorg Martin',
-      name   : 'Meine schone Morderin', // 271
+      name   : 'Meine schone Morderin',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00035',
-      author : 'Otfried Preußler', // 273
+      author : 'Otfried Preußler',
       name   : 'Krabat',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00036',
       author : 'I.Frank',
-      name   : 'Wandrers Nachtlied', // 298
+      name   : 'Wandrers Nachtlied',
       genre  : 'метод Франка: нім.мова'
     },
     {
       id     : '00037',
       author : 'E. M. Remarque',
-      name   : 'Drei Kameraden', // 409
+      name   : 'Drei Kameraden',
       genre  : 'метод Франка: нім.мова'
     },
     {
@@ -648,39 +648,34 @@
     },
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Francis Scott Fitzgerald',
+      name   : 'The diamond as big as the Ritz',
       genre  : 'метод Франка: англ.мова'
     },
-    Fitzgerald_The Diamond As Big As The Ritz_M - 157.doc
     {
       id     : '00',
       author : 'Francis Scott Fitzgerald',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Fitzgerald_Tales_of_the_Jazz_Age_M - 162.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Brian Doherty',
+      name   : 'The Story Of Pocahontas',
       genre  : 'метод Франка: англ.мова'
     },
-    Pocahontas_M - 163.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Theodore Dreiser',
+      name   : 'Will You Walk Into My Parlor?',
       genre  : 'метод Франка: англ.мова'
     },
-    Dreiser_Will_You_Walk_Into_My_Parlor_M - 169.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'D. H. Lawrence',
+      name   : 'The Shadow in the Rose Garden and Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Lawrence_The_Shadow_in_the_Rose_Garden_and_Other_Stories_M - 171.doc
     {
       id     : '00',
       author : 'John W. Smith',
@@ -689,60 +684,53 @@
     },
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'W. W. Jacobs',
+      name   : 'A Love Passage and Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Jacobs_A_Love_Passage_and_Other_Stories_M - 173.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Bram Stoker',
+      name   : "Dracula's Guest and Other Weird Stories",
       genre  : 'метод Франка: англ.мова'
     },
-    Stoker_Stories_M - 173.doc
     {
       id     : '00',
       author : 'Ernest Hemingway',
-      name   : '',
+      name   : 'The Old Man And The Sea',
       genre  : 'метод Франка: англ.мова'
     },
-    Hemingway_The Old Man And The Sea_M - 174.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Wilkie Collins',
+      name   : 'The Dream Woman',
       genre  : 'метод Франка: англ.мова'
     },
-    Collins_The_Dream_Woman_M - 176.doc
     {
       id     : '00',
       author : 'Oscar Wilde',
-      name   : '',
+      name   : 'The Importance of Being Earnest.A Trivial Comedy for Serious People',
       genre  : 'метод Франка: англ.мова'
     },
-    Wilde_The_Importance_of_Being_Earnest_M - 176.doc
     {
       id     : '00',
-      author : '',
+      author : 'H. P. Lovecraft',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
-    Lovecraft_The_Call_Of_Cthulhu_The_Rats_In_The_Walls_M - 177.doc
+    розбити на дві книги! Lovecraft_The_Call_Of_Cthulhu_The_Rats_In_The_Walls_M - 177.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Thomas Hardy',
+      name   : 'The Distracted Preacher',
       genre  : 'метод Франка: англ.мова'
     },
-    Hardy_The_Distracted_Preacher_M - 182.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jonathan Swift',
+      name   : "Gulliver's Travels",
       genre  : 'метод Франка: англ.мова'
     },
-    Swift_Gulliver's Travels_M - 183.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
@@ -752,11 +740,10 @@
     Stevenson_The_Bottle_Imp_The_Isle_of_Voices_M - 186.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Henry James',
+      name   : 'Daisy Miller',
       genre  : 'метод Франка: англ.мова'
     },
-    James_Daisy_Miller_M - 189.doc
     {
       id     : '00',
       author : '',
@@ -766,81 +753,70 @@
     Milne_Pooh_M - 189.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'Silver Blaze',
       genre  : 'метод Франка: англ.мова'
     },
-    Doyle_Silver_Blaze_M - 192.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : 'The Suicide Club ',
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_The_Suicide_Club_M - 194.doc
     {
       id     : '00',
       author : 'Francis Scott Fitzgerald',
-      name   : '',
+      name   : "Jacob's Ladder and Other Stories",
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Fitzgerald_Jacob's_Ladder_and_Other_Stories_M - 200.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Sir Walter Scott',
+      name   : 'Ivanhoe',
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Ivanhoe_M - 200.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Saki',
+      name   : 'Shock Tactics And Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Saki_Stories_M - 206.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : "The Rajah's Diamond",
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_The Rajahs Diamond_M - 206.doc
     {
       id     : '00',
       author : 'Graham Greene',
-      name   : '',
+      name   : 'The Third Man ',
       genre  : 'метод Франка: англ.мова'
     },
-    GREENE_THE THIRD MAN_M - 212.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John Steinbeck',
+      name   : 'Of Mice And Men',
       genre  : 'метод Франка: англ.мова'
     },
-    Steinbeck_Of_Mice_and_Men_M - 214.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : 'The strange case of dr. Jekyll and mr. Hyde',
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_Strange_Case_of_Dr_Jekyll_and_Mr_Hyde_M - 215.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jane Austen',
+      name   : 'Lady Susan',
       genre  : 'метод Франка: англ.мова'
     },
-    Austin_Lady_Susan_M - 218.doc
     {
       id     : '00',
       author : 'Oscar Wilde',
-      name   : '',
+      name   : 'The Star-Child And Other Legends',
       genre  : 'метод Франка: англ.мова'
     },
-    Wilde_Legends_M - 220.doc
     {
       id     : '00',
       author : 'John W. Smith',
@@ -856,371 +832,322 @@
     Milne_Pooh corner_M - 222.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'George Bernard Shaw',
+      name   : 'Pygmalion',
       genre  : 'метод Франка: англ.мова'
     },
-    Shaw_Pygmalion_M - 227.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Walter Brandon Thomas',
+      name   : "Charley's Aunt",
       genre  : 'метод Франка: англ.мова'
     },
-    Charley's_Aunt_M - 233.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jack London',
+      name   : 'All Gold Canyon (Stories)',
       genre  : 'метод Франка: англ.мова'
     },
-    London_ALL GOLD CANYON_Stories_M - 234.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Japanese Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    Japanese_Tales_M - 237.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jack London',
+      name   : 'In A Far Country (Stories)',
       genre  : 'метод Франка: англ.мова'
     },
-    London_IN A FAR COUNTRY-Stories_M - 237.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Sherwood Anderson',
+      name   : 'Winesburg, Ohio',
       genre  : 'метод Франка: англ.мова'
     },
-    Anderson_Winesburg_Ohio_M - 244.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname`',
+      name   : 'Robinson Crusoe Written Anew for Children by James Baldwin',
       genre  : 'метод Франка: англ.мова'
     },
-    Robinson Crusoe Written Anew for Children_M - 246.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Lewis Carroll',
+      name   : 'Through The Looking-Glass',
       genre  : 'метод Франка: англ.мова'
     },
-    Carroll_Through_The_Looking_Glass_M - 251.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jack London',
+      name   : 'South Sea Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    London_South_Sees_M - 257.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Charles Dickens',
+      name   : 'A Christmas Carol',
       genre  : 'метод Франка: англ.мова'
     },
-    Dickens_A_Christmas_Carol_M - 259.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. G. Wells',
+      name   : 'The Time Machine',
       genre  : 'метод Франка: англ.мова'
     },
-    Wells_The_Time_Machine_M - 264.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'William Somerset Maugham',
+      name   : 'Stories1',
       genre  : 'метод Франка: англ.мова'
     },
-    Maugham_Stories_Na okraine imperii_M - 265.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Lewis Carroll',
+      name   : "Alice's adventures in Wonderland",
       genre  : 'метод Франка: англ.мова'
     },
-    Carrol_Alice's adventures in Wonderland_M - 266.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'William Somerset Maugham',
+      name   : 'Stories2',
       genre  : 'метод Франка: англ.мова'
     },
-    Maugham_Stories_Mister_M - 268.doc
+    звести в одну! Maugham_Stories_Mister_M - 268.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : "The Beach of Falesá (Island Nights' Entertainments)",
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_The_Beach_of_Falesa_M - 272.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Paul Gallico',
+      name   : "Mrs. ‘Arris Goes to Paris",
       genre  : 'метод Франка: англ.мова'
     },
-    Gallico_Mrs_Harris_Goes_to_Paris_M - 274.doc
     {
       id     : '00',
       author : 'O’Henry',
-      name   : '',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    O_Henry_Stories_M - 276.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Cyrus Mac Millan',
+      name   : 'Indian Wonder Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    Indian_Wonder_Tales_M - 281.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Gilbert Keith Chesterton',
+      name   : 'The Innocence of Father Brown',
       genre  : 'метод Франка: англ.мова'
     },
-    Chesterton_The_Innocence_of_Father_Brown_M - 285.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John Buchan',
+      name   : 'The Thirty-Nine Steps',
       genre  : 'метод Франка: англ.мова'
     },
-    Buchan_The_Thirty_Nine_Steps_M - 286.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Rudyard Kipling',
+      name   : 'Just So Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Kipling_Just_So_Stories_M - 287.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. G. Wells',
+      name   : 'Short Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Wells_Stories_M - 287.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jack London',
+      name   : 'The Call Of The Wild',
       genre  : 'метод Франка: англ.мова'
     },
-    London_The_Call_Of_The_Wild_M - 292.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'P. L. Travers',
+      name   : 'Mary Poppins',
       genre  : 'метод Франка: англ.мова'
     },
-    Travers_Mary_Poppins_M - 300.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'L. Frank Baum',
+      name   : 'The Wonderful Wizard Of Oz',
       genre  : 'метод Франка: англ.мова'
     },
-    Baum_The_Wonderful_Wizard_of_Oz_M - 303.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'L. Frank Baum',
+      name   : 'The Marvelous Land Of Oz',
       genre  : 'метод Франка: англ.мова'
     },
-    Greene_The_Tenth_Man_M - 306.rtf
+    {
+      id     : '00',
+      author : 'Graham Greene',
+      name   : 'The Tenth Man',
+      genre  : 'метод Франка: англ.мова'
+    },
     {
       id     : '00',
       author : 'Arthur Conan Doyle',
-      name   : '',
+      name   : 'The Adventures Of Gerard',
       genre  : 'метод Франка: англ.мова'
     },
-    Conan_Doyle_The_Adventures_Of_Gerard_M - 313.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Doyle_Sherlock_Holmes_Stories_1_M - 319.doc
+    звести в одну книгу Doyle_Sherlock_Holmes_Stories_1_M - 319.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Joseph Jacobs',
+      name   : 'English Fairy Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    English_Fairy_Tales_M - 321.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Andrew Lang',
+      name   : 'King Arthur. Tales of the Round Table.',
       genre  : 'метод Франка: англ.мова'
     },
-    Tales_Of_The_Round_Table_M - 326.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'A Study In Scarlet',
       genre  : 'метод Франка: англ.мова'
     },
-    Doyle_A Study In Scarlet_M - 327.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'The Sign Of The Four',
       genre  : 'метод Франка: англ.мова'
     },
-    Doyle_THE SIGN OF THE FOUR_M - 328.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Irish Fairy Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    Baum_The_Marvelous_Land_of_Oz_M - 335.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Great Ghost Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Irish_Fairy_Tales_M - 343.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'P. G. Wodehouse',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Great_Ghost_Stories_M - 356.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jean Webster',
+      name   : 'Daddy-Long-Legs',
       genre  : 'метод Франка: англ.мова'
     },
-    Wodehouse_Short_Stories_M - 356.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Dashiell Hammett',
+      name   : 'The adventures of Sam Spade',
       genre  : 'метод Франка: англ.мова'
     },
-    JEAN WEBSTER_DADDY-LONG-LEGS_M - 358.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'William Somerset Maugham',
+      name   : 'Ashenden. The British Agent',
       genre  : 'метод Франка: англ.мова'
     },
-    Hammett_The_adventures_of_Sam_Spade_M - 371.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Grimm Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Maugham_Ashenden_M - 372.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Robert E. Howard',
+      name   : 'Conan',
       genre  : 'метод Франка: англ.мова'
     },
-    Grimm_English_M - 373.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jack London',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Howard_Conan_M - 373.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Robert E. Howard',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    London_LOVE OF LIFE_Stories_M - 378.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. G. Wells',
+      name   : 'The Invisible Man',
       genre  : 'метод Франка: англ.мова'
     },
-    Howard_THE TOWER OF THE ELEPHANT_Stories_M - 381.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'James Matthew Barrie',
+      name   : 'Peter Pan',
       genre  : 'метод Франка: англ.мова'
     },
-    Wells_The Invisible Man_M - 386.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Thornton W. Burgess',
+      name   : 'Peter Rabbit',
       genre  : 'метод Франка: англ.мова'
     },
-    Barrie_Peter_Pan_M - 390.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. P. Lovecraft',
+      name   : 'At The Mountains Of Madness',
       genre  : 'метод Франка: англ.мова'
     },
-    Burgess_Peter_Rabbit_M - 390.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Anthony Hope',
+      name   : 'The Prisoner Of Zenda',
       genre  : 'метод Франка: англ.мова'
     },
-    Lovecraft_At_The_Mountains_Of_Madness_M - 404.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'The Hound of the Baskervilles',
       genre  : 'метод Франка: англ.мова'
     },
-    Hope_The_Prisoner_Of_Zenda_M - 408.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Kenneth Grahame',
+      name   : 'The Wind in the Willows',
       genre  : 'метод Франка: англ.мова'
     },
-    Doyle_The Hound of the Baskervilles_M - 425.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Michael Moorcock',
+      name   : 'The Knight of the Swords',
       genre  : 'метод Франка: англ.мова'
     },
-    Grahame_The Wind in the Willows_M - 425.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
-      genre  : 'метод Франка: англ.мова'
-    },
-    Moorcock_The Knight of the Swords_M - 425.doc
-    {
-      id     : '00',
-      author : '',
+      author : 'Rudyard Kipling',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
     Kipling_The_Jungle_Book_1_M - 202.doc + Kipling_The_Jungle_Book_2_M - 226.doc 428
     {
       id     : '00',
-      author : '',
+      author : 'Arthur Conan Doyle',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1228,59 +1155,51 @@
     {
       id     : '00',
       author : 'Francis Scott Fitzgerald',
-      name   : '',
+      name   : 'The Great Gatsby',
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Fitzgerald_The_Great_Gatsby_M - 447.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. G. Wells',
+      name   : 'The War of the Worlds',
       genre  : 'метод Франка: англ.мова'
     },
-    Wells_The_War_of_the_Worlds_M - 462.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'J. Sheridan LeFanu',
+      name   : 'The Room in the Dragon Volant',
       genre  : 'метод Франка: англ.мова'
     },
-    Sheridan_Le_Fanu_The_Room_in_the_Dragon_Volant_M - 469.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Octavus Roy Cohen',
+      name   : 'Midnight',
       genre  : 'метод Франка: англ.мова'
     },
-    Cohen_Midnight_M - 470.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Graham Greene',
+      name   : 'A Gun for Sale',
       genre  : 'метод Франка: англ.мова'
     },
-    Greene_A_Gun_for_Sale_M - 472.doc
     {
       id     : '00',
       author : 'Jerome K. Jerome.',
-      name   : '',
+      name   : 'Three Men In A Boat ',
       genre  : 'метод Франка: англ.мова'
     },
-    Jerome_Three Men In A Boat_M - 479.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Agatha Christie',
+      name   : 'The ABC Murders',
       genre  : 'метод Франка: англ.мова'
     },
-    Christie_The_ABC_Murders_M - 482.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : 'Treasure Island',
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_Treasure_Island_M - 482.doc
     {
       id     : '00',
       author : '',
@@ -1290,71 +1209,61 @@
     Godfather_1 - 267.doc + Godfather_2 - 226.doc 493
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Edgar Rice Burroughs',
+      name   : 'A Princess Of Mars',
       genre  : 'метод Франка: англ.мова'
     },
-    Burroughs_A Princess Of Mars_M - 499.doc
     {
       id     : '00',
       author : 'Mark Twain',
-      name   : '',
+      name   : 'The Prince and the Pauper',
       genre  : 'метод Франка: англ.мова'
     },
-    Twain_The_Prince_and_the_Pauper_M - 518.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Dorothy L. Sayers',
+      name   : 'Whose Body?',
       genre  : 'метод Франка: англ.мова'
     },
-    Sayers_Whose_Body_M - 527.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Dashiell Hammett',
+      name   : 'The Maltese Falcon',
       genre  : 'метод Франка: англ.мова'
     },
-    Hammett_The_Maltese_Falcon_M - 556.doc
     {
       id     : '00',
       author : 'Mark Twain',
-      name   : '',
+      name   : 'The Adventures of Tom Sawyer',
       genre  : 'метод Франка: англ.мова'
     },
-    Twain_The_Adventures_of_Tom_Sawyer_M - 570.doc
     {
       id     : '00',
       author : 'R. L. Stevenson',
-      name   : '',
+      name   : 'The Black Arrow ',
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_The Black Arrow_M - 581.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Agatha Christie',
+      name   : 'Murder On The Orient Express',
       genre  : 'метод Франка: англ.мова'
     },
-    Christie_Murder_On_The_Orient_Express_M - 587.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'William Somerset Maugham',
+      name   : 'Theatre',
       genre  : 'метод Франка: англ.мова'
     },
-    Maugham_Theatre_M - 632.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John Ronald Reuel Tolkien',
+      name   : 'The Hobbit',
       genre  : 'метод Франка: англ.мова'
     },
-    Tolkien_The Hobbit_M - 664.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'H. R. Haggard',
+      name   : "King Solomon's Mines",
       genre  : 'метод Франка: англ.мова'
-    },
-    Haggard_King_Solomon's_Mines_M - 679.doc
+    }
