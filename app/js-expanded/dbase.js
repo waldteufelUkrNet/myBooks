@@ -353,13 +353,13 @@
     },
     {
       id     : '00052',
-      author : 'E. Seton Thompson',
+      author : 'E. Thompson Seton',
       name   : 'Lobo, the King of Currumpaw',
       genre  : 'метод Франка: англ.мова'
     },
     {
       id     : '00053',
-      author : 'E. Seton Thompson',
+      author : 'E. Thompson Seton',
       name   : 'Vixen, the Springfield Fox',
       genre  : 'метод Франка: англ.мова'
     },
@@ -377,7 +377,7 @@
     },
     {
       id     : '00056',
-      author : 'E. Seton Thompson',
+      author : 'E. Thompson Seton',
       name   : 'Raggylug. The Story of a Cottontail Rabbit',
       genre  : 'метод Франка: англ.мова'
     },
@@ -437,249 +437,215 @@
     },
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Oscar Wilde',
+      name   : 'The Canterville Ghost',
       genre  : 'метод Франка: англ.мова'
     },
-    Wilde_The Canterville Ghost_M - 93.doc
     {
       id     : '00',
       author : 'Stephen King',
-      name   : '',
+      name   : 'Children of the Corn',
       genre  : 'метод Франка: англ.мова'
     },
-    King_Children_Of_The_Corn_M - 96.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'W.B. Yeats',
+      name   : 'Stories Of Red Hanrahan',
       genre  : 'метод Франка: англ.мова'
     },
-    Yeats_Stories_of_Red_Hanrahan_M - 102.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'The Adventure of the Priory School',
       genre  : 'метод Франка: англ.мова'
     },
-    Conan_Doyle_The_Adventure_of_the_Priory_School_M - 103.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'O’Henry',
+      name   : 'The Octopus Marooned',
       genre  : 'метод Франка: англ.мова'
     },
-    O_Henry_The_Octopus_Marooned_M - 103.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John W. Smith',
+      name   : 'Twist-ending Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Smith_Twist-ending_Stories_M - 106.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'E. Thompson Seton',
+      name   : 'The Slum Cat',
       genre  : 'метод Франка: англ.мова'
     },
-    Seton_Thompson_The_Slum_Cat_M - 108.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Beowulf For Children',
       genre  : 'метод Франка: англ.мова'
     },
-    Beowulf_For_Children_M - 109.doc
     {
       id     : '00',
       author : 'Stephen King',
-      name   : '',
+      name   : 'The Monkey',
       genre  : 'метод Франка: англ.мова'
     },
-    King_The_Monkey_M - 111.doc
     {
       id     : '00',
       author : 'Francis Scott Fitzgerald',
-      name   : '',
+      name   : "Pat Hobby's Secret And Other Stories",
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Fitzgerald_Pat_Hobby's_Secret_M - 111.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'William Tell',
       genre  : 'метод Франка: англ.мова'
     },
-    William_Tell_M - 112.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Edward Lear',
+      name   : 'A Book of Nonsense',
       genre  : 'метод Франка: англ.мова'
     },
-    Lear_A_Book_of_Nonsense_M - 113.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'E. Thompson Seton',
+      name   : 'Tito. The Story of the Coyote That Learned How',
       genre  : 'метод Франка: англ.мова'
     },
-    Thompson_Seton_Tito_M - 114.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Virginia Woolf',
+      name   : 'A Haunted House and other stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Woolf_A_Haunted_House_and_other_stories_M - 115.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Jerome K. Jerome',
+      name   : 'Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Jerome_K_Jerome_Stories_M - 116.doc
     {
       id     : '00',
       author : 'Stephen King',
-      name   : '',
+      name   : 'Riding the Bullet',
       genre  : 'метод Франка: англ.мова'
     },
-    King_Riding_The_Bullet_M - 117.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Oscar Wilde',
+      name   : 'Lord Arthur Savile’s crime and other stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Wilde_Lord_Arthur_Savile_s_crime_and_other_stories_M - 119.doc
     {
       id     : '00',
       author : 'Edgar Allan Poe',
-      name   : '',
+      name   : 'The Murders In The Rue Morgue',
       genre  : 'метод Франка: англ.мова'
     },
-    Poe_The_Murders_in_the_Rue_Morgue_M - 120.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Bret Harte',
+      name   : 'Miss Peggy’s Proteges and Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Bret_Harte_Miss_Peggy’s_Proteges_and_Other_Stories_M - 124.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John W. Smith',
+      name   : 'Too Good To Be True And Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    John_Smith_Stories_M - 128.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'James Joyce',
+      name   : 'The Dead',
       genre  : 'метод Франка: англ.мова'
     },
-    Joyce_The Dead_M - 132.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John W. Smith',
+      name   : 'Scary Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Smith_Scary_Stories_M - 132.doc
     {
       id     : '00',
       author : 'Stephen King',
-      name   : '',
+      name   : 'The Night Flier',
       genre  : 'метод Франка: англ.мова'
     },
-    King_Night_Flier_M - 134.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Oscar Wilde',
+      name   : 'The Happy Prince And Other Tales',
       genre  : 'метод Франка: англ.мова'
     },
-    Wilde_Fairy_Tales_M - 134.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'North American Indian Legends',
       genre  : 'метод Франка: англ.мова'
     },
-    Indian_Legends_M - 139.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Herman Melville',
+      name   : 'Bartleby, The Scrivener',
       genre  : 'метод Франка: англ.мова'
     },
-    Melville_Bartleby_M - 139.doc
     {
       id     : '00',
       author : 'Edgar Allan Poe',
-      name   : '',
+      name   : 'The Fall of the House of Usher And Other Stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Poe_The_Fall_of_the_House_of_Usher_Stories_M - 143.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'R. L. Stevenson',
+      name   : 'The Pavilion On The Links ',
       genre  : 'метод Франка: англ.мова'
     },
-    Stevenson_The_Pavilion_On_The_Links_M - 145.doc
     {
       id     : '00',
-      author : '',
+      author : 'Bret Harte',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
-    Bret_Harte_Stephen_Leacock_Nonsense_M - 150.doc
+    розбити на дві книги! Bret_Harte_Stephen_Leacock_Nonsense_M - 150.doc
     {
       id     : '00',
       author : 'Francis Scott Fitzgerald',
-      name   : '',
+      name   : 'The Popular Girl',
       genre  : 'метод Франка: англ.мова'
     },
-    Scott_Fitzgerald_The_Popular_Girl_M - 150.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Graham Greene',
+      name   : "No Man's Land",
       genre  : 'метод Франка: англ.мова'
     },
-    Greene_No_Man_s_Land_M - 151.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Arthur Conan Doyle',
+      name   : 'Tales Of Pirates',
       genre  : 'метод Франка: англ.мова'
     },
-    Conan_Doyle_Tales_of_Pirates_M - 153.doc
     {
       id     : '00',
       author : 'Stephen King',
-      name   : '',
+      name   : "Dolan's Cadillac",
       genre  : 'метод Франка: англ.мова'
     },
-    King_Dolan_s_Cadillac_M - 155.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'noname',
+      name   : 'Sir Gawain and the Green Knight',
       genre  : 'метод Франка: англ.мова'
     },
-    Sir_Gawain_and_the_Green_Knight_M - 155.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'Mark Twain',
+      name   : 'The Million Pound Bank Note and other stories',
       genre  : 'метод Франка: англ.мова'
     },
-    Twain_The_Million_Pound_Bank_Note_M - 155.doc
     {
       id     : '00',
       author : '',
@@ -717,11 +683,10 @@
     Lawrence_The_Shadow_in_the_Rose_Garden_and_Other_Stories_M - 171.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John W. Smith',
+      name   : 'Longer Wacky Stories With Twist Endings',
       genre  : 'метод Франка: англ.мова'
     },
-    Smith_Longer_Wacky_Stories_M - 172.doc
     {
       id     : '00',
       author : '',
@@ -752,7 +717,7 @@
     Collins_The_Dream_Woman_M - 176.doc
     {
       id     : '00',
-      author : '',
+      author : 'Oscar Wilde',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -780,7 +745,7 @@
     Swift_Gulliver's Travels_M - 183.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -808,7 +773,7 @@
     Doyle_Silver_Blaze_M - 192.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -836,14 +801,14 @@
     Saki_Stories_M - 206.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
     Stevenson_The Rajahs Diamond_M - 206.doc
     {
       id     : '00',
-      author : '',
+      author : 'Graham Greene',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -857,7 +822,7 @@
     Steinbeck_Of_Mice_and_Men_M - 214.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -871,18 +836,17 @@
     Austin_Lady_Susan_M - 218.doc
     {
       id     : '00',
-      author : '',
+      author : 'Oscar Wilde',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
     Wilde_Legends_M - 220.doc
     {
       id     : '00',
-      author : '',
-      name   : '',
+      author : 'John W. Smith',
+      name   : 'More Longer Wacky Stories With Twist Endings',
       genre  : 'метод Франка: англ.мова'
     },
-    Smith_More_Longer_Wacky_Stories_With_Twist_Endings_M - 221.doc
     {
       id     : '00',
       author : '',
@@ -990,7 +954,7 @@
     Maugham_Stories_Mister_M - 268.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1004,7 +968,7 @@
     Gallico_Mrs_Harris_Goes_to_Paris_M - 274.doc
     {
       id     : '00',
-      author : '',
+      author : 'O’Henry',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1074,7 +1038,7 @@
     Greene_The_Tenth_Man_M - 306.rtf
     {
       id     : '00',
-      author : '',
+      author : 'Arthur Conan Doyle',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1298,7 +1262,7 @@
     Greene_A_Gun_for_Sale_M - 472.doc
     {
       id     : '00',
-      author : '',
+      author : 'Jerome K. Jerome.',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1312,7 +1276,7 @@
     Christie_The_ABC_Murders_M - 482.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1333,7 +1297,7 @@
     Burroughs_A Princess Of Mars_M - 499.doc
     {
       id     : '00',
-      author : '',
+      author : 'Mark Twain',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
@@ -1354,14 +1318,14 @@
     Hammett_The_Maltese_Falcon_M - 556.doc
     {
       id     : '00',
-      author : '',
+      author : 'Mark Twain',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
     Twain_The_Adventures_of_Tom_Sawyer_M - 570.doc
     {
       id     : '00',
-      author : '',
+      author : 'R. L. Stevenson',
       name   : '',
       genre  : 'метод Франка: англ.мова'
     },
