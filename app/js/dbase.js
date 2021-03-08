@@ -41,7 +41,7 @@
     },
     {
       id     : "00006",
-      author : "E.T.A. Hoffmann",
+      author : "Ernst Theodor Amadeus Hoffmann",
       name   : "Der Sandmann",
       genre  : "метод Франка: нім.мова"
     },
@@ -59,7 +59,7 @@
     },
     {
       id     : "00009",
-      author : "I.Frank",
+      author : "Ilya Frank",
       name   : "Dies Leben kömmt mir vor als eine Renne-Bahn. Deutsche Gedichte aus dem 17. Jahrhundert.",
       genre  : "метод Франка: нім.мова"
     },
@@ -221,13 +221,13 @@
     },
     {
       id     : "00036",
-      author : "I.Frank",
+      author : "Ilya Frank",
       name   : "Wandrers Nachtlied",
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00037",
-      author : "E. M. Remarque",
+      author : "Erich Maria Remarque",
       name   : "Drei Kameraden",
       genre  : "метод Франка: нім.мова"
     },
@@ -353,7 +353,7 @@
     },
     {
       id     : "00058",
-      author : "E. Thompson Seton",
+      author : "Ernest Thompson Seton",
       name   : "Lobo, the King of Currumpaw",
       genre  : "метод Франка: англ.мова"
     },
@@ -365,7 +365,7 @@
     },
     {
       id     : "00060",
-      author : "E. Thompson Seton",
+      author : "Ernest Thompson Seton",
       name   : "Vixen, the Springfield Fox",
       genre  : "метод Франка: англ.мова"
     },
@@ -389,7 +389,7 @@
     },
     {
       id     : "00064",
-      author : "E. Thompson Seton",
+      author : "Ernest Thompson Seton",
       name   : "Raggylug. The Story of a Cottontail Rabbit",
       genre  : "метод Франка: англ.мова"
     },
@@ -407,7 +407,7 @@
     },
     {
       id     : "00067",
-      author : "H. P. Lovecraft",
+      author : "Howard Phillips Lovecraft",
       name   : "The Rats In The Walls",
       genre  : "метод Франка: англ.мова"
     },
@@ -420,7 +420,7 @@
     {
       id     : "00069",
       author : "William Somerset Maugham",
-      name   : "A Man with a Conscience ",
+      name   : "A Man with a Conscience",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -431,7 +431,7 @@
     },
     {
       id     : "00071",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "The Isle of Voices",
       genre  : "метод Франка: англ.мова"
     },
@@ -515,7 +515,7 @@
     },
     {
       id     : "00085",
-      author : "W.B. Yeats",
+      author : "William Butler Yeats",
       name   : "Stories Of Red Hanrahan",
       genre  : "метод Франка: англ.мова"
     },
@@ -533,19 +533,19 @@
     },
     {
       id     : "00088",
-      author : "John W. Smith",
+      author : "John William Smith",
       name   : "Twist-ending Stories",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00089",
-      author : "H. P. Lovecraft",
+      author : "Howard Phillips Lovecraft",
       name   : "The Call Of Cthulhu",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00090",
-      author : "E. Thompson Seton",
+      author : "Ernest Thompson Seton",
       name   : "The Slum Cat",
       genre  : "метод Франка: англ.мова"
     },
@@ -557,7 +557,7 @@
     },
     {
       id     : "00092",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "The Bottle Imp",
       genre  : "метод Франка: англ.мова"
     },
@@ -587,7 +587,7 @@
     },
     {
       id     : "00097",
-      author : "E. Thompson Seton",
+      author : "Ernest Thompson Seton",
       name   : "Tito. The Story of the Coyote That Learned How",
       genre  : "метод Франка: англ.мова"
     },
@@ -599,7 +599,7 @@
     },
     {
       id     : "00099",
-      author : "Jerome K. Jerome",
+      author : "Jerome Klapka Jerome",
       name   : "Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -629,7 +629,7 @@
     },
     {
       id     : "00104",
-      author : "John W. Smith",
+      author : "John William Smith",
       name   : "Too Good To Be True And Other Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -641,7 +641,7 @@
     },
     {
       id     : "00106",
-      author : "John W. Smith",
+      author : "John William Smith",
       name   : "Scary Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -677,8 +677,8 @@
     },
     {
       id     : "00112",
-      author : "R. L. Stevenson",
-      name   : "The Pavilion On The Links ",
+      author : "Robert Louis Stevenson",
+      name   : "The Pavilion On The Links",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -737,19 +737,19 @@
     },
     {
       id     : "00122",
-      author : "D. H. Lawrence",
+      author : "David Herbert Lawrence",
       name   : "The Shadow in the Rose Garden and Other Stories",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00123",
-      author : "John W. Smith",
+      author : "John William Smith",
       name   : "Longer Wacky Stories With Twist Endings",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00124",
-      author : "W. W. Jacobs",
+      author : "William Wymark Jacobs",
       name   : "A Love Passage and Other Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -774,7 +774,7 @@
     {
       id     : "00128",
       author : "Oscar Wilde",
-      name   : "The Importance of Being Earnest.A Trivial Comedy for Serious People",
+      name   : "The Importance of Being Earnest. A Trivial Comedy for Serious People",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -815,8 +815,8 @@
     },
     {
       id     : "00135",
-      author : "R. L. Stevenson",
-      name   : "The Suicide Club ",
+      author : "Robert Louis Stevenson",
+      name   : "The Suicide Club",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -827,7 +827,7 @@
     },
     {
       id     : "00137",
-      author : "Sir Walter Scott",
+      author : "Walter Scott",
       name   : "Ivanhoe",
       genre  : "метод Франка: англ.мова"
     },
@@ -839,14 +839,14 @@
     },
     {
       id     : "00139",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "The Rajah's Diamond",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00140",
       author : "Graham Greene",
-      name   : "The Third Man ",
+      name   : "The Third Man",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -857,7 +857,7 @@
     },
     {
       id     : "00142",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "The strange case of dr. Jekyll and mr. Hyde",
       genre  : "метод Франка: англ.мова"
     },
@@ -875,7 +875,7 @@
     },
     {
       id     : "00145",
-      author : "John W. Smith",
+      author : "John William Smith",
       name   : "More Longer Wacky Stories With Twist Endings",
       genre  : "метод Франка: англ.мова"
     },
@@ -917,7 +917,7 @@
     },
     {
       id     : "00152",
-      author : "noname`",
+      author : "James Baldwin",
       name   : "Robinson Crusoe Written Anew for Children by James Baldwin",
       genre  : "метод Франка: англ.мова"
     },
@@ -941,7 +941,7 @@
     },
     {
       id     : "00156",
-      author : "H. G. Wells",
+      author : "Herbert George Wells",
       name   : "The Time Machine",
       genre  : "метод Франка: англ.мова"
     },
@@ -953,7 +953,7 @@
     },
     {
       id     : "00158",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "The Beach of Falesá (Island Nights' Entertainments)",
       genre  : "метод Франка: англ.мова"
     },
@@ -995,7 +995,7 @@
     },
     {
       id     : "00165",
-      author : "H. G. Wells",
+      author : "Herbert George Wells",
       name   : "Short Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -1007,19 +1007,19 @@
     },
     {
       id     : "00167",
-      author : "P. L. Travers",
+      author : "Pamela Lyndon Travers",
       name   : "Mary Poppins",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00168",
-      author : "L. Frank Baum",
+      author : "Lyman Frank Baum",
       name   : "The Wonderful Wizard Of Oz",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00169",
-      author : "L. Frank Baum",
+      author : "Lyman Frank Baum",
       name   : "The Marvelous Land Of Oz",
       genre  : "метод Франка: англ.мова"
     },
@@ -1073,7 +1073,7 @@
     },
     {
       id     : "00178",
-      author : "P. G. Wodehouse",
+      author : "Pelham Grenville Wodehouse",
       name   : "Stories",
       genre  : "метод Франка: англ.мова"
     },
@@ -1103,7 +1103,7 @@
     },
     {
       id     : "00183",
-      author : "Robert E. Howard",
+      author : "Robert Ervin Howard",
       name   : "Conan",
       genre  : "метод Франка: англ.мова"
     },
@@ -1115,13 +1115,13 @@
     },
     {
       id     : "00185",
-      author : "Robert E. Howard",
+      author : "Robert Ervin Howard",
       name   : "Stories",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00186",
-      author : "H. G. Wells",
+      author : "Herbert George Wells",
       name   : "The Invisible Man",
       genre  : "метод Франка: англ.мова"
     },
@@ -1133,13 +1133,13 @@
     },
     {
       id     : "00188",
-      author : "Thornton W. Burgess",
+      author : "Thornton Waldo Burgess",
       name   : "Peter Rabbit",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00189",
-      author : "H. P. Lovecraft",
+      author : "Howard Phillips Lovecraft",
       name   : "At The Mountains Of Madness",
       genre  : "метод Франка: англ.мова"
     },
@@ -1181,13 +1181,13 @@
     },
     {
       id     : "00196",
-      author : "H. G. Wells",
+      author : "Herbert George Wells",
       name   : "The War of the Worlds",
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00197",
-      author : "J. Sheridan LeFanu",
+      author : "Joseph Sheridan Le Fanu",
       name   : "The Room in the Dragon Volant",
       genre  : "метод Франка: англ.мова"
     },
@@ -1205,8 +1205,8 @@
     },
     {
       id     : "00200",
-      author : "Jerome K. Jerome.",
-      name   : "Three Men In A Boat ",
+      author : "Jerome Klapka Jerome",
+      name   : "Three Men In A Boat",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -1217,7 +1217,7 @@
     },
     {
       id     : "00202",
-      author : "R. L. Stevenson",
+      author : "Robert Louis Stevenson",
       name   : "Treasure Island",
       genre  : "метод Франка: англ.мова"
     },
@@ -1241,7 +1241,7 @@
     },
     {
       id     : "00206",
-      author : "Dorothy L. Sayers",
+      author : "Dorothy Leigh Sayers",
       name   : "Whose Body?",
       genre  : "метод Франка: англ.мова"
     },
@@ -1259,8 +1259,8 @@
     },
     {
       id     : "00209",
-      author : "R. L. Stevenson",
-      name   : "The Black Arrow ",
+      author : "Robert Louis Stevenson",
+      name   : "The Black Arrow",
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -1283,7 +1283,7 @@
     },
     {
       id     : "00213",
-      author : "H. R. Haggard",
+      author : "Henry Rider Haggard",
       name   : "King Solomon's Mines",
       genre  : "метод Франка: англ.мова"
     },
