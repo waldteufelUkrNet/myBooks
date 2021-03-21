@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+/* ↓↓↓ custom scroll ↓↓↓ */
+.wjs-scroll {
+  position: relative;
+  &__content-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    overflow: scroll;
+  }
+  &__wrapper {
+    position: absolute;
+    z-index: 1;
+    &_right {
+      top     : 0;
+      right   : 0;
+      height  : calc(100% - 0px);
+      width   : 12px;
+    }
+  }
+  &__line {
+    position: absolute;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    &_right {
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%);
+      height: 100%;
+      width: 7px;
+    }
+  }
+  &__thumb {
+    position: absolute;
+    cursor: pointer;
+    border: 0px solid grey;
+    border-radius: 4px;
+    background-color: grey;
+    &_right {
+      top: 1px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 6px;
+      min-height: 30px;
+    }
+  }
+}
+/* ↑↑↑ custom scroll ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////

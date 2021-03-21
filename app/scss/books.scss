@@ -34,7 +34,7 @@ html #book {
 }
 
 .first-screen {
-  height          : calc(100vh - 66px - 60px);
+  height          : calc(100%);
   overflow        : hidden;
   display         : flex;
   img {

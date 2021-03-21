@@ -213,7 +213,7 @@ html {
 
 .main {
   height: 100%;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 15px;
   position: relative;
@@ -428,7 +428,6 @@ h1 {
 }
 
 .books-list {
-  border: 1px solid lightgrey;
   overflow-y: auto;
   padding: 3px 6px;
   display: -webkit-box;
@@ -474,6 +473,18 @@ h1 {
 @media (min-width: 1200px) {
   .book {
     width: calc(33.33% - 5px);
+  }
+}
+
+@media (min-width: 1500px) {
+  .book {
+    width: calc(25% - 5px);
+  }
+}
+
+@media (min-width: 1900px) {
+  .book {
+    width: calc(20% - 5px);
   }
 }
 
@@ -546,6 +557,17 @@ h1 {
 
 .book-sm:hover {
   background-color: lightcyan;
+}
+
+.book__markers-wrapper {
+  height: 26px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.book__marker-img {
+  height: 26px;
 }
 
 .booksDivider {

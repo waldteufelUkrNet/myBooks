@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="wjs-MobileHeightFix" lang="en">
   <head>
     <title></title>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <script defer src="../../js/dbase.js"></script>
     <script defer src="../../js/books.js"></script>
     <script defer src="../../js/modules.js"></script>
+    <script defer src="../../js/wScrollFix.js"></script>
   </head>
   <body>
     <main class="main">
@@ -61,6 +62,11 @@
           <p class="tac">Эрнест Хемингуэй</p>
           <p class="tac">Киллеры</p>
           <p class="tac">Метод чтения Ильи Франка</p>
+        </div>
+        <div class="wjs-scrollfix" data-scrollfix="66">
+          <div class="wjs-scrollfix__content">
+            <audio src="audio/audio.mp3" controls style="width:100%"></audio>
+          </div>
         </div>
         <section>
           <p><span class="btext">The door of Henry’s lunch-room opened</span>
@@ -1349,7 +1355,6 @@
           <p class="btext">“I can’t stand to think about him waiting in the room and knowing he’s going to get it. It’s too damned awful.”</p>
           <p class="btext">“Well,” said George, “you better not think about it.”</p>
         </section>
-        <audio src="audio/audio.mp3" controls></audio>
       </div>
       <!-- ↓↓↓ modules: bbp (start) ↓↓↓-->
       <div class="bbp">

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/books.png">
+    <link rel="stylesheet" href="css/wScroll.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/w.css">
     <script defer src="js/w.js"></script>
     <script defer src="js/dbase.js"></script>
+    <script defer src="js/wScroll.js"></script>
     <script defer src="js/index.js"></script>
     <title>Мої книги</title>
   </head>
@@ -49,7 +51,13 @@
         </div>
         <div class="books-parser-wrapper"><a class="parserforFrank" href="books/parser/parser.html">парсер для м.Франка</a></div>
       </div>
-      <div class="books-list"></div>
+      <div class="wjs-scroll" data-scroll="right" data-scroll-hidden="horizontal">
+        <div class="wjs-scroll__content-wrapper">
+          <div class="wjs-scroll__content">
+            <div class="books-list"></div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
