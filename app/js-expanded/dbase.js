@@ -28,7 +28,7 @@
       id     : "00003",
       author : "Theodor Storm",
       name   : "Immensee",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -112,7 +112,7 @@
       id     : "00015",
       author : "Wilhelm Hauff",
       name   : "Kalif Storch. Der kleine Muck. Der Zwerg Nase",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -175,7 +175,7 @@
       id     : "00024",
       author : "Jacob und Wilhelm Grimm",
       name   : "Grimms Märchen",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
