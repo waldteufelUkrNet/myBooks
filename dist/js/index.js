@@ -16,6 +16,9 @@
   // відображення кількості книжок в базі
   document.getElementById('booksAmount').innerHTML = books.sort(compare).length + ' кн.';
 
+  // розрахунок висоти і кастомний скрол
+  setCustomScroll();
+
   // побудова списку
   buildBooksList();
 /* ↑↑↑ /MAIN LOGIC ↑↑↑ */
@@ -186,6 +189,14 @@
       }
 
       if (bookListType == 'big') {
+        let markers = '';
+        if (item.markers && item.markers.length) {
+          markers = '<div class="book__markers-wrapper">';
+          for (let i = 0; i < item.markers.length; i++) {
+            markers += '<img class="book__marker-img" src="img/' + item.markers[i] + '.png">';
+          }
+          markers += '</div>';
+        }
         book = '\
                 <a class="book" href="books/' + item.id + '/index.html">\
                   <div class="book__img-wrapper">\
@@ -196,7 +207,7 @@
                     <div class="book__name">' + item.name + '</div>\
                     <div class="book__genre">' + item.genre + '</div>\
                     <div class="book__id">' + item.id + '</div>\
-                  </div>\
+                  </div>' + markers + '\
                 </a>\
                ';
       } else if (bookListType == 'small') {
@@ -208,6 +219,8 @@
                ';
       };
       bookList.insertAdjacentHTML('beforeEnd', book);
+
+
     });
   }
 
@@ -330,6 +343,15 @@
    */
   function compare( a, b ) {
     return a[keyForCompare].localeCompare(b[keyForCompare]);
+  }
+
+  function setCustomScroll() {
+    let height = document.querySelector('.main').clientHeight -
+                 document.querySelector('.header-wrapper').clientHeight;
+    let scrollElem = document.querySelector('.wjs-scroll');
+    scrollElem.style.height = height + 'px';
+    scrollElem.style.border = '1px solid lightgrey';
+    wSetScroll( scrollElem, {right:true, overflowXHidden:true})
   }
 /* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////

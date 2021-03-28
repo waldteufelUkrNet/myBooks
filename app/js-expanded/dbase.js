@@ -21,14 +21,14 @@
       id     : "00002",
       author : "Hanns Heinz Ewers",
       name   : "Die Spinne",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00003",
       author : "Theodor Storm",
       name   : "Immensee",
-      markers : ['audio'],
+      markers : [],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -42,14 +42,14 @@
       id     : "00005",
       author : "Joseph Roth",
       name   : "Die Legende vom heiligen Trinker",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00006",
       author : "Ernst Theodor Amadeus Hoffmann",
       name   : "Der Sandmann",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -77,7 +77,7 @@
       id     : "00010",
       author : "Stefan Zweig",
       name   : "Schachnovelle",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -91,7 +91,7 @@
       id     : "00012",
       author : "Otfried Preußler",
       name   : "Die kleine Hexe",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -112,7 +112,7 @@
       id     : "00015",
       author : "Wilhelm Hauff",
       name   : "Kalif Storch. Der kleine Muck. Der Zwerg Nase",
-      markers : ['audio'],
+      markers : [],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -175,7 +175,7 @@
       id     : "00024",
       author : "Jacob und Wilhelm Grimm",
       name   : "Grimms Märchen",
-      markers : ['audio'],
+      markers : [],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -357,21 +357,21 @@
       id     : "00050",
       author : "Bret Harte",
       name   : "The Stolen Cigar Case",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00051",
       author : "Ray Bradbury",
       name   : "A Sound of Thunder",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00052",
       author : "Stephen King",
       name   : "Strawberry Spring",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: англ.мова"
     },
     {
@@ -385,14 +385,14 @@
       id     : "00054",
       author : "Stephen King",
       name   : "Luckey Quarter",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: англ.мова"
     },
     {
       id     : "00055",
       author : "William Somerset Maugham",
       name   : "The three fat women of Antibes",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: англ.мова"
     },
     {
