@@ -9,10 +9,12 @@
     <meta name="book-id" content="">
     <link rel="icon" href="../../img/book.png">
     <link rel="stylesheet" href="../../css/w.css">
+    <link rel="stylesheet" href="../../css/wScroll.css">
     <link rel="stylesheet" href="../../css/books.css">
     <link rel="stylesheet" href="../../css/modules.css">
     <script defer src="../../js/w.js"></script>
     <script defer src="../../js/dbase.js"></script>
+    <script defer src="../../js/wScroll.js"></script>
     <script defer src="../../js/books.js"></script>
     <script defer src="../../js/modules.js"></script>
     <script defer src="../../js/wScrollFix.js"></script>
@@ -48,448 +50,452 @@
         </div>
       </div>
       <!-- ↑↑↑ modules: top-book-panel (end) ↑↑↑-->
-      <div id="book">
-        <!-- ↓↓↓ modules: loader (start) ↓↓↓-->
-        <div class="loader loader_active">
-          <div class="loader__img-wrapper"><img class="loader__img" src="../../img/loader.gif"></div>
-          <p class="loader__text">завантаження...</p>
+      <div class="wjs-scroll" id="book" data-scroll="right" data-scroll-hidden="horizontal">
+        <div class="wjs-scroll__content-wrapper">
+          <div class="wjs-scroll__content">
+            <!-- ↓↓↓ modules: loader (start) ↓↓↓-->
+            <div class="loader loader_active">
+              <div class="loader__img-wrapper"><img class="loader__img" src="../../img/loader.gif"></div>
+              <p class="loader__text">завантаження...</p>
+            </div>
+            <!-- ↑↑↑ modules: loader (end) ↑↑↑-->
+            <div class="name-section">
+              <div class="name-section__author"></div>
+              <div class="name-section__book"></div>
+              <p class="tac">Уильям Сомерсет Моэм</p>
+              <p class="tac">Немец Гарри</p>
+              <p class="tac">адаптировала Ольга Ламонова</p>
+              <p class="tac">Метод чтения Ильи Франка</p>
+            </div>
+            <section>
+              <p><span class="btext">I was in Thursday Island and I wanted very much to go to New Guinea</span>
+                (я был на острове Четверга и очень хотел поехать в Новую Гвинею;
+                <span class="f-coni">Thursday Island — о. Четверга, административный и торговый центр группы островов Торресова пролива</span>)<span class="btext">. Now the only way in which I could do this</span>
+                (так вот, единственный способ, которым я мог это сделать;
+                <span class="f-coni">way — путь, дорога; образ действия, способ, путь, средство</span>)
+                <span class="btext"> was by getting a pearling lugger to take me across the Arafura Sea</span>
+                (/так это/ нанять люггер ловцов жемчуга, который перевез бы меня через Арафурское море = чтобы пересечь Арафурское море;
+                <span class="f-coni">pearl — жемчуг; to pearl — украшать жемчугом; добывать жемчуг; lugger — люггер — трехмачтовое судно с рейковым парусным вооружением</span>)<span class="btext">. The pearl fishery at that time was in a bad way</span>
+                (в то время /года/ ловля жемчуга шла плохо;
+                <span class="f-coni">fish — рыба; to fish — ловить рыбу; fishery — рыболовство; bad — плохой, дурной; неблагоприятный, неудачный</span>)
+                <span class="btext"> and a flock of neat little craft lay anchored in the harbour</span>
+                (и множество аккуратных небольших суденышек стояло в гавани на якоре;
+                <span class="f-coni">flock — стадо; толпа, скопление /людей/; craft — ремесло; судно, собир. суда; to lie — лежать; быть, оставаться /в каком-либо состоянии или положении/; anchor — якорь; to anchor — ставить на якорь</span>)<span class="btext">. I found a skipper with nothing much to do</span>
+                (я отыскал капитана /торгового/ судна, который был не особенно занят)
+                <span class="btext"> </span>
+                (<span class="f-coni">the journey to Merauke and back could hardly take him less than a month (путешествие до Мерауке и назад вряд ли заняло бы у него меньше месяца)</span>)
+                <span class="btext"> and with him I made the necessary arrangements</span>
+                (и /вместе/ с ним я сделал /все/ необходимые приготовления;
+                <span class="f-coni">arrangements — приведение в порядок; меры, приготовления /к чему-либо/</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">Guinea ['gInI], pearling ['pWlIN], anchor ['xNkq], harbour ['hQ:bq]</p><br>
+              <p class="btext">I was in Thursday Island and I wanted very much to go to New Guinea. Now the only way in which I could do this was by getting a pearling lugger to take me across the Arafura Sea. The pearl fishery at that time was in a bad way and a flock of neat little craft lay anchored in the harbour. I found a skipper with nothing much to do (the journey to Merauke and back could hardly take him less than a month) and with him I made the necessary arrangements.</p><br>
+              <p><span class="btext">He engaged four Torres Straits islanders as crew</span>
+                (в качестве /судовой/ команды он нанял четырех островитян /с Торресова пролива/;
+                <span class="f-coni">island — остров; islander — островитянин, житель острова</span>)
+                <span class="btext"> </span>
+                (<span class="f-coni">the boat was but nineteen tons (судно было /водоизмещением/ всего лишь в девятнадцать тон; boat — лодка, шлюпка; судно, корабль)</span>)
+                <span class="btext"> and we ransacked the local store for canned goods</span>
+                (и мы совершили набег на местный /продуктовый/ магазин, чтобы запастись консервами;
+                <span class="f-coni">to ransack — обыскивать; грабить, разграбить; store — запас, резерв; склад, магазин; can — жестянка; консервная банка; to can — консервировать /пищевые продукты/</span>)<span class="btext">. A day or two before I sailed a man who owned a number of pearlers came to me</span>
+                (за день или два до того как я отплыл, ко мне пришел один человек, владевший несколькими судами для ловли жемчуга;
+                <span class="f-coni">number — число, количество; некоторое количество; pearler — ловец жемчуга; небольшое судно для ловли жемчуга</span>)
+                <span class="btext"> and asked whether on my way I would stop at the island of Trebucket</span>
+                (и спросил, не остановлюсь ли я по пути: «на моем пути» на острове Требукет)
+                <span class="btext"> and leave a sack of flour, another of rice, and some magazines for the hermit who lived there</span>
+                (и /не/ оставлю мешок муки, мешок риса: «другой /мешок с/ рисом» и несколько журналов для отшельника, живущего там)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">islander ['aIlqndq], pearler ['pWlq], hermit ['hWmIt]</p><br>
+              <p class="btext">He engaged four Torres Straits islanders as crew (the boat was but nineteen tons) and we ransacked the local store for canned goods. A day or two before I sailed a man who owned a number of pearlers came to me and asked whether on my way I would stop at the island of Trebucket and leave a sack of flour, another of rice, and some magazines for the hermit who lived there.</p><br>
+              <p><span class="btext">I pricked up my ears</span>
+                (я навострил уши = я заинтересовался;
+                <span class="f-coni">to prick — колоть; to prick up one’s ears — навострить уши; насторожиться</span>)<span class="btext">. It appeared that the hermit had lived by himself on this remote and tiny island for thirty years</span>
+                (оказалось, что этот самый отшельник жил в одиночестве на этом удаленном/уединенном и крошечном островке уже тридцать лет;
+                <span class="f-coni">by oneself — один, без посторонней помощи; один, в одиночестве</span>)<span class="btext">, and when opportunity occurred provisions were sent to him by kindly souls</span>
+                (и при удобном случае добрые люди отсылали ему съестные припасы: «продукты отправлялись ему добряками»;
+                <span class="f-coni">to occur — случаться происходить; provision(s) — снабжение; провизия, пищевые продукты; soul — душа, сердце; человек</span>)<span class="btext">. He said that he was a Dane</span>
+                (он говорил, что он датчанин)<span class="btext">, but in the Torres Straits he was known as German Harry</span>
+                (но на /островах/ Торресова пролива его звали немцем Гарри: «он был известен как немец Гарри»;
+                <span class="f-coni">to know — знать</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">appear [q'pIq], opportunity ["Opq'tju:nItI], provision [prq'vIZ(q)n]</p><br>
+              <p class="btext">I pricked up my ears. It appeared that the hermit had lived by himself on this remote and tiny island for thirty years, and when opportunity occurred provisions were sent to him by kindly souls. He said that he was a Dane, but in the Torres Straits he was known as German Harry.</p><br>
+              <p><span class="btext">His history went back a long way</span>
+                (его история началась очень давно;
+                <span class="f-coni">to go back — возвращаться /на прежнее место/; брать начало</span>)<span class="btext">. Thirty years before, he had been an able seaman on a sailing vessel that was wrecked</span>
+                (тридцать лет назад он был матросом на парусном судне, которое потерпело крушение;
+                <span class="f-coni">able seaman = able-bodied seaman — матрос /звание/; vessel — сосуд, посудина; судно, корабль</span>)
+                <span class="btext"> in those treacherous waters</span>
+                (в тех ненадежных водах = в этом коварном море;
+                <span class="f-coni">treacherous — предательский, вероломный; ненадежный; water(s) — вода; воды, водное пространство</span>)<span class="btext">. Two boats managed to get away</span>
+                (двум лодкам /с моряками с потерпевшего крушение парусника/ удалось спастись;
+                <span class="f-coni">to manage — руководить; суметь /сделать/, ухитриться; to get away — удрать, ускользнуть</span>)
+                <span class="btext"> and eventually hit upon the desert island of Trebucket</span>
+                (и, в конечном счете, обнаружить этот необитаемый остров Требукет;
+                <span class="f-coni">to hit /upon/ — ударять; найти, напасть, обнаружить; desert — пустынный, безлюдный, необитаемый</span>)<span class="btext">. This is well out of the line of traffic</span>
+                (он расположен далеко от транспортного пути;
+                <span class="f-coni">well — хорошо, отлично; значительно, out — зд. указывает на нахождение за пределами чего-либо; line — линия; путь, линия сообщения; traffic — движение, сообщение, транспорт; торговля</span>)
+                <span class="btext"> and it was three years before any ship sighted the castaways</span>
+                (и прошло три года, прежде чем хоть /какой-то/ корабль /смог/ обнаружить потерпевших кораблекрушение;
+                <span class="f-coni">to sight — увидеть; обнаружить</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">vessel ['ves(q)l], treacherous ['tretS(q)rqs], eventually [I'ventSu(q)lI], desert ['dezqt]</p><br>
+              <p class="btext">His history went back a long way. Thirty years before, he had been an able seaman on a sailing vessel that was wrecked in those treacherous waters. Two boats managed to get away and eventually hit upon the desert island of Trebucket. This is well out of the line of traffic and it was three years before any ship sighted the castaways.</p><br>
+              <p><span class="btext">Sixteen men had landed on the island</span>
+                (шестнадцать человек высадились на остров /после кораблекрушения/;
+                <span class="f-coni">land — земля, суша; to land — высаживаться /на берег/</span>)<span class="btext">, but when at last a schooner, driven from her course by stress of weather</span>
+                (но когда наконец шхуна, сбившаяся с курса из-за шторма: «согнанная со своего курса бурей»;
+                <span class="f-coni">to drive — гнать, нести; stress of weather — непогода, буря</span>)<span class="btext">, put in for shelter, no more than five were left</span>
+                (встала на рейде, чтобы укрыться /от шторма/, осталось не более пяти /человек/;
+                <span class="f-coni">to put in — зд. мор. следовать, плыть; заходить в порт, вставать на рейде; shelter — кров, пристанище, убежище</span>)<span class="btext">. When the storm abated the skipper took four of these on board</span>
+                (когда шторм утих, шкипер = капитан того торгового судна взял на борт четырех /из тех моряков/;
+                <span class="f-coni">to abate — ослаблять; уменьшаться, утихать /чаще о буре, эпидемии и т.п./; to take — брать, хватать; брать, сажать, везти /пассажиров/; board — доска; борт /корабля/</span>)
+                <span class="btext"> and eventually landed them at Sydney</span>
+                (и в конечном счете высадил их на берег в Сиднее)<span class="btext">. German Harry refused to go with them</span>
+                (Немец Гарри отказался ехать с ними)<span class="btext">. He said that during those three years he had seen such terrible things</span>
+                (он сказал, что за время тех трех лет он увидел такие страшные/ужасные вещи;
+                <span class="f-coni">thing — вещь, предмет; вещь, явление</span>)
+                <span class="btext"> that he had a horror of his fellow-men</span>
+                (что он с отвращением и страхом относился к людям;
+                <span class="f-coni">horror — отвращение и страх, ужас, омерзение; fellow-man /pl. fellow-men/ — ближний, другой человек, собрат</span>)
+                <span class="btext"> and wished never to live with them again</span>
+                (и больше никогда не хотел жить вместе с ними)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">schooner ['sku:nq], skipper ['skIpq], eventually [I'ventSu(q)lI], terrible ['terqbl]</p><br>
+              <p class="btext">Sixteen men had landed on the island, but when at last a schooner, driven from her course by stress of weather, put in for shelter, no more than five were left. When the storm abated the skipper took four of these on board and eventually landed them at Sydney. German Harry refused to go with them. He said that during those three years he had seen such terrible things that he had a horror of his fellow-men and wished never to live with them again.</p><br>
+              <p><span class="btext">He would say no more</span>
+                (больше он ничего не говорил)<span class="btext">. He was absolutely fixed in his determination to stay, entirely by himself</span>
+                (он был совершенно непоколебим в своем решении остаться в совершенном одиночестве;
+                <span class="f-coni">fixed — неподвижный, закрепленный; постоянный, неменяющийся; determination — решимость, решительность</span>)<span class="btext">, in that lonely place</span>
+                (в том безлюдном месте;
+                <span class="f-coni">lonely — одинокий; глухой, заброшенный</span>)<span class="btext">. Though now and then opportunity had been given him to leave he had never taken it</span>
+                (и хотя время от времени ему предоставлялась возможность уехать, он так никогда ею и не воспользовался)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">absolutely ["xbsq'lu:tlI], determination [dI"tWmI'neIS(q)n], entirely [In'taIqlI]</p><br>
+              <p class="btext">He would say no more. He was absolutely fixed in his determination to stay, entirely by himself, in that lonely place. Though now and then opportunity had been given him to leave he had never taken it.</p><br>
+              <p><span class="btext">A strange man and a strange story</span>
+                (странный человек и странная история;
+                <span class="f-coni">strange — незнакомый; странный, необычный, чудной</span>)<span class="btext">. I learned more about him as we sailed across the desolate sea</span>
+                (я узнал о нем больше, пока мы плыли по пустынному морю;
+                <span class="f-coni">to learn — изучать, учить; узнавать</span>)<span class="btext">. The Torres Straits are peppered with islands</span>
+                (Торресов пролив усыпан островками;
+                <span class="f-coni">pepper — перец; to pepper — перчить, посыпать перцем; осыпать, усеивать</span>)
+                <span class="btext"> and at night we anchored on the lee of one or other of them</span>
+                (и ночью мы становились на якорь под ветром одного или другого из них = под прикрытием одного из этих островков;
+                <span class="f-coni">lee — защита, укрытие; подветренная сторона; on the lee — мор. под ветром</span>)<span class="btext">. Of late new pearling grounds have been discovered near Trebucket</span>
+                (недавно рядом с Требукетом были обнаружены новые участки для добычи жемчуга;
+                <span class="f-coni">ground — земля; участок земли; дно моря; to discover — открывать, делать открытие; обнаруживать, находить</span>)
+                <span class="btext"> and in the autumn pearlers, visiting it now and then</span>
+                (и осенью ловцы жемчуга, посещая его /остров/ время от времени)<span class="btext">, have given German Harry various necessities</span>
+                (давали немцу Гарри различные предметы первой необходимости;
+                <span class="f-coni">necessity — необходимость, нужда; предмет первой необходимости</span>)
+                <span class="btext"> so that he has been able to make himself sufficiently comfortable</span>
+                (чтобы он мог устроиться достаточно удобно)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">desolate ['desqlqt, 'dezqlqt], various ['ve(q)rIqs], necessity [nI'sesItI]</p><br>
+              <p class="btext">A strange man and a strange story. I learned more about him as we sailed across the desolate sea. The Torres Straits are peppered with islands and at night we anchored on the lee of one or other of them. Of late new pearling grounds have been discovered near Trebucket and in the autumn pearlers, visiting it now and then, have given German Harry various necessities so that he has been able to make himself sufficiently comfortable.</p><br>
+              <p><span class="btext">They bring him papers</span>
+                (они привозят ему газеты;
+                <span class="f-coni">paper — бумага; газета, журнал</span>)<span class="btext">, bags of flour and rice</span>
+                (мешки с мукой и рисом)<span class="btext">, and canned meats</span>
+                (и мясные консервы;
+                <span class="f-coni">canned — консервированный; can — жестяная банка; meat — мясо</span>)<span class="btext">. He has a whale boat and used to go fishing in it</span>
+                (у него был вельбот, и он, бывало, отправлялся на нем ловить рыбу;
+                <span class="f-coni">whale boat — китобойное судно; used to do smth. — иметь в прошлом обыкновение делать что-либо</span>)<span class="btext">, but now he is no longer strong enough to manage its unwieldy bulk</span>
+                (но теперь он уже не достаточно силен, чтобы справляться с его громоздкой массой;
+                <span class="f-coni">to wield — уметь обращаться</span>)<span class="btext">. There is abundant pearl shell on the reef that surrounds his island</span>
+                (огромное количество жемчужных раковин находится на рифе, что окружает его остров;
+                <span class="f-coni">abundant — обильный, изобильный</span>)
+                <span class="btext"> and this he used to collect and sell to the pearlers for tobacco</span>
+                (и их он, бывало, собирал и продавал ловцам жемчуга за табак)<span class="btext">, and sometimes he found a good pearl for which he got a considerable sum</span>
+                (а иногда он находил хорошую = крупную жемчужину, за которую он получал значительную сумму /денег/;
+                <span class="f-coni">to get — доставать, добывать; зарабатывать, получать</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">enough [I'nAf], unwieldy [An'wi:ldI], abundant [q'bAndqnt], tobacco [tq'bxkqu]</p><br>
+              <p class="btext">They bring him papers, bags of flour and rice, and canned meats. He has a whale boat and used to go fishing in it, but now he is no longer strong enough to manage its unwieldy bulk. There is abundant pearl shell on the reef that surrounds his island and this he used to collect and sell to the pearlers for tobacco, and sometimes he found a good pearl for which he got a considerable sum.</p><br>
+              <p><span class="btext">It is believed that he has, hidden away somewhere, a collection of magnificent pearls</span>
+                (считается, что у него где-то запрятана коллекция великолепных жемчужин;
+                <span class="f-coni">to believe — верить; думать, полагать, считать; to hide</span>)<span class="btext">. During the war no pearlers came out</span>
+                (во время войны ловцы жемчуга не приплывали;
+                <span class="f-coni">to come out — появляться, являться, приходить</span>)
+                <span class="btext"> and for years he never saw a living soul</span>
+                (и /долгие/ годы он не видел ни одной живой души)<span class="btext">. For all he knew, a terrible epidemic had killed off the entire human race</span>
+                (не исключено /думал он/, что ужасная эпидемия уничтожила всю человеческую расу;
+                <span class="f-coni">for all I know — насколько мне известно; не исключено; to kill /off/ — убивать, лишать жизни; ликвидировать, уничтожать</span>)
+                <span class="btext"> and he was the only man alive</span>
+                (и что он был единственным живым человеком)<span class="btext">. He was asked later what he thought</span>
+                (позже его спросили, о чем он подумал)<span class="btext">.</span>
+              </p>
+              <p><span class="btext">"I thought something had happened</span>
+                (я думал, что что-то случилось)<span class="btext">," he said.</span>
+              </p><br>
+              <p class="btext">magnificent [mxg'nIfIs(q)nt], epidemic ["epI'demIk], thought [TO:t]</p><br>
+              <p class="btext">It is believed that he has, hidden away somewhere, a collection of magnificent pearls. During the war no pearlers came out and for years he never saw a living soul. For all he knew, a terrible epidemic had killed off the entire human race and he was the only man alive. He was asked later what he thought.</p>
+              <p class="btext">"I thought something had happened," he said.</p><br>
+              <p><span class="btext">He ran out of matches and was afraid that his fire would go out</span>
+                (у него закончились спички, и он боялся, что /его/ огонь потухнет;
+                <span class="f-coni">to run out — кончаться, иссякать; остаться без чего-либо /когда иссякнет запас/; to go out — погаснуть</span>)<span class="btext">, so he only slept in snatches</span>
+                (поэтому спал он /только/ урывками;
+                <span class="f-coni">snatch — хватание, попытка схватить; момент, мгновение, короткий промежуток времени</span>)<span class="btext">, putting wood on his fire from time to time all day and all night</span>
+                (подкладывая дрова в огонь время от времени, весь день и всю ночь;
+                <span class="f-coni">wood — лес, роща; дрова, древесное топливо</span>)<span class="btext">. He came to the end of his provisions</span>
+                (съестные припасы у него закончились;
+                <span class="f-coni">to come to an end — прийти к концу, кончиться</span>)
+                <span class="btext"> and lived on chickens</span>
+                (и он питался курятиной;
+                <span class="f-coni">to live /on/ — жить, существовать; питаться /чем-либо/; chicken — цыпленок; курятина, куриное мясо</span>)<span class="btext">, fish</span>
+                (рыбой)
+                <span class="btext"> and coconuts</span>
+                (и кокосами)<span class="btext">. Sometimes he got a turtle</span>
+                (иногда он добывал черепаху)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">match [mxtS], snatch [snxtS], turtle [tWtl]</p><br>
+              <p class="btext">He ran out of matches and was afraid that his fire would go out, so he only slept in snatches, putting wood on his fire from time to time all day and all night. He came to the end of his provisions and lived on chickens, fish and coconuts. Sometimes he got a turtle.</p><br>
+              <p><span class="btext">During the last four months of the year there may be two or three pearlers about</span>
+                (в последние четыре месяца года, где-то рядом с его островом, могут находиться двое или трое ловцов жемчуга;
+                <span class="f-coni">to be about — быть поблизости</span>)
+                <span class="btext"> and not infrequently after the day’s work</span>
+                (и довольно часто, после рабочего дня;
+                <span class="f-coni">frequent — частый, infrequent — редкий</span>)
+                <span class="btext"> they will row in and spend an evening with him</span>
+                (они приплывают /к нему на остров/, и проводят с ним вечер;
+                <span class="f-coni">to row — грести /на лодке/; to spend — тратить, растрачивать; проводить /время/</span>)<span class="btext">. They try to make him drunk</span>
+                (они пытаются напоить его: «сделать его пьяным»;
+                <span class="f-coni">to drink — пить; выпивать, пьянствовать; drunk — пьяный</span>)
+                <span class="btext"> and then they ask him what happened during those three years</span>
+                (и тогда они спрашивают его /о том/, что же произошло во время тех трех лет)
+                <span class="btext"> after the two boat-loads came to the island</span>
+                (после того как две /груженые/ лодки приплыли на этот остров;
+                <span class="f-coni">boat — лодка, шлюпка; load — груз; нагрузка, загрузка; boatload — полная нагрузка лодки</span>)<span class="btext">. How was it that sixteen landed</span>
+                (как же случилось так, что сошло на берег шестнадцать /человек/)
+                <span class="btext"> and at the end of that time only five were left</span>
+                (и к концу того времени = спустя три года, остались только пятеро)<span class="btext">? He never says a word</span>
+                (он никогда ничего не говорит: «он не говорит ни слова»)<span class="btext">. Drunk or sober he is equally silent on that subject</span>
+                (пьяный или трезвый — он /всегда/ одинаково неразговорчив на эту тему;
+                <span class="f-coni">equally — поровну; в равной степени, одинаково; silent — молчаливый, безмолвный; немногословный, замкнутый</span>)
+                <span class="btext"> and if they insist grows angry and leaves them</span>
+                (и если они настаивают, /то он/ сердится, и уходит от них;
+                <span class="f-coni">to grow — расти, вырастать; делаться, становиться; angry — сердитый, гневный</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">infrequently [In'fri:kwqntlI], boatload ['bqutlqud], subject ['sAbdZIkt]</p><br>
+              <p class="btext">During the last four months of the year there may be two or three pearlers about and not infrequently after the day’s work they will row in and spend an evening with him. They try to make him drunk and then they ask him what happened during those three years after the two boat-loads came to the island. How was it that sixteen landed and at the end of that time only five were left? He never says a word. Drunk or sober he is equally silent on that subject and if they insist grows angry and leaves them.</p><br>
+              <p><span class="btext">I forget if it was four or five days</span>
+                (я не помню, /прошло/ ли четыре или пять дней)
+                <span class="btext"> before we sighted the hermit’s little kingdom</span>
+                (прежде чем мы увидели маленькое царство отшельника)<span class="btext">. We had been driven by bad weather to take shelter</span>
+                (из-за плохой погоды мы были вынуждены укрыться;
+                <span class="f-coni">shelter — кров, пристанище, убежище</span>)
+                <span class="btext"> and had spent a couple of days at an island on the way</span>
+                (и провести несколько дней на каком-то острове на /нашем/ пути)<span class="btext">. Trebucket is a low island, perhaps a mile round</span>
+                (Требукет — невысокий остров, может быть, с милю в радиусе;
+                <span class="f-coni">round — зд. указывает на измерение площади по радиусу</span>)<span class="btext">, covered with coconuts</span>
+                (покрытый кокосовыми пальмами;
+                <span class="f-coni">to cover — покрывать, накрывать; coco — кокосовая пальма; coconut — кокос, плод кокосовой пальмы</span>)<span class="btext">, just raised above the level of the sea</span>
+                (едва возвышающийся над уровнем моря;
+                <span class="f-coni">to raise — поднимать, повышать</span>)
+                <span class="btext"> and surrounded by a reef so</span>
+                (и окруженный рифами таким образом)
+                <span class="btext"> that it can be approached only on one side</span>
+                (что к нему можно приблизиться только с одной стороны;
+                <span class="f-coni">side — стенка; сторона</span>)<span class="btext">. There is no opening in the reef</span>
+                (в рифах нет прохода;
+                <span class="f-coni">opening — отверстие, щель; расщелина, проход</span>)
+                <span class="btext"> and the lugger had to anchor a mile from the shore</span>
+                (и /наш/ люггер был вынужден встать на якорь /на расстоянии/ мили от берега)<span class="btext">. We got into a dinghy with the provisions</span>
+                (мы забрались в корабельную шлюпку, /прихватив с собой/ съестные припасы)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">sight [saIt], weather ['weDq], approach [q'prqutS], dinghy ['dINgI]</p><br>
+              <p class="btext">I forget if it was four or five days before we sighted the hermit’s little kingdom. We had been driven by bad weather to take shelter and had spent a couple of days at an island on the way. Trebucket is a low island, perhaps a mile round, covered with coconuts, just raised above the level of the sea and surrounded by a reef so that it can be approached only on one side. There is no opening in the reef and the lugger had to anchor a mile from the shore. We got into a dinghy with the provisions.</p><br>
+              <p><span class="btext">It was a stiff pull</span>
+                (грести было тяжело: «это была тяжелая прогулка /на лодке/»;
+                <span class="f-coni">stiff — жесткий, крепкий; тяжелый, труднопроходимый /о спуске, подъеме и т.п./; pull — тяга, дерганье; удар весла, гребля, короткая прогулка по воде</span>)
+                <span class="btext"> and even within the reef the sea was choppy</span>
+                (и даже внутри рифов море было неспокойным;
+                <span class="f-coni">chop — удар /топором и т.п./; зыбь /на море/; choppy — порывистый /о ветре/; неспокойный, покрытый зыбью /о море/</span>)<span class="btext">. I saw the little hut, sheltered by trees in which German Harry lived</span>
+                (я увидел маленькую хижину, защищенную деревьями, в которой и жил немец Гарри;
+                <span class="f-coni">to shelter — приютить, дать приют; защищать, укрывать</span>)<span class="btext">, and as we approached he sauntered down slowly to the water’s edge</span>
+                (и, когда мы подходили, он медленно двинулся к берегу: «к краю воды»;
+                <span class="f-coni">to saunter — прогуливаться, гулять не спеша; edge — острие, лезвие; край, кромка</span>)<span class="btext">. We shouted a greeting, but he did not answer</span>
+                (мы прокричали приветствие = мы громко поприветствовали его, но он не ответил)<span class="btext">. He was a man of over seventy</span>
+                (ему было за семьдесят)<span class="btext">, very bald</span>
+                (/он был/ совершенно лысый)<span class="btext">, hatchet-faced</span>
+                (с продолговатым лицом /с выступающими скулами и резко очерченным носом/;
+                <span class="f-coni">hatchet — топорик, секач</span>)<span class="btext">, with a grey beard</span>
+                (с седой бородой;
+                <span class="f-coni">grey — серый; седой</span>)<span class="btext">, and he walked with a roll</span>
+                (и ходил он вразвалку;
+                <span class="f-coni">roll — походка вразвалку; to roll — катиться, перекатываться</span>)
+                <span class="btext"> so that you could never have taken him for anything but a sea-faring man</span>
+                (так что невозможно было принять его за кого-либо еще, кроме как за моряка;
+                <span class="f-coni">to take smb. for smb. — принимать кого-либо за кого-либо; sea-faring — мореплавание</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">saunter ['sO:ntq], shout [Saut], hatchet-faced ["hxtSIt'feIst], beard [bIqd]</p><br>
+              <p class="btext">It was a stiff pull and even within the reef the sea was choppy. I saw the little hut, sheltered by trees, in which German Harry lived, and as we approached he sauntered down slowly to the water’s edge. We shouted a greeting, but he did not answer. He was a man of over seventy, very bald, hatchet-faced, with a grey beard, and he walked with a roll so that you could never have taken him for anything but a sea-faring man.</p><br>
+              <p><span class="btext">His sunburn made his blue eyes look very pale and they were surrounded by wrinkles</span>
+                (/из-за/ загара его голубые глаза казались очень блеклыми, и они были окружены морщинками;
+                <span class="f-coni">to look — смотреть; выглядеть, иметь вид; pale — бледный; слабый, тусклый /о цвете, свете/</span>)
+                <span class="btext"> as though for long years he had spent interminable hours scanning the vacant sea</span>
+                (словно долгие годы он провел бесконечные часы, всматриваясь в пустынное море;
+                <span class="f-coni">to scan — бегло просматривать; внимательно смотреть, разглядывать; vacant — пустой, незаполненный</span>)<span class="btext">. He wore dungarees and a singlet</span>
+                (на нем были рабочие брюки /из хлопчатобумажной саржи/ и тельняшка/фуфайка;
+                <span class="f-coni">to wear — быть одетым /во что-либо/, носить /одежду/</span>)<span class="btext">, patched, but neat and clean</span>
+                (залатанные, но опрятные и чистые;
+                <span class="f-coni">patch — заплата</span>)<span class="btext">. The house to which he presently led us</span>
+                (дом, к которому он вскоре повел нас)
+                <span class="btext"> consisted of a single room with a roof of corrugated iron</span>
+                (состоял из одного помещения, с крышей из гофрированного железа;
+                <span class="f-coni">to corrugate — сморщивать, морщить; гофрировать</span>)<span class="btext">. There was a bed in it</span>
+                (в нем находилась кровать)<span class="btext">, some rough stools</span>
+                (несколько грубо /сделанных/ табуретов;
+                <span class="f-coni">rough — неровный, шероховатый; грубый</span>)
+                <span class="btext"> which he himself had made</span>
+                (которые он сделал сам)<span class="btext">, a table</span>
+                (стол)<span class="btext">, and his various household utensils</span>
+                (и различные предметы домашнего обихода;
+                <span class="f-coni">household — домашний, бытовой, хозяйственный; utensil — посуда, утварь</span>)<span class="btext">. Under a tree in front of it was a table and a bench</span>
+                (под деревом перед ней /хижиной/ находились стол и скамья)<span class="btext">. Behind was an enclosed run for his chickens</span>
+                (позади /нее/ располагался огороженный вольер для кур;
+                <span class="f-coni">to enclose — окружать, огораживать; run — бег, пробег; загон /для скота/, вольер /для птицы/</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">interminable [In'tWmInqb(q)l], dungaree ["dANgq'ri:], singlet ['sInglIt], corrugated ['kOrqgeItId], rough [rAf], utensil [ju:'tens(q)l]</p><br>
+              <p class="btext">His sunburn made his blue eyes look very pale and they were surrounded by wrinkles as though for long years he had spent interminable hours scanning the vacant sea. He wore dungarees and a singlet, patched, but neat and clean. The house to which he presently led us consisted of a single room with a roof of corrugated iron. There was a bed in it, some rough stools which he himself had made, a table, and his various household utensils. Under a tree in front of it was a table and a bench. Behind was an enclosed run for his chickens.</p><br>
+              <p><span class="btext">I cannot say that he was pleased to see us</span>
+                (не могу сказать, что он был рад видеть нас;
+                <span class="f-coni">pleased — довольный</span>)<span class="btext">. He accepted our gifts as a right, without thanks</span>
+                (он принял наши дары как должное, без благодарностей;
+                <span class="f-coni">right — правильность, правота; право, привилегия</span>)<span class="btext">, and grumbled a little because something or other he needed had not been brought</span>
+                (и немного поворчал, оттого, что что-то: «то или другое», что ему было необходимо, не привезли: «не было привезено»;
+                <span class="f-coni">to need — нуждаться, иметь надобность</span>)<span class="btext">. He was silent and morose</span>
+                (он был молчалив и угрюм)<span class="btext">. He was not interested in the news we had to give him</span>
+                (его не интересовали новости, которые мы хотели сообщить ему;
+                <span class="f-coni">to give — давать; сообщать</span>)<span class="btext">, for the outside world was no concern of his</span>
+                (потому что внешний мир его совершенно не волновал: «не был его заботой»;
+                <span class="f-coni">concern — отношение, касательство; беспокойство, забота; участие, интерес</span>)<span class="btext">: the only thing he cared about was his island</span>
+                (единственное, о чем он беспокоился — /был/ его остров;
+                <span class="f-coni">thing — вещь, предмет; нечто, что-то</span>)<span class="btext">. He looked upon it with a jealous, proprietary right</span>
+                (он смотрел на него с ревностным правом собственности;
+                <span class="f-coni">proprietary — собственнический</span>)<span class="btext">; he called it "my health resort"</span>
+                (он называл его "мой курорт";
+                <span class="f-coni">health — здоровье; resort — прибежище; курорт</span>)
+                <span class="btext"> and he feared that the coconuts that covered it</span>
+                (и он боялся, что кокосовые пальмы, покрывающие его = растущие на нем)
+                <span class="btext"> would tempt some enterprising trader</span>
+                (соблазнят какого-нибудь предприимчивого торговца;
+                <span class="f-coni">to tempt — уговаривать, склонять; соблазнять, прельщать; to enterprise — предпринимать; to trade — торговать</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">accept [qk'sept], brought [brO:t], morose [mq'rqus], jealous ['dZelqs], proprietary [prq'praIqt(q)rI], enterprising ['entqpraIzIN]</p><br>
+              <p class="btext">I cannot say that he was pleased to see us. He accepted our gifts as a right, without thanks, and grumbled a little because something or other he needed had not been brought. He was silent and morose. He was not interested in the news we had to give him, for the outside world was no concern of his: the only thing he cared about was his island. He looked upon it with a jealous, proprietary right; he called it "my health resort" and he feared that the coconuts that covered it would tempt some enterprising trader.</p><br>
+              <p><span class="btext">He looked at me with suspicion</span>
+                (он взглянул на меня подозрительно: «с подозрением»)<span class="btext">. He was sombrely curious to know what I was doing in these seas</span>
+                (он были исполнен мрачного любопытства, что я делал в этих морях;
+                <span class="f-coni">somber — темный; мрачный, унылый</span>)<span class="btext">. He used words with difficulty</span>
+                (он с трудом подбирал слова: «он употреблял слова с трудностью»)<span class="btext">, talking to himself rather than to us</span>
+                (разговаривая, скорее, с самим собой, чем с нами)<span class="btext">, and it was a little uncanny to hear him mumble away as though we were not there</span>
+                (и было немного жутковато слышать, как он бормочет себе под нос, словно нас и не было /там/)<span class="btext">. But he was moved when my skipper told him</span>
+                (но он был растроган, когда капитан моего судна сказал ему;
+                <span class="f-coni">to move — двигать, передвигать; трогать, волновать</span>)
+                <span class="btext"> that an old man of his own age whom he had known for a long time was dead</span>
+                (что некий старик того же возраста что и он, которого он знал долгое время, умер;
+                <span class="f-coni">own — свой собственный, принадлежащий /кому-либо или чему-либо/</span>)<span class="btext">.</span>
+              </p>
+              <p><span class="btext">"Old Charlie dead</span>
+                (старик Чарли мертв)
+                <span class="btext"> — that’s too bad</span>
+                (это очень плохо)<span class="btext">. Old Charlie dead."</span>
+              </p>
+              <p><span class="btext">He repeated it over and over again</span>
+                (он повторял это снова и снова)<span class="btext">. I asked him if he read</span>
+                (я спросил его, читает ли он /что-нибудь/)<span class="btext">.</span>
+              </p>
+              <p><span class="btext">"Not much</span>
+                (не много)<span class="btext">," he answered indifferently</span>
+                (ответил он равнодушно/безразличным тоном)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">suspicion [sq'spIS(q)n], curious ['kju(q)rIqs], indifferently [In'dIf(q)rqntlI]</p><br>
+              <p class="btext">He looked at me with suspicion. He was sombrely curious to know what I was doing in these seas. He used words with difficulty, talking to himself rather than to us, and it was a little uncanny to hear him mumble away as though we were not there. But he was moved when my skipper told him that an old man of his own age whom he had known for a long time was dead.</p>
+              <p class="btext">"Old Charlie dead — that’s too bad. Old Charlie dead."</p>
+              <p class="btext">He repeated it over and over again. I asked him if he read.</p>
+              <p class="btext">"Not much," he answered indifferently.</p><br>
+              <p><span class="btext">He seemed to be occupied with nothing</span>
+                (казалось, что он не был занят ничем;
+                <span class="f-coni">to occupy — занимать /место, пространство и т.п./; заниматься /чем-либо/, уделять время /чему-либо/</span>)
+                <span class="btext"> but his food</span>
+                (кроме своего пропитания;
+                <span class="f-coni">food — пища, питание, еда</span>)<span class="btext">, his dogs</span>
+                (своих собак)
+                <span class="btext"> and his chickens</span>
+                (и своих кур)<span class="btext">. If what they tell us in books were true</span>
+                (если то, что говорят нам в книгах, было бы правдой)
+                <span class="btext"> his long communion with nature and the sea</span>
+                (то его долгое единение с природой и морем;
+                <span class="f-coni">communion — общность; общение, связь</span>)
+                <span class="btext"> should have taught him many subtle secrets</span>
+                (должно было бы научить его множеству искусных уловок;
+                <span class="f-coni">to teach — учить, обучать; научить; subtle — тонкий, нежный; искусный, умелый, ловкий; secret — секрет, тайна; загадка, нечто необъяснимое, скрытое</span>)<span class="btext">. It hadn’t</span>
+                (но этого не было: «оно не /научило/»)<span class="btext">. He was a savage</span>
+                (он был дикарем)<span class="btext">. He was nothing but a narrow, ignorant and cantankerous seafaring man</span>
+                (он был просто: «ничем кроме как» ограниченным, невежественным и сварливым моряком;
+                <span class="f-coni">narrow — узкий, тесный; узкий, ограниченный /об уме и т.п./</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">communion [kq'mju:nIqn], nature ['neItSq], taught [tO:t], subtle [sAtl], savage ['sxvIdZ], ignorant ['Ignqrqnt], cantankerous [kxn'txNk(q)rqs]</p><br>
+              <p class="btext">He seemed to be occupied with nothing but his food, his dogs and his chickens. If what they tell us in books were true his long communion with nature and the sea should have taught him many subtle secrets. It hadn’t. He was a savage. He was nothing but a narrow, ignorant and cantankerous seafaring man.</p><br>
+              <p><span class="btext">As I looked at the wrinkled, mean old face</span>
+                (когда я глядел на это морщинистое, неприветливое, старое лицо;
+                <span class="f-coni">wrinkle — морщина, складка; mean — посредственный, плохой; придирчивый, злобный</span>)
+                <span class="btext"> I wondered what was the story of those three dreadful years</span>
+                (мне было интересно, что же это была за история тех трех ужасных лет;
+                <span class="f-coni">story — повесть, рассказ; история</span>)
+                <span class="btext"> that had made him welcome this long imprisonment</span>
+                (которая заставила его желать этого долгого заточения;
+                <span class="f-coni">to welcome — приветствовать /гостя/; приветствовать, одобрять; prison — тюрьма; to imprison — заключать в тюрьму; imprisonment — тюремное заключение, лишение свободы</span>)<span class="btext">. I sought to see behind those pale blue eyes of his</span>
+                (я пытался разглядеть за теми блеклыми голубыми глазами;
+                <span class="f-coni">to seek — искать, разыскивать; to seek to do smth. — пытаться, стараться что-либо сделать</span>)
+                <span class="btext"> what secrets they were that he would carry to his grave</span>
+                (что же за секреты это были, которые он унесет в могилу)<span class="btext">. And then I foresaw the end</span>
+                (а затем я предугадал конец;
+                <span class="f-coni">to foresee — предвидеть, знать заранее</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">wrinkled ['rINk(q)ld], dreadful ['dredS(q)l], imprisonment [Im'prIz(q)nmqnt]</p><br>
+              <p class="btext">As I looked at the wrinkled, mean old face I wondered what was the story of those three dreadful years that had made him welcome this long imprisonment. I sought to see behind those pale blue eyes of his what secrets they were that he would carry to his grave. And then I foresaw the end.</p><br>
+              <p><span class="btext">One day a pearl fisher would land on the island</span>
+                (однажды какой-нибудь ловец жемчуга высадится на остров)
+                <span class="btext"> and German Harry would not be waiting for him</span>
+                (и немец Гарри не будет ожидать его)<span class="btext">, silent and suspicious, at the water’s edge</span>
+                (молчаливый и подозрительный/недоверчивый, у кромки воды)<span class="btext">. He would go up to the hut</span>
+                (он /ловец жемчуга/ дойдет до хижины;
+                <span class="f-coni">to go up /to/ — подниматься /на гору и т.п./; приближаться, подходить</span>)
+                <span class="btext"> and there, lying on the bed, unrecognizable</span>
+                (и там, лежащим на кровати, неузнаваемым;
+                <span class="f-coni">to recognize — узнавать, опознавать</span>)<span class="btext">, he would see all that remained of what had once been a man</span>
+                (он увидит все, что осталось от того, кто когда-то был человеком)<span class="btext">. Perhaps then he would hunt high and low</span>
+                (возможно, тогда он /ловец жемчуга/ будет рыскать повсюду;
+                <span class="f-coni">to hunt — охотиться, ловить; искать, рыскать; high — высоко; low — низко; high and low — повсюду, везде</span>)
+                <span class="btext"> for the great mass of pearls</span>
+                (в поисках того огромного количества жемчужин;
+                <span class="f-coni">mass — масса; множество, большое количество</span>)
+                <span class="btext"> that has haunted the fancy of so many adventurers</span>
+                (что волновало воображение такого большого числа авантюристов;
+                <span class="f-coni">to haunt — часто посещать, навещать /какое-либо место/; преследовать, тревожить, терзать /о мысли и т.п./; adventure — приключение; смелое предприятие, авантюра</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">unrecognizable [An'rekqgnaIzqb(q)l], haunt [hO:nt], adventurer [qd'ventS(q)rq]</p><br>
+              <p class="btext">One day a pearl fisher would land on the island and German Harry would not be waiting for him, silent and suspicious, at the water’s edge. He would go up to the hut and there, lying on the bed, unrecognisable, he would see all that remained of what had once been a man. Perhaps then he would hunt high and low for the great mass of pearls that has haunted the fancy of so many adventurers.</p><br>
+              <p><span class="btext">But I do not believe he would find it</span>
+                (но не думаю, что он найдет его;
+                <span class="f-coni">to believe — верить; думать, полагать, считать</span>)<span class="btext">: German Harry would have seen to it that none should discover the treasure</span>
+                (немец Гарри /заранее/ позаботится о том, чтобы никто не обнаружил это сокровище;
+                <span class="f-coni">to see to smth. — следить, присматривать, заботиться о чем-либо; to discover — открывать; обнаруживать, находить</span>)<span class="btext">, and the pearls would rot in their hiding place</span>
+                (и жемчужины сгниют в тайнике;
+                <span class="f-coni">to hide — прятать; place — место</span>)<span class="btext">. Then the pearl fisher would go back into his dinghy</span>
+                (тогда ловец жемчуга вернется назад, в свою корабельную шлюпку)
+                <span class="btext"> and the island once more be deserted of man</span>
+                (и этот остров снова станет безлюдным;
+                <span class="f-coni">to desert — бросать, покидать; deserted — пустынный, безлюдный</span>)<span class="btext">.</span>
+              </p><br>
+              <p class="btext">discover [dIs'kAvq], treasure ['treZq], deserted [dI'zWtId]</p><br>
+              <p class="btext">But I do not believe he would find it: German Harry would have seen to it that none should discover the treasure, and the pearls would rot in their hiding place. Then the pearl fisher would go back into his dinghy and the island once more be deserted of man.</p>
+            </section>
+          </div>
         </div>
-        <!-- ↑↑↑ modules: loader (end) ↑↑↑-->
-        <div class="name-section">
-          <div class="name-section__author"></div>
-          <div class="name-section__book"></div>
-          <p class="tac">Уильям Сомерсет Моэм</p>
-          <p class="tac">Немец Гарри</p>
-          <p class="tac">адаптировала Ольга Ламонова</p>
-          <p class="tac">Метод чтения Ильи Франка</p>
-        </div>
-        <section>
-          <p><span class="btext">I was in Thursday Island and I wanted very much to go to New Guinea</span>
-            (я был на острове Четверга и очень хотел поехать в Новую Гвинею;
-            <span class="f-coni">Thursday Island — о. Четверга, административный и торговый центр группы островов Торресова пролива</span>)<span class="btext">. Now the only way in which I could do this</span>
-            (так вот, единственный способ, которым я мог это сделать;
-            <span class="f-coni">way — путь, дорога; образ действия, способ, путь, средство</span>)
-            <span class="btext"> was by getting a pearling lugger to take me across the Arafura Sea</span>
-            (/так это/ нанять люггер ловцов жемчуга, который перевез бы меня через Арафурское море = чтобы пересечь Арафурское море;
-            <span class="f-coni">pearl — жемчуг; to pearl — украшать жемчугом; добывать жемчуг; lugger — люггер — трехмачтовое судно с рейковым парусным вооружением</span>)<span class="btext">. The pearl fishery at that time was in a bad way</span>
-            (в то время /года/ ловля жемчуга шла плохо;
-            <span class="f-coni">fish — рыба; to fish — ловить рыбу; fishery — рыболовство; bad — плохой, дурной; неблагоприятный, неудачный</span>)
-            <span class="btext"> and a flock of neat little craft lay anchored in the harbour</span>
-            (и множество аккуратных небольших суденышек стояло в гавани на якоре;
-            <span class="f-coni">flock — стадо; толпа, скопление /людей/; craft — ремесло; судно, собир. суда; to lie — лежать; быть, оставаться /в каком-либо состоянии или положении/; anchor — якорь; to anchor — ставить на якорь</span>)<span class="btext">. I found a skipper with nothing much to do</span>
-            (я отыскал капитана /торгового/ судна, который был не особенно занят)
-            <span class="btext"> </span>
-            (<span class="f-coni">the journey to Merauke and back could hardly take him less than a month (путешествие до Мерауке и назад вряд ли заняло бы у него меньше месяца)</span>)
-            <span class="btext"> and with him I made the necessary arrangements</span>
-            (и /вместе/ с ним я сделал /все/ необходимые приготовления;
-            <span class="f-coni">arrangements — приведение в порядок; меры, приготовления /к чему-либо/</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">Guinea ['gInI], pearling ['pWlIN], anchor ['xNkq], harbour ['hQ:bq]</p><br>
-          <p class="btext">I was in Thursday Island and I wanted very much to go to New Guinea. Now the only way in which I could do this was by getting a pearling lugger to take me across the Arafura Sea. The pearl fishery at that time was in a bad way and a flock of neat little craft lay anchored in the harbour. I found a skipper with nothing much to do (the journey to Merauke and back could hardly take him less than a month) and with him I made the necessary arrangements.</p><br>
-          <p><span class="btext">He engaged four Torres Straits islanders as crew</span>
-            (в качестве /судовой/ команды он нанял четырех островитян /с Торресова пролива/;
-            <span class="f-coni">island — остров; islander — островитянин, житель острова</span>)
-            <span class="btext"> </span>
-            (<span class="f-coni">the boat was but nineteen tons (судно было /водоизмещением/ всего лишь в девятнадцать тон; boat — лодка, шлюпка; судно, корабль)</span>)
-            <span class="btext"> and we ransacked the local store for canned goods</span>
-            (и мы совершили набег на местный /продуктовый/ магазин, чтобы запастись консервами;
-            <span class="f-coni">to ransack — обыскивать; грабить, разграбить; store — запас, резерв; склад, магазин; can — жестянка; консервная банка; to can — консервировать /пищевые продукты/</span>)<span class="btext">. A day or two before I sailed a man who owned a number of pearlers came to me</span>
-            (за день или два до того как я отплыл, ко мне пришел один человек, владевший несколькими судами для ловли жемчуга;
-            <span class="f-coni">number — число, количество; некоторое количество; pearler — ловец жемчуга; небольшое судно для ловли жемчуга</span>)
-            <span class="btext"> and asked whether on my way I would stop at the island of Trebucket</span>
-            (и спросил, не остановлюсь ли я по пути: «на моем пути» на острове Требукет)
-            <span class="btext"> and leave a sack of flour, another of rice, and some magazines for the hermit who lived there</span>
-            (и /не/ оставлю мешок муки, мешок риса: «другой /мешок с/ рисом» и несколько журналов для отшельника, живущего там)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">islander ['aIlqndq], pearler ['pWlq], hermit ['hWmIt]</p><br>
-          <p class="btext">He engaged four Torres Straits islanders as crew (the boat was but nineteen tons) and we ransacked the local store for canned goods. A day or two before I sailed a man who owned a number of pearlers came to me and asked whether on my way I would stop at the island of Trebucket and leave a sack of flour, another of rice, and some magazines for the hermit who lived there.</p><br>
-          <p><span class="btext">I pricked up my ears</span>
-            (я навострил уши = я заинтересовался;
-            <span class="f-coni">to prick — колоть; to prick up one’s ears — навострить уши; насторожиться</span>)<span class="btext">. It appeared that the hermit had lived by himself on this remote and tiny island for thirty years</span>
-            (оказалось, что этот самый отшельник жил в одиночестве на этом удаленном/уединенном и крошечном островке уже тридцать лет;
-            <span class="f-coni">by oneself — один, без посторонней помощи; один, в одиночестве</span>)<span class="btext">, and when opportunity occurred provisions were sent to him by kindly souls</span>
-            (и при удобном случае добрые люди отсылали ему съестные припасы: «продукты отправлялись ему добряками»;
-            <span class="f-coni">to occur — случаться происходить; provision(s) — снабжение; провизия, пищевые продукты; soul — душа, сердце; человек</span>)<span class="btext">. He said that he was a Dane</span>
-            (он говорил, что он датчанин)<span class="btext">, but in the Torres Straits he was known as German Harry</span>
-            (но на /островах/ Торресова пролива его звали немцем Гарри: «он был известен как немец Гарри»;
-            <span class="f-coni">to know — знать</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">appear [q'pIq], opportunity ["Opq'tju:nItI], provision [prq'vIZ(q)n]</p><br>
-          <p class="btext">I pricked up my ears. It appeared that the hermit had lived by himself on this remote and tiny island for thirty years, and when opportunity occurred provisions were sent to him by kindly souls. He said that he was a Dane, but in the Torres Straits he was known as German Harry.</p><br>
-          <p><span class="btext">His history went back a long way</span>
-            (его история началась очень давно;
-            <span class="f-coni">to go back — возвращаться /на прежнее место/; брать начало</span>)<span class="btext">. Thirty years before, he had been an able seaman on a sailing vessel that was wrecked</span>
-            (тридцать лет назад он был матросом на парусном судне, которое потерпело крушение;
-            <span class="f-coni">able seaman = able-bodied seaman — матрос /звание/; vessel — сосуд, посудина; судно, корабль</span>)
-            <span class="btext"> in those treacherous waters</span>
-            (в тех ненадежных водах = в этом коварном море;
-            <span class="f-coni">treacherous — предательский, вероломный; ненадежный; water(s) — вода; воды, водное пространство</span>)<span class="btext">. Two boats managed to get away</span>
-            (двум лодкам /с моряками с потерпевшего крушение парусника/ удалось спастись;
-            <span class="f-coni">to manage — руководить; суметь /сделать/, ухитриться; to get away — удрать, ускользнуть</span>)
-            <span class="btext"> and eventually hit upon the desert island of Trebucket</span>
-            (и, в конечном счете, обнаружить этот необитаемый остров Требукет;
-            <span class="f-coni">to hit /upon/ — ударять; найти, напасть, обнаружить; desert — пустынный, безлюдный, необитаемый</span>)<span class="btext">. This is well out of the line of traffic</span>
-            (он расположен далеко от транспортного пути;
-            <span class="f-coni">well — хорошо, отлично; значительно, out — зд. указывает на нахождение за пределами чего-либо; line — линия; путь, линия сообщения; traffic — движение, сообщение, транспорт; торговля</span>)
-            <span class="btext"> and it was three years before any ship sighted the castaways</span>
-            (и прошло три года, прежде чем хоть /какой-то/ корабль /смог/ обнаружить потерпевших кораблекрушение;
-            <span class="f-coni">to sight — увидеть; обнаружить</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">vessel ['ves(q)l], treacherous ['tretS(q)rqs], eventually [I'ventSu(q)lI], desert ['dezqt]</p><br>
-          <p class="btext">His history went back a long way. Thirty years before, he had been an able seaman on a sailing vessel that was wrecked in those treacherous waters. Two boats managed to get away and eventually hit upon the desert island of Trebucket. This is well out of the line of traffic and it was three years before any ship sighted the castaways.</p><br>
-          <p><span class="btext">Sixteen men had landed on the island</span>
-            (шестнадцать человек высадились на остров /после кораблекрушения/;
-            <span class="f-coni">land — земля, суша; to land — высаживаться /на берег/</span>)<span class="btext">, but when at last a schooner, driven from her course by stress of weather</span>
-            (но когда наконец шхуна, сбившаяся с курса из-за шторма: «согнанная со своего курса бурей»;
-            <span class="f-coni">to drive — гнать, нести; stress of weather — непогода, буря</span>)<span class="btext">, put in for shelter, no more than five were left</span>
-            (встала на рейде, чтобы укрыться /от шторма/, осталось не более пяти /человек/;
-            <span class="f-coni">to put in — зд. мор. следовать, плыть; заходить в порт, вставать на рейде; shelter — кров, пристанище, убежище</span>)<span class="btext">. When the storm abated the skipper took four of these on board</span>
-            (когда шторм утих, шкипер = капитан того торгового судна взял на борт четырех /из тех моряков/;
-            <span class="f-coni">to abate — ослаблять; уменьшаться, утихать /чаще о буре, эпидемии и т.п./; to take — брать, хватать; брать, сажать, везти /пассажиров/; board — доска; борт /корабля/</span>)
-            <span class="btext"> and eventually landed them at Sydney</span>
-            (и в конечном счете высадил их на берег в Сиднее)<span class="btext">. German Harry refused to go with them</span>
-            (Немец Гарри отказался ехать с ними)<span class="btext">. He said that during those three years he had seen such terrible things</span>
-            (он сказал, что за время тех трех лет он увидел такие страшные/ужасные вещи;
-            <span class="f-coni">thing — вещь, предмет; вещь, явление</span>)
-            <span class="btext"> that he had a horror of his fellow-men</span>
-            (что он с отвращением и страхом относился к людям;
-            <span class="f-coni">horror — отвращение и страх, ужас, омерзение; fellow-man /pl. fellow-men/ — ближний, другой человек, собрат</span>)
-            <span class="btext"> and wished never to live with them again</span>
-            (и больше никогда не хотел жить вместе с ними)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">schooner ['sku:nq], skipper ['skIpq], eventually [I'ventSu(q)lI], terrible ['terqbl]</p><br>
-          <p class="btext">Sixteen men had landed on the island, but when at last a schooner, driven from her course by stress of weather, put in for shelter, no more than five were left. When the storm abated the skipper took four of these on board and eventually landed them at Sydney. German Harry refused to go with them. He said that during those three years he had seen such terrible things that he had a horror of his fellow-men and wished never to live with them again.</p><br>
-          <p><span class="btext">He would say no more</span>
-            (больше он ничего не говорил)<span class="btext">. He was absolutely fixed in his determination to stay, entirely by himself</span>
-            (он был совершенно непоколебим в своем решении остаться в совершенном одиночестве;
-            <span class="f-coni">fixed — неподвижный, закрепленный; постоянный, неменяющийся; determination — решимость, решительность</span>)<span class="btext">, in that lonely place</span>
-            (в том безлюдном месте;
-            <span class="f-coni">lonely — одинокий; глухой, заброшенный</span>)<span class="btext">. Though now and then opportunity had been given him to leave he had never taken it</span>
-            (и хотя время от времени ему предоставлялась возможность уехать, он так никогда ею и не воспользовался)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">absolutely ["xbsq'lu:tlI], determination [dI"tWmI'neIS(q)n], entirely [In'taIqlI]</p><br>
-          <p class="btext">He would say no more. He was absolutely fixed in his determination to stay, entirely by himself, in that lonely place. Though now and then opportunity had been given him to leave he had never taken it.</p><br>
-          <p><span class="btext">A strange man and a strange story</span>
-            (странный человек и странная история;
-            <span class="f-coni">strange — незнакомый; странный, необычный, чудной</span>)<span class="btext">. I learned more about him as we sailed across the desolate sea</span>
-            (я узнал о нем больше, пока мы плыли по пустынному морю;
-            <span class="f-coni">to learn — изучать, учить; узнавать</span>)<span class="btext">. The Torres Straits are peppered with islands</span>
-            (Торресов пролив усыпан островками;
-            <span class="f-coni">pepper — перец; to pepper — перчить, посыпать перцем; осыпать, усеивать</span>)
-            <span class="btext"> and at night we anchored on the lee of one or other of them</span>
-            (и ночью мы становились на якорь под ветром одного или другого из них = под прикрытием одного из этих островков;
-            <span class="f-coni">lee — защита, укрытие; подветренная сторона; on the lee — мор. под ветром</span>)<span class="btext">. Of late new pearling grounds have been discovered near Trebucket</span>
-            (недавно рядом с Требукетом были обнаружены новые участки для добычи жемчуга;
-            <span class="f-coni">ground — земля; участок земли; дно моря; to discover — открывать, делать открытие; обнаруживать, находить</span>)
-            <span class="btext"> and in the autumn pearlers, visiting it now and then</span>
-            (и осенью ловцы жемчуга, посещая его /остров/ время от времени)<span class="btext">, have given German Harry various necessities</span>
-            (давали немцу Гарри различные предметы первой необходимости;
-            <span class="f-coni">necessity — необходимость, нужда; предмет первой необходимости</span>)
-            <span class="btext"> so that he has been able to make himself sufficiently comfortable</span>
-            (чтобы он мог устроиться достаточно удобно)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">desolate ['desqlqt, 'dezqlqt], various ['ve(q)rIqs], necessity [nI'sesItI]</p><br>
-          <p class="btext">A strange man and a strange story. I learned more about him as we sailed across the desolate sea. The Torres Straits are peppered with islands and at night we anchored on the lee of one or other of them. Of late new pearling grounds have been discovered near Trebucket and in the autumn pearlers, visiting it now and then, have given German Harry various necessities so that he has been able to make himself sufficiently comfortable.</p><br>
-          <p><span class="btext">They bring him papers</span>
-            (они привозят ему газеты;
-            <span class="f-coni">paper — бумага; газета, журнал</span>)<span class="btext">, bags of flour and rice</span>
-            (мешки с мукой и рисом)<span class="btext">, and canned meats</span>
-            (и мясные консервы;
-            <span class="f-coni">canned — консервированный; can — жестяная банка; meat — мясо</span>)<span class="btext">. He has a whale boat and used to go fishing in it</span>
-            (у него был вельбот, и он, бывало, отправлялся на нем ловить рыбу;
-            <span class="f-coni">whale boat — китобойное судно; used to do smth. — иметь в прошлом обыкновение делать что-либо</span>)<span class="btext">, but now he is no longer strong enough to manage its unwieldy bulk</span>
-            (но теперь он уже не достаточно силен, чтобы справляться с его громоздкой массой;
-            <span class="f-coni">to wield — уметь обращаться</span>)<span class="btext">. There is abundant pearl shell on the reef that surrounds his island</span>
-            (огромное количество жемчужных раковин находится на рифе, что окружает его остров;
-            <span class="f-coni">abundant — обильный, изобильный</span>)
-            <span class="btext"> and this he used to collect and sell to the pearlers for tobacco</span>
-            (и их он, бывало, собирал и продавал ловцам жемчуга за табак)<span class="btext">, and sometimes he found a good pearl for which he got a considerable sum</span>
-            (а иногда он находил хорошую = крупную жемчужину, за которую он получал значительную сумму /денег/;
-            <span class="f-coni">to get — доставать, добывать; зарабатывать, получать</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">enough [I'nAf], unwieldy [An'wi:ldI], abundant [q'bAndqnt], tobacco [tq'bxkqu]</p><br>
-          <p class="btext">They bring him papers, bags of flour and rice, and canned meats. He has a whale boat and used to go fishing in it, but now he is no longer strong enough to manage its unwieldy bulk. There is abundant pearl shell on the reef that surrounds his island and this he used to collect and sell to the pearlers for tobacco, and sometimes he found a good pearl for which he got a considerable sum.</p><br>
-          <p><span class="btext">It is believed that he has, hidden away somewhere, a collection of magnificent pearls</span>
-            (считается, что у него где-то запрятана коллекция великолепных жемчужин;
-            <span class="f-coni">to believe — верить; думать, полагать, считать; to hide</span>)<span class="btext">. During the war no pearlers came out</span>
-            (во время войны ловцы жемчуга не приплывали;
-            <span class="f-coni">to come out — появляться, являться, приходить</span>)
-            <span class="btext"> and for years he never saw a living soul</span>
-            (и /долгие/ годы он не видел ни одной живой души)<span class="btext">. For all he knew, a terrible epidemic had killed off the entire human race</span>
-            (не исключено /думал он/, что ужасная эпидемия уничтожила всю человеческую расу;
-            <span class="f-coni">for all I know — насколько мне известно; не исключено; to kill /off/ — убивать, лишать жизни; ликвидировать, уничтожать</span>)
-            <span class="btext"> and he was the only man alive</span>
-            (и что он был единственным живым человеком)<span class="btext">. He was asked later what he thought</span>
-            (позже его спросили, о чем он подумал)<span class="btext">.</span>
-          </p>
-          <p><span class="btext">"I thought something had happened</span>
-            (я думал, что что-то случилось)<span class="btext">," he said.</span>
-          </p><br>
-          <p class="btext">magnificent [mxg'nIfIs(q)nt], epidemic ["epI'demIk], thought [TO:t]</p><br>
-          <p class="btext">It is believed that he has, hidden away somewhere, a collection of magnificent pearls. During the war no pearlers came out and for years he never saw a living soul. For all he knew, a terrible epidemic had killed off the entire human race and he was the only man alive. He was asked later what he thought.</p>
-          <p class="btext">"I thought something had happened," he said.</p><br>
-          <p><span class="btext">He ran out of matches and was afraid that his fire would go out</span>
-            (у него закончились спички, и он боялся, что /его/ огонь потухнет;
-            <span class="f-coni">to run out — кончаться, иссякать; остаться без чего-либо /когда иссякнет запас/; to go out — погаснуть</span>)<span class="btext">, so he only slept in snatches</span>
-            (поэтому спал он /только/ урывками;
-            <span class="f-coni">snatch — хватание, попытка схватить; момент, мгновение, короткий промежуток времени</span>)<span class="btext">, putting wood on his fire from time to time all day and all night</span>
-            (подкладывая дрова в огонь время от времени, весь день и всю ночь;
-            <span class="f-coni">wood — лес, роща; дрова, древесное топливо</span>)<span class="btext">. He came to the end of his provisions</span>
-            (съестные припасы у него закончились;
-            <span class="f-coni">to come to an end — прийти к концу, кончиться</span>)
-            <span class="btext"> and lived on chickens</span>
-            (и он питался курятиной;
-            <span class="f-coni">to live /on/ — жить, существовать; питаться /чем-либо/; chicken — цыпленок; курятина, куриное мясо</span>)<span class="btext">, fish</span>
-            (рыбой)
-            <span class="btext"> and coconuts</span>
-            (и кокосами)<span class="btext">. Sometimes he got a turtle</span>
-            (иногда он добывал черепаху)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">match [mxtS], snatch [snxtS], turtle [tWtl]</p><br>
-          <p class="btext">He ran out of matches and was afraid that his fire would go out, so he only slept in snatches, putting wood on his fire from time to time all day and all night. He came to the end of his provisions and lived on chickens, fish and coconuts. Sometimes he got a turtle.</p><br>
-          <p><span class="btext">During the last four months of the year there may be two or three pearlers about</span>
-            (в последние четыре месяца года, где-то рядом с его островом, могут находиться двое или трое ловцов жемчуга;
-            <span class="f-coni">to be about — быть поблизости</span>)
-            <span class="btext"> and not infrequently after the day’s work</span>
-            (и довольно часто, после рабочего дня;
-            <span class="f-coni">frequent — частый, infrequent — редкий</span>)
-            <span class="btext"> they will row in and spend an evening with him</span>
-            (они приплывают /к нему на остров/, и проводят с ним вечер;
-            <span class="f-coni">to row — грести /на лодке/; to spend — тратить, растрачивать; проводить /время/</span>)<span class="btext">. They try to make him drunk</span>
-            (они пытаются напоить его: «сделать его пьяным»;
-            <span class="f-coni">to drink — пить; выпивать, пьянствовать; drunk — пьяный</span>)
-            <span class="btext"> and then they ask him what happened during those three years</span>
-            (и тогда они спрашивают его /о том/, что же произошло во время тех трех лет)
-            <span class="btext"> after the two boat-loads came to the island</span>
-            (после того как две /груженые/ лодки приплыли на этот остров;
-            <span class="f-coni">boat — лодка, шлюпка; load — груз; нагрузка, загрузка; boatload — полная нагрузка лодки</span>)<span class="btext">. How was it that sixteen landed</span>
-            (как же случилось так, что сошло на берег шестнадцать /человек/)
-            <span class="btext"> and at the end of that time only five were left</span>
-            (и к концу того времени = спустя три года, остались только пятеро)<span class="btext">? He never says a word</span>
-            (он никогда ничего не говорит: «он не говорит ни слова»)<span class="btext">. Drunk or sober he is equally silent on that subject</span>
-            (пьяный или трезвый — он /всегда/ одинаково неразговорчив на эту тему;
-            <span class="f-coni">equally — поровну; в равной степени, одинаково; silent — молчаливый, безмолвный; немногословный, замкнутый</span>)
-            <span class="btext"> and if they insist grows angry and leaves them</span>
-            (и если они настаивают, /то он/ сердится, и уходит от них;
-            <span class="f-coni">to grow — расти, вырастать; делаться, становиться; angry — сердитый, гневный</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">infrequently [In'fri:kwqntlI], boatload ['bqutlqud], subject ['sAbdZIkt]</p><br>
-          <p class="btext">During the last four months of the year there may be two or three pearlers about and not infrequently after the day’s work they will row in and spend an evening with him. They try to make him drunk and then they ask him what happened during those three years after the two boat-loads came to the island. How was it that sixteen landed and at the end of that time only five were left? He never says a word. Drunk or sober he is equally silent on that subject and if they insist grows angry and leaves them.</p><br>
-          <p><span class="btext">I forget if it was four or five days</span>
-            (я не помню, /прошло/ ли четыре или пять дней)
-            <span class="btext"> before we sighted the hermit’s little kingdom</span>
-            (прежде чем мы увидели маленькое царство отшельника)<span class="btext">. We had been driven by bad weather to take shelter</span>
-            (из-за плохой погоды мы были вынуждены укрыться;
-            <span class="f-coni">shelter — кров, пристанище, убежище</span>)
-            <span class="btext"> and had spent a couple of days at an island on the way</span>
-            (и провести несколько дней на каком-то острове на /нашем/ пути)<span class="btext">. Trebucket is a low island, perhaps a mile round</span>
-            (Требукет — невысокий остров, может быть, с милю в радиусе;
-            <span class="f-coni">round — зд. указывает на измерение площади по радиусу</span>)<span class="btext">, covered with coconuts</span>
-            (покрытый кокосовыми пальмами;
-            <span class="f-coni">to cover — покрывать, накрывать; coco — кокосовая пальма; coconut — кокос, плод кокосовой пальмы</span>)<span class="btext">, just raised above the level of the sea</span>
-            (едва возвышающийся над уровнем моря;
-            <span class="f-coni">to raise — поднимать, повышать</span>)
-            <span class="btext"> and surrounded by a reef so</span>
-            (и окруженный рифами таким образом)
-            <span class="btext"> that it can be approached only on one side</span>
-            (что к нему можно приблизиться только с одной стороны;
-            <span class="f-coni">side — стенка; сторона</span>)<span class="btext">. There is no opening in the reef</span>
-            (в рифах нет прохода;
-            <span class="f-coni">opening — отверстие, щель; расщелина, проход</span>)
-            <span class="btext"> and the lugger had to anchor a mile from the shore</span>
-            (и /наш/ люггер был вынужден встать на якорь /на расстоянии/ мили от берега)<span class="btext">. We got into a dinghy with the provisions</span>
-            (мы забрались в корабельную шлюпку, /прихватив с собой/ съестные припасы)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">sight [saIt], weather ['weDq], approach [q'prqutS], dinghy ['dINgI]</p><br>
-          <p class="btext">I forget if it was four or five days before we sighted the hermit’s little kingdom. We had been driven by bad weather to take shelter and had spent a couple of days at an island on the way. Trebucket is a low island, perhaps a mile round, covered with coconuts, just raised above the level of the sea and surrounded by a reef so that it can be approached only on one side. There is no opening in the reef and the lugger had to anchor a mile from the shore. We got into a dinghy with the provisions.</p><br>
-          <p><span class="btext">It was a stiff pull</span>
-            (грести было тяжело: «это была тяжелая прогулка /на лодке/»;
-            <span class="f-coni">stiff — жесткий, крепкий; тяжелый, труднопроходимый /о спуске, подъеме и т.п./; pull — тяга, дерганье; удар весла, гребля, короткая прогулка по воде</span>)
-            <span class="btext"> and even within the reef the sea was choppy</span>
-            (и даже внутри рифов море было неспокойным;
-            <span class="f-coni">chop — удар /топором и т.п./; зыбь /на море/; choppy — порывистый /о ветре/; неспокойный, покрытый зыбью /о море/</span>)<span class="btext">. I saw the little hut, sheltered by trees in which German Harry lived</span>
-            (я увидел маленькую хижину, защищенную деревьями, в которой и жил немец Гарри;
-            <span class="f-coni">to shelter — приютить, дать приют; защищать, укрывать</span>)<span class="btext">, and as we approached he sauntered down slowly to the water’s edge</span>
-            (и, когда мы подходили, он медленно двинулся к берегу: «к краю воды»;
-            <span class="f-coni">to saunter — прогуливаться, гулять не спеша; edge — острие, лезвие; край, кромка</span>)<span class="btext">. We shouted a greeting, but he did not answer</span>
-            (мы прокричали приветствие = мы громко поприветствовали его, но он не ответил)<span class="btext">. He was a man of over seventy</span>
-            (ему было за семьдесят)<span class="btext">, very bald</span>
-            (/он был/ совершенно лысый)<span class="btext">, hatchet-faced</span>
-            (с продолговатым лицом /с выступающими скулами и резко очерченным носом/;
-            <span class="f-coni">hatchet — топорик, секач</span>)<span class="btext">, with a grey beard</span>
-            (с седой бородой;
-            <span class="f-coni">grey — серый; седой</span>)<span class="btext">, and he walked with a roll</span>
-            (и ходил он вразвалку;
-            <span class="f-coni">roll — походка вразвалку; to roll — катиться, перекатываться</span>)
-            <span class="btext"> so that you could never have taken him for anything but a sea-faring man</span>
-            (так что невозможно было принять его за кого-либо еще, кроме как за моряка;
-            <span class="f-coni">to take smb. for smb. — принимать кого-либо за кого-либо; sea-faring — мореплавание</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">saunter ['sO:ntq], shout [Saut], hatchet-faced ["hxtSIt'feIst], beard [bIqd]</p><br>
-          <p class="btext">It was a stiff pull and even within the reef the sea was choppy. I saw the little hut, sheltered by trees, in which German Harry lived, and as we approached he sauntered down slowly to the water’s edge. We shouted a greeting, but he did not answer. He was a man of over seventy, very bald, hatchet-faced, with a grey beard, and he walked with a roll so that you could never have taken him for anything but a sea-faring man.</p><br>
-          <p><span class="btext">His sunburn made his blue eyes look very pale and they were surrounded by wrinkles</span>
-            (/из-за/ загара его голубые глаза казались очень блеклыми, и они были окружены морщинками;
-            <span class="f-coni">to look — смотреть; выглядеть, иметь вид; pale — бледный; слабый, тусклый /о цвете, свете/</span>)
-            <span class="btext"> as though for long years he had spent interminable hours scanning the vacant sea</span>
-            (словно долгие годы он провел бесконечные часы, всматриваясь в пустынное море;
-            <span class="f-coni">to scan — бегло просматривать; внимательно смотреть, разглядывать; vacant — пустой, незаполненный</span>)<span class="btext">. He wore dungarees and a singlet</span>
-            (на нем были рабочие брюки /из хлопчатобумажной саржи/ и тельняшка/фуфайка;
-            <span class="f-coni">to wear — быть одетым /во что-либо/, носить /одежду/</span>)<span class="btext">, patched, but neat and clean</span>
-            (залатанные, но опрятные и чистые;
-            <span class="f-coni">patch — заплата</span>)<span class="btext">. The house to which he presently led us</span>
-            (дом, к которому он вскоре повел нас)
-            <span class="btext"> consisted of a single room with a roof of corrugated iron</span>
-            (состоял из одного помещения, с крышей из гофрированного железа;
-            <span class="f-coni">to corrugate — сморщивать, морщить; гофрировать</span>)<span class="btext">. There was a bed in it</span>
-            (в нем находилась кровать)<span class="btext">, some rough stools</span>
-            (несколько грубо /сделанных/ табуретов;
-            <span class="f-coni">rough — неровный, шероховатый; грубый</span>)
-            <span class="btext"> which he himself had made</span>
-            (которые он сделал сам)<span class="btext">, a table</span>
-            (стол)<span class="btext">, and his various household utensils</span>
-            (и различные предметы домашнего обихода;
-            <span class="f-coni">household — домашний, бытовой, хозяйственный; utensil — посуда, утварь</span>)<span class="btext">. Under a tree in front of it was a table and a bench</span>
-            (под деревом перед ней /хижиной/ находились стол и скамья)<span class="btext">. Behind was an enclosed run for his chickens</span>
-            (позади /нее/ располагался огороженный вольер для кур;
-            <span class="f-coni">to enclose — окружать, огораживать; run — бег, пробег; загон /для скота/, вольер /для птицы/</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">interminable [In'tWmInqb(q)l], dungaree ["dANgq'ri:], singlet ['sInglIt], corrugated ['kOrqgeItId], rough [rAf], utensil [ju:'tens(q)l]</p><br>
-          <p class="btext">His sunburn made his blue eyes look very pale and they were surrounded by wrinkles as though for long years he had spent interminable hours scanning the vacant sea. He wore dungarees and a singlet, patched, but neat and clean. The house to which he presently led us consisted of a single room with a roof of corrugated iron. There was a bed in it, some rough stools which he himself had made, a table, and his various household utensils. Under a tree in front of it was a table and a bench. Behind was an enclosed run for his chickens.</p><br>
-          <p><span class="btext">I cannot say that he was pleased to see us</span>
-            (не могу сказать, что он был рад видеть нас;
-            <span class="f-coni">pleased — довольный</span>)<span class="btext">. He accepted our gifts as a right, without thanks</span>
-            (он принял наши дары как должное, без благодарностей;
-            <span class="f-coni">right — правильность, правота; право, привилегия</span>)<span class="btext">, and grumbled a little because something or other he needed had not been brought</span>
-            (и немного поворчал, оттого, что что-то: «то или другое», что ему было необходимо, не привезли: «не было привезено»;
-            <span class="f-coni">to need — нуждаться, иметь надобность</span>)<span class="btext">. He was silent and morose</span>
-            (он был молчалив и угрюм)<span class="btext">. He was not interested in the news we had to give him</span>
-            (его не интересовали новости, которые мы хотели сообщить ему;
-            <span class="f-coni">to give — давать; сообщать</span>)<span class="btext">, for the outside world was no concern of his</span>
-            (потому что внешний мир его совершенно не волновал: «не был его заботой»;
-            <span class="f-coni">concern — отношение, касательство; беспокойство, забота; участие, интерес</span>)<span class="btext">: the only thing he cared about was his island</span>
-            (единственное, о чем он беспокоился — /был/ его остров;
-            <span class="f-coni">thing — вещь, предмет; нечто, что-то</span>)<span class="btext">. He looked upon it with a jealous, proprietary right</span>
-            (он смотрел на него с ревностным правом собственности;
-            <span class="f-coni">proprietary — собственнический</span>)<span class="btext">; he called it "my health resort"</span>
-            (он называл его "мой курорт";
-            <span class="f-coni">health — здоровье; resort — прибежище; курорт</span>)
-            <span class="btext"> and he feared that the coconuts that covered it</span>
-            (и он боялся, что кокосовые пальмы, покрывающие его = растущие на нем)
-            <span class="btext"> would tempt some enterprising trader</span>
-            (соблазнят какого-нибудь предприимчивого торговца;
-            <span class="f-coni">to tempt — уговаривать, склонять; соблазнять, прельщать; to enterprise — предпринимать; to trade — торговать</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">accept [qk'sept], brought [brO:t], morose [mq'rqus], jealous ['dZelqs], proprietary [prq'praIqt(q)rI], enterprising ['entqpraIzIN]</p><br>
-          <p class="btext">I cannot say that he was pleased to see us. He accepted our gifts as a right, without thanks, and grumbled a little because something or other he needed had not been brought. He was silent and morose. He was not interested in the news we had to give him, for the outside world was no concern of his: the only thing he cared about was his island. He looked upon it with a jealous, proprietary right; he called it "my health resort" and he feared that the coconuts that covered it would tempt some enterprising trader.</p><br>
-          <p><span class="btext">He looked at me with suspicion</span>
-            (он взглянул на меня подозрительно: «с подозрением»)<span class="btext">. He was sombrely curious to know what I was doing in these seas</span>
-            (он были исполнен мрачного любопытства, что я делал в этих морях;
-            <span class="f-coni">somber — темный; мрачный, унылый</span>)<span class="btext">. He used words with difficulty</span>
-            (он с трудом подбирал слова: «он употреблял слова с трудностью»)<span class="btext">, talking to himself rather than to us</span>
-            (разговаривая, скорее, с самим собой, чем с нами)<span class="btext">, and it was a little uncanny to hear him mumble away as though we were not there</span>
-            (и было немного жутковато слышать, как он бормочет себе под нос, словно нас и не было /там/)<span class="btext">. But he was moved when my skipper told him</span>
-            (но он был растроган, когда капитан моего судна сказал ему;
-            <span class="f-coni">to move — двигать, передвигать; трогать, волновать</span>)
-            <span class="btext"> that an old man of his own age whom he had known for a long time was dead</span>
-            (что некий старик того же возраста что и он, которого он знал долгое время, умер;
-            <span class="f-coni">own — свой собственный, принадлежащий /кому-либо или чему-либо/</span>)<span class="btext">.</span>
-          </p>
-          <p><span class="btext">"Old Charlie dead</span>
-            (старик Чарли мертв)
-            <span class="btext"> — that’s too bad</span>
-            (это очень плохо)<span class="btext">. Old Charlie dead."</span>
-          </p>
-          <p><span class="btext">He repeated it over and over again</span>
-            (он повторял это снова и снова)<span class="btext">. I asked him if he read</span>
-            (я спросил его, читает ли он /что-нибудь/)<span class="btext">.</span>
-          </p>
-          <p><span class="btext">"Not much</span>
-            (не много)<span class="btext">," he answered indifferently</span>
-            (ответил он равнодушно/безразличным тоном)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">suspicion [sq'spIS(q)n], curious ['kju(q)rIqs], indifferently [In'dIf(q)rqntlI]</p><br>
-          <p class="btext">He looked at me with suspicion. He was sombrely curious to know what I was doing in these seas. He used words with difficulty, talking to himself rather than to us, and it was a little uncanny to hear him mumble away as though we were not there. But he was moved when my skipper told him that an old man of his own age whom he had known for a long time was dead.</p>
-          <p class="btext">"Old Charlie dead — that’s too bad. Old Charlie dead."</p>
-          <p class="btext">He repeated it over and over again. I asked him if he read.</p>
-          <p class="btext">"Not much," he answered indifferently.</p><br>
-          <p><span class="btext">He seemed to be occupied with nothing</span>
-            (казалось, что он не был занят ничем;
-            <span class="f-coni">to occupy — занимать /место, пространство и т.п./; заниматься /чем-либо/, уделять время /чему-либо/</span>)
-            <span class="btext"> but his food</span>
-            (кроме своего пропитания;
-            <span class="f-coni">food — пища, питание, еда</span>)<span class="btext">, his dogs</span>
-            (своих собак)
-            <span class="btext"> and his chickens</span>
-            (и своих кур)<span class="btext">. If what they tell us in books were true</span>
-            (если то, что говорят нам в книгах, было бы правдой)
-            <span class="btext"> his long communion with nature and the sea</span>
-            (то его долгое единение с природой и морем;
-            <span class="f-coni">communion — общность; общение, связь</span>)
-            <span class="btext"> should have taught him many subtle secrets</span>
-            (должно было бы научить его множеству искусных уловок;
-            <span class="f-coni">to teach — учить, обучать; научить; subtle — тонкий, нежный; искусный, умелый, ловкий; secret — секрет, тайна; загадка, нечто необъяснимое, скрытое</span>)<span class="btext">. It hadn’t</span>
-            (но этого не было: «оно не /научило/»)<span class="btext">. He was a savage</span>
-            (он был дикарем)<span class="btext">. He was nothing but a narrow, ignorant and cantankerous seafaring man</span>
-            (он был просто: «ничем кроме как» ограниченным, невежественным и сварливым моряком;
-            <span class="f-coni">narrow — узкий, тесный; узкий, ограниченный /об уме и т.п./</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">communion [kq'mju:nIqn], nature ['neItSq], taught [tO:t], subtle [sAtl], savage ['sxvIdZ], ignorant ['Ignqrqnt], cantankerous [kxn'txNk(q)rqs]</p><br>
-          <p class="btext">He seemed to be occupied with nothing but his food, his dogs and his chickens. If what they tell us in books were true his long communion with nature and the sea should have taught him many subtle secrets. It hadn’t. He was a savage. He was nothing but a narrow, ignorant and cantankerous seafaring man.</p><br>
-          <p><span class="btext">As I looked at the wrinkled, mean old face</span>
-            (когда я глядел на это морщинистое, неприветливое, старое лицо;
-            <span class="f-coni">wrinkle — морщина, складка; mean — посредственный, плохой; придирчивый, злобный</span>)
-            <span class="btext"> I wondered what was the story of those three dreadful years</span>
-            (мне было интересно, что же это была за история тех трех ужасных лет;
-            <span class="f-coni">story — повесть, рассказ; история</span>)
-            <span class="btext"> that had made him welcome this long imprisonment</span>
-            (которая заставила его желать этого долгого заточения;
-            <span class="f-coni">to welcome — приветствовать /гостя/; приветствовать, одобрять; prison — тюрьма; to imprison — заключать в тюрьму; imprisonment — тюремное заключение, лишение свободы</span>)<span class="btext">. I sought to see behind those pale blue eyes of his</span>
-            (я пытался разглядеть за теми блеклыми голубыми глазами;
-            <span class="f-coni">to seek — искать, разыскивать; to seek to do smth. — пытаться, стараться что-либо сделать</span>)
-            <span class="btext"> what secrets they were that he would carry to his grave</span>
-            (что же за секреты это были, которые он унесет в могилу)<span class="btext">. And then I foresaw the end</span>
-            (а затем я предугадал конец;
-            <span class="f-coni">to foresee — предвидеть, знать заранее</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">wrinkled ['rINk(q)ld], dreadful ['dredS(q)l], imprisonment [Im'prIz(q)nmqnt]</p><br>
-          <p class="btext">As I looked at the wrinkled, mean old face I wondered what was the story of those three dreadful years that had made him welcome this long imprisonment. I sought to see behind those pale blue eyes of his what secrets they were that he would carry to his grave. And then I foresaw the end.</p><br>
-          <p><span class="btext">One day a pearl fisher would land on the island</span>
-            (однажды какой-нибудь ловец жемчуга высадится на остров)
-            <span class="btext"> and German Harry would not be waiting for him</span>
-            (и немец Гарри не будет ожидать его)<span class="btext">, silent and suspicious, at the water’s edge</span>
-            (молчаливый и подозрительный/недоверчивый, у кромки воды)<span class="btext">. He would go up to the hut</span>
-            (он /ловец жемчуга/ дойдет до хижины;
-            <span class="f-coni">to go up /to/ — подниматься /на гору и т.п./; приближаться, подходить</span>)
-            <span class="btext"> and there, lying on the bed, unrecognizable</span>
-            (и там, лежащим на кровати, неузнаваемым;
-            <span class="f-coni">to recognize — узнавать, опознавать</span>)<span class="btext">, he would see all that remained of what had once been a man</span>
-            (он увидит все, что осталось от того, кто когда-то был человеком)<span class="btext">. Perhaps then he would hunt high and low</span>
-            (возможно, тогда он /ловец жемчуга/ будет рыскать повсюду;
-            <span class="f-coni">to hunt — охотиться, ловить; искать, рыскать; high — высоко; low — низко; high and low — повсюду, везде</span>)
-            <span class="btext"> for the great mass of pearls</span>
-            (в поисках того огромного количества жемчужин;
-            <span class="f-coni">mass — масса; множество, большое количество</span>)
-            <span class="btext"> that has haunted the fancy of so many adventurers</span>
-            (что волновало воображение такого большого числа авантюристов;
-            <span class="f-coni">to haunt — часто посещать, навещать /какое-либо место/; преследовать, тревожить, терзать /о мысли и т.п./; adventure — приключение; смелое предприятие, авантюра</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">unrecognizable [An'rekqgnaIzqb(q)l], haunt [hO:nt], adventurer [qd'ventS(q)rq]</p><br>
-          <p class="btext">One day a pearl fisher would land on the island and German Harry would not be waiting for him, silent and suspicious, at the water’s edge. He would go up to the hut and there, lying on the bed, unrecognisable, he would see all that remained of what had once been a man. Perhaps then he would hunt high and low for the great mass of pearls that has haunted the fancy of so many adventurers.</p><br>
-          <p><span class="btext">But I do not believe he would find it</span>
-            (но не думаю, что он найдет его;
-            <span class="f-coni">to believe — верить; думать, полагать, считать</span>)<span class="btext">: German Harry would have seen to it that none should discover the treasure</span>
-            (немец Гарри /заранее/ позаботится о том, чтобы никто не обнаружил это сокровище;
-            <span class="f-coni">to see to smth. — следить, присматривать, заботиться о чем-либо; to discover — открывать; обнаруживать, находить</span>)<span class="btext">, and the pearls would rot in their hiding place</span>
-            (и жемчужины сгниют в тайнике;
-            <span class="f-coni">to hide — прятать; place — место</span>)<span class="btext">. Then the pearl fisher would go back into his dinghy</span>
-            (тогда ловец жемчуга вернется назад, в свою корабельную шлюпку)
-            <span class="btext"> and the island once more be deserted of man</span>
-            (и этот остров снова станет безлюдным;
-            <span class="f-coni">to desert — бросать, покидать; deserted — пустынный, безлюдный</span>)<span class="btext">.</span>
-          </p><br>
-          <p class="btext">discover [dIs'kAvq], treasure ['treZq], deserted [dI'zWtId]</p><br>
-          <p class="btext">But I do not believe he would find it: German Harry would have seen to it that none should discover the treasure, and the pearls would rot in their hiding place. Then the pearl fisher would go back into his dinghy and the island once more be deserted of man.</p>
-        </section>
       </div>
       <!-- ↓↓↓ modules: bbp (start) ↓↓↓-->
       <div class="bbp">

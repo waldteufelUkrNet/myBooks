@@ -56,15 +56,15 @@
     },1000);
   });
 
-  document.getElementById('book').onscroll = pagination;
+  document.querySelector('#book .wjs-scroll__content').addEventListener('scroll', pagination);
 /* ↑↑↑ /PAGINATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
   function pagination() {
-    let book              = document.getElementById('book'),
-        visibleBookHeight = book.offsetHeight,
-        fullBookHeight    = book.scrollHeight,
-        bookScrollTop     = book.scrollTop;
+    let bookInner         = document.querySelector('#book .wjs-scroll__content'),
+        visibleBookHeight = bookInner.offsetHeight,
+        fullBookHeight    = bookInner.scrollHeight,
+        bookScrollTop     = bookInner.scrollTop;
 
     let pageNumber = Math.ceil(bookScrollTop/visibleBookHeight);
     if (pageNumber == 0) pageNumber = 1;

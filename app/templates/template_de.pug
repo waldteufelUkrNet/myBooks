@@ -9,10 +9,12 @@ html.wjs-MobileHeightFix(lang='de')
     meta(name="book-id" content="")
     link(rel='icon', href='../../img/book.png')
     link(rel="stylesheet", href="../../css/w.css")
+    link(rel="stylesheet", href="../../css/wScroll.css")
     link(rel="stylesheet", href="../../css/books.css")
     link(rel="stylesheet", href="../../css/modules.css")
     script(defer src="../../js/w.js")
     script(defer src="../../js/dbase.js")
+    script(defer src="../../js/wScroll.js")
     script(defer src="../../js/books.js")
     script(defer src="../../js/modules.js")
     script(defer src="../../js/wScrollFix.js")
@@ -22,15 +24,18 @@ html.wjs-MobileHeightFix(lang='de')
 
       include ../modules/top-book-panel/top-book-panel.pug
 
-      #book
-        include ../modules/loader/loader.pug
-        block first-screen
-        block name
-        block content
-        block audio
-        block text
-        block marginalias
-        block about
+      #book.wjs-scroll(data-scroll='right' data-scroll-hidden='horizontal')
+        .wjs-scroll__content-wrapper
+          .wjs-scroll__content
+
+            include ../modules/loader/loader.pug
+            block first-screen
+            block name
+            block content
+            block audio
+            block text
+            block marginalias
+            block about
 
       include ../modules/bottom-book-panel/bottom-book-panel.pug
     #lightning-conductor(style='display:none')

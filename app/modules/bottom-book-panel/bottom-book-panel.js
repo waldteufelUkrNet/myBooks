@@ -173,7 +173,7 @@
    * [showBookmarksBtns створення кнопок закладки]
    */
   function showBookmarksBtns() {
-    let book = document.getElementById('book');
+    let book = document.querySelector('#book .wjs-scroll__content');
     let bookmarkInFirstScreen = '\
                                   <div class="bookmark-in-first-screen">\
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">\
@@ -271,13 +271,13 @@
    */
   function scrollingWindow(how) {
     let topPoint;
-    let book = document.getElementById('book');
+    let bookInner = document.querySelector('#book .wjs-scroll__content');
 
     if (how == 'scrollTop') {
       topPoint = 0;
     } else {
-      let currentScroll = book.scrollTop;
-      let scrollValue   = book.offsetHeight;
+      let currentScroll = bookInner.scrollTop;
+      let scrollValue   = bookInner.offsetHeight;
 
       if ( how == 'scrollUp' ) {
         topPoint = currentScroll - scrollValue + 20;
@@ -286,7 +286,7 @@
       }
     }
 
-    book.scroll({top: topPoint, behavior: 'smooth'});
+    bookInner.scroll({top: topPoint, behavior: 'smooth'});
   }
 
   /**

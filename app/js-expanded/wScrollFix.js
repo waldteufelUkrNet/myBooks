@@ -8,7 +8,7 @@
 
 
     if ( document.querySelector('.wjs-MobileHeightFix') ) {
-      document.querySelector('#book').addEventListener('scroll', wSetScrollFix);
+      document.querySelector('#book .wjs-scroll__content').addEventListener('scroll', wSetScrollFix);
     } else {
       document.addEventListener('scroll', wSetScrollFix);
     }

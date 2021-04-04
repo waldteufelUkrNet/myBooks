@@ -427,7 +427,7 @@
 
 .bookmark-in-first-screen {
   position: absolute;
-  bottom: 10px;
+  top: 20px;
   right: 10px;
   width: 180px;
   border: 1px solid grey;

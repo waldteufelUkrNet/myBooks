@@ -35,7 +35,7 @@
       id     : "00004",
       author : "Theodor Storm",
       name   : "Die Regentrude",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -63,7 +63,7 @@
       id     : "00008",
       author : "Wilhelm Hauff",
       name   : "Das kalte Herz",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -98,14 +98,14 @@
       id     : "00013",
       author : "Stefan Zweig",
       name   : "Brief einer Unbekannten",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00014",
       author : "Adelbert von Chamisso",
       name   : "Peter Schlemihls wundersame Geschichte",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -119,7 +119,7 @@
       id     : "00016",
       author : "Franz Kafka",
       name   : "Die Verwandlung",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -133,42 +133,42 @@
       id     : "00018",
       author : "Wolfgang Borchert",
       name   : "Draußen vor der Tür",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00019",
       author : "Ludwig Thoma",
       name   : "Lausbubengeschichten",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00020",
       author : "Ludwig Thoma",
       name   : "Tante Frieda",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00021",
       author : "Friedrich Durrenmatt",
       name   : "Der Richter und sein Henker",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00022",
       author : "Arthur Schnitzler",
       name   : "Traumnovelle",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
       id     : "00023",
       author : "Erich Kästner",
       name   : "Das doppelte Lottchen",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -231,7 +231,7 @@
       id     : "00032",
       author : "Erich Kästner",
       name   : "Drei Männer im Schnee",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
@@ -252,7 +252,7 @@
       id     : "00035",
       author : "Otfried Preußler",
       name   : "Krabat",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {

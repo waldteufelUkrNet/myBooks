@@ -9,10 +9,12 @@
     <meta name="book-id" content="">
     <link rel="icon" href="../../img/book.png">
     <link rel="stylesheet" href="../../css/w.css">
+    <link rel="stylesheet" href="../../css/wScroll.css">
     <link rel="stylesheet" href="../../css/books.css">
     <link rel="stylesheet" href="../../css/modules.css">
     <script defer src="../../js/w.js"></script>
     <script defer src="../../js/dbase.js"></script>
+    <script defer src="../../js/wScroll.js"></script>
     <script defer src="../../js/books.js"></script>
     <script defer src="../../js/modules.js"></script>
     <script defer src="../../js/wScrollFix.js"></script>
@@ -48,1060 +50,1064 @@
         </div>
       </div>
       <!-- ↑↑↑ modules: top-book-panel (end) ↑↑↑-->
-      <div id="book">
-        <!-- ↓↓↓ modules: loader (start) ↓↓↓-->
-        <div class="loader loader_active">
-          <div class="loader__img-wrapper"><img class="loader__img" src="../../img/loader.gif"></div>
-          <p class="loader__text">завантаження...</p>
+      <div class="wjs-scroll" id="book" data-scroll="right" data-scroll-hidden="horizontal">
+        <div class="wjs-scroll__content-wrapper">
+          <div class="wjs-scroll__content">
+            <!-- ↓↓↓ modules: loader (start) ↓↓↓-->
+            <div class="loader loader_active">
+              <div class="loader__img-wrapper"><img class="loader__img" src="../../img/loader.gif"></div>
+              <p class="loader__text">завантаження...</p>
+            </div>
+            <!-- ↑↑↑ modules: loader (end) ↑↑↑-->
+            <div class="name-section">
+              <div class="name-section__author"></div>
+              <div class="name-section__book"></div>
+            </div>
+            <section>
+              <style>
+                .multi-columns {
+                  column-gap: 6px;
+                  column-count: 1;
+                  column-rule: 1px dotted lightgrey;
+                  padding: 10px 15px;
+                }
+                @media (min-width: 600px) {
+                  .multi-columns {
+                    column-count: 2;
+                  }
+                }
+                @media (min-width: 700px) {
+                  .multi-columns {
+                    column-count: 3;
+                  }
+                }
+                @media (min-width: 800px) {
+                  .multi-columns {
+                    column-count: 4;
+                  }
+                }
+                .multi-columns p {
+                  padding: 0;
+                  text-indent: 0;
+                }
+                .table-wrapper {
+                  overflow-y: auto;
+                }
+                table {
+                  margin: 0 auto;
+                }
+                .custom-header {
+                  padding: 2px 2px 2px 15px;
+                  margin-bottom: 6px;
+                  font-weight: 900;
+                  background-color: steelblue;//springgreen;
+                  color: white;
+                }
+                
+              </style>
+              <h4>Голосні звуки:</h4>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Позначення</th>
+                      <th>Вимова</th>
+                      <th>Приклад</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>[a:]</td>
+                      <td>Відповідає довгому звуку а</td>
+                      <td>last [la:st]</td>
+                    </tr>
+                    <tr>
+                      <td>[æ]</td>
+                      <td>Середній звук між а та е</td>
+                      <td>ally ['ælai]</td>
+                    </tr>
+                    <tr>
+                      <td>[i:]</td>
+                      <td>Нагадує протяжний звук і</td>
+                      <td>key [ki:]</td>
+                    </tr>
+                    <tr>
+                      <td>[i]</td>
+                      <td>Нагадує короткий звук і</td>
+                      <td>bullet ['bulit]</td>
+                    </tr>
+                    <tr>
+                      <td>[e]</td>
+                      <td>Нагадує звук е</td>
+                      <td>blame [bleim]</td>
+                    </tr>
+                    <tr>
+                      <td>[ɔ]</td>
+                      <td>Короткий звук о</td>
+                      <td>pot [pɔt]</td>
+                    </tr>
+                    <tr>
+                      <td>[ɔ:]</td>
+                      <td>Нагадує протяжний звук о</td>
+                      <td>torment ['tɔ:ment]</td>
+                    </tr>
+                    <tr>
+                      <td>[ə:]</td>
+                      <td>Середній звук між о та е, Нагадує йо</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>[ə]</td>
+                      <td>Неясний, ненаголошений звук, схожий на е</td>
+                      <td>pole [pəul]</td>
+                    </tr>
+                    <tr>
+                      <td>[ʌ]</td>
+                      <td>Нагадує звук а</td>
+                      <td>funny ['fʌni]</td>
+                    </tr>
+                    <tr>
+                      <td>[з]</td>
+                      <td>Нагадує звук йо</td>
+                      <td>girl [gз:l]</td>
+                    </tr>
+                    <tr>
+                      <td>[u]</td>
+                      <td>Короткий звук у</td>
+                      <td>cook [kuk]</td>
+                    </tr>
+                    <tr>
+                      <td>[u:]</td>
+                      <td>Нагадує протяжний звук у</td>
+                      <td>school [sku:l]</td>
+                    </tr>
+                    <tr>
+                      <td>[ai]</td>
+                      <td>Нагадує звук ай</td>
+                      <td>slide [slaid]</td>
+                    </tr>
+                    <tr>
+                      <td>[ei]</td>
+                      <td>Нагадує звук ей</td>
+                      <td>sale [seil]</td>
+                    </tr>
+                    <tr>
+                      <td>[ɔi]</td>
+                      <td>Нагадує звук ой</td>
+                      <td>toy [tɔi]</td>
+                    </tr>
+                    <tr>
+                      <td>[au]</td>
+                      <td>Нагадує звук ау</td>
+                      <td>now [nau]</td>
+                    </tr>
+                    <tr>
+                      <td>[əu]</td>
+                      <td>Нагадує звук оу</td>
+                      <td>so [səu]</td>
+                    </tr>
+                    <tr>
+                      <td>[iə]</td>
+                      <td>Нагадує звук іе</td>
+                      <td>wire ['waiə]</td>
+                    </tr>
+                    <tr>
+                      <td>[uə]</td>
+                      <td>Нагадує звук уе</td>
+                      <td>tower ['tauə]</td>
+                    </tr>
+                    <tr>
+                      <td>[ɛə]</td>
+                      <td>Віддалено нагадує звук еа</td>
+                      <td>dare [dɛə]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><br>
+              <h4>Приголосні звуки:</h4>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Позначення</th>
+                      <th>Вимова</th>
+                      <th>Приклад</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>[l]</td>
+                      <td>Відповідає звуку л</td>
+                      <td>lab [læb]</td>
+                    </tr>
+                    <tr>
+                      <td>[p]</td>
+                      <td>Відповідає звуку п</td>
+                      <td>sleep [sli:p]</td>
+                    </tr>
+                    <tr>
+                      <td>[b]</td>
+                      <td>Відповідає звуку б</td>
+                      <td>bush [buʃ]</td>
+                    </tr>
+                    <tr>
+                      <td>[t]</td>
+                      <td>Відповідає звуку т</td>
+                      <td>point [pɔint]</td>
+                    </tr>
+                    <tr>
+                      <td>[d]</td>
+                      <td>Відповідає звуку д</td>
+                      <td>drama ['dra:mə]</td>
+                    </tr>
+                    <tr>
+                      <td>[m]</td>
+                      <td>Відповідає звуку м</td>
+                      <td>time [taim]</td>
+                    </tr>
+                    <tr>
+                      <td>[k]</td>
+                      <td>Відповідає звуку к</td>
+                      <td>kiss [kis]</td>
+                    </tr>
+                    <tr>
+                      <td>[g]</td>
+                      <td>Відповідає звуку г</td>
+                      <td>goal [gəul]</td>
+                    </tr>
+                    <tr>
+                      <td>[n]</td>
+                      <td>Відповідає звуку н</td>
+                      <td>snake [sneik]</td>
+                    </tr>
+                    <tr>
+                      <td>[ʃ]</td>
+                      <td>Відповідає звуку ш</td>
+                      <td>motion ['məuʃ(ə)n]</td>
+                    </tr>
+                    <tr>
+                      <td>[f]</td>
+                      <td>Відповідає звуку ф</td>
+                      <td>office ['ɔfis]</td>
+                    </tr>
+                    <tr>
+                      <td>[v]</td>
+                      <td>Відповідає звуку в</td>
+                      <td>nerve [nз:v]</td>
+                    </tr>
+                    <tr>
+                      <td>[s]</td>
+                      <td>Відповідає звуку с</td>
+                      <td>peace [pi:s]</td>
+                    </tr>
+                    <tr>
+                      <td>[z]</td>
+                      <td>Відповідає звуку з</td>
+                      <td>museum [mju:'zi:əm]</td>
+                    </tr>
+                    <tr>
+                      <td>[ʒ]</td>
+                      <td>Відповідає звуку ж</td>
+                      <td>joy [dʒɔi]</td>
+                    </tr>
+                    <tr>
+                      <td>[tʃ]</td>
+                      <td>Відповідає звуку ч</td>
+                      <td>inch [intʃ]</td>
+                    </tr>
+                    <tr>
+                      <td>[dʒ]</td>
+                      <td>Відповідає звуку дж</td>
+                      <td>joke [dʒəuk]</td>
+                    </tr>
+                    <tr>
+                      <td>[r]</td>
+                      <td>Нагадує звук р</td>
+                      <td>red [red]</td>
+                    </tr>
+                    <tr>
+                      <td>[h]</td>
+                      <td>Нагадує звук х</td>
+                      <td>hammer ['hæmə]</td>
+                    </tr>
+                    <tr>
+                      <td>[j]</td>
+                      <td>Нагадує звук й</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>[ju:]</td>
+                      <td>Нагадує звук ю</td>
+                      <td>view ['vju:]</td>
+                    </tr>
+                    <tr>
+                      <td>[je]</td>
+                      <td>Нагадує звук е</td>
+                      <td>yellow ['jeləu]</td>
+                    </tr>
+                    <tr>
+                      <td>[jз]</td>
+                      <td>Нагадує звук йо</td>
+                      <td>year [jз:]</td>
+                    </tr>
+                    <tr>
+                      <td>[jʌ]</td>
+                      <td>Нагадує звук я</td>
+                      <td>young [jʌŋ]</td>
+                    </tr>
+                    <tr>
+                      <td>[w]</td>
+                      <td>Звук у або в</td>
+                      <td>water ['wɔ:tə]</td>
+                    </tr>
+                    <tr>
+                      <td>[ŋ]</td>
+                      <td>Віддалено нагадує звук н</td>
+                      <td>king [kiŋ]</td>
+                    </tr>
+                    <tr>
+                      <td>[θ]</td>
+                      <td>Середній звук між с та ф</td>
+                      <td>thin [θin]</td>
+                    </tr>
+                    <tr>
+                      <td>[ð]</td>
+                      <td>Середній звук між з та в</td>
+                      <td>brother [brʌðə]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><br>
+              <div class="custom-header">е [i:]</div>
+              <div class="btext">– одна голосна в слові, і вона стоїть в кінці:</div>
+              <div class="multi-columns">
+                <p>be [bi:] – бути</p>
+                <p>he [hi:] – він</p>
+              </div>
+              <div class="btext">– е знаходиться перед приголосною, а після неї іде голосна:</div>
+              <div class="multi-columns">
+                <p>Eve [i:v] – Ева</p>
+              </div><br>
+              <div class="custom-header">е [i]</div>
+              <div class="btext">– перед наголошеним складом:</div>
+              <div class="multi-columns">
+                <p>effect [i'fekt] – результат, ефект</p>
+                <p>elect [i'lekt] – обирати голосуванням</p>
+                <p>essential [i'senʃ(ə)l] - обов'язковий</p>
+              </div><br>
+              <div class="custom-header">е [e]</div>
+              <div class="btext">– е знаходиться перед приголосною, після якої нема голосної:</div>
+              <div class="multi-columns">
+                <p>debt [det] – борг</p>
+                <p>bend [bend] – згибати, гнути</p>
+                <p>vend [vend] – торгувати (на вулиці)</p>
+                <p>tempt [tempt] - спокушати</p>
+                <p>mell [mel] - кувалда</p>
+                <p>pell [pel] - пергамент</p>
+                <p>fend [fend] – відбивати, відганяти</p>
+                <p>left [left] – лівий</p>
+                <p>sell [sel] – продавати</p>
+                <p>tell [tel] - казати</p>
+                <p>send [send] - посилати</p>
+                <p>nest [nest] – гніздо</p>
+                <p>spell [spel] - писати/вимовляти по буквах</p>
+                <p>spend [spend] - витрачати</p>
+                <p>lend [lend] - позичати</p>
+                <p>bet [bet] – парі</p>
+                <p>help [help] - допомагати</p>
+              </div><br>
+              <div class="custom-header">е [-]</div>
+              <div class="btext">– в кінці слова:</div>
+              <div class="multi-columns">
+                <p>Eve [i:v] – Ева</p>
+                <p>lie [lai] - брехня</p>
+              </div><br>
+              <div class="custom-header">еe [i:]</div>
+              <div class="multi-columns">
+                <p>deed [di:d] – дія, діяння</p>
+                <p>deep [di:p] – глибокий</p>
+                <p>bee [bi:] – бджола</p>
+                <p>meed [mi:d] – нагорода</p>
+                <p>meet [mi:t] – зустрічати</p>
+                <p>lee [li:] – захист, прихисток</p>
+                <p>feel [fi:l] – відчувати</p>
+                <p>seem [si:m] - здаватися</p>
+                <p>see [si:] – бачити</p>
+                <p>sleep [sli:p] - спати</p>
+              </div><br>
+              <div class="custom-header">еa [i:]</div>
+              <div class="multi-columns">
+                <p>lead [li:d] – керівництво, ініціатива</p>
+                <p>pea [pi:] – горох</p>
+                <p>tea [ti:] – чай</p>
+                <p>eat [i:t] - їсти</p>
+                <p>beat [bi:t] – удар, бити</p>
+                <p>bead [bi:d] – бусина, бісерина</p>
+                <p>mean [mi:n] – мати на увазі</p>
+                <p>meal [mi:l] – приймання їжі, їжа</p>
+                <p>deal [di:l] – угода, контракт</p>
+                <p>meat [mi:t] – м’ясо</p>
+                <p>steal [sti:l] - красти</p>
+                <p>sea [si:] - море</p>
+                <p>east [i:st] – схід</p>
+                <p>zeal [zi:l] – завзятість, ентузіазм</p>
+                <p>heal [hi:l] - лікувати</p>
+                <p>heat [hi:t] – спека</p>
+                <p>speak [spi:k] - говорити</p>
+              </div><br>
+              <div class="custom-header">еa [e]</div>
+              <div class="multi-columns">
+                <p>lead [led] – свинець</p>
+                <p>dead [ded] – мертвий</p>
+                <p>heaven ['hev(ə)n] – небеса</p>
+                <p>bread [bred] – хліб</p>
+                <p>deaf [def] – глухий</p>
+                <p>head [hed] – голова</p>
+                <p>ahead [ə'hed] – попереду</p>
+                <p>spread [spred] – розповсюдження</p>
+                <p>instead [in'sted] – замість</p>
+                <p>heavy ['hevi] - важкий</p>
+              </div><br>
+              <div class="custom-header">ew [ju:]</div>
+              <div class="multi-columns">
+                <p>dew [dju:] – роса</p>
+                <p>few [fju:] – мало</p>
+                <p>new [nju:] - новий</p>
+              </div><br>
+              <div class="custom-header">y [j]</div>
+              <div class="btext">– на початку слова перед голосною:</div>
+              <div class="multi-columns">
+                <p>yet [jet] - все ще</p>
+                <p>Yemen ['jemən] - Ємен</p>
+                <p>you [ju:] – ви, ти</p>
+                <p>yes [jes] - так</p>
+              </div><br>
+              <div class="custom-header">y [ai]</div>
+              <div class="btext">– у відкритому складі:</div>
+              <div class="multi-columns">
+                <p>sky [skai] - небо</p>
+                <p>my [mai] - мій, моя, моє, мої</p>
+                <p>type [taip] - друкувати</p>
+              </div><br>
+              <div class="custom-header">i [ai]</div>
+              <div class="btext">– у відкритому складі:</div>
+              <div class="multi-columns">
+                <p>dive [daiv] – займатися дайвінгом</p>
+                <p>side [said] – сторона</p>
+                <p>lie [lai] - брехня</p>
+                <p>mile [mail] – миля</p>
+                <p>like [laik] - подобатися</p>
+                <p>smile [smail] – посмішка</p>
+                <p>size [saiz] – розмір</p>
+              </div>
+              <div class="btext">– односкладові слова + nd:</div>
+              <div class="multi-columns">
+                <p>kind [kaind] – 1. добрий 2. вид</p>
+              </div><br>
+              <div class="custom-header">i [i]</div>
+              <div class="btext">– у закритому складі:</div>
+              <div class="multi-columns">
+                <p>it [it] – він, вона, воно</p>
+                <p>lift [lift] – підйом</p>
+                <p>in [in] - в</p>
+                <p>slim [slim] - стрункий, худий</p>
+                <p>mill [mil] – млин</p>
+                <p>bit [bit] – шматок, частинка</p>
+                <p>sit [sit] – сидіти, сідати</p>
+                <p>till [til] - до</p>
+                <p>hit [hit] - ударяти</p>
+              </div>
+              <div class="btext">– у ненаголошеному складі:</div>
+              <div class="multi-columns">
+                <p>limit ['limit] - межа</p>
+              </div><br>
+              <div class="custom-header">ie, ey, y [i]</div>
+              <div class="btext">– в кінці дво- і більше складових слів у ненаголошеному складі:</div>
+              <div class="multi-columns">
+                <p>ninety ['nainti] – дев’яносто</p>
+                <p>milky ['milki] – молочний</p>
+                <p>Teddy ['tedi] – Тедді</p>
+                <p>kidney ['kidni] - нирка</p>
+                <p>donkey ['dAŋki] – віслюк</p>
+                <p>hippie ['hipi] – хіппі</p>
+              </div><br>
+              <div class="custom-header">ie [i:]</div>
+              <div class="multi-columns">
+                <p>shield [ʃi:ld] – захищати</p>
+              </div><br>
+              <div class="custom-header">о [ʌ]</div>
+              <div class="multi-columns">
+                <p>dove [dʌv] – голуб</p>
+                <p>front [frʌnt] – передня сторона</p>
+                <p>love [lʌv] – кохання</p>
+                <p>son [sʌn] - син</p>
+                <p>some [sʌm] – певна кількість</p>
+              </div><br>
+              <div class="custom-header">о [ɔ]</div>
+              <div class="btext">– у закритому складі:</div>
+              <div class="multi-columns">
+                <p>font [fɔnt] – шрифт</p>
+                <p>doll [dɔl] – лялька</p>
+                <p>stop [stɔp] – зупинятися</p>
+                <p>on [ɔn] – на</p>
+                <p>top [tɔp] - верхівка, вершина</p>
+                <p>hot [hɔt] – гарячий</p>
+              </div><br>
+              <div class="custom-header">о [əu]</div>
+              <div class="btext">– у відкритому складі:</div>
+              <div class="multi-columns">
+                <p>no [nəu] – ні</p>
+                <p>vote [vəut] – голосування</p>
+                <p>bone [bəun] – кістка</p>
+                <p>lone [ləun] – одинокий</p>
+                <p>dome [dəum] – баня</p>
+                <p>so [səu] – так, отже</p>
+                <p>hope [həup] – сподіватися</p>
+                <p>zero ['ziərəu] – нуль</p>
+              </div>
+              <div class="btext">– перед ld:</div>
+              <div class="multi-columns">
+                <p>gold [gəuld] – золото</p>
+                <p>old [əuld] – старий</p>
+                <p>hold [həuld] – тримати</p>
+              </div><br>
+              <div class="custom-header">oa [əu]</div>
+              <div class="multi-columns">
+                <p>float [fləut] – плавати</p>
+                <p>oat [əut] – вівсянка</p>
+                <p>foam [fəum] – піна</p>
+                <p>boat [bəut] – човен</p>
+                <p>soap [səup] - мило</p>
+              </div><br>
+              <div class="custom-header">oi, oy [ɔi]</div>
+              <div class="btext">– в кінці слова або в іменниках:</div>
+              <div class="multi-columns">
+                <p>destroy [di'strɔi] – руйнувати</p>
+                <p>spoil [spɔil] – псувати</p>
+                <p>poison ['pɔiz(ə)n] - отрута</p>
+                <p>coin [kɔin] – монета</p>
+                <p>toy [tɔi] - іграшка</p>
+                <p>boy [bɔi] - хлопчик</p>
+              </div><br>
+              <div class="custom-header">оо [u:]</div>
+              <div class="multi-columns">
+                <p>noon [nu:n] – полудень</p>
+                <p>boot [bu:t] – чобіт</p>
+                <p>mood [mu:d] – настрій</p>
+                <p>doom [du:m] – загибель</p>
+                <p>loop [lu:p] – петля</p>
+                <p>soon [su:n] - незабаром</p>
+                <p>too [tu:] – 1 той же 2 надміру</p>
+              </div><br>
+              <div class="custom-header">ou, ow [au]</div>
+              <div class="btext">– у наголошених складах:</div>
+              <div class="multi-columns">
+                <p>crown [kraun] – корона</p>
+                <p>towel ['tauəl] – рушник</p>
+                <p>flower ['flauə] – квітка</p>
+                <p>about [ə'baut] – про, стосовно</p>
+                <p>account [ə'kaunt] – сет</p>
+                <p>house [haus] – дім</p>
+                <p>bounty ['baunti] – щедрість</p>
+                <p>cloud [klaud] – хмара</p>
+                <p>mountain ['mauntin] – гора</p>
+                <p>down ['daun] – низ</p>
+              </div><br>
+              <div class="custom-header">а [a:]</div>
+              <div class="btext">– перед кількома приголосними:</div>
+              <div class="multi-columns">
+                <p>task [ta:sk] – завдання</p>
+                <p>vast [va:st] – широкий</p>
+                <p>master ['ma:stə] - хозяїн, вчитель</p>
+                <p>fasten ['fa:s(ə)n] – застібати</p>
+                <p>calf [ka:f] – теля</p>
+                <p>pass [pa:s] - проходити</p>
+              </div><br>
+              <div class="custom-header">а [æ]</div>
+              <div class="btext">– у закритому складі:</div>
+              <div class="multi-columns">
+                <p>lamp [læmp] – лампа</p>
+                <p>bat [bæt] - кажан</p>
+                <p>sad [sæd] – сумний</p>
+                <p>stand [stænd] – стояти</p>
+                <p>land [lænd] – земля</p>
+                <p>man [mæn] - чоловік</p>
+                <p>fantasy ['fæntəsi] – фантазія</p>
+              </div><br>
+              <div class="custom-header">а [ei]</div>
+              <div class="btext">– у відкритому складі:</div>
+              <div class="multi-columns">
+                <p>fame [feim] – слава</p>
+                <p>name [neim] – ім’я</p>
+                <p>late [leit] – пізній</p>
+                <p>blame [bleim] – засуджувати</p>
+                <p>pale [peil] – блідий</p>
+                <p>take [teik] - брати</p>
+                <p>make [meik] - робити</p>
+                <p>sane [sein] – розумний (про погляди)</p>
+                <p>tale [teil] – розповідь, оповідання</p>
+              </div><br>
+              <div class="custom-header">аi [ei]</div>
+              <div class="btext">– в середині або на початку слова:</div>
+              <div class="multi-columns">
+                <p>tail [teil] – хвіст</p>
+                <p>mail [meil] – пошта</p>
+                <p>saint [seint] – святий</p>
+                <p>vain [vein] – марнославний</p>
+                <p>aim [eim] – мета</p>
+                <p>fail [feil] – зазнати невдачі</p>
+              </div><br>
+              <div class="custom-header">ay [ei]</div>
+              <div class="btext">– в кінці слова:</div>
+              <div class="multi-columns">
+                <p>play [plei] – грати</p>
+                <p>may [mei] – травень</p>
+                <p>day [dei] – день</p>
+                <p>pay [pei] - платити</p>
+              </div><br>
+              <div class="custom-header">au [ɔ:]</div>
+              <div class="multi-columns">
+                <p>autumn ['ɔ:təm] – осінь</p>
+                <p>astronaut ['æstrənɔ:t] – космонавт</p>
+                <p>author ['ɔ:θə] – автор</p>
+                <p>cause [kɔ:z] – причина</p>
+                <p>fault [fɔ:lt] - провина</p>
+                <p>sauce [sɔ:s] – соус</p>
+              </div><br>
+              <div class="custom-header">u, e, o, a [ə]</div>
+              <div class="multi-columns">
+                <p>demon ['di:mən] – демон</p>
+                <p>seldom ['seldəm] – рідко</p>
+                <p>plenum ['pli:nəm] – збори</p>
+                <p>bottom ['bɔtəm] – дно</p>
+                <p>element ['elimənt] – елемент</p>
+                <p>payment ['peimənt] – платіж</p>
+                <p>ballad ['bæləd] - балада</p>
+              </div><br>
+              <div class="custom-header">u [ʌ]</div>
+              <div class="btext">– у закритому складі:</div>
+              <div class="multi-columns">
+                <p>dust [dʌst] – пилюка</p>
+                <p>stun [stʌn] – приголомшити</p>
+                <p>pub [pʌb] – пивна</p>
+                <p>lucky ['lʌki] – успішний, щасливий</p>
+                <p>numb [nʌm] – занімілий</p>
+                <p>hush [hʌʃ] – вщухати</p>
+                <p>duck [dʌk] – качка</p>
+                <p>butter ['bʌtə] - масло</p>
+              </div><br>
+              <div class="custom-header">u [ju:]</div>
+              <div class="btext">– у відкритому складі:</div>
+              <div class="multi-columns">
+                <p>museum [mju:'zi:əm] – музей</p>
+                <p>huge [hju:dʒ] – величезний</p>
+                <p>duty ['dju:ti] – обов’язок</p>
+                <p>tutor ['tju:tə] – репетитор</p>
+              </div><br>
+              <div class="custom-header">u [u:]</div>
+              <div class="btext">– після букв j та l у відкритих складах:</div>
+              <div class="multi-columns">
+                <p>junior ['dʒu:niə] – молодший</p>
+                <p>lunar ['lu:nə] – місячний</p>
+              </div><br>
+              <div class="custom-header">u [-]</div>
+              <div class="btext">– після букви g перед наступною голосною:</div>
+              <div class="multi-columns">
+                <p>intrigue ['intri:g] – інтрига</p>
+                <p>vogue [vəug] – мода</p>
+                <p>disguise [dis'gaiz] – маскування</p>
+                <p>guitar [gi'ta:] – гітара</p>
+                <p>guess [ges] - здогадуватися</p>
+                <p>guilt [gilt] - провина</p>
+              </div><br>
+              <div class="custom-header">alk [ɔ:k]</div>
+              <div class="multi-columns">
+                <p>walk [wɔ:k] – ходити пішки</p>
+                <p>chalk [tʃɔ:k] – крейда</p>
+                <p>talk [tɔ:k] - говорити</p>
+              </div><br>
+              <div class="custom-header">al [ɔ:l]</div>
+              <div class="btext">– перед приголосною буквою:</div>
+              <div class="multi-columns">
+                <p>install [in'stɔ:l] – встановлювати</p>
+                <p>fall [fɔ:l] – падати</p>
+                <p>tall [tɔ:l] – високий</p>
+                <p>ball [bɔ:l] – шар</p>
+                <p>wall [wɔ:l] – стіна</p>
+                <p>alternate [ɔ:l'tə:nət] - альтернатива</p>
+                <p>almost ['ɔ:lməust] – майже</p>
+                <p>call [kɔ:l] - дзвонити</p>
+              </div><br>
+              <div class="custom-header">qu [kw]</div>
+              <div class="multi-columns">
+                <p>question ['kwestʃən] – питання</p>
+                <p>quiet ['kwaiət] – тихий</p>
+                <p>quick [kwik] – швидкий</p>
+                <p>queen [kwi:n] – королева</p>
+                <p>quarrel ['kwɔr(ə)l] – сварка</p>
+                <p>liquid ['likwid] – рідина</p>
+                <p>request [ri'kwest] – вимога</p>
+                <p>frequent ['fri:kwənt] – частий</p>
+                <p>quantity ['kwɔntəti] – кількість</p>
+              </div><br>
+              <div class="custom-header">ph [f]</div>
+              <div class="multi-columns">
+                <p>elephant ['elifənt] – слон</p>
+                <p>sphere [sfiə] – сфера</p>
+                <p>phone [fəun] - телефон</p>
+                <p>photo ['fəutəu] - фотографія</p>
+              </div><br>
+              <div class="custom-header">sh [ʃ]</div>
+              <div class="multi-columns">
+                <p>she [ʃi:] – вона</p>
+                <p>leash [li:ʃ] – повідок</p>
+                <p>shot [ʃɔt] – постріл</p>
+                <p>shield [ʃi:ld] – захищати</p>
+                <p>shop [ʃɔp] - магазин</p>
+                <p>fish [fiʃ] – риба</p>
+                <p>shame [ʃeim] - сором</p>
+              </div><br>
+              <div class="custom-header">s [ʒ]</div>
+              <div class="btext">– між голосними буквами перед u,i:</div>
+              <div class="multi-columns">
+                <p>vision ['viʒ(ə)n] – зір</p>
+                <p>decision [di'siʒn] – рішення</p>
+                <p>division [di'viʒ(ə)n] – ділення</p>
+                <p>casual ['kæʒwəl] – випадковий</p>
+                <p>measure ['meʒə] – міра</p>
+                <p>pleasure ['pleʒə] – задоволення</p>
+                <p>closure ['kləuʒə] – закриття</p>
+                <p>usually ['ju:ʒ(ə)li] - зазвичай</p>
+              </div><br>
+              <div class="custom-header">k [k]</div>
+              <div class="multi-columns">
+                <p>naked ['neikid] – голий</p>
+                <p>snake [sneik] – змія</p>
+                <p>bike [baik] – мотоцикл</p>
+                <p>mask [ma:sk] – маска</p>
+                <p>folk [fəuk] – народний</p>
+                <p>talk [tɔ:k] - казати</p>
+              </div><br>
+              <div class="custom-header">сk [k]</div>
+              <div class="multi-columns">
+                <p>lucky ['lʌki] – успішний, щасливий</p>
+                <p>pack [pæk] – пачка</p>
+                <p>lack [læk] – нестача</p>
+                <p>sick [sik] – хворий</p>
+                <p>stick [stik] – палиця</p>
+                <p>clock [klɔk] – годинник</p>
+              </div><br>
+              <div class="custom-header">с [k]</div>
+              <div class="btext">– в усіх випадках, крім як перед буквами е, i, y:</div>
+              <div class="multi-columns">
+                <p>can [kæn] – бути спроможним</p>
+                <p>cost [kɔst] – коштувати</p>
+                <p>active ['æktiv] – активний</p>
+                <p>coal [kəul] – вугілля</p>
+                <p>coin [kɔin] – монета</p>
+                <p>insect ['insekt] – комаха</p>
+                <p>clean [kli:n] – чистий</p>
+                <p>custom ['kʌstəm] – звичай</p>
+                <p>scar [ska:] – шрам</p>
+                <p>camp [kæmp] – табір</p>
+                <p>candle ['kændl] – свічка</p>
+              </div><br>
+              <div class="custom-header">с [s]</div>
+              <div class="btext">– перед буквами е, i, y:</div>
+              <div class="multi-columns">
+                <p>space [speis] - простір, космос</p>
+                <p>face [feis] - обличчя</p>
+                <p>distance ['dist(ə)n(t)s] – відстань</p>
+                <p>fence [fen(t)s] – паркан</p>
+                <p>office ['ɔfis] - офіс</p>
+                <p>officer ['ɔfisə] - чиновник, офіцер</p>
+                <p>police [pə'li:s] – поліція</p>
+                <p>acid ['æsid] – кислотний</p>
+                <p>civil ['siv(ə)l] – громадянський</p>
+                <p>cinema ['sinəmə] – кінотеатр</p>
+                <p>diplomacy [di'pləuməsi] – дипломатія</p>
+                <p>mercy ['mə:si] – милосердя</p>
+                <p>city ['siti] - місто</p>
+              </div><br>
+              <div class="custom-header">ch [tʃ]</div>
+              <div class="multi-columns">
+                <p>such [sʌtʃ] – такий</p>
+                <p>beach [bi:tʃ] – пляж</p>
+                <p>channel ['tʃæn(ə)l] - канал, пролив</p>
+                <p>cheap [tʃi:p] – дешевий</p>
+                <p>rich [ritʃ] – багатий</p>
+                <p>inch [intʃ] – дюйм</p>
+                <p>teach [ti:tʃ] - навчати</p>
+              </div><br>
+              <div class="custom-header">tch [tʃ]</div>
+              <div class="multi-columns">
+                <p>sketch [sketʃ] - ескіз</p>
+                <p>catch [kætʃ] – ловити</p>
+                <p>match [mætʃ] - сірник</p>
+              </div>
+              <div class="custom-header">j [dʒ]</div>
+              <div class="multi-columns">
+                <p>joke [dʒəuk] – жарт</p>
+                <p>jealous ['dʒeləs] – ревнивий</p>
+                <p>joy [dʒɔi] – радість</p>
+                <p>juice [dʒu:s] – сік</p>
+                <p>job [dʒɔb] - робота</p>
+              </div><br>
+              <div class="custom-header">g [dʒ]</div>
+              <div class="btext">– в деяких словах перед буквами e, i, y:</div>
+              <div class="multi-columns">
+                <p>digit ['didʒit] – цифра</p>
+                <p>gem [dʒem] – коштовний камінь</p>
+                <p>gym [dʒim] – гімнастичний зал</p>
+                <p>oxygen ['ɔksidʒən] – кисень</p>
+              </div>
+              <div class="btext">– завжди в кінці слова перед німою буквою е:</div>
+              <div class="multi-columns">
+                <p>stage [steidʒ] – сцена</p>
+                <p>age [eidʒ] – вік</p>
+                <p>luggage ['lʌgidʒ] – багаж</p>
+                <p>damage ['dæmidʒ] – шкода, збиток</p>
+                <p>image ['imidʒ] – малюнок</p>
+                <p>manage ['mænidʒ] - управляти</p>
+                <p>cage [keidʒ] – клітка</p>
+                <p>village ['vilidʒ] - село</p>
+              </div><br>
+              <div class="custom-header">g [g]</div>
+              <div class="multi-columns">
+                <p>gossip ['gɔsip] – плітки</p>
+                <p>flag [flæg] - прапор</p>
+                <p>god [gɔd] - бог</p>
+                <p>good [gud] – хороший</p>
+                <p>beg [beg] – просити</p>
+                <p>glad [glæd] – радісний</p>
+                <p>give [giv] – дати</p>
+                <p>gift [gift] - подарунок</p>
+              </div><br>
+              <div class="custom-header">gh [-]</div>
+              <div class="btext">– перед буквою t:</div>
+              <div class="multi-columns">
+                <p>sight [sait] – зір</p>
+                <p>daughter ['dɔ:tə] – донька</p>
+                <p>delight [di'lait] – задоволення</p>
+                <p>tight [tait] – тугий</p>
+                <p>eight [eit] - вісім</p>
+              </div><br>
+              <div class="custom-header">х [gz]</div>
+              <div class="btext">– перед наголошеним звуком у наголошеному складі:</div>
+              <div class="multi-columns">
+                <p>exalt [ig'zɔ:lt] – звеличувати</p>
+                <p>examine [ig'zæmin] – оглядати</p>
+                <p>exam [ig'zæm] - екзамен</p>
+                <p>exotic [ig'zɔtik] – екзотичний</p>
+              </div><br>
+              <div class="custom-header">х [ks]</div>
+              <div class="btext">– у всіх випадках, крім як перед наголошеним звуком у наголошеному складі:</div>
+              <div class="multi-columns">
+                <p>fox [fɔks] – лисиця</p>
+                <p>pixel ['piks(ə)l] – піксель</p>
+                <p>tax [tæks] – податок</p>
+                <p>oxygen ['ɔksidʒən] – кисень</p>
+                <p>exchange [iks'tʃeindʒ] – обмін</p>
+                <p>ox [ɔks] – бик</p>
+                <p>explain [ik'splein] - пояснювати</p>
+                <p>exhibition [eksi'biʃ(ə)n] - виставка</p>
+              </div><br>
+              <div class="custom-header">th [ð]</div>
+              <div class="multi-columns">
+                <p>there [ðɛə] – там</p>
+                <p>then [ðen] - потім</p>
+                <p>than [ðæn] – ніж</p>
+                <p>they [ðei] – вони</p>
+                <p>that [ðæt] - той</p>
+                <p>this [ðis] – цей</p>
+                <p>these [ði:z] - ці</p>
+                <p>those [ðəuz] - ті</p>
+                <p>smooth [smu:ð] - гладкий, рівний</p>
+              </div><br>
+              <div class="custom-header">th [θ]</div>
+              <div class="multi-columns">
+                <p>thought [θɔ:t] – думка</p>
+                <p>thorn [θɔ:n] – шип</p>
+                <p>threat [θret] – загроза</p>
+                <p>cloth [klɔθ] – тканина</p>
+                <p>both [bəuθ] - обидва</p>
+                <p>math [mæθ] – математика</p>
+                <p>south [sauθ] – південь</p>
+                <p>youth [ju:θ] - юність, молодість</p>
+                <p>couth [ku:θ] – вишуканість</p>
+                <p>thin [θin] - тонкий, худий</p>
+              </div><br>
+              <div class="custom-header">ng [ŋ]</div>
+              <div class="multi-columns">
+                <p>along [ə'lɔŋ] - вздовж</p>
+                <p>among [ə'mʌŋ] - посеред</p>
+                <p>amazing [ə'meiziŋ] – дивовижний</p>
+                <p>ceiling ['si:liŋ] – стеля</p>
+                <p>annoying [ə'nɔiiŋ] – набридливий</p>
+                <p>falling ['fɔ:liŋ] – падіння</p>
+                <p>meeting ['mi:tiŋ] – збори</p>
+                <p>thing [θiŋ] - річ, предмет</p>
+              </div><br>
+              <div class="custom-header">ng [ŋg]</div>
+              <div class="btext">– перед голосними та r, l, w:</div>
+              <div class="multi-columns">
+                <p>mango ['mæŋgəu] – манго</p>
+                <p>finger ['fiŋgə] – палець</p>
+                <p>linger ['liŋgə] – зволікати</p>
+                <p>jingle ['dʒiŋgl] – дзвін</p>
+                <p>congress ['kɔŋgres] – конгрес</p>
+                <p>anger ['æŋgə] – злість</p>
+                <p>hungry ['hʌŋgri] - голодний</p>
+              </div><br>
+              <div class="custom-header">nk [ŋk]</div>
+              <div class="multi-columns">
+                <p>drink [driŋk] – пити</p>
+                <p>rink [riŋk] – каток</p>
+                <p>donkey ['dɔŋki] – віслюк</p>
+                <p>blink [bliŋk] – мить</p>
+                <p>ink [iŋk] – чорнила</p>
+                <p>sink [siŋk] – раковина</p>
+                <p>rank [ræŋk] – ряд</p>
+                <p>think [θiŋk] - думати</p>
+                <p>thank [θæŋk] – дякувати</p>
+                <p>pink [piŋk] - рожевий</p>
+              </div><br>
+              <div class="custom-header">w [w]</div>
+              <div class="multi-columns">
+                <p>wave [weiv] – хвиля</p>
+                <p>wall [wɔ:l] – стіна</p>
+              </div><br>
+              <div class="custom-header">wh [w]</div>
+              <div class="multi-columns">
+                <p>what [(h)wɔt] – що</p>
+                <p>white [(h)wait] – білий</p>
+              </div><br>
+              <div class="custom-header">wh [h]</div>
+              <div class="btext">– перед буквою о:</div>
+              <div class="multi-columns">
+                <p>whole [həul] - увесь</p>
+                <p>who [hu:] – хто</p>
+                <p>whose [hu:z] - чий</p>
+              </div><br>
+              <div class="custom-header">wa, wha [wɔ]</div>
+              <div class="btext">– у наголошеному складі перед приголосною в кінці слова або перед двома (крім g, r, ck та х):</div>
+              <div class="multi-columns">
+                <p>wasp [wɔsp] – оса</p>
+                <p>want [wɔnt] – хотіти</p>
+                <p>what [(h)wɔt] - що, який</p>
+                <p>wash [wɔʃ] - мити</p>
+              </div><br>
+              <div class="custom-header">wr [r]</div>
+              <div class="multi-columns">
+                <p>wrist [rist] – зап’ястя</p>
+                <p>wrong [rɔŋ] – неправильний</p>
+                <p>write [rait] - писати</p>
+              </div><br>
+              <div class="custom-header">r [r]</div>
+              <div class="multi-columns">
+                <p>rabbit ['ræbit] – кролик</p>
+                <p>radio ['reidiəu] – радіо</p>
+                <p>rain [rein] – дощ</p>
+                <p>restaurant ['restərɔnt] – ресторан</p>
+                <p>random ['rændəm] - випадковий</p>
+                <p>raise [reiz] – піднімати</p>
+                <p>rare [rɛə] – рідкісний</p>
+                <p>ray [rei] – промінь</p>
+                <p>rest [rest] – відпочинок</p>
+              </div><br>
+              <div class="custom-header">er, ur [ə]</div>
+              <div class="btext">– у ненаголошеному складі:</div>
+              <div class="multi-columns">
+                <p>better ['betə] – кращий</p>
+                <p>bitter ['bitə] – гіркий</p>
+                <p>ladder ['lædə] – сходи</p>
+                <p>later ['leitə] – пізніше</p>
+                <p>saturday ['sætədei] – субота</p>
+                <p>sister ['sistə] – сестра</p>
+                <p>dinner ['dinə] - обід</p>
+              </div><br>
+              <div class="custom-header">ar [a:]</div>
+              <div class="multi-columns">
+                <p>spark [spa:k] – іскра</p>
+                <p>dark [da:k] – темний</p>
+                <p>alarm [ə'la:m] – тривога</p>
+                <p>scarf [ska:f] - шарф</p>
+              </div><br>
+              <div class="custom-header">or [ɔ:]</div>
+              <div class="multi-columns">
+                <p>short [ʃɔ:t] – короткий</p>
+                <p>adore [ə'dɔ:] – обожнювати</p>
+                <p>perform [pə'fɔ:m] – виконувати</p>
+                <p>storm [stɔ:m] - буря, гроза</p>
+                <p>afford [ə'fɔ:d] – дозволити собі щось</p>
+                <p>force [fɔ:s] – сила</p>
+              </div><br>
+              <div class="custom-header">ur, er, ir (yr), в деяких випадках ear [ə:]</div>
+              <div class="multi-columns">
+                <p>suburb ['sʌbə:b] – передмістя</p>
+                <p>burn [bə:n] – горіти</p>
+                <p>church [tʃə:tʃ] – церква</p>
+                <p>curtain ['kə:t(ə)n] – занавіска</p>
+                <p>advertisement [əd'və:tismənt] – реклама</p>
+                <p>alert [ə'lə:t] – тривога</p>
+                <p>berg [bə:g] – айсберг</p>
+                <p>Berlin [bə:'lin] - Берлин</p>
+                <p>term [tə:m] – термін</p>
+                <p>nervous ['nə:vəs] – нервовий</p>
+                <p>bird [bə:d] – птах</p>
+                <p>birth [bə:θ] – народження</p>
+                <p>circle ['sə:kl] – коло</p>
+                <p>earn [ə:n] – заробляти</p>
+                <p>rehearsal [ri'hə:s(ə)l] – репетиція</p>
+              </div><br>
+              <div class="custom-header">ure, our, oor [uə]</div>
+              <div class="multi-columns">
+                <p>ensure [in'ʃuə] – гарантувати, забезпечувати</p>
+                <p>sure [ʃuə] - впевнений</p>
+                <p>flour ['flauə] – борошно</p>
+                <p>boor [buə] – невихована людина</p>
+                <p>poor [puə] – бідний</p>
+              </div><br>
+              <div class="custom-header">ure [juə]</div>
+              <div class="btext">– у наголошеній позиції:</div>
+              <div class="multi-columns">
+                <p>impure [im'pjuə] – нечистий</p>
+                <p>pure [pjuə] - чистий</p>
+                <p>secure [si'kjuə] – безпечний</p>
+                <p>cure [kjuə] - лікувати</p>
+              </div><br>
+              <div class="custom-header">ear, eer, ere [iə]</div>
+              <div class="multi-columns">
+                <p>gear [giə] – механізм</p>
+                <p>appear [ə'piə] – з’являтися</p>
+                <p>career [kə'riə] – кар’єра</p>
+                <p>deer [diə] – олень</p>
+                <p>sneer [sniə] – висміювання</p>
+                <p>here [hiə] - тут</p>
+              </div><br>
+              <div class="custom-header">our [auə]</div>
+              <div class="multi-columns">
+                <p>sour ['sauə] – кислий</p>
+                <p>flour ['flauə] – борошно</p>
+              </div><br>
+              <div class="custom-header">wa+r, wha+r [wɔ:]</div>
+              <div class="btext">– у наголошеному складі, якщо після них нема голосної:</div>
+              <div class="multi-columns">
+                <p>wart [wɔ:t] – бородавка</p>
+                <p>wharf [(h)wɔ:f] – пристань</p>
+                <p>warm [wɔ:m] – теплий</p>
+                <p>war [wɔ:] - війна</p>
+              </div><br>
+              <div class="custom-header">wor [wə:]</div>
+              <div class="btext">– перед приголосною:</div>
+              <div class="multi-columns">
+                <p>worm [wə:m] – черв’як</p>
+                <p>world [wə:ld] – світ</p>
+                <p>word [wə:d] - слово</p>
+              </div>
+            </section>
+          </div>
         </div>
-        <!-- ↑↑↑ modules: loader (end) ↑↑↑-->
-        <div class="name-section">
-          <div class="name-section__author"></div>
-          <div class="name-section__book"></div>
-        </div>
-        <section>
-          <style>
-            .multi-columns {
-              column-gap: 6px;
-              column-count: 1;
-              column-rule: 1px dotted lightgrey;
-              padding: 10px 15px;
-            }
-            @media (min-width: 600px) {
-              .multi-columns {
-                column-count: 2;
-              }
-            }
-            @media (min-width: 700px) {
-              .multi-columns {
-                column-count: 3;
-              }
-            }
-            @media (min-width: 800px) {
-              .multi-columns {
-                column-count: 4;
-              }
-            }
-            .multi-columns p {
-              padding: 0;
-              text-indent: 0;
-            }
-            .table-wrapper {
-              overflow-y: auto;
-            }
-            table {
-              margin: 0 auto;
-            }
-            .custom-header {
-              padding: 2px 2px 2px 15px;
-              margin-bottom: 6px;
-              font-weight: 900;
-              background-color: steelblue;//springgreen;
-              color: white;
-            }
-            
-          </style>
-          <h4>Голосні звуки:</h4>
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Позначення</th>
-                  <th>Вимова</th>
-                  <th>Приклад</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>[a:]</td>
-                  <td>Відповідає довгому звуку а</td>
-                  <td>last [la:st]</td>
-                </tr>
-                <tr>
-                  <td>[æ]</td>
-                  <td>Середній звук між а та е</td>
-                  <td>ally ['ælai]</td>
-                </tr>
-                <tr>
-                  <td>[i:]</td>
-                  <td>Нагадує протяжний звук і</td>
-                  <td>key [ki:]</td>
-                </tr>
-                <tr>
-                  <td>[i]</td>
-                  <td>Нагадує короткий звук і</td>
-                  <td>bullet ['bulit]</td>
-                </tr>
-                <tr>
-                  <td>[e]</td>
-                  <td>Нагадує звук е</td>
-                  <td>blame [bleim]</td>
-                </tr>
-                <tr>
-                  <td>[ɔ]</td>
-                  <td>Короткий звук о</td>
-                  <td>pot [pɔt]</td>
-                </tr>
-                <tr>
-                  <td>[ɔ:]</td>
-                  <td>Нагадує протяжний звук о</td>
-                  <td>torment ['tɔ:ment]</td>
-                </tr>
-                <tr>
-                  <td>[ə:]</td>
-                  <td>Середній звук між о та е, Нагадує йо</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>[ə]</td>
-                  <td>Неясний, ненаголошений звук, схожий на е</td>
-                  <td>pole [pəul]</td>
-                </tr>
-                <tr>
-                  <td>[ʌ]</td>
-                  <td>Нагадує звук а</td>
-                  <td>funny ['fʌni]</td>
-                </tr>
-                <tr>
-                  <td>[з]</td>
-                  <td>Нагадує звук йо</td>
-                  <td>girl [gз:l]</td>
-                </tr>
-                <tr>
-                  <td>[u]</td>
-                  <td>Короткий звук у</td>
-                  <td>cook [kuk]</td>
-                </tr>
-                <tr>
-                  <td>[u:]</td>
-                  <td>Нагадує протяжний звук у</td>
-                  <td>school [sku:l]</td>
-                </tr>
-                <tr>
-                  <td>[ai]</td>
-                  <td>Нагадує звук ай</td>
-                  <td>slide [slaid]</td>
-                </tr>
-                <tr>
-                  <td>[ei]</td>
-                  <td>Нагадує звук ей</td>
-                  <td>sale [seil]</td>
-                </tr>
-                <tr>
-                  <td>[ɔi]</td>
-                  <td>Нагадує звук ой</td>
-                  <td>toy [tɔi]</td>
-                </tr>
-                <tr>
-                  <td>[au]</td>
-                  <td>Нагадує звук ау</td>
-                  <td>now [nau]</td>
-                </tr>
-                <tr>
-                  <td>[əu]</td>
-                  <td>Нагадує звук оу</td>
-                  <td>so [səu]</td>
-                </tr>
-                <tr>
-                  <td>[iə]</td>
-                  <td>Нагадує звук іе</td>
-                  <td>wire ['waiə]</td>
-                </tr>
-                <tr>
-                  <td>[uə]</td>
-                  <td>Нагадує звук уе</td>
-                  <td>tower ['tauə]</td>
-                </tr>
-                <tr>
-                  <td>[ɛə]</td>
-                  <td>Віддалено нагадує звук еа</td>
-                  <td>dare [dɛə]</td>
-                </tr>
-              </tbody>
-            </table>
-          </div><br>
-          <h4>Приголосні звуки:</h4>
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Позначення</th>
-                  <th>Вимова</th>
-                  <th>Приклад</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>[l]</td>
-                  <td>Відповідає звуку л</td>
-                  <td>lab [læb]</td>
-                </tr>
-                <tr>
-                  <td>[p]</td>
-                  <td>Відповідає звуку п</td>
-                  <td>sleep [sli:p]</td>
-                </tr>
-                <tr>
-                  <td>[b]</td>
-                  <td>Відповідає звуку б</td>
-                  <td>bush [buʃ]</td>
-                </tr>
-                <tr>
-                  <td>[t]</td>
-                  <td>Відповідає звуку т</td>
-                  <td>point [pɔint]</td>
-                </tr>
-                <tr>
-                  <td>[d]</td>
-                  <td>Відповідає звуку д</td>
-                  <td>drama ['dra:mə]</td>
-                </tr>
-                <tr>
-                  <td>[m]</td>
-                  <td>Відповідає звуку м</td>
-                  <td>time [taim]</td>
-                </tr>
-                <tr>
-                  <td>[k]</td>
-                  <td>Відповідає звуку к</td>
-                  <td>kiss [kis]</td>
-                </tr>
-                <tr>
-                  <td>[g]</td>
-                  <td>Відповідає звуку г</td>
-                  <td>goal [gəul]</td>
-                </tr>
-                <tr>
-                  <td>[n]</td>
-                  <td>Відповідає звуку н</td>
-                  <td>snake [sneik]</td>
-                </tr>
-                <tr>
-                  <td>[ʃ]</td>
-                  <td>Відповідає звуку ш</td>
-                  <td>motion ['məuʃ(ə)n]</td>
-                </tr>
-                <tr>
-                  <td>[f]</td>
-                  <td>Відповідає звуку ф</td>
-                  <td>office ['ɔfis]</td>
-                </tr>
-                <tr>
-                  <td>[v]</td>
-                  <td>Відповідає звуку в</td>
-                  <td>nerve [nз:v]</td>
-                </tr>
-                <tr>
-                  <td>[s]</td>
-                  <td>Відповідає звуку с</td>
-                  <td>peace [pi:s]</td>
-                </tr>
-                <tr>
-                  <td>[z]</td>
-                  <td>Відповідає звуку з</td>
-                  <td>museum [mju:'zi:əm]</td>
-                </tr>
-                <tr>
-                  <td>[ʒ]</td>
-                  <td>Відповідає звуку ж</td>
-                  <td>joy [dʒɔi]</td>
-                </tr>
-                <tr>
-                  <td>[tʃ]</td>
-                  <td>Відповідає звуку ч</td>
-                  <td>inch [intʃ]</td>
-                </tr>
-                <tr>
-                  <td>[dʒ]</td>
-                  <td>Відповідає звуку дж</td>
-                  <td>joke [dʒəuk]</td>
-                </tr>
-                <tr>
-                  <td>[r]</td>
-                  <td>Нагадує звук р</td>
-                  <td>red [red]</td>
-                </tr>
-                <tr>
-                  <td>[h]</td>
-                  <td>Нагадує звук х</td>
-                  <td>hammer ['hæmə]</td>
-                </tr>
-                <tr>
-                  <td>[j]</td>
-                  <td>Нагадує звук й</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>[ju:]</td>
-                  <td>Нагадує звук ю</td>
-                  <td>view ['vju:]</td>
-                </tr>
-                <tr>
-                  <td>[je]</td>
-                  <td>Нагадує звук е</td>
-                  <td>yellow ['jeləu]</td>
-                </tr>
-                <tr>
-                  <td>[jз]</td>
-                  <td>Нагадує звук йо</td>
-                  <td>year [jз:]</td>
-                </tr>
-                <tr>
-                  <td>[jʌ]</td>
-                  <td>Нагадує звук я</td>
-                  <td>young [jʌŋ]</td>
-                </tr>
-                <tr>
-                  <td>[w]</td>
-                  <td>Звук у або в</td>
-                  <td>water ['wɔ:tə]</td>
-                </tr>
-                <tr>
-                  <td>[ŋ]</td>
-                  <td>Віддалено нагадує звук н</td>
-                  <td>king [kiŋ]</td>
-                </tr>
-                <tr>
-                  <td>[θ]</td>
-                  <td>Середній звук між с та ф</td>
-                  <td>thin [θin]</td>
-                </tr>
-                <tr>
-                  <td>[ð]</td>
-                  <td>Середній звук між з та в</td>
-                  <td>brother [brʌðə]</td>
-                </tr>
-              </tbody>
-            </table>
-          </div><br>
-          <div class="custom-header">е [i:]</div>
-          <div class="btext">– одна голосна в слові, і вона стоїть в кінці:</div>
-          <div class="multi-columns">
-            <p>be [bi:] – бути</p>
-            <p>he [hi:] – він</p>
-          </div>
-          <div class="btext">– е знаходиться перед приголосною, а після неї іде голосна:</div>
-          <div class="multi-columns">
-            <p>Eve [i:v] – Ева</p>
-          </div><br>
-          <div class="custom-header">е [i]</div>
-          <div class="btext">– перед наголошеним складом:</div>
-          <div class="multi-columns">
-            <p>effect [i'fekt] – результат, ефект</p>
-            <p>elect [i'lekt] – обирати голосуванням</p>
-            <p>essential [i'senʃ(ə)l] - обов'язковий</p>
-          </div><br>
-          <div class="custom-header">е [e]</div>
-          <div class="btext">– е знаходиться перед приголосною, після якої нема голосної:</div>
-          <div class="multi-columns">
-            <p>debt [det] – борг</p>
-            <p>bend [bend] – згибати, гнути</p>
-            <p>vend [vend] – торгувати (на вулиці)</p>
-            <p>tempt [tempt] - спокушати</p>
-            <p>mell [mel] - кувалда</p>
-            <p>pell [pel] - пергамент</p>
-            <p>fend [fend] – відбивати, відганяти</p>
-            <p>left [left] – лівий</p>
-            <p>sell [sel] – продавати</p>
-            <p>tell [tel] - казати</p>
-            <p>send [send] - посилати</p>
-            <p>nest [nest] – гніздо</p>
-            <p>spell [spel] - писати/вимовляти по буквах</p>
-            <p>spend [spend] - витрачати</p>
-            <p>lend [lend] - позичати</p>
-            <p>bet [bet] – парі</p>
-            <p>help [help] - допомагати</p>
-          </div><br>
-          <div class="custom-header">е [-]</div>
-          <div class="btext">– в кінці слова:</div>
-          <div class="multi-columns">
-            <p>Eve [i:v] – Ева</p>
-            <p>lie [lai] - брехня</p>
-          </div><br>
-          <div class="custom-header">еe [i:]</div>
-          <div class="multi-columns">
-            <p>deed [di:d] – дія, діяння</p>
-            <p>deep [di:p] – глибокий</p>
-            <p>bee [bi:] – бджола</p>
-            <p>meed [mi:d] – нагорода</p>
-            <p>meet [mi:t] – зустрічати</p>
-            <p>lee [li:] – захист, прихисток</p>
-            <p>feel [fi:l] – відчувати</p>
-            <p>seem [si:m] - здаватися</p>
-            <p>see [si:] – бачити</p>
-            <p>sleep [sli:p] - спати</p>
-          </div><br>
-          <div class="custom-header">еa [i:]</div>
-          <div class="multi-columns">
-            <p>lead [li:d] – керівництво, ініціатива</p>
-            <p>pea [pi:] – горох</p>
-            <p>tea [ti:] – чай</p>
-            <p>eat [i:t] - їсти</p>
-            <p>beat [bi:t] – удар, бити</p>
-            <p>bead [bi:d] – бусина, бісерина</p>
-            <p>mean [mi:n] – мати на увазі</p>
-            <p>meal [mi:l] – приймання їжі, їжа</p>
-            <p>deal [di:l] – угода, контракт</p>
-            <p>meat [mi:t] – м’ясо</p>
-            <p>steal [sti:l] - красти</p>
-            <p>sea [si:] - море</p>
-            <p>east [i:st] – схід</p>
-            <p>zeal [zi:l] – завзятість, ентузіазм</p>
-            <p>heal [hi:l] - лікувати</p>
-            <p>heat [hi:t] – спека</p>
-            <p>speak [spi:k] - говорити</p>
-          </div><br>
-          <div class="custom-header">еa [e]</div>
-          <div class="multi-columns">
-            <p>lead [led] – свинець</p>
-            <p>dead [ded] – мертвий</p>
-            <p>heaven ['hev(ə)n] – небеса</p>
-            <p>bread [bred] – хліб</p>
-            <p>deaf [def] – глухий</p>
-            <p>head [hed] – голова</p>
-            <p>ahead [ə'hed] – попереду</p>
-            <p>spread [spred] – розповсюдження</p>
-            <p>instead [in'sted] – замість</p>
-            <p>heavy ['hevi] - важкий</p>
-          </div><br>
-          <div class="custom-header">ew [ju:]</div>
-          <div class="multi-columns">
-            <p>dew [dju:] – роса</p>
-            <p>few [fju:] – мало</p>
-            <p>new [nju:] - новий</p>
-          </div><br>
-          <div class="custom-header">y [j]</div>
-          <div class="btext">– на початку слова перед голосною:</div>
-          <div class="multi-columns">
-            <p>yet [jet] - все ще</p>
-            <p>Yemen ['jemən] - Ємен</p>
-            <p>you [ju:] – ви, ти</p>
-            <p>yes [jes] - так</p>
-          </div><br>
-          <div class="custom-header">y [ai]</div>
-          <div class="btext">– у відкритому складі:</div>
-          <div class="multi-columns">
-            <p>sky [skai] - небо</p>
-            <p>my [mai] - мій, моя, моє, мої</p>
-            <p>type [taip] - друкувати</p>
-          </div><br>
-          <div class="custom-header">i [ai]</div>
-          <div class="btext">– у відкритому складі:</div>
-          <div class="multi-columns">
-            <p>dive [daiv] – займатися дайвінгом</p>
-            <p>side [said] – сторона</p>
-            <p>lie [lai] - брехня</p>
-            <p>mile [mail] – миля</p>
-            <p>like [laik] - подобатися</p>
-            <p>smile [smail] – посмішка</p>
-            <p>size [saiz] – розмір</p>
-          </div>
-          <div class="btext">– односкладові слова + nd:</div>
-          <div class="multi-columns">
-            <p>kind [kaind] – 1. добрий 2. вид</p>
-          </div><br>
-          <div class="custom-header">i [i]</div>
-          <div class="btext">– у закритому складі:</div>
-          <div class="multi-columns">
-            <p>it [it] – він, вона, воно</p>
-            <p>lift [lift] – підйом</p>
-            <p>in [in] - в</p>
-            <p>slim [slim] - стрункий, худий</p>
-            <p>mill [mil] – млин</p>
-            <p>bit [bit] – шматок, частинка</p>
-            <p>sit [sit] – сидіти, сідати</p>
-            <p>till [til] - до</p>
-            <p>hit [hit] - ударяти</p>
-          </div>
-          <div class="btext">– у ненаголошеному складі:</div>
-          <div class="multi-columns">
-            <p>limit ['limit] - межа</p>
-          </div><br>
-          <div class="custom-header">ie, ey, y [i]</div>
-          <div class="btext">– в кінці дво- і більше складових слів у ненаголошеному складі:</div>
-          <div class="multi-columns">
-            <p>ninety ['nainti] – дев’яносто</p>
-            <p>milky ['milki] – молочний</p>
-            <p>Teddy ['tedi] – Тедді</p>
-            <p>kidney ['kidni] - нирка</p>
-            <p>donkey ['dAŋki] – віслюк</p>
-            <p>hippie ['hipi] – хіппі</p>
-          </div><br>
-          <div class="custom-header">ie [i:]</div>
-          <div class="multi-columns">
-            <p>shield [ʃi:ld] – захищати</p>
-          </div><br>
-          <div class="custom-header">о [ʌ]</div>
-          <div class="multi-columns">
-            <p>dove [dʌv] – голуб</p>
-            <p>front [frʌnt] – передня сторона</p>
-            <p>love [lʌv] – кохання</p>
-            <p>son [sʌn] - син</p>
-            <p>some [sʌm] – певна кількість</p>
-          </div><br>
-          <div class="custom-header">о [ɔ]</div>
-          <div class="btext">– у закритому складі:</div>
-          <div class="multi-columns">
-            <p>font [fɔnt] – шрифт</p>
-            <p>doll [dɔl] – лялька</p>
-            <p>stop [stɔp] – зупинятися</p>
-            <p>on [ɔn] – на</p>
-            <p>top [tɔp] - верхівка, вершина</p>
-            <p>hot [hɔt] – гарячий</p>
-          </div><br>
-          <div class="custom-header">о [əu]</div>
-          <div class="btext">– у відкритому складі:</div>
-          <div class="multi-columns">
-            <p>no [nəu] – ні</p>
-            <p>vote [vəut] – голосування</p>
-            <p>bone [bəun] – кістка</p>
-            <p>lone [ləun] – одинокий</p>
-            <p>dome [dəum] – баня</p>
-            <p>so [səu] – так, отже</p>
-            <p>hope [həup] – сподіватися</p>
-            <p>zero ['ziərəu] – нуль</p>
-          </div>
-          <div class="btext">– перед ld:</div>
-          <div class="multi-columns">
-            <p>gold [gəuld] – золото</p>
-            <p>old [əuld] – старий</p>
-            <p>hold [həuld] – тримати</p>
-          </div><br>
-          <div class="custom-header">oa [əu]</div>
-          <div class="multi-columns">
-            <p>float [fləut] – плавати</p>
-            <p>oat [əut] – вівсянка</p>
-            <p>foam [fəum] – піна</p>
-            <p>boat [bəut] – човен</p>
-            <p>soap [səup] - мило</p>
-          </div><br>
-          <div class="custom-header">oi, oy [ɔi]</div>
-          <div class="btext">– в кінці слова або в іменниках:</div>
-          <div class="multi-columns">
-            <p>destroy [di'strɔi] – руйнувати</p>
-            <p>spoil [spɔil] – псувати</p>
-            <p>poison ['pɔiz(ə)n] - отрута</p>
-            <p>coin [kɔin] – монета</p>
-            <p>toy [tɔi] - іграшка</p>
-            <p>boy [bɔi] - хлопчик</p>
-          </div><br>
-          <div class="custom-header">оо [u:]</div>
-          <div class="multi-columns">
-            <p>noon [nu:n] – полудень</p>
-            <p>boot [bu:t] – чобіт</p>
-            <p>mood [mu:d] – настрій</p>
-            <p>doom [du:m] – загибель</p>
-            <p>loop [lu:p] – петля</p>
-            <p>soon [su:n] - незабаром</p>
-            <p>too [tu:] – 1 той же 2 надміру</p>
-          </div><br>
-          <div class="custom-header">ou, ow [au]</div>
-          <div class="btext">– у наголошених складах:</div>
-          <div class="multi-columns">
-            <p>crown [kraun] – корона</p>
-            <p>towel ['tauəl] – рушник</p>
-            <p>flower ['flauə] – квітка</p>
-            <p>about [ə'baut] – про, стосовно</p>
-            <p>account [ə'kaunt] – сет</p>
-            <p>house [haus] – дім</p>
-            <p>bounty ['baunti] – щедрість</p>
-            <p>cloud [klaud] – хмара</p>
-            <p>mountain ['mauntin] – гора</p>
-            <p>down ['daun] – низ</p>
-          </div><br>
-          <div class="custom-header">а [a:]</div>
-          <div class="btext">– перед кількома приголосними:</div>
-          <div class="multi-columns">
-            <p>task [ta:sk] – завдання</p>
-            <p>vast [va:st] – широкий</p>
-            <p>master ['ma:stə] - хозяїн, вчитель</p>
-            <p>fasten ['fa:s(ə)n] – застібати</p>
-            <p>calf [ka:f] – теля</p>
-            <p>pass [pa:s] - проходити</p>
-          </div><br>
-          <div class="custom-header">а [æ]</div>
-          <div class="btext">– у закритому складі:</div>
-          <div class="multi-columns">
-            <p>lamp [læmp] – лампа</p>
-            <p>bat [bæt] - кажан</p>
-            <p>sad [sæd] – сумний</p>
-            <p>stand [stænd] – стояти</p>
-            <p>land [lænd] – земля</p>
-            <p>man [mæn] - чоловік</p>
-            <p>fantasy ['fæntəsi] – фантазія</p>
-          </div><br>
-          <div class="custom-header">а [ei]</div>
-          <div class="btext">– у відкритому складі:</div>
-          <div class="multi-columns">
-            <p>fame [feim] – слава</p>
-            <p>name [neim] – ім’я</p>
-            <p>late [leit] – пізній</p>
-            <p>blame [bleim] – засуджувати</p>
-            <p>pale [peil] – блідий</p>
-            <p>take [teik] - брати</p>
-            <p>make [meik] - робити</p>
-            <p>sane [sein] – розумний (про погляди)</p>
-            <p>tale [teil] – розповідь, оповідання</p>
-          </div><br>
-          <div class="custom-header">аi [ei]</div>
-          <div class="btext">– в середині або на початку слова:</div>
-          <div class="multi-columns">
-            <p>tail [teil] – хвіст</p>
-            <p>mail [meil] – пошта</p>
-            <p>saint [seint] – святий</p>
-            <p>vain [vein] – марнославний</p>
-            <p>aim [eim] – мета</p>
-            <p>fail [feil] – зазнати невдачі</p>
-          </div><br>
-          <div class="custom-header">ay [ei]</div>
-          <div class="btext">– в кінці слова:</div>
-          <div class="multi-columns">
-            <p>play [plei] – грати</p>
-            <p>may [mei] – травень</p>
-            <p>day [dei] – день</p>
-            <p>pay [pei] - платити</p>
-          </div><br>
-          <div class="custom-header">au [ɔ:]</div>
-          <div class="multi-columns">
-            <p>autumn ['ɔ:təm] – осінь</p>
-            <p>astronaut ['æstrənɔ:t] – космонавт</p>
-            <p>author ['ɔ:θə] – автор</p>
-            <p>cause [kɔ:z] – причина</p>
-            <p>fault [fɔ:lt] - провина</p>
-            <p>sauce [sɔ:s] – соус</p>
-          </div><br>
-          <div class="custom-header">u, e, o, a [ə]</div>
-          <div class="multi-columns">
-            <p>demon ['di:mən] – демон</p>
-            <p>seldom ['seldəm] – рідко</p>
-            <p>plenum ['pli:nəm] – збори</p>
-            <p>bottom ['bɔtəm] – дно</p>
-            <p>element ['elimənt] – елемент</p>
-            <p>payment ['peimənt] – платіж</p>
-            <p>ballad ['bæləd] - балада</p>
-          </div><br>
-          <div class="custom-header">u [ʌ]</div>
-          <div class="btext">– у закритому складі:</div>
-          <div class="multi-columns">
-            <p>dust [dʌst] – пилюка</p>
-            <p>stun [stʌn] – приголомшити</p>
-            <p>pub [pʌb] – пивна</p>
-            <p>lucky ['lʌki] – успішний, щасливий</p>
-            <p>numb [nʌm] – занімілий</p>
-            <p>hush [hʌʃ] – вщухати</p>
-            <p>duck [dʌk] – качка</p>
-            <p>butter ['bʌtə] - масло</p>
-          </div><br>
-          <div class="custom-header">u [ju:]</div>
-          <div class="btext">– у відкритому складі:</div>
-          <div class="multi-columns">
-            <p>museum [mju:'zi:əm] – музей</p>
-            <p>huge [hju:dʒ] – величезний</p>
-            <p>duty ['dju:ti] – обов’язок</p>
-            <p>tutor ['tju:tə] – репетитор</p>
-          </div><br>
-          <div class="custom-header">u [u:]</div>
-          <div class="btext">– після букв j та l у відкритих складах:</div>
-          <div class="multi-columns">
-            <p>junior ['dʒu:niə] – молодший</p>
-            <p>lunar ['lu:nə] – місячний</p>
-          </div><br>
-          <div class="custom-header">u [-]</div>
-          <div class="btext">– після букви g перед наступною голосною:</div>
-          <div class="multi-columns">
-            <p>intrigue ['intri:g] – інтрига</p>
-            <p>vogue [vəug] – мода</p>
-            <p>disguise [dis'gaiz] – маскування</p>
-            <p>guitar [gi'ta:] – гітара</p>
-            <p>guess [ges] - здогадуватися</p>
-            <p>guilt [gilt] - провина</p>
-          </div><br>
-          <div class="custom-header">alk [ɔ:k]</div>
-          <div class="multi-columns">
-            <p>walk [wɔ:k] – ходити пішки</p>
-            <p>chalk [tʃɔ:k] – крейда</p>
-            <p>talk [tɔ:k] - говорити</p>
-          </div><br>
-          <div class="custom-header">al [ɔ:l]</div>
-          <div class="btext">– перед приголосною буквою:</div>
-          <div class="multi-columns">
-            <p>install [in'stɔ:l] – встановлювати</p>
-            <p>fall [fɔ:l] – падати</p>
-            <p>tall [tɔ:l] – високий</p>
-            <p>ball [bɔ:l] – шар</p>
-            <p>wall [wɔ:l] – стіна</p>
-            <p>alternate [ɔ:l'tə:nət] - альтернатива</p>
-            <p>almost ['ɔ:lməust] – майже</p>
-            <p>call [kɔ:l] - дзвонити</p>
-          </div><br>
-          <div class="custom-header">qu [kw]</div>
-          <div class="multi-columns">
-            <p>question ['kwestʃən] – питання</p>
-            <p>quiet ['kwaiət] – тихий</p>
-            <p>quick [kwik] – швидкий</p>
-            <p>queen [kwi:n] – королева</p>
-            <p>quarrel ['kwɔr(ə)l] – сварка</p>
-            <p>liquid ['likwid] – рідина</p>
-            <p>request [ri'kwest] – вимога</p>
-            <p>frequent ['fri:kwənt] – частий</p>
-            <p>quantity ['kwɔntəti] – кількість</p>
-          </div><br>
-          <div class="custom-header">ph [f]</div>
-          <div class="multi-columns">
-            <p>elephant ['elifənt] – слон</p>
-            <p>sphere [sfiə] – сфера</p>
-            <p>phone [fəun] - телефон</p>
-            <p>photo ['fəutəu] - фотографія</p>
-          </div><br>
-          <div class="custom-header">sh [ʃ]</div>
-          <div class="multi-columns">
-            <p>she [ʃi:] – вона</p>
-            <p>leash [li:ʃ] – повідок</p>
-            <p>shot [ʃɔt] – постріл</p>
-            <p>shield [ʃi:ld] – захищати</p>
-            <p>shop [ʃɔp] - магазин</p>
-            <p>fish [fiʃ] – риба</p>
-            <p>shame [ʃeim] - сором</p>
-          </div><br>
-          <div class="custom-header">s [ʒ]</div>
-          <div class="btext">– між голосними буквами перед u,i:</div>
-          <div class="multi-columns">
-            <p>vision ['viʒ(ə)n] – зір</p>
-            <p>decision [di'siʒn] – рішення</p>
-            <p>division [di'viʒ(ə)n] – ділення</p>
-            <p>casual ['kæʒwəl] – випадковий</p>
-            <p>measure ['meʒə] – міра</p>
-            <p>pleasure ['pleʒə] – задоволення</p>
-            <p>closure ['kləuʒə] – закриття</p>
-            <p>usually ['ju:ʒ(ə)li] - зазвичай</p>
-          </div><br>
-          <div class="custom-header">k [k]</div>
-          <div class="multi-columns">
-            <p>naked ['neikid] – голий</p>
-            <p>snake [sneik] – змія</p>
-            <p>bike [baik] – мотоцикл</p>
-            <p>mask [ma:sk] – маска</p>
-            <p>folk [fəuk] – народний</p>
-            <p>talk [tɔ:k] - казати</p>
-          </div><br>
-          <div class="custom-header">сk [k]</div>
-          <div class="multi-columns">
-            <p>lucky ['lʌki] – успішний, щасливий</p>
-            <p>pack [pæk] – пачка</p>
-            <p>lack [læk] – нестача</p>
-            <p>sick [sik] – хворий</p>
-            <p>stick [stik] – палиця</p>
-            <p>clock [klɔk] – годинник</p>
-          </div><br>
-          <div class="custom-header">с [k]</div>
-          <div class="btext">– в усіх випадках, крім як перед буквами е, i, y:</div>
-          <div class="multi-columns">
-            <p>can [kæn] – бути спроможним</p>
-            <p>cost [kɔst] – коштувати</p>
-            <p>active ['æktiv] – активний</p>
-            <p>coal [kəul] – вугілля</p>
-            <p>coin [kɔin] – монета</p>
-            <p>insect ['insekt] – комаха</p>
-            <p>clean [kli:n] – чистий</p>
-            <p>custom ['kʌstəm] – звичай</p>
-            <p>scar [ska:] – шрам</p>
-            <p>camp [kæmp] – табір</p>
-            <p>candle ['kændl] – свічка</p>
-          </div><br>
-          <div class="custom-header">с [s]</div>
-          <div class="btext">– перед буквами е, i, y:</div>
-          <div class="multi-columns">
-            <p>space [speis] - простір, космос</p>
-            <p>face [feis] - обличчя</p>
-            <p>distance ['dist(ə)n(t)s] – відстань</p>
-            <p>fence [fen(t)s] – паркан</p>
-            <p>office ['ɔfis] - офіс</p>
-            <p>officer ['ɔfisə] - чиновник, офіцер</p>
-            <p>police [pə'li:s] – поліція</p>
-            <p>acid ['æsid] – кислотний</p>
-            <p>civil ['siv(ə)l] – громадянський</p>
-            <p>cinema ['sinəmə] – кінотеатр</p>
-            <p>diplomacy [di'pləuməsi] – дипломатія</p>
-            <p>mercy ['mə:si] – милосердя</p>
-            <p>city ['siti] - місто</p>
-          </div><br>
-          <div class="custom-header">ch [tʃ]</div>
-          <div class="multi-columns">
-            <p>such [sʌtʃ] – такий</p>
-            <p>beach [bi:tʃ] – пляж</p>
-            <p>channel ['tʃæn(ə)l] - канал, пролив</p>
-            <p>cheap [tʃi:p] – дешевий</p>
-            <p>rich [ritʃ] – багатий</p>
-            <p>inch [intʃ] – дюйм</p>
-            <p>teach [ti:tʃ] - навчати</p>
-          </div><br>
-          <div class="custom-header">tch [tʃ]</div>
-          <div class="multi-columns">
-            <p>sketch [sketʃ] - ескіз</p>
-            <p>catch [kætʃ] – ловити</p>
-            <p>match [mætʃ] - сірник</p>
-          </div>
-          <div class="custom-header">j [dʒ]</div>
-          <div class="multi-columns">
-            <p>joke [dʒəuk] – жарт</p>
-            <p>jealous ['dʒeləs] – ревнивий</p>
-            <p>joy [dʒɔi] – радість</p>
-            <p>juice [dʒu:s] – сік</p>
-            <p>job [dʒɔb] - робота</p>
-          </div><br>
-          <div class="custom-header">g [dʒ]</div>
-          <div class="btext">– в деяких словах перед буквами e, i, y:</div>
-          <div class="multi-columns">
-            <p>digit ['didʒit] – цифра</p>
-            <p>gem [dʒem] – коштовний камінь</p>
-            <p>gym [dʒim] – гімнастичний зал</p>
-            <p>oxygen ['ɔksidʒən] – кисень</p>
-          </div>
-          <div class="btext">– завжди в кінці слова перед німою буквою е:</div>
-          <div class="multi-columns">
-            <p>stage [steidʒ] – сцена</p>
-            <p>age [eidʒ] – вік</p>
-            <p>luggage ['lʌgidʒ] – багаж</p>
-            <p>damage ['dæmidʒ] – шкода, збиток</p>
-            <p>image ['imidʒ] – малюнок</p>
-            <p>manage ['mænidʒ] - управляти</p>
-            <p>cage [keidʒ] – клітка</p>
-            <p>village ['vilidʒ] - село</p>
-          </div><br>
-          <div class="custom-header">g [g]</div>
-          <div class="multi-columns">
-            <p>gossip ['gɔsip] – плітки</p>
-            <p>flag [flæg] - прапор</p>
-            <p>god [gɔd] - бог</p>
-            <p>good [gud] – хороший</p>
-            <p>beg [beg] – просити</p>
-            <p>glad [glæd] – радісний</p>
-            <p>give [giv] – дати</p>
-            <p>gift [gift] - подарунок</p>
-          </div><br>
-          <div class="custom-header">gh [-]</div>
-          <div class="btext">– перед буквою t:</div>
-          <div class="multi-columns">
-            <p>sight [sait] – зір</p>
-            <p>daughter ['dɔ:tə] – донька</p>
-            <p>delight [di'lait] – задоволення</p>
-            <p>tight [tait] – тугий</p>
-            <p>eight [eit] - вісім</p>
-          </div><br>
-          <div class="custom-header">х [gz]</div>
-          <div class="btext">– перед наголошеним звуком у наголошеному складі:</div>
-          <div class="multi-columns">
-            <p>exalt [ig'zɔ:lt] – звеличувати</p>
-            <p>examine [ig'zæmin] – оглядати</p>
-            <p>exam [ig'zæm] - екзамен</p>
-            <p>exotic [ig'zɔtik] – екзотичний</p>
-          </div><br>
-          <div class="custom-header">х [ks]</div>
-          <div class="btext">– у всіх випадках, крім як перед наголошеним звуком у наголошеному складі:</div>
-          <div class="multi-columns">
-            <p>fox [fɔks] – лисиця</p>
-            <p>pixel ['piks(ə)l] – піксель</p>
-            <p>tax [tæks] – податок</p>
-            <p>oxygen ['ɔksidʒən] – кисень</p>
-            <p>exchange [iks'tʃeindʒ] – обмін</p>
-            <p>ox [ɔks] – бик</p>
-            <p>explain [ik'splein] - пояснювати</p>
-            <p>exhibition [eksi'biʃ(ə)n] - виставка</p>
-          </div><br>
-          <div class="custom-header">th [ð]</div>
-          <div class="multi-columns">
-            <p>there [ðɛə] – там</p>
-            <p>then [ðen] - потім</p>
-            <p>than [ðæn] – ніж</p>
-            <p>they [ðei] – вони</p>
-            <p>that [ðæt] - той</p>
-            <p>this [ðis] – цей</p>
-            <p>these [ði:z] - ці</p>
-            <p>those [ðəuz] - ті</p>
-            <p>smooth [smu:ð] - гладкий, рівний</p>
-          </div><br>
-          <div class="custom-header">th [θ]</div>
-          <div class="multi-columns">
-            <p>thought [θɔ:t] – думка</p>
-            <p>thorn [θɔ:n] – шип</p>
-            <p>threat [θret] – загроза</p>
-            <p>cloth [klɔθ] – тканина</p>
-            <p>both [bəuθ] - обидва</p>
-            <p>math [mæθ] – математика</p>
-            <p>south [sauθ] – південь</p>
-            <p>youth [ju:θ] - юність, молодість</p>
-            <p>couth [ku:θ] – вишуканість</p>
-            <p>thin [θin] - тонкий, худий</p>
-          </div><br>
-          <div class="custom-header">ng [ŋ]</div>
-          <div class="multi-columns">
-            <p>along [ə'lɔŋ] - вздовж</p>
-            <p>among [ə'mʌŋ] - посеред</p>
-            <p>amazing [ə'meiziŋ] – дивовижний</p>
-            <p>ceiling ['si:liŋ] – стеля</p>
-            <p>annoying [ə'nɔiiŋ] – набридливий</p>
-            <p>falling ['fɔ:liŋ] – падіння</p>
-            <p>meeting ['mi:tiŋ] – збори</p>
-            <p>thing [θiŋ] - річ, предмет</p>
-          </div><br>
-          <div class="custom-header">ng [ŋg]</div>
-          <div class="btext">– перед голосними та r, l, w:</div>
-          <div class="multi-columns">
-            <p>mango ['mæŋgəu] – манго</p>
-            <p>finger ['fiŋgə] – палець</p>
-            <p>linger ['liŋgə] – зволікати</p>
-            <p>jingle ['dʒiŋgl] – дзвін</p>
-            <p>congress ['kɔŋgres] – конгрес</p>
-            <p>anger ['æŋgə] – злість</p>
-            <p>hungry ['hʌŋgri] - голодний</p>
-          </div><br>
-          <div class="custom-header">nk [ŋk]</div>
-          <div class="multi-columns">
-            <p>drink [driŋk] – пити</p>
-            <p>rink [riŋk] – каток</p>
-            <p>donkey ['dɔŋki] – віслюк</p>
-            <p>blink [bliŋk] – мить</p>
-            <p>ink [iŋk] – чорнила</p>
-            <p>sink [siŋk] – раковина</p>
-            <p>rank [ræŋk] – ряд</p>
-            <p>think [θiŋk] - думати</p>
-            <p>thank [θæŋk] – дякувати</p>
-            <p>pink [piŋk] - рожевий</p>
-          </div><br>
-          <div class="custom-header">w [w]</div>
-          <div class="multi-columns">
-            <p>wave [weiv] – хвиля</p>
-            <p>wall [wɔ:l] – стіна</p>
-          </div><br>
-          <div class="custom-header">wh [w]</div>
-          <div class="multi-columns">
-            <p>what [(h)wɔt] – що</p>
-            <p>white [(h)wait] – білий</p>
-          </div><br>
-          <div class="custom-header">wh [h]</div>
-          <div class="btext">– перед буквою о:</div>
-          <div class="multi-columns">
-            <p>whole [həul] - увесь</p>
-            <p>who [hu:] – хто</p>
-            <p>whose [hu:z] - чий</p>
-          </div><br>
-          <div class="custom-header">wa, wha [wɔ]</div>
-          <div class="btext">– у наголошеному складі перед приголосною в кінці слова або перед двома (крім g, r, ck та х):</div>
-          <div class="multi-columns">
-            <p>wasp [wɔsp] – оса</p>
-            <p>want [wɔnt] – хотіти</p>
-            <p>what [(h)wɔt] - що, який</p>
-            <p>wash [wɔʃ] - мити</p>
-          </div><br>
-          <div class="custom-header">wr [r]</div>
-          <div class="multi-columns">
-            <p>wrist [rist] – зап’ястя</p>
-            <p>wrong [rɔŋ] – неправильний</p>
-            <p>write [rait] - писати</p>
-          </div><br>
-          <div class="custom-header">r [r]</div>
-          <div class="multi-columns">
-            <p>rabbit ['ræbit] – кролик</p>
-            <p>radio ['reidiəu] – радіо</p>
-            <p>rain [rein] – дощ</p>
-            <p>restaurant ['restərɔnt] – ресторан</p>
-            <p>random ['rændəm] - випадковий</p>
-            <p>raise [reiz] – піднімати</p>
-            <p>rare [rɛə] – рідкісний</p>
-            <p>ray [rei] – промінь</p>
-            <p>rest [rest] – відпочинок</p>
-          </div><br>
-          <div class="custom-header">er, ur [ə]</div>
-          <div class="btext">– у ненаголошеному складі:</div>
-          <div class="multi-columns">
-            <p>better ['betə] – кращий</p>
-            <p>bitter ['bitə] – гіркий</p>
-            <p>ladder ['lædə] – сходи</p>
-            <p>later ['leitə] – пізніше</p>
-            <p>saturday ['sætədei] – субота</p>
-            <p>sister ['sistə] – сестра</p>
-            <p>dinner ['dinə] - обід</p>
-          </div><br>
-          <div class="custom-header">ar [a:]</div>
-          <div class="multi-columns">
-            <p>spark [spa:k] – іскра</p>
-            <p>dark [da:k] – темний</p>
-            <p>alarm [ə'la:m] – тривога</p>
-            <p>scarf [ska:f] - шарф</p>
-          </div><br>
-          <div class="custom-header">or [ɔ:]</div>
-          <div class="multi-columns">
-            <p>short [ʃɔ:t] – короткий</p>
-            <p>adore [ə'dɔ:] – обожнювати</p>
-            <p>perform [pə'fɔ:m] – виконувати</p>
-            <p>storm [stɔ:m] - буря, гроза</p>
-            <p>afford [ə'fɔ:d] – дозволити собі щось</p>
-            <p>force [fɔ:s] – сила</p>
-          </div><br>
-          <div class="custom-header">ur, er, ir (yr), в деяких випадках ear [ə:]</div>
-          <div class="multi-columns">
-            <p>suburb ['sʌbə:b] – передмістя</p>
-            <p>burn [bə:n] – горіти</p>
-            <p>church [tʃə:tʃ] – церква</p>
-            <p>curtain ['kə:t(ə)n] – занавіска</p>
-            <p>advertisement [əd'və:tismənt] – реклама</p>
-            <p>alert [ə'lə:t] – тривога</p>
-            <p>berg [bə:g] – айсберг</p>
-            <p>Berlin [bə:'lin] - Берлин</p>
-            <p>term [tə:m] – термін</p>
-            <p>nervous ['nə:vəs] – нервовий</p>
-            <p>bird [bə:d] – птах</p>
-            <p>birth [bə:θ] – народження</p>
-            <p>circle ['sə:kl] – коло</p>
-            <p>earn [ə:n] – заробляти</p>
-            <p>rehearsal [ri'hə:s(ə)l] – репетиція</p>
-          </div><br>
-          <div class="custom-header">ure, our, oor [uə]</div>
-          <div class="multi-columns">
-            <p>ensure [in'ʃuə] – гарантувати, забезпечувати</p>
-            <p>sure [ʃuə] - впевнений</p>
-            <p>flour ['flauə] – борошно</p>
-            <p>boor [buə] – невихована людина</p>
-            <p>poor [puə] – бідний</p>
-          </div><br>
-          <div class="custom-header">ure [juə]</div>
-          <div class="btext">– у наголошеній позиції:</div>
-          <div class="multi-columns">
-            <p>impure [im'pjuə] – нечистий</p>
-            <p>pure [pjuə] - чистий</p>
-            <p>secure [si'kjuə] – безпечний</p>
-            <p>cure [kjuə] - лікувати</p>
-          </div><br>
-          <div class="custom-header">ear, eer, ere [iə]</div>
-          <div class="multi-columns">
-            <p>gear [giə] – механізм</p>
-            <p>appear [ə'piə] – з’являтися</p>
-            <p>career [kə'riə] – кар’єра</p>
-            <p>deer [diə] – олень</p>
-            <p>sneer [sniə] – висміювання</p>
-            <p>here [hiə] - тут</p>
-          </div><br>
-          <div class="custom-header">our [auə]</div>
-          <div class="multi-columns">
-            <p>sour ['sauə] – кислий</p>
-            <p>flour ['flauə] – борошно</p>
-          </div><br>
-          <div class="custom-header">wa+r, wha+r [wɔ:]</div>
-          <div class="btext">– у наголошеному складі, якщо після них нема голосної:</div>
-          <div class="multi-columns">
-            <p>wart [wɔ:t] – бородавка</p>
-            <p>wharf [(h)wɔ:f] – пристань</p>
-            <p>warm [wɔ:m] – теплий</p>
-            <p>war [wɔ:] - війна</p>
-          </div><br>
-          <div class="custom-header">wor [wə:]</div>
-          <div class="btext">– перед приголосною:</div>
-          <div class="multi-columns">
-            <p>worm [wə:m] – черв’як</p>
-            <p>world [wə:ld] – світ</p>
-            <p>word [wə:d] - слово</p>
-          </div>
-        </section>
       </div>
       <!-- ↓↓↓ modules: bbp (start) ↓↓↓-->
       <div class="bbp">

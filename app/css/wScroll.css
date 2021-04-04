@@ -24,7 +24,7 @@
   top: 0;
   right: 0;
   height: calc(100% - 0px);
-  width: 12px;
+  width: 9px;
 }
 
 .wjs-scroll__line {
@@ -65,3 +65,6 @@
 }
 
 /* ↑↑↑ custom scroll ↑↑↑ */
+.wjs-scroll__content {
+  position: relative;
+}

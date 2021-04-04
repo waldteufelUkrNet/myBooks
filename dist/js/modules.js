@@ -173,7 +173,7 @@
    * [showBookmarksBtns створення кнопок закладки]
    */
   function showBookmarksBtns() {
-    let book = document.getElementById('book');
+    let book = document.querySelector('#book .wjs-scroll__content');
     let bookmarkInFirstScreen = '\
                                   <div class="bookmark-in-first-screen">\
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">\
@@ -271,13 +271,13 @@
    */
   function scrollingWindow(how) {
     let topPoint;
-    let book = document.getElementById('book');
+    let bookInner = document.querySelector('#book .wjs-scroll__content');
 
     if (how == 'scrollTop') {
       topPoint = 0;
     } else {
-      let currentScroll = book.scrollTop;
-      let scrollValue   = book.offsetHeight;
+      let currentScroll = bookInner.scrollTop;
+      let scrollValue   = bookInner.offsetHeight;
 
       if ( how == 'scrollUp' ) {
         topPoint = currentScroll - scrollValue + 20;
@@ -286,7 +286,7 @@
       }
     }
 
-    book.scroll({top: topPoint, behavior: 'smooth'});
+    bookInner.scroll({top: topPoint, behavior: 'smooth'});
   }
 
   /**
@@ -694,15 +694,15 @@
     },1000);
   });
 
-  document.getElementById('book').onscroll = pagination;
+  document.querySelector('#book .wjs-scroll__content').addEventListener('scroll', pagination);
 /* ↑↑↑ /PAGINATION ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
 /* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
   function pagination() {
-    let book              = document.getElementById('book'),
-        visibleBookHeight = book.offsetHeight,
-        fullBookHeight    = book.scrollHeight,
-        bookScrollTop     = book.scrollTop;
+    let bookInner         = document.querySelector('#book .wjs-scroll__content'),
+        visibleBookHeight = bookInner.offsetHeight,
+        fullBookHeight    = bookInner.scrollHeight,
+        bookScrollTop     = bookInner.scrollTop;
 
     let pageNumber = Math.ceil(bookScrollTop/visibleBookHeight);
     if (pageNumber == 0) pageNumber = 1;
