@@ -28,7 +28,7 @@
       id     : "00003",
       author : "Theodor Storm",
       name   : "Immensee",
-      markers : [],
+      markers : ['audio'],
       genre  : "метод Франка: нім.мова"
     },
     {
