@@ -829,692 +829,692 @@
       markers : [],
       genre  : "метод Франка: англ.мова"
     },
-    {
-      id     : "00118",
-      author : "Mark Twain",
-      name   : "The Million Pound Bank Note and other stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00119",
-      author : "Francis Scott Fitzgerald",
-      name   : "The diamond as big as the Ritz",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00120",
-      author : "Brian Doherty",
-      name   : "The Story Of Pocahontas",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00121",
-      author : "Theodore Dreiser",
-      name   : "Will You Walk Into My Parlor?",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00122",
-      author : "David Herbert Lawrence",
-      name   : "The Shadow in the Rose Garden and Other Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00123",
-      author : "John William Smith",
-      name   : "Longer Wacky Stories With Twist Endings",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00124",
-      author : "William Wymark Jacobs",
-      name   : "A Love Passage and Other Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00125",
-      author : "Bram Stoker",
-      name   : "Dracula's Guest and Other Weird Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00126",
-      author : "Ernest Hemingway",
-      name   : "The Old Man And The Sea",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00127",
-      author : "Wilkie Collins",
-      name   : "The Dream Woman",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00128",
-      author : "Oscar Wilde",
-      name   : "The Importance of Being Earnest. A Trivial Comedy for Serious People",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00129",
-      author : "Thomas Hardy",
-      name   : "The Distracted Preacher",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00130",
-      author : "Jonathan Swift",
-      name   : "Gulliver's Travels",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00131",
-      author : "Henry James",
-      name   : "Daisy Miller",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00132",
-      author : "Alexander Alan Milne",
-      name   : "Winnie-the-Pooh",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00133",
-      author : "Alexander Alan Milne",
-      name   : "The House at Pooh Corner",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00134",
-      author : "Arthur Conan Doyle",
-      name   : "Silver Blaze",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00135",
-      author : "Robert Louis Stevenson",
-      name   : "The Suicide Club",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00136",
-      author : "Francis Scott Fitzgerald",
-      name   : "Jacob's Ladder and Other Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00137",
-      author : "Walter Scott",
-      name   : "Ivanhoe",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00138",
-      author : "Saki",
-      name   : "Shock Tactics And Other Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00139",
-      author : "Robert Louis Stevenson",
-      name   : "The Rajah's Diamond",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00140",
-      author : "Graham Greene",
-      name   : "The Third Man",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00141",
-      author : "John Steinbeck",
-      name   : "Of Mice And Men",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00142",
-      author : "Robert Louis Stevenson",
-      name   : "The strange case of dr. Jekyll and mr. Hyde",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00143",
-      author : "Jane Austen",
-      name   : "Lady Susan",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00144",
-      author : "Oscar Wilde",
-      name   : "The Star-Child And Other Legends",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00145",
-      author : "John William Smith",
-      name   : "More Longer Wacky Stories With Twist Endings",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00146",
-      author : "George Bernard Shaw",
-      name   : "Pygmalion",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00147",
-      author : "Walter Brandon Thomas",
-      name   : "Charley's Aunt",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00148",
-      author : "Jack London",
-      name   : "All Gold Canyon (Stories)",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00149",
-      author : "noname",
-      name   : "Japanese Tales",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00150",
-      author : "Jack London",
-      name   : "In A Far Country (Stories)",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00151",
-      author : "Sherwood Anderson",
-      name   : "Winesburg, Ohio",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00152",
-      author : "James Baldwin",
-      name   : "Robinson Crusoe Written Anew for Children by James Baldwin",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00153",
-      author : "Lewis Carroll",
-      name   : "Through The Looking-Glass",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00154",
-      author : "Jack London",
-      name   : "South Sea Tales",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00155",
-      author : "Charles Dickens",
-      name   : "A Christmas Carol",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00156",
-      author : "Herbert George Wells",
-      name   : "The Time Machine",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00157",
-      author : "Lewis Carroll",
-      name   : "Alice's adventures in Wonderland",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00158",
-      author : "Robert Louis Stevenson",
-      name   : "The Beach of Falesá (Island Nights' Entertainments)",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00159",
-      author : "Paul Gallico",
-      name   : "Mrs. ‘Arris Goes to Paris",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00160",
-      author : "O’Henry",
-      name   : "Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00161",
-      author : "Cyrus Mac Millan",
-      name   : "Indian Wonder Tales",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00162",
-      author : "Gilbert Keith Chesterton",
-      name   : "The Innocence of Father Brown",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00163",
-      author : "John Buchan",
-      name   : "The Thirty-Nine Steps",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00164",
-      author : "Rudyard Kipling",
-      name   : "Just So Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00165",
-      author : "Herbert George Wells",
-      name   : "Short Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00166",
-      author : "Jack London",
-      name   : "The Call Of The Wild",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00167",
-      author : "Pamela Lyndon Travers",
-      name   : "Mary Poppins",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00168",
-      author : "Lyman Frank Baum",
-      name   : "The Wonderful Wizard Of Oz",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00169",
-      author : "Lyman Frank Baum",
-      name   : "The Marvelous Land Of Oz",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00170",
-      author : "Graham Greene",
-      name   : "The Tenth Man",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00171",
-      author : "Arthur Conan Doyle",
-      name   : "The Adventures Of Gerard",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00172",
-      author : "Joseph Jacobs",
-      name   : "English Fairy Tales",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00173",
-      author : "Andrew Lang",
-      name   : "King Arthur. Tales of the Round Table.",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00174",
-      author : "Arthur Conan Doyle",
-      name   : "A Study In Scarlet",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00175",
-      author : "Arthur Conan Doyle",
-      name   : "The Sign Of The Four",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00176",
-      author : "noname",
-      name   : "Irish Fairy Tales",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00177",
-      author : "noname",
-      name   : "Great Ghost Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00178",
-      author : "Pelham Grenville Wodehouse",
-      name   : "Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00179",
-      author : "Jean Webster",
-      name   : "Daddy-Long-Legs",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00180",
-      author : "Dashiell Hammett",
-      name   : "The adventures of Sam Spade",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00181",
-      author : "William Somerset Maugham",
-      name   : "Ashenden. The British Agent",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00182",
-      author : "noname",
-      name   : "Grimm Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00183",
-      author : "Robert Ervin Howard",
-      name   : "Conan",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00184",
-      author : "Jack London",
-      name   : "Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00185",
-      author : "Robert Ervin Howard",
-      name   : "Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00186",
-      author : "Herbert George Wells",
-      name   : "The Invisible Man",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00187",
-      author : "James Matthew Barrie",
-      name   : "Peter Pan",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00188",
-      author : "Thornton Waldo Burgess",
-      name   : "Peter Rabbit",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00189",
-      author : "Howard Phillips Lovecraft",
-      name   : "At The Mountains Of Madness",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00190",
-      author : "Anthony Hope",
-      name   : "The Prisoner Of Zenda",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00191",
-      author : "Arthur Conan Doyle",
-      name   : "The Hound of the Baskervilles",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00192",
-      author : "Kenneth Grahame",
-      name   : "The Wind in the Willows",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00193",
-      author : "Michael Moorcock",
-      name   : "The Knight of the Swords",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00194",
-      author : "Rudyard Kipling",
-      name   : "The Jungle Book",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00195",
-      author : "Francis Scott Fitzgerald",
-      name   : "The Great Gatsby",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00196",
-      author : "Herbert George Wells",
-      name   : "The War of the Worlds",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00197",
-      author : "Joseph Sheridan Le Fanu",
-      name   : "The Room in the Dragon Volant",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00198",
-      author : "Octavus Roy Cohen",
-      name   : "Midnight",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00199",
-      author : "Graham Greene",
-      name   : "A Gun for Sale",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00200",
-      author : "Jerome Klapka Jerome",
-      name   : "Three Men In A Boat",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00201",
-      author : "Agatha Christie",
-      name   : "The ABC Murders",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00202",
-      author : "Robert Louis Stevenson",
-      name   : "Treasure Island",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00203",
-      author : "Mario Puzo",
-      name   : "Godfather",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00204",
-      author : "Edgar Rice Burroughs",
-      name   : "A Princess Of Mars",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00205",
-      author : "Mark Twain",
-      name   : "The Prince and the Pauper",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00206",
-      author : "Dorothy Leigh Sayers",
-      name   : "Whose Body?",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00207",
-      author : "Dashiell Hammett",
-      name   : "The Maltese Falcon",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00208",
-      author : "Mark Twain",
-      name   : "The Adventures of Tom Sawyer",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00209",
-      author : "Robert Louis Stevenson",
-      name   : "The Black Arrow",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00210",
-      author : "Agatha Christie",
-      name   : "Murder On The Orient Express",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00211",
-      author : "William Somerset Maugham",
-      name   : "Theatre",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00212",
-      author : "John Ronald Reuel Tolkien",
-      name   : "The Hobbit",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00213",
-      author : "Henry Rider Haggard",
-      name   : "King Solomon's Mines",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00214",
-      author : "Arthur Conan Doyle",
-      name   : "Stories",
-      markers : [],
-      genre  : "метод Франка: англ.мова"
-    },
-    {
-      id     : "00215",
-      author : "Stefan Zweig",
-      name   : "Sommernovelette",
-      markers : [],
-      genre  : "метод Франка: нім.мова"
-    },
+    // {
+    //   id     : "00118",
+    //   author : "Mark Twain",
+    //   name   : "The Million Pound Bank Note and other stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00119",
+    //   author : "Francis Scott Fitzgerald",
+    //   name   : "The diamond as big as the Ritz",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00120",
+    //   author : "Brian Doherty",
+    //   name   : "The Story Of Pocahontas",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00121",
+    //   author : "Theodore Dreiser",
+    //   name   : "Will You Walk Into My Parlor?",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00122",
+    //   author : "David Herbert Lawrence",
+    //   name   : "The Shadow in the Rose Garden and Other Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00123",
+    //   author : "John William Smith",
+    //   name   : "Longer Wacky Stories With Twist Endings",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00124",
+    //   author : "William Wymark Jacobs",
+    //   name   : "A Love Passage and Other Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00125",
+    //   author : "Bram Stoker",
+    //   name   : "Dracula's Guest and Other Weird Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00126",
+    //   author : "Ernest Hemingway",
+    //   name   : "The Old Man And The Sea",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00127",
+    //   author : "Wilkie Collins",
+    //   name   : "The Dream Woman",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00128",
+    //   author : "Oscar Wilde",
+    //   name   : "The Importance of Being Earnest. A Trivial Comedy for Serious People",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00129",
+    //   author : "Thomas Hardy",
+    //   name   : "The Distracted Preacher",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00130",
+    //   author : "Jonathan Swift",
+    //   name   : "Gulliver's Travels",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00131",
+    //   author : "Henry James",
+    //   name   : "Daisy Miller",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00132",
+    //   author : "Alexander Alan Milne",
+    //   name   : "Winnie-the-Pooh",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00133",
+    //   author : "Alexander Alan Milne",
+    //   name   : "The House at Pooh Corner",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00134",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "Silver Blaze",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00135",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "The Suicide Club",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00136",
+    //   author : "Francis Scott Fitzgerald",
+    //   name   : "Jacob's Ladder and Other Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00137",
+    //   author : "Walter Scott",
+    //   name   : "Ivanhoe",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00138",
+    //   author : "Saki",
+    //   name   : "Shock Tactics And Other Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00139",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "The Rajah's Diamond",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00140",
+    //   author : "Graham Greene",
+    //   name   : "The Third Man",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00141",
+    //   author : "John Steinbeck",
+    //   name   : "Of Mice And Men",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00142",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "The strange case of dr. Jekyll and mr. Hyde",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00143",
+    //   author : "Jane Austen",
+    //   name   : "Lady Susan",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00144",
+    //   author : "Oscar Wilde",
+    //   name   : "The Star-Child And Other Legends",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00145",
+    //   author : "John William Smith",
+    //   name   : "More Longer Wacky Stories With Twist Endings",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00146",
+    //   author : "George Bernard Shaw",
+    //   name   : "Pygmalion",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00147",
+    //   author : "Walter Brandon Thomas",
+    //   name   : "Charley's Aunt",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00148",
+    //   author : "Jack London",
+    //   name   : "All Gold Canyon (Stories)",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00149",
+    //   author : "noname",
+    //   name   : "Japanese Tales",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00150",
+    //   author : "Jack London",
+    //   name   : "In A Far Country (Stories)",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00151",
+    //   author : "Sherwood Anderson",
+    //   name   : "Winesburg, Ohio",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00152",
+    //   author : "James Baldwin",
+    //   name   : "Robinson Crusoe Written Anew for Children by James Baldwin",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00153",
+    //   author : "Lewis Carroll",
+    //   name   : "Through The Looking-Glass",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00154",
+    //   author : "Jack London",
+    //   name   : "South Sea Tales",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00155",
+    //   author : "Charles Dickens",
+    //   name   : "A Christmas Carol",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00156",
+    //   author : "Herbert George Wells",
+    //   name   : "The Time Machine",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00157",
+    //   author : "Lewis Carroll",
+    //   name   : "Alice's adventures in Wonderland",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00158",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "The Beach of Falesá (Island Nights' Entertainments)",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00159",
+    //   author : "Paul Gallico",
+    //   name   : "Mrs. ‘Arris Goes to Paris",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00160",
+    //   author : "O’Henry",
+    //   name   : "Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00161",
+    //   author : "Cyrus Mac Millan",
+    //   name   : "Indian Wonder Tales",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00162",
+    //   author : "Gilbert Keith Chesterton",
+    //   name   : "The Innocence of Father Brown",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00163",
+    //   author : "John Buchan",
+    //   name   : "The Thirty-Nine Steps",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00164",
+    //   author : "Rudyard Kipling",
+    //   name   : "Just So Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00165",
+    //   author : "Herbert George Wells",
+    //   name   : "Short Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00166",
+    //   author : "Jack London",
+    //   name   : "The Call Of The Wild",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00167",
+    //   author : "Pamela Lyndon Travers",
+    //   name   : "Mary Poppins",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00168",
+    //   author : "Lyman Frank Baum",
+    //   name   : "The Wonderful Wizard Of Oz",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00169",
+    //   author : "Lyman Frank Baum",
+    //   name   : "The Marvelous Land Of Oz",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00170",
+    //   author : "Graham Greene",
+    //   name   : "The Tenth Man",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00171",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "The Adventures Of Gerard",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00172",
+    //   author : "Joseph Jacobs",
+    //   name   : "English Fairy Tales",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00173",
+    //   author : "Andrew Lang",
+    //   name   : "King Arthur. Tales of the Round Table.",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00174",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "A Study In Scarlet",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00175",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "The Sign Of The Four",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00176",
+    //   author : "noname",
+    //   name   : "Irish Fairy Tales",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00177",
+    //   author : "noname",
+    //   name   : "Great Ghost Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00178",
+    //   author : "Pelham Grenville Wodehouse",
+    //   name   : "Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00179",
+    //   author : "Jean Webster",
+    //   name   : "Daddy-Long-Legs",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00180",
+    //   author : "Dashiell Hammett",
+    //   name   : "The adventures of Sam Spade",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00181",
+    //   author : "William Somerset Maugham",
+    //   name   : "Ashenden. The British Agent",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00182",
+    //   author : "noname",
+    //   name   : "Grimm Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00183",
+    //   author : "Robert Ervin Howard",
+    //   name   : "Conan",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00184",
+    //   author : "Jack London",
+    //   name   : "Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00185",
+    //   author : "Robert Ervin Howard",
+    //   name   : "Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00186",
+    //   author : "Herbert George Wells",
+    //   name   : "The Invisible Man",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00187",
+    //   author : "James Matthew Barrie",
+    //   name   : "Peter Pan",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00188",
+    //   author : "Thornton Waldo Burgess",
+    //   name   : "Peter Rabbit",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00189",
+    //   author : "Howard Phillips Lovecraft",
+    //   name   : "At The Mountains Of Madness",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00190",
+    //   author : "Anthony Hope",
+    //   name   : "The Prisoner Of Zenda",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00191",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "The Hound of the Baskervilles",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00192",
+    //   author : "Kenneth Grahame",
+    //   name   : "The Wind in the Willows",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00193",
+    //   author : "Michael Moorcock",
+    //   name   : "The Knight of the Swords",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00194",
+    //   author : "Rudyard Kipling",
+    //   name   : "The Jungle Book",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00195",
+    //   author : "Francis Scott Fitzgerald",
+    //   name   : "The Great Gatsby",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00196",
+    //   author : "Herbert George Wells",
+    //   name   : "The War of the Worlds",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00197",
+    //   author : "Joseph Sheridan Le Fanu",
+    //   name   : "The Room in the Dragon Volant",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00198",
+    //   author : "Octavus Roy Cohen",
+    //   name   : "Midnight",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00199",
+    //   author : "Graham Greene",
+    //   name   : "A Gun for Sale",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00200",
+    //   author : "Jerome Klapka Jerome",
+    //   name   : "Three Men In A Boat",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00201",
+    //   author : "Agatha Christie",
+    //   name   : "The ABC Murders",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00202",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "Treasure Island",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00203",
+    //   author : "Mario Puzo",
+    //   name   : "Godfather",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00204",
+    //   author : "Edgar Rice Burroughs",
+    //   name   : "A Princess Of Mars",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00205",
+    //   author : "Mark Twain",
+    //   name   : "The Prince and the Pauper",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00206",
+    //   author : "Dorothy Leigh Sayers",
+    //   name   : "Whose Body?",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00207",
+    //   author : "Dashiell Hammett",
+    //   name   : "The Maltese Falcon",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00208",
+    //   author : "Mark Twain",
+    //   name   : "The Adventures of Tom Sawyer",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00209",
+    //   author : "Robert Louis Stevenson",
+    //   name   : "The Black Arrow",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00210",
+    //   author : "Agatha Christie",
+    //   name   : "Murder On The Orient Express",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00211",
+    //   author : "William Somerset Maugham",
+    //   name   : "Theatre",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00212",
+    //   author : "John Ronald Reuel Tolkien",
+    //   name   : "The Hobbit",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00213",
+    //   author : "Henry Rider Haggard",
+    //   name   : "King Solomon's Mines",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00214",
+    //   author : "Arthur Conan Doyle",
+    //   name   : "Stories",
+    //   markers : [],
+    //   genre  : "метод Франка: англ.мова"
+    // },
+    // {
+    //   id     : "00215",
+    //   author : "Stefan Zweig",
+    //   name   : "Sommernovelette",
+    //   markers : [],
+    //   genre  : "метод Франка: нім.мова"
+    // },
   ];
 /* ↑↑↑ /DATA BASE ↑↑↑ */
 ////////////////////////////////////////////////////////////////////////////////
