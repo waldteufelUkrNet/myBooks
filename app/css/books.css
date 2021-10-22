@@ -39,7 +39,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -56,135 +56,108 @@ table {
   font-family: gost;
   src: url("../fonts/gost_type_au.ttf");
 }
-
 @font-face {
   font-family: bold;
   src: url("../fonts/gost_bold.ttf");
 }
-
 @font-face {
   font-family: semibold_regular;
   src: url("../fonts/gost_semibold_regular.ttf");
 }
-
 @font-face {
   font-family: regular_italic;
   src: url("../fonts/gost_regular_italic.ttf");
 }
-
 @font-face {
   font-family: monotype;
   src: url("../fonts/gost_monotype.ttf");
 }
-
 @font-face {
   font-family: monotype_italic;
   src: url("../fonts/gost_monotype_italic.ttf");
 }
-
 @font-face {
   font-family: regular;
   src: url("../fonts/gost_regular.ttf");
 }
-
 @font-face {
   font-family: semibold_small;
   src: url("../fonts/gost_semibold_small.ttf");
 }
-
 @font-face {
   font-family: condensed_small;
   src: url("../fonts/gost_condensed_small.ttf");
 }
-
 @font-face {
   font-family: condensed_italic;
   src: url("../fonts/gost_condensed_italic.ttf");
 }
-
 @font-face {
   font-family: ab;
   src: url("../fonts/ArialBold.ttf");
 }
-
 @font-face {
   font-family: ar;
   src: url("../fonts/ArialRegular.ttf");
 }
-
 @font-face {
   font-family: ai;
   src: url("../fonts/ArialItalic.ttf");
 }
-
 @font-face {
   font-family: cb;
   src: url("../fonts/consolab.ttf");
 }
-
 @font-face {
   font-family: cr;
   src: url("../fonts/consola.ttf");
 }
-
 @font-face {
   font-family: ci;
   src: url("../fonts/consolai.ttf");
 }
-
 @font-face {
   font-family: rb;
   src: url("../fonts/RobotoBold.ttf");
 }
-
 @font-face {
   font-family: rr;
   src: url("../fonts/RobotoRegular.ttf");
 }
-
 @font-face {
   font-family: ri;
   src: url("../fonts/RobotoItalic.ttf");
 }
-
 @font-face {
   font-family: bmp;
   src: url("../fonts/Bulgaria_Moderna_Pro.otf");
 }
-
 @font-face {
   font-family: segb;
   src: url("../fonts/SegoeUIBold.ttf");
 }
-
 @font-face {
   font-family: segr;
   src: url("../fonts/SegoeUIRegular.ttf");
 }
-
 @font-face {
   font-family: segi;
   src: url("../fonts/SegoeUIItalic.ttf");
 }
-
 @font-face {
   font-family: tnrb;
   src: url("../fonts/TimesNewRomanBold.ttf");
 }
-
 @font-face {
   font-family: tnrr;
   src: url("../fonts/TimesNewRomanRegular.ttf");
 }
-
 @font-face {
   font-family: tnri;
   src: url("../fonts/TimesNewRomanItalic.ttf");
 }
-
 html {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
@@ -193,7 +166,6 @@ html {
 
 body {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow-y: auto;
@@ -213,12 +185,10 @@ html {
 
 main {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
@@ -226,7 +196,6 @@ main {
 
 html #book {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   height: 100%;
@@ -242,14 +211,12 @@ html #book {
 }
 
 .first-screen {
-  height: calc(100%);
+  height: 100%;
   overflow: hidden;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-
 .first-screen img {
   max-width: 100%;
   max-height: 100%;
@@ -265,13 +232,11 @@ html #book {
   border-bottom: 1px dotted lightgrey;
   padding: 30px 0;
 }
-
 .name-section__author {
   text-align: center;
   padding-bottom: 5px;
   font-family: bold;
 }
-
 .name-section__book {
   text-align: center;
   padding-bottom: 15px;
@@ -284,7 +249,6 @@ html #book {
   border-bottom: 1px dotted lightgrey;
   padding: 15px 0;
 }
-
 .content-section__name {
   text-align: center;
   padding-bottom: 30px;
@@ -297,14 +261,13 @@ html #book {
   margin-bottom: 15px;
   position: relative;
 }
-
 @media screen and (min-width: 768px) {
   .content {
     -webkit-column-count: 2;
+       -moz-column-count: 2;
             column-count: 2;
   }
 }
-
 .content a {
   display: block;
   max-width: 100%;
@@ -312,21 +275,17 @@ html #book {
   text-align: left;
   text-decoration: none;
 }
-
 .content__main-link {
   font-family: bold;
 }
-
 .content__sub-link {
   font-family: gost;
   padding-left: 15px;
 }
-
 .content__sub2-link {
   font-family: gost;
   padding-left: 30px;
 }
-
 .content__sub3-link {
   font-family: condensed_small;
   padding-left: 45px;
@@ -408,7 +367,7 @@ img {
 ul {
   padding-bottom: 10px;
   padding-left: 30px;
-  list-style-type: '- ';
+  list-style-type: "- ";
   list-style-position: outside;
 }
 
@@ -424,18 +383,15 @@ table {
   border: 1px solid lightgrey;
   margin-bottom: 10px;
 }
-
 table td, table th {
   border-collapse: collapse;
   border: 1px solid lightgrey;
   padding: 3px;
 }
-
 table th {
   background-color: lightgrey;
   font-weight: 900;
 }
-
 table th:not(:last-of-type) {
   border-right: 1px solid white;
 }
@@ -502,7 +458,6 @@ table th:not(:last-of-type) {
   padding: 10px;
   font-weight: 900;
 }
-
 @media screen and (min-width: 768px) {
   .epigraph {
     max-width: 400px;

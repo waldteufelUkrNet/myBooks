@@ -152,7 +152,7 @@ h1 {
     border-bottom      : 1px dotted lightgrey;
     &:hover {
       background-color : lightgrey;
-      transition       : background-color.3s;
+      transition       : background-color .3s;
     }
   }
 }

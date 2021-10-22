@@ -4,8 +4,15 @@
   "description": "my online books",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "build": "gulp build"
   },
+  "browserslist": [
+    "last 10 versions",
+    "> 1%",
+    "maintained node versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/waldteufelUkrNet/myBooks.git"
@@ -18,16 +25,20 @@
   "homepage": "https://github.com/waldteufelUkrNet/myBooks#readme",
   "devDependencies": {
     "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.1.3",
     "gulp-changed": "^4.0.3",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^8.0.0",
     "gulp-notify": "^4.0.0",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.3"
   }
 }
