@@ -1,0 +1,848 @@
+<!DOCTYPE html><html class="wjs-MobileHeightFix" lang="en"><head><title></title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content=""><meta name="book-name" content=""><meta name="book-id" content=""><link rel="icon" href="../../img/book.png"><link rel="stylesheet" href="../../css/w.css"><link rel="stylesheet" href="../../css/wScroll.css"><link rel="stylesheet" href="../../css/books.css"><link rel="stylesheet" href="../../css/modules.css"><script defer src="../../js/w.js"></script><script defer src="../../js/dbase.js"></script><script defer src="../../js/wScroll.js"></script><script defer src="../../js/books.js"></script><script defer src="../../js/modules.js"></script><script defer src="../../js/wScrollFix.js"></script></head><body><main class="main"><!-- ↓↓↓ modules: top-book-panel (start) ↓↓↓--><div class="top-book-panel"><div class="top-book-panel__inner"><div class="top-book-panel__info"><div class="top-book-panel__tags"><div class="top-book-panel__author"></div><div class="top-book-panel__book-name"></div></div><button class="top-book-panel__btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512"><path d="M448.1 344v112c0 13.3-10.7 24-24 24h-112c-21.4 0-32.1-25.9-17-41l36.2-36.2L224 295.6 116.8 402.9 153 439c15.1 15.1 4.4 41-17 41H24c-13.3 0-24-10.7-24-24V344c0-21.4 25.9-32.1 41-17l36.2 36.2L184.5 256 77.2 148.7 41 185c-15.1 15.1-41 4.4-41-17V56c0-13.3 10.7-24 24-24h112c21.4 0 32.1 25.9 17 41l-36.2 36.2L224 216.4l107.3-107.3L295.1 73c-15.1-15.1-4.4-41 17-41h112c13.3 0 24 10.7 24 24v112c0 21.4-25.9 32.1-41 17l-36.2-36.2L263.6 256l107.3 107.3 36.2-36.2c15.1-15.2 41-4.5 41 16.9z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M200 288H88c-21.4 0-32.1 25.8-17 41l32.9 31-99.2 99.3c-6.2 6.2-6.2 16.4 0 22.6l25.4 25.4c6.2 6.2 16.4 6.2 22.6 0L152 408l31.1 33c15.1 15.1 40.9 4.4 40.9-17V312c0-13.3-10.7-24-24-24zm112-64h112c21.4 0 32.1-25.9 17-41l-33-31 99.3-99.3c6.2-6.2 6.2-16.4 0-22.6L481.9 4.7c-6.2-6.2-16.4-6.2-22.6 0L360 104l-31.1-33C313.8 55.9 288 66.6 288 88v112c0 13.3 10.7 24 24 24zm96 136l33-31.1c15.1-15.1 4.4-40.9-17-40.9H312c-13.3 0-24 10.7-24 24v112c0 21.4 25.9 32.1 41 17l31-32.9 99.3 99.3c6.2 6.2 16.4 6.2 22.6 0l25.4-25.4c6.2-6.2 6.2-16.4 0-22.6L408 360zM183 71.1L152 104 52.7 4.7c-6.2-6.2-16.4-6.2-22.6 0L4.7 30.1c-6.2 6.2-6.2 16.4 0 22.6L104 152l-33 31.1C55.9 198.2 66.6 224 88 224h112c13.3 0 24-10.7 24-24V88c0-21.3-25.9-32-41-16.9z"></path></svg></button></div><div class="top-book-panel__read-line-wrapper"><div class="top-book-panel__read-line"></div></div><div class="top-book-panel__pages"><div class="top-book-panel__read">0</div><div class="top-book-panel__symbol">стр. з</div><div class="top-book-panel__not-read">0</div><div class="top-book-panel__symbol">сторінок</div></div></div></div><!-- ↑↑↑ modules: top-book-panel (end) ↑↑↑--><div class="wjs-scroll" id="book" data-scroll="right" data-scroll-hidden="horizontal"><div class="wjs-scroll__content-wrapper"><div class="wjs-scroll__content"><!-- ↓↓↓ modules: loader (start) ↓↓↓--><div class="loader loader_active"><div class="loader__img-wrapper"><img class="loader__img" src="../../img/loader.gif"></div><p class="loader__text">завантаження...</p></div><!-- ↑↑↑ modules: loader (end) ↑↑↑--><div class="first-screen"><img src="img/title.jpg" alt="title image"></div><div class="name-section"><div class="name-section__author"></div><div class="name-section__book"></div><p class="tac">Эдвард Лир</p><p class="tac">Книга бессмыслицы</p><p class="tac">Книгу подготовил Илья Франк</p><p class="tac">Метод чтения Ильи Франка</p></div><section><h4>1</h4><br><p><span class="btext">There was an Old Man with a beard</span>
+(был /как-то/ старик: «старый мужчина/человек» с бородой)<span class="btext">,</span></p><p><span class="btext">Who said</span>
+(который сказал)<span class="btext">, 'It is just as I feared</span>
+(это именно /так/, как я боялся /что случится/;
+<span class="f-coni">to fear</span>)<span class="btext">!</span></p><p><span class="btext">Two Owls and a Hen</span>
+(две совы и курица)<span class="btext">,</span></p><p><span class="btext">Four Larks and a Wren</span>
+(четыре жаворонка и крапивник;
+<span class="f-coni">wren — крапивник /птица/</span>)<span class="btext">,</span></p><p><span class="btext">Have all built their nests in my beard</span>
+(все построили свои гнезда в моей бороде;
+<span class="f-coni">to build</span>)<span class="btext">!'</span></p><br><p class="btext">beard [bɪəd], fear [fɪə], owl [aul], wren [ren]</p><br><p class="btext">There was an Old Man with a beard,</p><p class="btext">Who said, 'It is just as I feared!</p><p class="btext">Two Owls and a Hen,</p><p class="btext">Four Larks and a Wren,</p><p class="btext">Have all built their nests in my beard!'</p><br><h4>2</h4><br><p><span class="btext">There was a Young Lady of Ryde</span>
+(была /как-то/ юная леди из Райда /город на острове Уайт, в проливе Ла-Манш/)<span class="btext">,</span></p><p><span class="btext">Whose shoe-strings were seldom untied</span>
+(чьи ботиночные шнурки были редко развязаны;
+<span class="f-coni">shoe — туфля; полуботинок; to untie — отвязывать, развязывать; to tie — завязывать</span>)<span class="btext">.</span></p><p><span class="btext">She purchased some clogs</span>
+(она приобрела несколько сабо /обувь на высокой деревянной подошве без задника/)<span class="btext">,</span></p><p><span class="btext">And some small spotted dogs</span>
+(и в мелких пятнах: «мелко-пятнистых» собак
+<span class="f-coni">spot — пятнышко; крапинка; to spot — пятнать, покрывать пятнами</span>)<span class="btext">,</span></p><p><span class="btext">And frequently walked about Ryde</span>
+(и часто гуляла по Райду)<span class="btext">.</span></p><br><p class="btext">shoe [ʃu:], untie [ʌn'taɪ], purchase ['pɜ:ʧəs], frequently ['fri:kwəntlɪ]</p><br><p class="btext">There was a Young Lady of Ryde,</p><p class="btext">Whose shoe-strings were seldom untied.</p><p class="btext">She purchased some clogs,</p><p class="btext">And some small spotted dogs,</p><p class="btext">And frequently walked about Ryde.</p><br><h4>3</h4><br><p><span class="btext">There was an Old Man with a nose</span>
+(был /как-то/ старик с носом)<span class="btext">,</span></p><p><span class="btext">Who said, 'If you choose to suppose</span>
+(который сказал: Если вы предпочтете думать: «выберете предполагать»)<span class="btext">,</span></p><p><span class="btext">That my nose is too long</span>
+(что мой нос слишком длинный)<span class="btext">,</span></p><p><span class="btext">You are certainly wrong</span>
+(вы безусловно ошибаетесь)<span class="btext">!'</span></p><p><span class="btext">That remarkable Man with a nose</span>
+(этот удивительный мужчина с носом)<span class="btext">.</span></p><br><p class="btext">choose [ʧu:z], suppose [sə'pəuz], certainly ['sɜ:t(ə)nlɪ], remarkable [rɪ'mɑ:kəbl]</p><br><p class="btext">There was an Old Man with a nose,</p><p class="btext">Who said, 'If you choose to suppose,</p><p class="btext">That my nose is too long,</p><p class="btext">You are certainly wrong!'</p><p class="btext">That remarkable Man with a nose.</p><br><h4>4</h4><br><p><span class="btext">There was an Old Man on a hill</span>
+(был /как-то/ старик на холме)<span class="btext">,</span></p><p><span class="btext">Who seldom, if ever, stood still</span>
+(который редко, если /вообще/ когда-либо, стоял спокойно;
+<span class="f-coni">to stand — стоять</span>)<span class="btext">;</span></p><p><span class="btext">He ran up and down</span>
+(он бегал вверх и вниз;
+<span class="f-coni">to run — бегать</span>)<span class="btext">,</span></p><p><span class="btext">In his Grandmother's gown</span>
+(в платье своей бабушки)<span class="btext">,</span></p><p><span class="btext">Which adorned that Old Man on a hill</span>
+(которое украшало/красило того старика на холме)<span class="btext">.</span></p><br><p class="btext">gown [gaun], adorn [ə'dɔ:n]</p><br><p class="btext">There was an Old Man on a hill,</p><p class="btext">Who seldom, if ever, stood still;</p><p class="btext">He ran up and down,</p><p class="btext">In his Grandmother's gown,</p><p class="btext">Which adorned that Old Man on a hill.</p><br><h4>5</h4><br><p><span class="btext">There was a Young Lady whose bonnet</span>
+(была /как-то/ юная леди, чей капор/капор которой;
+<span class="f-coni">bonnet — дамская шляпа /без полей/; кáпор /детский или женский головной убор, завязывающийся под подбородком/</span>)<span class="btext">,</span></p><p><span class="btext">Came untied</span>
+(становился развязанным = развязывался)
+<span class="btext"> when the birds sate upon it</span>
+(когда птицы садились на него;
+<span class="f-coni">to sit — сидеть, садиться</span>)<span class="btext">;</span></p><p><span class="btext">But she said, 'I don't care</span>
+(но она сказала: Я не забочусь = мне все равно)<span class="btext">!</span></p><p><span class="btext">All the birds in the air</span>
+(все птицы /находящиеся/ в воздухе)<span class="btext">.</span></p><p><span class="btext">Are welcome to sit on my bonnet</span>
+(вправе/могут/я радушно приглашаю сесть на мой капор;
+<span class="f-coni">welcome — желанный; долгожданный, приятный</span>)<span class="btext">!'</span></p><br><p class="btext">bonnet ['bɔnɪt], care [keə], air [eə], welcome ['welkəm]</p><br><p class="btext">There was a Young Lady whose bonnet,</p><p class="btext">Came untied when the birds sate upon it;</p><p class="btext">But she said, 'I don't care!</p><p class="btext">All the birds in the air</p><p class="btext">Are welcome to sit on my bonnet!'</p><br><h4>6</h4><br><p><span class="btext">There was a Young Person of Smyrna</span>
+(была /как-то/ одна молодая особа из Смирны /древний город на западном побережье Малой Азии, нынешний Измир/)<span class="btext">,</span></p><p><span class="btext">Whose Grandmother threatened to burn her</span>
+(чья бабушка грозилась сжечь ее;
+<span class="f-coni">to threaten — грозить, угрожать</span>)<span class="btext">;</span></p><p><span class="btext">But she seized on the cat</span>
+(но она ухватилась за кота,
+<span class="f-coni">to seize — хватать, схватить</span>)<span class="btext">,</span></p><p><span class="btext">And said, 'Granny, burn that</span>
+(и сказала: Бабушка/бабуля, сожги то = его)<span class="btext">!</span></p><p><span class="btext">You incongruous Old Woman of Smyrna</span>
+(ты, нелепая старуха: «старая женщина» из Смирны)<span class="btext">!'</span></p><br><p class="btext">person ['pɜ:s(ə)n], Smyrna ['smɜ:nə], threaten ['θret(ə)n], seize [si:z], incongruous [ɪn'kɔŋgruəs]</p><br><p class="btext">There was a Young Person of Smyrna,</p><p class="btext">Whose Grandmother threatened to burn her;</p><p class="btext">But she seized on the cat,</p><p class="btext">And said, 'Granny, burn that!</p><p class="btext">You incongruous Old Woman of Smyrna!'</p><br><h4>7</h4><br><p><span class="btext">There was an Old Person of Chili</span>
+(был /как-то/ старый человек: «старая особа» из Чили)<span class="btext">,</span></p><p><span class="btext">Whose conduct was painful and silly</span>
+(чье поведение было неприятным и глупым;
+<span class="f-coni">painful — причиняющий боль, болезненный; мучительный, тягостный, неприятный; pain — боль</span>)<span class="btext">,</span></p><p><span class="btext">He sate on the stairs</span>
+(он сидел на ступенях)<span class="btext">,</span></p><p><span class="btext">Eating apples and pears</span>
+(поедая яблоки и груши)<span class="btext">,</span></p><p><span class="btext">That imprudent Old Person of Chili</span>
+(этот неблагоразумный старый человек из Чили;
+<span class="f-coni">imprudent — неблагоразумный, опрометчивый; неосмотрительный, безрассудный</span>)<span class="btext">.</span></p><br><p class="btext">Chili ['ʧɪlɪ], conduct ['kɔndʌkt], painful ['peɪnf(ə)l], stair [steə], pear [peə], imprudent [ɪm'pru:d(ə)nt]</p><br><p class="btext">There was an Old Person of Chili,</p><p class="btext">Whose conduct was painful and silly,</p><p class="btext">He sate on the stairs,</p><p class="btext">Eating apples and pears,</p><p class="btext">That imprudent Old Person of Chili.</p><br><h4>8</h4><br><p><span class="btext">There was an Old Man with a gong</span>
+(был /как-то/ старик с гонгом)<span class="btext">,</span></p><p><span class="btext">Who bumped at it all day long</span>
+(который ударял по нему весь день)<span class="btext">;</span></p><p><span class="btext">But they called out</span>
+(но они /люди, кто-то/ закричали)<span class="btext">, 'O law</span>
+(о, силы: «закон»)<span class="btext">!</span></p><p><span class="btext">You're a horrid old bore</span>
+(ты — ужасный /противный/ старый зануда;
+<span class="f-coni">to bore — сверлить, бурить; докучать, донимать; bore — скучный человек, надоеда, зануда</span>)<span class="btext">!'</span></p><p><span class="btext">So they smashed that Old Man with a gong</span>
+(и потому они пристукнули/разбили /в лепешку, вдребезги/ этого старика с гонгом;
+<span class="f-coni">to smash — разбивать; крушить; ломать; наносить сильный удар, ударять</span>)<span class="btext">.</span></p><br><p class="btext">horrid ['hɔrɪd], bore I [bɔ:]</p><br><p class="btext">There was an Old Man with a gong,</p><p class="btext">Who bumped at it all day long;</p><p class="btext">But they called out, 'O law!</p><p class="btext">You're a horrid old bore!'</p><p class="btext">So they smashed that Old Man with a gong.</p><br><h4>9</h4><br><p><span class="btext">There was an Old Lady of Chertsey</span>
+(была /как-то/ старая леди из Чертси /город в Англии, на Темзе, графство Саррей/)<span class="btext">,</span></p><p><span class="btext">Who made a remarkable curtsey</span>
+(которая сделала удивительный: «примечательный» реверанс)<span class="btext">;</span></p><p><span class="btext">She twirled round and round</span>
+(она завертелась вокруг и вокруг = завертелась и завертелась;
+<span class="f-coni">to twirl = twirl /a/round — вертеться, кружиться, вращаться</span>)<span class="btext">,</span></p><p><span class="btext">Till she sunk underground</span>
+(/до тех пор/ пока /не/ погрузилась под землю;
+<span class="f-coni">to sink — погружаться, тонуть; underground — под землей; под землю; under — под; ground — почва, земля</span>)<span class="btext">,</span></p><p><span class="btext">Which distressed all the people of Chertsey</span>
+(что /крайне/ огорчило всех людей из Чертси)<span class="btext">.</span></p><br><p class="btext">remarkable [rɪ'mɑ:kəbl], curtsey ['kɜ:tsɪ], twirl [twɜ:l], underground ['ʌndəgraund], distress [dɪ'stres], people [pi:pl]</p><br><p class="btext">There was an Old Lady of Chertsey,</p><p class="btext">Who made a remarkable curtsey;</p><p class="btext">She twirled round and round,</p><p class="btext">Till she sunk underground,</p><p class="btext">Which distressed all the people of Chertsey.</p><br><h4>10</h4><br><p><span class="btext">There was an Old Man in a tree</span>
+(был /как-то/ старик на дереве: «в дереве»)<span class="btext">,</span></p><p><span class="btext">Who was horribly bored by a Bee</span>
+(которому ужасно надоедала пчела/к которому страшно приставала пчела: «который был ужасно наскучен пчелой»)<span class="btext">;</span></p><p><span class="btext">When they said</span>
+(когда сказали = спросили)<span class="btext">, 'Does it buzz</span>
+(она жужжит)<span class="btext">?'</span></p><p><span class="btext">He replied</span>
+(он ответил;
+<span class="f-coni">to reply</span>)<span class="btext">, 'Yes, it does</span>
+(да, жужжит)<span class="btext">!'</span></p><p><span class="btext">'It's a regular brute of a Bee</span>
+(это прямо-таки зверь-пчела = это зверь, а не пчела: «настоящая грубая скотина пчелы»;
+<span class="f-coni">regular — правильный, нормальный, регулярный; /разг./ настоящий, сущий; brute — животное, зверь; жестокий, грубый или глупый и тупой человек; «скотина»</span>)<span class="btext">!'</span></p><br><p class="btext">horribly ['hɔrəblɪ], reply [rɪ'plaɪ], regular ['regjələ], brute [bru:t]</p><br><p class="btext">There was an Old Man in a tree,</p><p class="btext">Who was horribly bored by a Bee;</p><p class="btext">When they said, 'Does it buzz?'</p><p class="btext">He replied, 'Yes, it does!'</p><p class="btext">'It's a regular brute of a Bee!'</p><br><h4>11</h4><br><p><span class="btext">There was an Old Man with a flute</span>
+(был /как-то/ старик с флейтой)<span class="btext">,</span></p><p><span class="btext">A sarpint ran into his boot</span>
+(змей вполз в его сапог;
+<span class="f-coni">sarpint = serpent /книжн./ змея /обычно большая/, змей; to run — бежать; быстро перемещаться; boot — ботинок; сапог</span>)<span class="btext">;</span></p><p><span class="btext">But he played day and night</span>
+(но он играл день и ночь)<span class="btext">,</span></p><p><span class="btext">Till the sarpint took flight</span>
+(пока змей не обратился в бегство;
+<span class="f-coni">to take — брать; to take flight — обратиться в бегство</span>)<span class="btext">,</span></p><p><span class="btext">And avoided that man with a flute</span>
+(и избегал этого человека/мужчину с флейтой;
+<span class="f-coni">to avoid — избегать, остерегаться, сторониться, уклоняться</span>)<span class="btext">.</span></p><br><p class="btext">flute [flu:t], serpent ['sɜ:p(ə)nt], avoid [ə'vɔɪd]</p><br><p class="btext">There was an Old Man with a flute,</p><p class="btext">A sarpint ran into his boot;</p><p class="btext">But he played daay and night,</p><p class="btext">Till the sarpint took flight,</p><p class="btext">And avoided that man with a flute.</p><br><h4>12</h4><br><p><span class="btext">There was a Young Lady whose chin</span>
+(была /как-то/ юная леди, чей подбородок)<span class="btext">,</span></p><p><span class="btext">Resembled the point of a pin</span>
+(напоминал кончик булавки)<span class="btext">;</span></p><p><span class="btext">So she had it made sharp</span>
+(так что = поэтому она сделала его острым/заострила)<span class="btext">,</span></p><p><span class="btext">And purchased a harp</span>
+(и приобрела арфу)<span class="btext">,</span></p><p><span class="btext">And played several tunes</span>
+(и играла несколько /целый ряд/ мелодий)
+<span class="btext"> with her chin</span>
+(своим подбородком)<span class="btext">.</span></p><br><p class="btext">resemble [rɪ'zembl], purchase ['pɜ:ʧəs], several ['sev(ə)r(ə)l]</p><br><p class="btext">There was a Young Lady whose chin,</p><p class="btext">Resembled the point of a pin;</p><p class="btext">So she had it made sharp,</p><p class="btext">And purchased a harp,</p><p class="btext">And played several tunes with her chin.</p><br><h4>13</h4><br><p><span class="btext">There was an Old Man of Kilkenny</span>
+(был /как-то/ старик из Килкенни /город в Северной Ирландии/)<span class="btext">,</span></p><p><span class="btext">Who never had more than a penny</span>
+(у которого никогда не было больше, чем /один/ пенни = не было денег больше пенни/пенса)<span class="btext">;</span></p><p><span class="btext">He spent all that money</span>
+(он потратил все эти деньги;
+<span class="f-coni">to spend</span>)<span class="btext">,</span></p><p><span class="btext">In onions and honey</span>
+(на лук и мёд)<span class="btext">,</span></p><p><span class="btext">That wayward Old Man of Kilkenny</span>
+(этот своенравный старик из Килкенни;
+<span class="f-coni">wayward — своенравный; несговорчивый, капризный, упрямый</span>)<span class="btext">.</span></p><br><p class="btext">Kilkenny [kɪl'kenɪ], onion ['ʌnjən], honey ['hʌnɪ], wayward ['weɪwəd]</p><br><p class="btext">There was an Old Man of Kilkenny,</p><p class="btext">Who never had more than a penny;</p><p class="btext">He spent all that money,</p><p class="btext">In onions and honey,</p><p class="btext">That wayward Old Man of Kilkenny.</p><br><h4>14</h4><br><p><span class="btext">There was an Old Person of Ischia</span>
+(был /как-то/ старик из Искии /город в Италии/)<span class="btext">,</span></p><p><span class="btext">Whose conduct grew friskier and friskier</span>
+(поведение которого становилось все игривее/резвее;
+<span class="f-coni">to grow — расти; увеличиваться; делаться, становиться; frisky — игривый, резвый, шаловливый; frisk — прыжок, скачок; возня, шумная игра</span>)<span class="btext">;</span></p><p><span class="btext">He danced hornpipes and jigs</span>
+(он танцевал хорнпайпы и джиги;
+<span class="f-coni">hornpipe: «рожковый свисток, дудка» — волынка; английский матросский танец</span>)<span class="btext">,</span></p><p><span class="btext">And ate thousands of figs</span>
+(и ел тысячи фиг;
+<span class="f-coni">to eat — есть, кушать</span>)<span class="btext">,</span></p><p><span class="btext">That lively Old Person of Ischia</span>
+(этот бодрый старик из Искии;
+<span class="f-coni">lively — активный, деятельный, энергичный, бодрый</span>)<span class="btext">.</span></p><br><p class="btext">conduct ['kɔndʌkt], grew [gru:], lively ['laɪvlɪ]</p><br><p class="btext">There was an Old Person of Ischia,</p><p class="btext">Whose conduct grew friskier and friskier;</p><p class="btext">He danced hornpipes and jigs,</p><p class="btext">And ate thousands of figs,</p><p class="btext">That lively Old Person of Ischia.</p><br><h4>15</h4><br><p><span class="btext">There was an Old Man in a boat</span>
+(был /как-то/ старик в лодке)<span class="btext">,</span></p><p><span class="btext">Who said, 'I'm afloat, I'm afloat</span>
+(который сказал: Я на плаву, я на плаву;
+<span class="f-coni">to float — плавать; держаться на поверхности воды</span>)<span class="btext">!'</span></p><p><span class="btext">When they said, 'No! you ain't</span>
+(когда /ему/ сказали: Нет, ты не /на плаву/;
+<span class="f-coni">ain't — сокр. от is not; are not; has not; have not, здесь: are not</span>)<span class="btext">!'</span></p><p><span class="btext">He was ready to faint</span>
+(он готов был упасть в обморок;
+<span class="f-coni">to faint — упасть в обморок</span>)<span class="btext">,</span></p><p><span class="btext">That unhappy Old Man in a boat</span>
+(этот несчастный старик в лодке)<span class="btext">.</span></p><br><p class="btext">afloat [ə'fləut], ready ['redɪ]</p><br><p class="btext">There was an Old Man in a boat,</p><p class="btext">Who said, 'I'm afloat, I'm afloat!'</p><p class="btext">When they said, 'No! you ain't!'</p><p class="btext">He was ready to faint,</p><p class="btext">That unhappy Old Man in a boat.</p><br><h4>16</h4><br><p><span class="btext">There was a Young Lady of Portugal</span>
+(была /как-то/ юная леди из Португалии)<span class="btext">,</span></p><p><span class="btext">Whose ideas were excessively nautical</span>
+(чьи идеи были чрезмерно/чересчур мореходными;
+<span class="f-coni">excessive — непомерный, чрезвычайный, чрезмерный, неумеренный, заядлый; nautical — морской; навигационный, мореходный</span>)<span class="btext">:</span></p><p><span class="btext">She climbed up a tree</span>
+(она взобралась на дерево;
+<span class="f-coni">to climb — взбираться, влезать, карабкаться, подниматься</span>)<span class="btext">,</span></p><p><span class="btext">To examine the sea</span>
+(чтобы изучать/рассмотреть море;
+<span class="f-coni">to examine — рассматривать, осматривать; исследовать; изучать</span>)<span class="btext">,</span></p><p><span class="btext">But declared she would never leave Portugal</span>
+(но заявила, что она никогда не покинет Португалию)<span class="btext">.</span></p><br><p class="btext">Portugal ['pɔ:ʧəg(ə)l], excessive [ɪk'sesɪv], nautical ['nɔ:tɪk(ə)l], climb [klaɪm], examine [ɪg'zæmɪn], declare [dɪ'kleə]</p><br><p class="btext">There was a Young Lady of Portugal,</p><p class="btext">Whose ideas were excessively nautical:</p><p class="btext">She climbed up a tree,</p><p class="btext">To examine the sea,</p><p class="btext">But declared she would never leave Portugal.</p><br><h4>17</h4><br><p><span class="btext">There was an Old Man of Moldavia</span>
+(была /как-то/ старик из Молдавии)<span class="btext">,</span></p><p><span class="btext">Who had the most curious behaviour</span>
+(у которого было самое = крайне чудное/странное поведение;
+<span class="f-coni">to behave — вести себя, поступать, держаться</span>)<span class="btext">;</span></p><p><span class="btext">For while he was able</span>
+(ибо, пока он был способен)<span class="btext">,</span></p><p><span class="btext">He slept on a table</span>
+(он спал на столе;
+<span class="f-coni">to sleep</span>)<span class="btext">.</span></p><p><span class="btext">That funny Old Man of Moldavia</span>
+(этот смешной/забавный старик из Молдавии)<span class="btext">.</span></p><br><p class="btext">Moldavia [mɔl'deɪvɪə], curious ['kjuərɪəs], behaviour [bɪ'heɪvjə], able ['eɪbl]</p><br><p class="btext">There was an Old Man of Moldavia,</p><p class="btext">Who had the most curious behaviour;</p><p class="btext">For while he was able,</p><p class="btext">He slept on a table.</p><p class="btext">That funny Old Man of Moldavia.</p><br><h4>18</h4><br><p><span class="btext">There was an Old Man of Madras</span>
+(был /как-то/ старик из Мадраса /город в Индии/)<span class="btext">,</span></p><p><span class="btext">Who rode on a cream-coloured ass</span>
+(который ездил на ишаке кремового цвета;
+<span class="f-coni">to ride — ездить верхом; colour — цвет</span>)<span class="btext">;</span></p><p><span class="btext">But the length of its ears</span>
+(но длина его /осла/ ушей)<span class="btext">,</span></p><p><span class="btext">So promoted his fears</span>
+(так /сильно/ провоцировало/увеличивало: «продвигало» его /человека/ страхи)<span class="btext">,</span></p><p><span class="btext">That it killed that Old Man of Madras</span>
+(что это убило старика из Мадраса)<span class="btext">.</span></p><br><p class="btext">Madras [mə'drɑ:s], colour ['kʌlə], promote [prə'məut]</p><br><p class="btext">There was an Old Man of Madras,</p><p class="btext">Who rode on a cream-coloured ass;</p><p class="btext">But the length of its ears,</p><p class="btext">So promoted his fears,</p><p class="btext">That it killed that Old Man of Madras.</p><br><h4>19</h4><br><p><span class="btext">There was an Old Person of Leeds</span>
+(была /как-то/ старуха из Лидса)<span class="btext">,</span></p><p><span class="btext">Whose head was infested with beads</span>
+(чья голова кишела бусинами;
+<span class="f-coni">to infest — кишеть; наводнять, заполнять; bead — шарик /со сквозным отверстием/, бусина, бисерина</span>)<span class="btext">;</span></p><p><span class="btext">She sat on a stool</span>
+(она сидела на табурете;
+<span class="f-coni">to sit; stool — табурет; барный стул; скамеечка</span>)<span class="btext">,</span></p><p><span class="btext">And ate gooseberry fool</span>
+(и ела крыжовенное пюре;
+<span class="f-coni">fool — вид десерта типа киселя или компота со сливками</span>)<span class="btext">,</span></p><p><span class="btext">Which agreed with that person of Leeds</span>
+(что гармонировало с этой особой = что было неудивительно для этой старухи из Лидса;
+<span class="f-coni">to agree — соглашаться; соответствовать, гармонировать, быть сходным</span>)<span class="btext">.</span></p><br><p class="btext">head [hed], infest [ɪn'fest], bead [bi:d], gooseberry ['guzb(ə)rɪ], agree [ə'gri:]</p><br><p class="btext">There was an Old Person of Leeds,</p><p class="btext">Whose head was infested with beads;</p><p class="btext">She sat on a stool,</p><p class="btext">And ate gooseberry fool,</p><p class="btext">Which agreed with that person of Leeds.</p><br><h4>20</h4><br><p><span class="btext">There was an Old Man of Peru</span>
+(был /как-то/ старик из Перу)<span class="btext">,</span></p><p><span class="btext">Who never knew what he should do</span>
+(который никогда не знал, что ему следует делать/чем ему заняться)<span class="btext">;</span></p><p><span class="btext">So he tore off his hair</span>
+(поэтому он рвал свои волосы;
+<span class="f-coni">to tear — рвать; to tear off — срывать,отрывать</span>)<span class="btext">,</span></p><p><span class="btext">And behaved like a bear</span>
+(и вел себя, как медведь)<span class="btext">,</span></p><p><span class="btext">That intrinsic Old Man of Peru</span>
+(этот своеобразный: «внутренний/присущий/особенный» старик из Перу)<span class="btext">.</span></p><br><p class="btext">Peru [pə'ru:], tear [teə], hair [heə], bear [beə], intrinsic [ɪn'trɪnzɪk]</p><br><p class="btext">There was an Old Man of Peru,</p><p class="btext">Who never knew what he should do;</p><p class="btext">So he tore off his hair,</p><p class="btext">And behaved like a bear,</p><p class="btext">That intrinsic Old Man of Peru.</p><br><h4>21</h4><br><p><span class="btext">There was an Old Person of Hurst</span>
+(был /как-то/ старик из Хёрста /деревня в графстве Беркшир/)<span class="btext">,</span></p><p><span class="btext">Who drank when he was not athirst</span>
+(который пил, когда не был томим жаждой;
+<span class="f-coni">to drink — пить; thirst — жажда; athirst — страдающий от жажды</span>)<span class="btext">;</span></p><p><span class="btext">When they said, 'You'll grow fatter</span>
+(когда /ему/ сказали: Ты станешь толще = растолстеешь;
+<span class="f-coni">fat — толстый, упитанный, тучный; жирный</span>)<span class="btext">,'</span></p><p><span class="btext">He answered, 'What matter</span>
+(он ответил: Какое /это имеет/ значение)<span class="btext">?'</span></p><p><span class="btext">That globular Person of Hurst</span>
+(этот шаровидный человек из Хёрста)<span class="btext">.</span></p><br><p class="btext">athirst [ə'θɜ:st], globular ['glɔbjulə]</p><br><p class="btext">There was an Old Person of Hurst,</p><p class="btext">Who drank when he was not athirst;</p><p class="btext">When they said, 'You'll grow fatter,'</p><p class="btext">He answered, 'What matter?'</p><p class="btext">That globular Person of Hurst.</p><br><h4>22</h4><br><p><span class="btext">There was a Young Person of Crete</span>
+(была /как-то/ юная особа с /острова/ Крит)<span class="btext">,</span></p><p><span class="btext">Whose toilette was far from complete</span>
+(чей туалет был далек от полного = от того, чтобы быть полным/совершенным)<span class="btext">;</span></p><p><span class="btext">She dressed in a sack</span>
+(она одевалась/оделась в мешок)<span class="btext">,</span></p><p><span class="btext">Spickle-speckled with black</span>
+(в крапинку с черным = в черную крапинку;
+<span class="f-coni">speckled — крапчатый, пятнистый; рябой, пёстрый; speckle — крапинка, пятнышко; to speckle — испещрять, пятнать</span>)<span class="btext">,</span></p><p><span class="btext">That ombliferous person of Crete</span>
+(эта зонтичная особа с острова Крит: от
+<span class="f-coni">umbelliferous</span>)<span class="btext">.</span></p><br><p class="btext">toilette [twɑ:'let], complete [kəm'pli:t]</p><br><p class="btext">There was a Young Person of Crete,</p><p class="btext">Whose toilette was far from complete;</p><p class="btext">She dressed in a sack,</p><p class="btext">Spickle-speckled with black,</p><p class="btext">That ombliferous person of Crete.</p><br><h4>23</h4><br><p><span class="btext">There was an Old Man of the Isles</span>
+(был /как-то/ один старик с /Британских/ островов;
+<span class="f-coni">isle = от island — остров /обычно как часть географического названия/</span>)<span class="btext">,</span></p><p><span class="btext">Whose face was pervaded with smiles</span>
+(лицо которого было наполнено: «проникнуто/пронизано» улыбками;
+<span class="f-coni">to pervade — заполнять, наполнять; пропитывать, пронизывать</span>)<span class="btext">;</span></p><p><span class="btext">He sung high dum diddle</span>
+(он пел весело какую-то чушь;
+<span class="f-coni">high — высокий; весёлый, радостный; возбуждённый; to sing — петь; diddle-daddle — чушь, нелепица, вздор, чепуха, ерунда; пустая болтовня; dum = damn = damned — чёртов, проклятый</span>)<span class="btext">,</span></p><p><span class="btext">And played on the fiddle</span>
+(и играл на скрипке;
+<span class="f-coni">fiddle — /разг./ скрипка</span>)<span class="btext">,</span></p><p><span class="btext">That amiable Man of the Isles</span>
+(этот приятный/любезный мужчина с /Британских/ островов;
+<span class="f-coni">amiable — дружелюбный, любезный; милый, симпатичный</span>)<span class="btext">.</span></p><br><p class="btext">isle [aɪl], pervade [pə'veɪd], amiable ['eɪmɪəbl]</p><br><p class="btext">There was an Old Man of the Isles,</p><p class="btext">Whose face was pervaded with smiles;</p><p class="btext">He sung high dum diddle,</p><p class="btext">And played on the fiddle,</p><p class="btext">That amiable Man of the Isles.</p><br><h4>24</h4><br><p><span class="btext">There was an Old Person of Buda</span>
+(был /однажды/ старик из Буды)<span class="btext">,</span></p><p><span class="btext">Whose conduct grew ruder and ruder</span>
+(чье поведение становилось все грубее и грубее;
+<span class="f-coni">to grow — расти; становиться; rude — грубый, оскорбительный, невежливый; невоспитанный</span>)<span class="btext">;</span></p><p><span class="btext">Till at last, with a hammer</span>
+(пока, наконец, молотом/молотком)<span class="btext">,</span></p><p><span class="btext">They silenced his clamour</span>
+(они = люди /не/ утихомирили его шум;
+<span class="f-coni">silence — тишина, безмолвие; to silence — заставить замолчать; успокаивать; утихомиривать; унимать; clamour — шум, крик, ор</span>)<span class="btext">,</span></p><p><span class="btext">By smashing that Person of Buda</span>
+(разбив в лепешку/вдребезги эту особу из Буды;
+<span class="f-coni">to smash — разбивать; крушить; ломать; наносить сильный удар, ударять</span>)<span class="btext">.</span></p><br><p class="btext">rude [ru:d], silence ['saɪləns], clamour ['klæmə]</p><br><p class="btext">There was an Old Person of Buda,</p><p class="btext">Whose conduct grew ruder and ruder;</p><p class="btext">Till at last, with a hammer,</p><p class="btext">They silenced his clamour,</p><p class="btext">By smashing that Person of Buda.</p><br><h4>25</h4><br><p><span class="btext">There was an Old Man of Columbia</span>
+(был /однажды/ старик из Колумбии)<span class="btext">,</span></p><p><span class="btext">Who was thirsty, and called out for some beer</span>
+(который был мучим жаждой и попросил немного пива;
+<span class="f-coni">to call out — выкрикивать</span>)<span class="btext">;</span></p><p><span class="btext">But they brought it quite hot</span>
+(но /ему/ принесли его /пиво/ довольно горячим;
+<span class="f-coni">to bring — приносить</span>)<span class="btext">,</span></p><p><span class="btext">In a small copper pot</span>
+(в маленьком медном котелке;
+<span class="f-coni">pot — горшок, котелок, кастрюля</span>)<span class="btext">,</span></p><p><span class="btext">Which disgusted that man of Columbia</span>
+(что внушило отвращение этому старику из Колумбии;
+<span class="f-coni">to disgust — внушать отвращение; быть противным</span>)<span class="btext">.</span></p><br><p class="btext">Columbia [kə'lʌmbɪə], brought [brɔ:t], disgust [dɪs'gʌst</p><br><p class="btext">There was an Old Man of Columbia,</p><p class="btext">Who was thirsty, and called out for some beer;</p><p class="btext">But they brought it quite hot,</p><p class="btext">In a small copper pot,</p><p class="btext">Which disgusted that man of Columbia.</p><br><h4>26</h4><br><p><span class="btext">There was a Young Lady of Dorking</span>
+(была /как-то/ юная леди из Доркинга)<span class="btext">,</span></p><p><span class="btext">Who bought a large bonnet for walking</span>
+(которая купила большой капор для гуляния;
+<span class="f-coni">to buy — покупать</span>)<span class="btext">;</span></p><p><span class="btext">But its colour and size</span>
+(но его /капора/ цвет и размер)<span class="btext">,</span></p><p><span class="btext">So bedazzled her eyes</span>
+(так ослепил блеском ее глаза;
+<span class="f-coni">to bedazzle — ослеплять блеском</span>)<span class="btext">,</span></p><p><span class="btext">That she very soon went back to Dorking</span>
+(что она очень скоро вернулась: «пришла назад» в Доркинг)<span class="btext">.</span></p><br><p class="btext">bought [bɔ:t], colour ['kʌlə], bedazzle [bɪ'dæzl]</p><br><p class="btext">There was a Young Lady of Dorking,</p><p class="btext">Who bought a large bonnet for walking;</p><p class="btext">But its colour and size,</p><p class="btext">So bedazzled her eyes,</p><p class="btext">That she very soon went back to Dorking.</p><br><h4>27</h4><br><p><span class="btext">There was an Old Man who supposed</span>
+(был /однажды/ старик, который полагал)<span class="btext">,</span></p><p><span class="btext">That the street door was partially closed</span>
+(что дверь на улицу частично закрыта = прикрыта;
+<span class="f-coni">partially — немного, отчасти, частично, частью</span>)<span class="btext">;</span></p><p><span class="btext">But some very large rats</span>
+(но несколько очень крупных крыс)<span class="btext">,</span></p><p><span class="btext">Ate his coats and his hats</span>
+(съели его пальто и его шляпы;
+<span class="f-coni">eat — кушать</span>)<span class="btext">,</span></p><p><span class="btext">While that futile old gentleman dozed</span>
+(пока этот несерьезный/поверхностный старый джентльмен дремал)<span class="btext">.</span></p><br><p class="btext">suppose [sə'pəuz], partially ['pɑ:ʃ(ə)lɪ], futile ['fju:taɪl]</p><br><p class="btext">There was an Old Man who supposed,</p><p class="btext">That the street door was partially closed;</p><p class="btext">But some very large rats,</p><p class="btext">Ate his coats and his hats,</p><p class="btext">While that futile old gentleman dozed.</p><br><h4>28</h4><br><p><span class="btext">There was an Old Man of the West</span>
+(был /как-то/ старик с Запада)<span class="btext">,</span></p><p><span class="btext">Who wore a pale plum-coloured vest</span>
+(который носил бледный = неяркий сливового цвета жилет;
+<span class="f-coni">to wear — носить; plum — слива</span>)<span class="btext">;</span></p><p><span class="btext">When they said</span>
+(когда сказали = спросили)<span class="btext">, 'Does it fit</span>
+(он /жилет/ впору;
+<span class="f-coni">to fit — быть впору, быть в самый раз, подходить</span>)<span class="btext">?'</span></p><p><span class="btext">He replied</span>
+(он отвечал;
+<span class="f-coni">to reply</span>)<span class="btext">, 'Not a bit</span>
+(ничуть/вовсе нет)<span class="btext">!'</span></p><p><span class="btext">That uneasy Old Man of the West</span>
+(этот беспокойный/неуживчивый старик с Запада;
+<span class="f-coni">uneasy — неловкий, скованный; обеспокоенный, встревоженный</span>)<span class="btext">.</span></p><br><p class="btext">wore [wɔ:], reply [rɪ'plaɪ], uneasy [ʌn'i:zɪ]</p><br><p class="btext">There was an Old Man of the West,</p><p class="btext">Who wore a pale plum-coloured vest;</p><p class="btext">When they said, 'Does it fit?'</p><p class="btext">He replied, 'Not a bit!'</p><p class="btext">That uneasy Old Man of the West.</p><br><h4>29</h4><br><p><span class="btext">There was an Old Man of the Wrekin</span>
+(был /как-то/ старик с Рэкина /холм в графстве Шропшир/)<span class="btext">.</span></p><p><span class="btext">Whose shoes made a horrible creaking</span>
+(чьи ботинки издавали ужасный скрип;
+<span class="f-coni">to creak — скрипеть</span>)<span class="btext">.</span></p><p><span class="btext">But they said</span>
+(но /ему/ сказали = его спросили)<span class="btext">, 'Tell us whether,</span></p><p><span class="btext">Your shoes are of leather</span>
+(скажи нам, твои ботинки из кожи ли;
+<span class="f-coni">whether — ли /вводит косвенный вопрос/; leather — кожа /выделанная/</span>)<span class="btext">,</span></p><p><span class="btext">Or of what</span>
+(или из чего)<span class="btext">, you Old Man of the Wrekin</span>
+(а, старик с Рэкина)<span class="btext">?'</span></p><br><p class="btext">horrible ['hɔrəbl], creak [kri:k], whether ['weðə], leather ['leðə]</p><br><p class="btext">There was an Old Man of the Wrekin</p><p class="btext">Whose shoes made a horrible creaking</p><p class="btext">But they said, 'Tell us whether,</p><p class="btext">Your shoes are of leather,</p><p class="btext">Or of what, you Old Man of the Wrekin?'</p><br><h4>30</h4><br><p><span class="btext">There was a Young Lady whose eyes</span>
+(была /как-то/ юная леди, глаза которой)<span class="btext">,</span></p><p><span class="btext">Were unique as to colour and size</span>
+(были уникальны, что до цвета и размера = что касается/в отношении…)<span class="btext">;</span></p><p><span class="btext">When she opened them wide</span>
+(когда она открывала их широко)<span class="btext">,</span></p><p><span class="btext">People all turned aside</span>
+(люди все отворачивались: «поворачивались в сторону»;
+<span class="f-coni">side — бок; сторона; aside — в сторону</span>)<span class="btext">,</span></p><p><span class="btext">And started away in surprise</span>
+(и бросались прочь в изумлении/удивившись)<span class="btext">.</span></p><br><p class="btext">unique [ju:'ni:k], aside [ə'saɪd], surprise [sə'praɪz]</p><br><p class="btext">There was a Young Lady whose eyes,</p><p class="btext">Were unique as to colour and size;</p><p class="btext">When she opened them wide,</p><p class="btext">People all turned aside,</p><p class="btext">And started away in surprise.</p><br><h4>31</h4><br><p><span class="btext">There was a Young Lady of Norway</span>
+(была /как-то/ юная леди из Норвегии)<span class="btext">,</span></p><p><span class="btext">Who casually sat on a doorway</span>
+(которая случайно = как-то сидела в дверном проёме;
+<span class="f-coni">casually — случайно, по воле случая; неумышленно, нечаянно; doorway — дверной проём, раствор двери; портал</span>)<span class="btext">;</span></p><p><span class="btext">When the door squeezed her flat</span>
+(когда дверь сжала ее плоской = стиснула ее так, что она стала плоской;
+<span class="f-coni">to squeeze — сжимать; сдавливать; стискивать</span>)<span class="btext">,</span></p><p><span class="btext">She exclaimed</span>
+(она воскликнула)<span class="btext">, 'What of that</span>
+(/ну и/ что с того)<span class="btext">?'</span></p><p><span class="btext">This courageous Young Lady of Norway</span>
+(эта храбрая юная леди из Норвегии)<span class="btext">.</span></p><br><p class="btext">Norway ['nɔ:weɪ], casually ['kæʒjuəlɪ], squeeze [skwi:z], exclaim [ɪks'kleɪm], courageous [kə'reɪʤəs]</p><br><p class="btext">There was a Young Lady of Norway,</p><p class="btext">Who casually sat on a doorway;</p><p class="btext">When the door squeezed her flat,</p><p class="btext">She exclaimed, 'What of that?'</p><p class="btext">This courageous Young Lady of Norway.</p><br><h4>32</h4><br><p><span class="btext">There was an Old Man of Vienna</span>
+(был /как-то/ старик из Вены)<span class="btext">,</span></p><p><span class="btext">Who lived upon Tincture of Senna</span>
+(которой жил = питался настойкой сенны;
+<span class="f-coni">upon = on — на; tincture — оттенок, примесь /какого-л. цвета/; настойка, тинктура /в фармацевтике/</span>)<span class="btext">;</span></p><p><span class="btext">When that did not agree</span>
+(когда это не соответствовало/не подходило)<span class="btext">,</span></p><p><span class="btext">He took Camomile Tea</span>
+(он брал /принимал/ ромашковый чай = настой ромашки;
+<span class="f-coni">to take — брать; camomile — ромашка</span>)<span class="btext">,</span></p><p><span class="btext">That nasty Old Man of Vienna</span>
+(этот противный старик из Вены;
+<span class="f-coni">nasty — отвратительный, отталкивающий; мерзкий, противный</span>)<span class="btext">.</span></p><br><p class="btext">There was an Old Man of Vienna,</p><p class="btext">Who lived upon Tincture of Senna;</p><p class="btext">When that did not agree,</p><p class="btext">He took Camomile Tea,</p><p class="btext">That nasty Old Man of Vienna.</p><br><h4>33</h4><br><p><span class="btext">There was an Old Person whose habits</span>
+(был /как-то/ старик, чьи привычки)<span class="btext">,</span></p><p><span class="btext">Induced him to feed upon rabbits</span>
+(побудили его питаться кроликами;
+<span class="f-coni">to induce — побуждать, склонять</span>)<span class="btext">;</span></p><p><span class="btext">When he'd eaten eighteen</span>
+(когда он съел восемнадцать)<span class="btext">,</span></p><p><span class="btext">He turned perfectly green</span>
+(он стал совершенно зеленым = совсем позеленел;
+<span class="f-coni">to turn — поворачивать/ся/; становиться /каким-л./</span>)<span class="btext">,</span></p><p><span class="btext">Upon which he relinquished those habits</span>
+(после чего он бросил те привычки;
+<span class="f-coni">to relinquish — оставлять; сдаваться, отступать; habit — обыкновение; обычай; привычка; пагубная/вредная привычка</span>)<span class="btext">.</span></p><br><p class="btext">induce [ɪn'dju:s], perfectly ['pɜ:fɪktlɪ], relinquish [rɪ'lɪŋkwɪʃ], habit ['hæbɪt]</p><br><p class="btext">There was an Old Person whose habits,</p><p class="btext">Induced him to feed upon rabbits;</p><p class="btext">When he'd eaten eighteen,</p><p class="btext">He turned perfectly green,</p><p class="btext">Upon which he relinquished those habits.</p><br><h4>34</h4><br><p><span class="btext">There was an Old Person of Dover</span>
+(был /как-то/ старик из Дувра /город и порт в Англии, графство Кент/)<span class="btext">,</span></p><p><span class="btext">Who rushed through a field of blue clover</span>
+(мчался через поле = по полю синего клевера; сравните:
+<span class="f-coni">he is/lives in clover — он живет припеваючи, как сыр в масле катается</span>)<span class="btext">;</span></p><p><span class="btext">But some very large bees</span>
+(но несколько очень крупных пчел)<span class="btext">,</span></p><p><span class="btext">Stung his nose and his knees</span>
+(ужалили его нос и колени;
+<span class="f-coni">to sting — жалить</span>)<span class="btext">,</span></p><p><span class="btext">So he very soon went back to Dover</span>
+(так что он очень скоро вернулся назад в Дувр)<span class="btext">.</span></p><br><p class="btext">Dover ['dəuvə], through [θru:], clover ['kləuvə]</p><br><p class="btext">There was an Old Person of Dover,</p><p class="btext">Who rushed through a field of blue clover;</p><p class="btext">But some very large bees,</p><p class="btext">Stung his nose and his knees,</p><p class="btext">So he very soon went back to Dover.</p><br><h4>35</h4><br><p><span class="btext">There was an Old Man of Marseilles</span>
+(был /как-то/ старик из Марселя /город в южной Франции, средиземноморский порт/)<span class="btext">,</span></p><p><span class="btext">Whose daughters wore bottle-green veils</span>
+(дочери которого носили бутылочно-зеленые = цвета зеленого бутылочного стекла вуали)<span class="btext">;</span></p><p><span class="btext">They caught several fish</span>
+(они поймали несколько рыб;
+<span class="f-coni">to catch — поймать, ловить</span>)<span class="btext">,</span></p><p><span class="btext">Which they put in a dish</span>
+(которых они положили на блюдо;
+<span class="f-coni">to put — класть</span>)<span class="btext">,</span></p><p><span class="btext">And sent to their Pa' at Marseilles</span>
+(и отправили своему папе в Марсель;
+<span class="f-coni">to send</span>)<span class="btext">.</span></p><br><p class="btext">Marseilles [mɑ:'seɪ], veil [veɪl], caught [kɔ:t], several ['sev(ə)r(ə)l], put [put]</p><br><p class="btext">There was an Old Man of Marseilles,</p><p class="btext">Whose daughters wore bottle-green veils;</p><p class="btext">They caught several fish,</p><p class="btext">Which they put in a dish,</p><p class="btext">And sent to their Pa' at Marseilles.</p><br><h4>36</h4><br><p><span class="btext">There was an Old Person of Cadiz</span>
+(был /как-то/ старик из Кадиса /город в южной Испании, порт на Атлантическом океане/)<span class="btext">,</span></p><p><span class="btext">Who was always polite to all ladies</span>
+(который был всегда вежлив со всеми дамами: «ко все дамам»)<span class="btext">;</span></p><p><span class="btext">But in handing his daughter</span>
+(но, подавая руку своей дочери;
+<span class="f-coni">to hand — вести за руку; помогать, протягивать руку</span>)<span class="btext">,</span></p><p><span class="btext">He fell into the water</span>
+(он упал в воду;
+<span class="f-coni">to fall</span>)<span class="btext">,</span></p><p><span class="btext">Which drowned that Old Person of Cadiz</span>
+(что /и/ утопило этого старика из Кадиса)<span class="btext">.</span></p><br><p class="btext">Cadiz [kə'dɪz], polite [pə'laɪt], drown [draun]</p><br><p class="btext">There was an Old Person of Cadiz,</p><p class="btext">Who was always polite to all ladies;</p><p class="btext">But in handing his daughter,</p><p class="btext">He fell into the water,</p><p class="btext">Which drowned that Old Person of Cadiz.</p><br><h4>37</h4><br><p><span class="btext">There was an Old Person of Basing</span>
+(был /как-то/ старик из Бейсинга /деревня в графстве Хэмпшир/)<span class="btext">,</span></p><p><span class="btext">Whose presence of mind was amazing</span>
+(чье хладнокровие: «присутствие духа» было удивительным;
+<span class="f-coni">mind — разум; умственные способности; ум; to amaze — изумлять, поражать</span>)<span class="btext">;</span></p><p><span class="btext">He purchased a steed</span>
+(он приобрел коня/рысака)<span class="btext">,</span></p><p><span class="btext">Which he rode at full speed</span>
+(на котором он скакал со всей: «с полной» скоростью;
+<span class="f-coni">to ride — скакать, ехать верхом</span>)<span class="btext">,</span></p><p><span class="btext">And escaped from the people of Basing</span>
+(и спасся бегством от людей = жителей Бейсинга;
+<span class="f-coni">to escape — бежать /из заключения/, совершать побег; избежать /опасности и т. п./, спастись; отделаться</span>)<span class="btext">.</span></p><br><p class="btext">presence ['prez(ə)ns], amazing [ə'meɪzɪŋ], mind [maɪnd], escape [ɪs'keɪp]</p><br><p class="btext">There was an Old Person of Basing,</p><p class="btext">Whose presence of mind was amazing;</p><p class="btext">He purchased a steed,</p><p class="btext">Which he rode at full speed,</p><p class="btext">And escaped from the people of Basing.</p><br><h4>38</h4><br><p><span class="btext">There was an Old Man of Quebec</span>
+(был /как-то/ старик из Квебека /провинция Канады, а также город и порт в Канаде, адм. центр провинции Квебек/)<span class="btext">,</span></p><p><span class="btext">A beetle ran over his neck</span>
+(жук пробежал по его шее;
+<span class="f-coni">to run</span>)<span class="btext">;</span></p><p><span class="btext">But he cried, 'With a needle</span>
+(но он закричал/воскликнул: Иглой: «с иглой»;
+<span class="f-coni">to cry — кричать; вопить</span>)<span class="btext">,</span></p><p><span class="btext">I'll slay you, o beadle</span>
+(я сражу/умервщлю тебя, о церковный сторож;
+<span class="f-coni">to slay — убивать, уничтожать, лишать жизни, сравните: to slay by a sword — сразить мечом; beadle — университетский педель; /устар./ церковный сторож</span>)<span class="btext">!'</span></p><p><span class="btext">That angry Old Man of Quebec</span>
+(этот сердитый старик из Квебека;
+<span class="f-coni">angry — сердитый, недовольный; рассерженный, раздражённый; разгневанный; anger — гнев, злость, ярость; раздражение</span>)<span class="btext">.</span></p><br><p class="btext">Quebec [k(w)ɪ'bek], beadle [bi:dl], angry ['æŋgrɪ]</p><br><p class="btext">There was an Old Man of Quebec,</p><p class="btext">A beetle ran over his neck;</p><p class="btext">But he cried, 'With a needle,</p><p class="btext">I'll slay you, o beadle!'</p><p class="btext">That angry Old Man of Quebec.</p><br><h4>39</h4><br><p><span class="btext">There was an Old Person of Philæ</span>
+(был /как-то/ старик из Фил /Филы — остров и храмовый город в Египте/)<span class="btext">,</span></p><p><span class="btext">Whose conduct was scroobious and wily</span>
+(чье поведение быть странным и лукавым;
+<span class="f-coni">wile — хитрость, уловка; приём, ухищрение; scroobious = scabrous — грубый на ощупь, шершавый: scabrous skin — шершавая кожа; скабрезный, неприличный, непристойный, оскорбительный wily — лукавый, хитрый; коварный</span>)<span class="btext">;</span></p><p><span class="btext">He rushed up a palm</span>
+(он бросился на пальму)<span class="btext">,</span></p><p><span class="btext">When the weather was calm</span>
+(когда погода была тихой;
+<span class="f-coni">calm — спокойный; безветренный; тихий</span>)<span class="btext">,</span></p><p><span class="btext">And observed all the ruins of Philæ</span>
+(и наблюдал за развалинами/руинами Фил)<span class="btext">.</span></p><br><p class="btext">scabrous ['skeɪbrəs], palm [pɑ:m], weather ['weðə], calm [kɑ:m], observe [əb'zɜ:v], ruins ['ru:ɪnz], Philæ ['faɪlɪ]</p><br><p class="btext">There was an Old Person of Philæ,</p><p class="btext">Whose conduct was scroobious and wily;</p><p class="btext">He rushed up a palm,</p><p class="btext">When the weather was calm,</p><p class="btext">And observed all the ruins of Philæ.</p><br><h4>40</h4><br><p><span class="btext">The was a Young Lady of Bute</span>
+(была /как-то/ юная леди из Бьюта;
+<span class="f-coni">Bute/shire/ — Бьют/шир/ /бывшее графство Шотландии/</span>)<span class="btext">,</span></p><p><span class="btext">Who played on a silver-gilt flute</span>
+(которая играла на покрытой серебром флейте;
+<span class="f-coni">to gild — золотить; gilt — позолоченный</span>)<span class="btext">;</span></p><p><span class="btext">She played several jigs</span>
+(она играла несколько джиг)<span class="btext">,</span></p><p><span class="btext">To her uncle's white pigs</span>
+(для белых свиней ее дяди)<span class="btext">,</span></p><p><span class="btext">That amusing Young Lady of Bute</span>
+(эта забавная юная леди из Бьюта;
+<span class="f-coni">amusing — забавный, занимательный, занятный; to amuse — развлекать, занимать внимание /кого-л./; позабавить, развеселить</span>)<span class="btext">.</span></p><br><p class="btext">flute [flu:t], uncle [ʌŋkl], amusing [ə'mju:zɪŋ]</p><br><p class="btext">The was a Young Lady of Bute,</p><p class="btext">Who played on a silver-gilt flute;</p><p class="btext">She played several jigs,</p><p class="btext">To her uncle's white pigs,</p><p class="btext">That amusing Young Lady of Bute.</p><br><h4>41</h4><br><p><span class="btext">There was a Young Lady whose nose</span>
+(была /как-то/ юная леди, нос которой)<span class="btext">,</span></p><p><span class="btext">Was so long that it reached to her toes</span>
+(был столь длинный, что доставал до пальцев ее ног;
+<span class="f-coni">toe — палец ноги</span>)<span class="btext">;</span></p><p><span class="btext">So she hired an Old Lady</span>
+(так /что/ = поэтому она наняла пожилую леди)<span class="btext">,</span></p><p><span class="btext">Whose conduct was steady</span>
+(чье поведение/сопровождение было устойчивым/уравновешенным;
+<span class="f-coni">steady — устойчивый; прочный, твёрдый; спокойный, уравновешенный: steady person — уравновешенный человек, steady nerve — крепкие, железные нервы</span>)<span class="btext">,</span></p><p><span class="btext">To carry that wonderful nose</span>
+(чтобы носить этот замечательный нос;
+<span class="f-coni">wonderful — замечательный, удивительный; wonder — чудо</span>)<span class="btext">.</span></p><br><p class="btext">toe [təu], hire ['haɪə], steady ['stedɪ], carry ['kærɪ], wonderful ['wʌndəf(ə)l]</p><br><p class="btext">There was a Young Lady whose nose,</p><p class="btext">Was so long that it reached to her toes;</p><p class="btext">So she hired an Old Lady,</p><p class="btext">Whose conduct was steady,</p><p class="btext">To carry that wonderful nose.</p><br><h4>42</h4><br><p><span class="btext">There was a Young Lady of Turkey</span>
+(была /как-то/ юная леди из Турции)<span class="btext">,</span></p><p><span class="btext">Who wept when the weather was murky</span>
+(которая плакала, когда погода была мрачной;
+<span class="f-coni">to weep — плакать; murky — тёмный; слабо освещённый; тусклый; густой, плотный, непроглядный /о тумане, облаках/; murk — мрак, темнота</span>)<span class="btext">;</span></p><p><span class="btext">When the day turned out fine</span>
+(когда день оказывался ясным;
+<span class="f-coni">to turn out — оказываться</span>)<span class="btext">,</span></p><p><span class="btext">She ceased to repine</span>
+(она прекращала роптать/ворчать;
+<span class="f-coni">to cease — переставать, прекращать</span>)<span class="btext">,</span></p><p><span class="btext">That capricious Young Lady of Turkey</span>
+(эта капризная юная леди из Турции;
+<span class="f-coni">capricious — капризный, раздражительный</span>)<span class="btext">.</span></p><br><p class="btext">Turkey ['tɜ:kɪ], cease [si:s], repine [rɪ'paɪn], capricious [kə'prɪʃəs]</p><br><p class="btext">There was a Young Lady of Turkey,</p><p class="btext">Who wept when the weather was murky;</p><p class="btext">When the day turned out fine,</p><p class="btext">She ceased to repine,</p><p class="btext">That capricious Young Lady of Turkey.</p><br><h4>43</h4><br><p><span class="btext">There was an Old Man of Apulia</span>
+(был /как-то/ старик из Апулии /город в Италии/)<span class="btext">,</span></p><p><span class="btext">Whose conduct was very peculiar</span>
+(чье поведение было весьма специфическим/особенным)<span class="btext">.</span></p><p><span class="btext">He fed twenty sons</span>
+(он кормил двадцать сыновей;
+<span class="f-coni">to feed — кормить</span>)<span class="btext">,</span></p><p><span class="btext">Upon nothing but buns</span>
+(ничем, кроме сдобных булочек;
+<span class="f-coni">bun — сдобная булочка</span>)<span class="btext">,</span></p><p><span class="btext">That whimsical Man of Apulia</span>
+(этот эксцентричный старик из Апулии;
+<span class="f-coni">whimsical — причудливый, эксцентричный /о поведении человека, его поступках и т. п./; whim — прихоть, каприз; причуда</span>)<span class="btext">.</span></p><br><p class="btext">Apulia [ə'pju:lɪə], peculiar [pɪ'kju:lɪə], whimsical ['wɪmzɪk(ə)l]</p><br><p class="btext">There was an Old Man of Apulia,</p><p class="btext">Whose conduct was very peculiar</p><p class="btext">He fed twenty sons,</p><p class="btext">Upon nothing but buns,</p><p class="btext">That whimsical Man of Apulia.</p><br><h4>44</h4><br><p><span class="btext">There was an Old Man with a poker</span>
+(был /как-то/ старик с кочергой)<span class="btext">,</span></p><p><span class="btext">Who painted his face with red oker</span>
+(который покрасил свое лицо красной охрой /от
+<span class="f-coni">ochre/</span>)<span class="btext">.</span></p><p><span class="btext">When they said, 'You're a Guy</span>
+(когда они = люди ему сказали: Ты Чучело<a class="marginalias" id="marginalias1" href="#m-definition1">[1]</a>)<span class="btext">!'</span></p><p><span class="btext">He made no reply</span>
+(он не дал: «не сделал» никакого ответа)<span class="btext">,</span></p><p><span class="btext">But knocked them all down with his poker</span>
+(а: «но» сбил их всех с ног своей кочергой;
+<span class="f-coni">to knock down — сломать, разрушить; сбить с ног: «сбить вниз»</span>)<span class="btext">.</span></p><br><p class="btext">ochre ['əukə], Guy [gaɪ], reply [rɪ'plaɪ], knock down [nɔkdaun]</p><br><p class="btext">There was an Old Man with a poker,</p><p class="btext">Who painted his face with red oker</p><p class="btext">When they said, 'You're a Guy!'</p><p class="btext">He made no reply,</p><p class="btext">But knocked them all down with his poker.</p><br><h4>45</h4><br><p><span class="btext">There was an Old Person of Prague</span>
+(был /как-то/ старик из Праги)<span class="btext">,</span></p><p><span class="btext">Who was suddenly seized with the Plague</span>
+(который был внезапно захвачен чумой;
+<span class="f-coni">to seize — схватить, хватать; plague — мор, эпидемия; чума</span>)<span class="btext">;</span></p><p><span class="btext">But they gave him some butter</span>
+(ему дали немного масла;
+<span class="f-coni">to give — давать</span>)<span class="btext">,</span></p><p><span class="btext">Which caused him to mutter</span>
+(что заставило его бормотать/ворчать)<span class="btext">,</span></p><p><span class="btext">And cured that Old Person of Prague</span>
+(и вылечило этого старика из Праги)<span class="btext">.</span></p><br><p class="btext">Prague [prɑ:g], suddenly ['sʌd(ə)nlɪ], seize [si:z], plague [pleɪg]</p><br><p class="btext">There was an Old Person of Prague,</p><p class="btext">Who was suddenly seized with the Plague;</p><p class="btext">But they gave him some butter,</p><p class="btext">Which caused him to mutter,</p><p class="btext">And cured that Old Person of Prague.</p><br><h4>46</h4><br><p><span class="btext">There was an Old Man of the North</span>
+(был /как-то/ старик с Севера)<span class="btext">,</span></p><p><span class="btext">Who fell into a basin of broth</span>
+(который упал в миску с мясным бульоном;
+<span class="f-coni">to fall; basin — миска, таз; чаша; broth — отвар, бульон</span>)<span class="btext">;</span></p><p><span class="btext">But a laudable cook</span>
+(однако достойная похвалы кухарка;
+<span class="f-coni">laudable — похвальный, достойный похвалы</span>)<span class="btext">,</span></p><p><span class="btext">Fished him out with a hook</span>
+(выудила его крюком;
+<span class="f-coni">to fish out</span>)<span class="btext">,</span></p><p><span class="btext">Which saved that Old Man of the North</span>
+(что спасло этого старика с Севера)<span class="btext">.</span></p><br><p class="btext">basin ['beɪsn], broth [brɔθ], laudable ['lɔ:dəbl], cook [kuk], hook [huk]</p><br><p class="btext">There was an Old Man of the North,</p><p class="btext">Who fell into a basin of broth;</p><p class="btext">But a laudable cook,</p><p class="btext">Fished him out with a hook,</p><p class="btext">Which saved that Old Man of the North.</p><br><h4>47</h4><br><p><span class="btext">There was a Young Lady of Poole</span>
+(была /как-то/ юная леди из Пула /город в Англии, в графстве Дорсетшир/)<span class="btext">,</span></p><p><span class="btext">Whose soup was excessively cool</span>
+(чей суп был чрезмерно холодным)<span class="btext">;</span></p><p><span class="btext">So she put it to boil</span>
+(поэтому она поставила его кипятиться;
+<span class="f-coni">to put — класть, ставить; to boil — кипятить; кипеть</span>)<span class="btext">.</span></p><p><span class="btext">By the aid of some oil</span>
+(при помощи /растительного/ масла)<span class="btext">,</span></p><p><span class="btext">That ingenious Young Lady of Poole</span>
+(эта изобретательная юная леди из Пула)<span class="btext">.</span></p><br><p class="btext">soup [su:p], boil [bɔɪl], aid [eɪd], oil [ɔɪl], ingenious [ɪn'ʤi:nɪəs]</p><br><p class="btext">There was a Young Lady of Poole,</p><p class="btext">Whose soup was excessively cool;</p><p class="btext">So she put it to boil</p><p class="btext">By the aid of some oil,</p><p class="btext">That ingenious Young Lady of Poole.</p><br><h4>48</h4><br><p><span class="btext">There was an Old Person of Mold</span>
+(был /как-то/ старик из Молда /город в Уэльсе/)<span class="btext">,</span></p><p><span class="btext">Who shrank from sensations of cold</span>
+(который не переносил ощущений холода;
+<span class="f-coni">to shrink — садиться, съеживаться; избегать</span>)<span class="btext">,</span></p><p><span class="btext">So he purchased some muffs</span>
+(поэтому он приобрел несколько муфт)<span class="btext">,</span></p><p><span class="btext">Some furs and some fluffs</span>
+(немного мехов и немного пуха;
+<span class="f-coni">fluff — пух, пушинки; пушок /мягкие волоски или шерсть животных/</span>)<span class="btext">,</span></p><p><span class="btext">And wrapped himself from the cold</span>
+(и укутал себя от холода)<span class="btext">.</span></p><br><p class="btext">sensation [sen'seɪʃ(ə)n], purchase ['pɜ:ʧəs]</p><br><p class="btext">There was an Old Person of Mold,</p><p class="btext">Who shrank from sensations of cold,</p><p class="btext">So he purchased some muffs,</p><p class="btext">Some furs and some fluffs,</p><p class="btext">And wrapped himself from the cold.</p><br><h4>49</h4><br><p><span class="btext">There was an Old Man of Nepaul</span>
+(был /как-то/ старик из Непала;
+<span class="f-coni">Nepaul = Nepal</span>)<span class="btext">,</span></p><p><span class="btext">From his horse had a terrible fall</span>
+(со своей лошади имел ужасное падение = упал и сильно ушибся)<span class="btext">;</span></p><p><span class="btext">But, though split quite in two</span>
+(но, хотя он раскололся практически на две /половины/;
+<span class="f-coni">to split</span>)<span class="btext">,</span></p><p><span class="btext">By some very strong glue</span>
+(при помощи некоторого очень сильного клея)<span class="btext">,</span></p><p><span class="btext">They mended that Man of Nepaul</span>
+(этого старика из Непала починили;
+<span class="f-coni">to mend — чинить, ремонтировать; штопать</span>)<span class="btext">.</span></p><br><p class="btext">Nepal [nɪ'pɔ:l], horse [hɔ:s], terrible ['terəbl], though [ðəu], glue [glu:]</p><br><p class="btext">There was an Old Man of Nepaul,</p><p class="btext">From his horse had a terrible fall;</p><p class="btext">But, though split quite in two,</p><p class="btext">By some very strong glue,</p><p class="btext">They mended that Man of Nepaul.</p><br><h4>50</h4><br><p><span class="btext">There was an Old Man of th' Abruzzi</span>
+(был /как-то/ старик из Абруцци /город в Италии/)<span class="btext">,</span></p><p><span class="btext">So blind that he couldn't his foot see</span>
+(такой слепой, что не мог своей ноги/ступни видеть)<span class="btext">;</span></p><p><span class="btext">When they said, 'That's your toe</span>
+(когда говорили: Это твой палец ноги)<span class="btext">,'</span></p><p><span class="btext">He replied, 'Is it so</span>
+(он отвечал: Так ли это/в самом деле)<span class="btext">?'</span></p><p><span class="btext">That doubtful Old Man of th' Abruzzi</span>
+(этот сомневающийся старик из Абруцци)<span class="btext">.</span></p><br><p class="btext">Abruzzi [a'brutsi], blind [blaɪnd], doubtful ['dautf(ə)l]</p><br><p class="btext">There was an Old Man of th' Abruzzi,</p><p class="btext">So blind that he couldn't his foot see;</p><p class="btext">When they said, 'That's your toe,'</p><p class="btext">He replied, 'Is it so?'</p><p class="btext">That doubtful Old Man of th' Abruzzi.</p><br><h4>51</h4><br><p><span class="btext">There was an Old Person of Rhodes</span>
+(был /как-то/ старик с /острова/ Родос /остров в Эгейском море; принадлежит Греции/)<span class="btext">,</span></p><p><span class="btext">Who strongly objected to toads</span>
+(который сильно = категорически возражал /против/ жаб)<span class="btext">;</span></p><p><span class="btext">He paid several cousins</span>
+(заплатил нескольким двоюродным братьям;
+<span class="f-coni">to pay — платить</span>)<span class="btext">,</span></p><p><span class="btext">To catch them by the dozens</span>
+(ловить их = чтобы ловили их дюжинами)<span class="btext">,</span></p><p><span class="btext">That futile Old Person of Rhodes</span>
+(несерьезный, пустой)<span class="btext">.</span></p><br><p class="btext">Rhodes [rəudz], object [əb'ʤekt], toad [təud], cousin ['kʌz(ə)n], dozen ['dʌz(ə)n], futile ['fju:taɪl]</p><br><p class="btext">There was an Old Person of Rhodes,</p><p class="btext">Who strongly objected to toads;</p><p class="btext">He paid several cousins,</p><p class="btext">To catch them by the dozens,</p><p class="btext">That futile Old Person of Rhodes.</p><br><h4>52</h4><br><p><span class="btext">There was an Old Man of Peru</span>
+(был /как-то/ старик из Перу)<span class="btext">,</span></p><p><span class="btext">Who watched his wife making a stew</span>
+(который смотрел за своей женой, готовящей тушеное мясо;
+<span class="f-coni">stew — блюдо из тушёного мяса или рыбы /обычно с овощами, рисом/; рагу</span>)<span class="btext">;</span></p><p><span class="btext">But once by mistake</span>
+(но однажды по ошибке)<span class="btext">,</span></p><p><span class="btext">In a stove she did bake</span>
+(в печи они испекла)<span class="btext">,</span></p><p><span class="btext">That unfortunate Man of Peru</span>
+(этого незадачливого/несчастного мужчину из Перу)<span class="btext">.</span></p><br><p class="btext">stew [stju:], once [wʌns], mistake [mɪ'steɪk], stove [stəuv],</p><br><p class="btext">There was an Old Man of Peru,</p><p class="btext">Who watched his wife making a stew;</p><p class="btext">But once by mistake,</p><p class="btext">In a stove she did bake,</p><p class="btext">That unfortunate Man of Peru.</p><br><h4>53</h4><br><p><span class="btext">There was an Old Man of Melrose</span>
+(был /как-то/ старик из Мелроза /деревня в северо-восточной Шотландии, на реке Твид, с развалинами знаменитого аббатства)<span class="btext">,</span></p><p><span class="btext">Who walked on the tips of his toes</span>
+(который ходил на цыпочках: «на кончиках своих пальцев ног)<span class="btext">;</span></p><p><span class="btext">But they said, 'It ain't pleasant</span>
+(но они = люди сказали: Это неприятно;
+<span class="f-coni">pleasant — приятный; радостный</span>)<span class="btext">,</span></p><p><span class="btext">To see you at present</span>
+(видеть тебя сейчас/в настоящее время)<span class="btext">,</span></p><p><span class="btext">You stupid Old Man of Melrose</span>
+(/эх/ ты, глупый старик из Мелроза)<span class="btext">.</span></p><br><p class="btext">Melrose ['melrəuz], pleasant ['plez(ə)nt], stupid ['stju:pɪd]</p><br><p class="btext">There was an Old Man of Melrose,</p><p class="btext">Who walked on the tips of his toes;</p><p class="btext">But they said, 'It ain't pleasant,</p><p class="btext">To see you at present,</p><p class="btext">You stupid Old Man of Melrose.</p><br><h4>54</h4><br><p><span class="btext">There was a Young Lady of Lucca</span>
+(была /как-то/ юная леди из Лукки /город в Италии/)<span class="btext">,</span></p><p><span class="btext">Whose lovers completely forsook her</span>
+(возлюбленные которой совершенно покинули ее;
+<span class="f-coni">completely — вполне, всецело, полностью, совершенно, совсем; to forsake — покидать, бросать, отвергать</span>)<span class="btext">;</span></p><p><span class="btext">She ran up a tree</span>
+(она взобралась на дерево;
+<span class="f-coni">to run up</span>)<span class="btext">,</span></p><p><span class="btext">And said, 'Fiddle-de-dee!</span>
+(и сказала: Ерунда/вздор!)<span class="btext">'</span></p><p><span class="btext">Which embarrassed the people of Lucca</span>
+(что смутило жителей Лукки;
+<span class="f-coni">to embarrass — затруднять, мешать, препятствовать, стеснять; сбивать с толку, приводить в замешательство; смущать, ставить в неудобное положение</span>)<span class="btext">.</span></p><br><p class="btext">Lucca ['lu:kə], completely [kəm'pli:tlɪ], forsook [fə'su:k], embarrass [ɪm'bærəs]</p><br><p class="btext">There was a Young Lady of Lucca,</p><p class="btext">Whose lovers completely forsook her;</p><p class="btext">She ran up a tree,</p><p class="btext">And said, 'Fiddle-de-dee!'</p><p class="btext">Which embarrassed the people of Lucca.</p><br><h4>55</h4><br><p><span class="btext">There was an Old Man of Bohemia</span>
+(был /как-то/ старик из Богемии = из Чехии)<span class="btext">,</span></p><p><span class="btext">Whose daughter was christened Euphemia</span>
+(дочь которого нарекли Эуфимия /‘добрая слава’ — греч./;
+<span class="f-coni">to christen — крестить, совершать обряд крещения; нарекать, давать имя при крещении</span>)<span class="btext">,</span></p><p><span class="btext">Till one day, to his grief</span>
+(пока в один день, к его горю/огорчению;
+<span class="f-coni">grief — горе, печаль, скорбь</span>)<span class="btext">,</span></p><p><span class="btext">She married a thief</span>
+(она /не/ вышла замуж за вора;
+<span class="f-coni">to marry smb. — выходить за кого-л. замуж; жениться на ком-л.</span>)<span class="btext">,</span></p><p><span class="btext">Which grieved that Old Man of Bohemia</span>
+(что /глубоко/ опечалило этого старика из Богемии;
+<span class="f-coni">to grieve — огорчать, глубоко опечаливать</span>)<span class="btext">.</span></p><br><p class="btext">Bohemia [bə(u)'hi:mɪə], Euphemia [ju:'fi:mɪə] christen ['krɪs(ə)n], grief [gri:f], marry ['mærɪ], thief [θi:f], grieve [gri:v]</p><br><p class="btext">There was an Old Man of Bohemia,</p><p class="btext">Whose daughter was christened Euphemia,</p><p class="btext">Till one day, to his grief,</p><p class="btext">She married a thief,</p><p class="btext">Which grieved that Old Man of Bohemia.</p><br><h4>56</h4><br><p><span class="btext">There was an Old Man of Vesuvius</span>
+(был /как-то/ старик из /области/ Везувия /действующий вулкан на юге Италии, близ Неаполя/)<span class="btext">,</span></p><p><span class="btext">Who studied the works of Vitruvius</span>
+(который изучал работы Витрувия /классические труды по архитектуре/;
+<span class="f-coni">to study</span>)<span class="btext">;</span></p><p><span class="btext">When the flames burnt his book</span>
+(когда языки пламени сожгли его книгу;
+<span class="f-coni">flame — пламя; to burn — жечь</span>)<span class="btext">,</span></p><p><span class="btext">To drinking he took</span>
+(пить он начал = запил)<span class="btext">,</span></p><p><span class="btext">That morbid Old Man of Vesuvius</span>
+(этот больной/ненормальный старик из /области/ Везувия;
+<span class="f-coni">morbid — болезненный; нездоровый; ненормальный; психически нездоровый; с отклонениями</span>)<span class="btext">.</span></p><br><p class="btext">Vesuvius [vɪ'su:vɪəs], study ['stʌdɪ], morbid ['mɔ:bɪd]</p><br><p class="btext">There was an Old Man of Vesuvius,</p><p class="btext">Who studied the works of Vitruvius;</p><p class="btext">When the flames burnt his book,</p><p class="btext">To drinking he took,</p><p class="btext">That morbid Old Man of Vesuvius.</p><br><h4>57</h4><br><p><span class="btext">There was an Old Man of Cape Horn</span>
+(был /как-то/ старик с Мыса Доброй Надежды;
+<span class="f-coni">cape — мыс; horn — рог</span>)<span class="btext">,</span></p><p><span class="btext">Who wished he had never been born</span>
+(который желал, чтобы он никогда не был рожден)<span class="btext">;</span></p><p><span class="btext">So he sat on a chair</span>
+(потому он сидел на стуле)<span class="btext">,</span></p><p><span class="btext">Till he died of despair</span>
+(пока не умер от отчаяния)<span class="btext">,</span></p><p><span class="btext">That dolorous Man of Cape Horn</span>
+(этот страдающий/унылый старик с Мыса Доброй Надежды;
+<span class="f-coni">dolorous — грустный, печальный, унылый, страдающий</span>)<span class="btext">.</span></p><br><p class="btext">chair [ʧeə], despair [dɪ'speə], dolorous ['dɔl(ə)rəs]</p><br><p class="btext">There was an Old Man of Cape Horn,</p><p class="btext">Who wished he had never been born;</p><p class="btext">So he sat on a chair,</p><p class="btext">Till he died of despair,</p><p class="btext">That dolorous Man of Cape Horn.</p><br><h4>58</h4><br><p><span class="btext">There was an Old Lady whose folly</span>
+(была /как-то/ пожилая леди, чье сумасшествие/чья глупость)<span class="btext">,</span></p><p><span class="btext">Induced her to sit on a holly</span>
+(побудила ее сидеть на остролисте)<span class="btext">;</span></p><p><span class="btext">Whereon by a thorn</span>
+(на котором шипом)<span class="btext">,</span></p><p><span class="btext">Her dress being torn</span>
+(ее платье будучи разорвано;
+<span class="f-coni">to tear — рвать</span>)<span class="btext">,</span></p><p><span class="btext">She quickly became melancholy</span>
+(она быстро стала меланхоличной = пришла в подавленное состояние;
+<span class="f-coni">to become — становиться</span>)<span class="btext">.</span></p><br><p class="btext">whereon [weə'rɔn], melancholy ['melənk(ə)lɪ]</p><br><p class="btext">There was an Old Lady whose folly,</p><p class="btext">Induced her to sit on a holly;</p><p class="btext">Whereon by a thorn,</p><p class="btext">Her dress being torn,</p><p class="btext">She quickly became melancholy.</p><br><h4>59</h4><br><p><span class="btext">There was an Old Man of Corfu</span>
+(был /как-то/ старик с /острова/ Корфу /остров в группе Ионических островов, Греция/)<span class="btext">,</span></p><p><span class="btext">Who never knew what he should do</span>
+(который никогда не знал, что ему следует делать;
+<span class="f-coni">to know</span>)<span class="btext">;</span></p><p><span class="btext">So he rushed up and down</span>
+(поэтому носился туда-сюда: «вверх и вниз»;
+<span class="f-coni">to rush — бросаться, мчаться, нестись, устремляться</span>)<span class="btext">,</span></p><p><span class="btext">Till the sun made him brown</span>
+(пока солнце не сделало его коричневым)<span class="btext">,</span></p><p><span class="btext">That bewildered Old Man of Corfu</span>
+(этот сбитый с толку/озадаченный старик с /острова/ Корфу;
+<span class="f-coni">to bewilder — смущать; ставить в тупик; сбивать с толку; приводить в замешательство</span>)<span class="btext">.</span></p><br><p class="btext">Corfu [kɔ:'fu:], bewilder [bɪ'wɪldə]</p><br><p class="btext">There was an Old Man of Corfu,</p><p class="btext">Who never knew what he should do;</p><p class="btext">So he rushed up and down,</p><p class="btext">Till the sun made him brown,</p><p class="btext">That bewildered Old Man of Corfu.</p><br><h4>60</h4><br><p><span class="btext">There was an Old Man of the South</span>
+(был /как-то/ старик с Юга)<span class="btext">,</span></p><p><span class="btext">Who had an immoderate mouth</span>
+(у которого был чрезмерный рот;
+<span class="f-coni">immoderate — излишний, неумеренный, чрезмерный, непомерный: immoderate appetite — неумеренный аппетит</span>)<span class="btext">;</span></p><p><span class="btext">But in swallowing a dish</span>
+(но, глотая блюдо)<span class="btext">,</span></p><p><span class="btext">That was quite full of fish</span>
+(которое было довольно полным рыбы)<span class="btext">,</span></p><p><span class="btext">He was choked, that Old Man of the South</span>
+(он подавился, этот старик с Юга)<span class="btext">.</span></p><br><p class="btext">south [sauθ], immoderate [ɪ'mɔd(ə)rət], swallow ['swɔləu], full [ful]</p><br><p class="btext">There was an Old Man of the South,</p><p class="btext">Who had an immoderate mouth;</p><p class="btext">But in swallowing a dish,</p><p class="btext">That was quite full of fish,</p><p class="btext">He was choked, that Old Man of the South.</p><br><h4>61</h4><br><p><span class="btext">There was an Old Man of the Nile</span>
+(был /как-то/ старик с Нила)<span class="btext">,</span></p><p><span class="btext">Who sharpened his nails with a file</span>
+(который затачивал ногти напильником;
+<span class="f-coni">sharp — острый</span>)<span class="btext">,</span></p><p><span class="btext">Till he cut out his thumbs</span>
+(пока не отрезал большие пальцы своих рук;
+<span class="f-coni">thumb — большой палец /руки/</span>)<span class="btext">,</span></p><p><span class="btext">And said calmly, 'This comes</span>
+(и спокойно сказал: Это происходит: «приходит»)<span class="btext">.</span></p><p><span class="btext">Of sharpening one's nails with a file</span>
+(из-за затачивания своих ногтей напильником)<span class="btext">!'</span></p><br><p class="btext">cut [kʌt], thumb [θʌm]</p><br><p class="btext">There was an Old Man of the Nile,</p><p class="btext">Who sharpened his nails with a file,</p><p class="btext">Till he cut out his thumbs,</p><p class="btext">And said calmly, 'This comes</p><p class="btext">Of sharpening one's nails with a file!'</p><br><h4>62</h4><br><p><span class="btext">There was an Old Person of Rheims</span>
+(был /как-то/ старик из Реймса /город во Франции/)<span class="btext">,</span></p><p><span class="btext">Who was troubled with horrible dreams</span>
+(который был обеспокоен/мучим ужасными снами)<span class="btext">;</span></p><p><span class="btext">So, to keep him awake</span>
+(поэтому, чтобы держать его бодрствующим = не давать ему уснуть)<span class="btext">.</span></p><p><span class="btext">They fed him on cake</span>
+(/они/ его кормили тортом;
+<span class="f-coni">to feed</span>)<span class="btext">,</span></p><p><span class="btext">Which amused that Old Person of Rheims</span>
+(что забавляло этого старика из Реймса)<span class="btext">.</span></p><br><p class="btext">Rheims [ri:mz], trouble [trʌbl], horrible ['hɔrəbl], awake [ə'weɪk], amuse [ə'mju:z]</p><br><p class="btext">There was an Old Person of Rheims,</p><p class="btext">Who was troubled with horrible dreams;</p><p class="btext">So, to keep him awake</p><p class="btext">They fed him on cake,</p><p class="btext">Which amused that Old Person of Rheims.</p><br><h4>63</h4><br><p><span class="btext">There was an Old Person of Cromer</span>
+(был /как-то/ старик из Кромера /город в Великобритании/)<span class="btext">,</span></p><p><span class="btext">Who stood on one leg to read Homer</span>
+(который стоял на одной ноге, чтобы читать Гомера)<span class="btext">;</span></p><p><span class="btext">When he found he grew stiff</span>
+(когда он обнаружил, /что/ он стал окостеневшим/одеревеневшим = что нога затекла;
+<span class="f-coni">to find — находить; to grow — расти; становиться</span>)<span class="btext">,</span></p><p><span class="btext">He jumped over the cliff</span>
+(он спрыгнул с утеса: «через утес»)<span class="btext">,</span></p><p><span class="btext">Which concluded that Person of Cromer</span>
+(что прикончило этого человека из Кромера;
+<span class="f-coni">to conclude — завершать, заканчивать</span>)<span class="btext">.</span></p><br><p class="btext">Homer ['həʊmə], grew [gru:], conclude [kən'klu:d]</p><br><p class="btext">There was an Old Person of Cromer,</p><p class="btext">Who stood on one leg to read Homer;</p><p class="btext">When he found he grew stiff,</p><p class="btext">He jumped over the cliff,</p><p class="btext">Which concluded that Person of Cromer.</p><br><h4>64</h4><br><p><span class="btext">There was an old person of Troy</span>
+(был /как-то/ старик из Трои /древний город на северо-западе Малой Азии/)<span class="btext">,</span></p><p><span class="btext">Whose drink was warm brandy and soy</span>
+(питьем которого были теплый бренди и соя)<span class="btext">,</span></p><p><span class="btext">Which he took with a spoon</span>
+(которые он брал ложкой)<span class="btext">,</span></p><p><span class="btext">By the light of the moon</span>
+(при свете луны)<span class="btext">,</span></p><p><span class="btext">In sight of the city of Troy</span>
+(с видом на город Трою)<span class="btext">.</span></p><br><p class="btext">Troy [trɔɪ], warm [wɔ:m], city ['sɪtɪ]</p><br><p class="btext">There was an old person of Troy,</p><p class="btext">Whose drink was warm brandy and soy,</p><p class="btext">Which he took with a spoon,</p><p class="btext">By the light of the moon,</p><p class="btext">In sight of the city of Troy.</p><br><h4>65</h4><br><p><span class="btext">There was an Old Man of the Dee</span>
+(был /как-то/ старик из Ди /город в Шотландии/)<span class="btext">,</span></p><p><span class="btext">Who was sadly annoyed by a flea</span>
+(который был досадно раздражен/раздражаем блохой = которому не давала покоя/надоедала блоха;
+<span class="f-coni">to annoy — раздражать, сердить, злить; досаждать, донимать, допекать</span>)<span class="btext">;</span></p><p><span class="btext">When he said, 'I will scratch it</span>
+(когда он сказал: Я расцарапаю = раздавлю это /блоху/;
+<span class="f-coni">to scratch — царапать, скрести; чесать</span>)<span class="btext">,'</span></p><p><span class="btext">They gave him a hatchet</span>
+(ему дали топорик;
+<span class="f-coni">hatchet — топор, топорик; большой нож, резак, сечка</span>)<span class="btext">,</span></p><p><span class="btext">Which grieved that Old Man of the Dee</span>
+(что огорчило этого старика из Ди)<span class="btext">.</span></p><br><p class="btext">annoy [ə'nɔɪ], flea [fli:], hatchet ['hæʧɪt]</p><br><p class="btext">There was an Old Man of the Dee,</p><p class="btext">Who was sadly annoyed by a flea;</p><p class="btext">When he said, 'I will scratch it,'</p><p class="btext">They gave him a hatchet,</p><p class="btext">Which grieved that Old Man of the Dee.</p><br><h4>66</h4><br><p><span class="btext">There was an Old Man of Dundee</span>
+(был /как-то/ старик из Данди /город в Шотландии/)<span class="btext">,</span></p><p><span class="btext">Who frequented the top of a tree</span>
+(который часто посещал верхушку дерева;
+<span class="f-coni">to frequent — часто посещать, бывать</span>)<span class="btext">;</span></p><p><span class="btext">When disturbed by the crows</span>
+(когда был потревожен воронами;
+<span class="f-coni">to disturb — волновать, тревожить, беспокоить</span>)<span class="btext">,</span></p><p><span class="btext">He abruptly arose</span>
+(он внезапно поднялся;
+<span class="f-coni">to arise</span>)<span class="btext">,</span></p><p><span class="btext">And exclaimed, 'I'll return to Dundee</span>
+(и воскликнул: Я вернусь в Данди)<span class="btext">.'</span></p><br><p class="btext">Dundee [dʌn'di:], frequent [fri:'kwent], disturb [dɪ'stɜ:b], abruptly [ə'brʌptlɪ], arose [ə'rəuz], exclaim [ɪks'kleɪm], return [rɪ'tɜ:n]</p><br><p class="btext">There was an Old Man of Dundee,</p><p class="btext">Who frequented the top of a tree;</p><p class="btext">When disturbed by the crows,</p><p class="btext">He abruptly arose,</p><p class="btext">And exclaimed, 'I'll return to Dundee.'</p><br><h4>67</h4><br><p><span class="btext">There was an Old Person of Tring</span>
+(был /как-то/ старик из Тринга /городок в графстве Хартфордшир/)<span class="btext">,</span></p><p><span class="btext">Who embellished his nose with a ring</span>
+(который украсил свой нос кольцом)<span class="btext">;</span></p><p><span class="btext">Ha gazed at the moon</span>
+(он пристально смотрел на луну;
+<span class="f-coni">to gaze — пристально глядеть; вглядываться; уставиться</span>)<span class="btext">.</span></p><p><span class="btext">Every evening in June</span>
+(каждый вечер в июне)<span class="btext">,</span></p><p><span class="btext">That ecstatic Old Person in Tring</span>
+(этот исступленный старик из Тринга;
+<span class="f-coni">ecstatic — исступлённый; экстатический; восторженный; находящийся в экстазе</span>)<span class="btext">.</span></p><br><p class="btext">embellish [ɪm'belɪʃ], June [ʤu:n], ecstatic [ɪk'stætɪk]</p><br><p class="btext">There was an Old Person of Tring,</p><p class="btext">Who embellished his nose with a ring;</p><p class="btext">Ha gazed at the moon</p><p class="btext">Every evening in June,</p><p class="btext">That ecstatic Old Person in Tring.</p><br><h4>68</h4><br><p><span class="btext">There was an Old Man on some rocks</span>
+(был /как-то/ старик на одних скалах)<span class="btext">,</span></p><p><span class="btext">Who shut his wife up in a box</span>
+(который закрыл свою жену в коробке;
+<span class="f-coni">to shut up — заключать, сажать /в тюрьму/</span>)<span class="btext">;</span></p><p><span class="btext">When she said, 'Let me out</span>
+(когда она сказала: Выпусти меня)<span class="btext">!'</span></p><p><span class="btext">He exclaimed, 'Without doubt</span>
+(он воскликнул: Без сомнения)<span class="btext">,</span></p><p><span class="btext">You will pass all your life in that box</span>
+(ты проведешь всю
+<span class="f-coni">cвою жизнь в этой коробке</span>)<span class="btext">.'</span></p><br><p class="btext">shut [ʃʌt], without [wɪ'ðaut], doubt [daut], pass [pɑ:s]</p><br><p class="btext">There was an Old Man on some rocks,</p><p class="btext">Who shut his wife up in a box;</p><p class="btext">When she said, 'Let me out!'</p><p class="btext">He exclaimed, 'Without doubt,</p><p class="btext">You will pass all your life in that box.'</p><br><h4>69</h4><br><p><span class="btext">There was an Old Man of Coblenz</span>
+(был /как-то/ старик из Кобленца /город в Германии/)<span class="btext">,</span></p><p><span class="btext">The length of whose legs was immense</span>
+(длина ног которого была колоссальна: «неизмерима»;
+<span class="f-coni">immense — безмерный, очень большой, огромный</span>)<span class="btext">;</span></p><p><span class="btext">He went with one prance</span>
+(он перешел одним скачком)<span class="btext">.</span></p><p><span class="btext">From Turkey to France</span>
+(из Турции во Францию)<span class="btext">,</span></p><p><span class="btext">That surprising Old Man of Coblenz</span>
+(этот удивительный старик из Кобленца;
+<span class="f-coni">to surprise — изумлять, поражать, удивлять</span>)<span class="btext">.</span></p><br><p class="btext">immense [ɪ'mens], prance [prɑ:ns], France [frɑ:ns], surprising [sə'praɪzɪŋ]</p><br><p class="btext">There was an Old Man of Coblenz,</p><p class="btext">The length of whose legs was immense;</p><p class="btext">He went with one prance</p><p class="btext">From Turkey to France,</p><p class="btext">That surprising Old Man of Coblenz.</p><br><h4>70</h4><br><p><span class="btext">There was an Old Man of Calcutta</span>
+(был /как-то/ старик из Калькутты /город в Индии/)<span class="btext">,</span></p><p><span class="btext">Who perpetually ate bread and butter</span>
+(который беспрестанно ел хлеб и масло;
+<span class="f-coni">perpetual — бесконечный, вечный; беспрестанный, непрекращающийся</span>)<span class="btext">,</span></p><p><span class="btext">Till a great bit of muffin</span>
+(пока огромный кусок булки;
+<span class="f-coni">muffin — маффин, оладья; сдобная булка</span>)<span class="btext">,</span></p><p><span class="btext">On which he was stuffing</span>
+(которую он запихивал /в себя/;
+<span class="f-coni">to stuff — набивать; запихивать, засовывать</span>)<span class="btext">,</span></p><p><span class="btext">Choked that horrid Old Man of Calcutta</span>
+(/не/ задушил этого ужасного/отвратительного старика из Калькутты)<span class="btext">.</span></p><br><p class="btext">Calcutta [kæl'kʌtə], perpetual [pə'peʧuəl], bread [bred], muffin ['mʌfɪn]</p><br><p class="btext">There was an Old Man of Calcutta,</p><p class="btext">Who perpetually ate bread and butter,</p><p class="btext">Till a great bit of muffin,</p><p class="btext">On which he was stuffing,</p><p class="btext">Choked that horrid Old Man of Calcutta.</p><br><h4>71</h4><br><p><span class="btext">There was Old Man in a pew</span>
+(был /как-то/ старик на церковной скамье;
+<span class="f-coni">pew — церковная скамья со спинкой</span>)<span class="btext">,</span></p><p><span class="btext">Whose waistcoat was spotted with blue</span>
+(жилет которого был в синюю точку: «запятнан синим»;
+<span class="f-coni">waistcoat — камзол; жилет; spot — пятнышко; крапинка; to spot — пятнать, покрывать пятнами</span>)<span class="btext">;</span></p><p><span class="btext">But he tore it in pieces</span>
+(но он разорвал его на куски;
+<span class="f-coni">to tear</span>)<span class="btext">.</span></p><p><span class="btext">To give to his nieces</span>
+(чтобы отдать своим племянницам)<span class="btext">,</span></p><p><span class="btext">That cheerful Old Man in a pew</span>
+(этот неунывающий старик на церковной скамье;
+<span class="f-coni">cheerful — весёлый, радостный; живой, энергичный, неунывающий</span>)<span class="btext">.</span></p><br><p class="btext">pew [pju:], waistcoat ['weɪstkəut], piece [pi:s], niece [ni:s], cheerful ['ʧɪəf(ə)l]</p><br><p class="btext">There was Old Man in a pew,</p><p class="btext">Whose waistcoat was spotted with blue;</p><p class="btext">But he tore it in pieces</p><p class="btext">To give to his nieces,</p><p class="btext">That cheerful Old Man in a pew.</p><br><h4>72</h4><br><p><span class="btext">There was an Old Man who said, 'How</span>
+(был /как-то/ старик, который спросил: Как)<span class="btext">.</span></p><p><span class="btext">Shall I flee from that horrible cow</span>
+(мне убежать от этой ужасной коровы;
+<span class="f-coni">to flee — убегать, спасаться бегством</span>)<span class="btext">?</span></p><p><span class="btext">I will sit on this stile</span>
+(я буду сидеть на этой приступке;
+<span class="f-coni">stile I — ступеньки для перехода через ограждение /забор, стену/; перелаз</span>)<span class="btext">,</span></p><p><span class="btext">And continue to smile</span>
+(и продолжать улыбаться)<span class="btext">,</span></p><p><span class="btext">Which may soften the heart of that cow</span>
+(что может смягчить сердце этой коровы)<span class="btext">.'</span></p><br><p class="btext">horrible ['hɔrəbl], cow [kau], continue [kən'tɪnju:], soften ['sɔf(ə)n], heart [hɑ:t]</p><br><p class="btext">There was an Old Man who said, 'How</p><p class="btext">Shall I flee from that horrible cow?</p><p class="btext">I will sit on this stile,</p><p class="btext">And continue to smile,</p><p class="btext">Which may soften the heart of that cow.'</p><br><h4>73</h4><br><p><span class="btext">There was a Young Lady of Hull</span>
+(была /как-то/ юная леди из Халла;
+<span class="f-coni">Hull = Kingston upon Hull — Кингстон-апон-Халл /город и порт в Англии/</span>)<span class="btext">,</span></p><p><span class="btext">Who was chased by a virulent bull</span>
+(которая была преследуема злобным/разъяренным быком;
+<span class="f-coni">to chase — гнаться, преследовать</span>)<span class="btext">;</span></p><p><span class="btext">But she seized on a spade</span>
+(но она схватила лопату)<span class="btext">,</span></p><p><span class="btext">And called out</span>
+(и выкрикнула/закричала)<span class="btext">, 'Who's afraid</span>
+(кто испуган/боится;
+<span class="f-coni">afraid — испуганный, напуганный; боящийся</span>)<span class="btext">?'</span></p><p><span class="btext">Which distracted that virulent bull</span>
+(что отвлекло/сбило с толку этого разъяренного быка;
+<span class="f-coni">to distract — отвлекать, уводить в сторону: to distract the attention — отвлекать внимание; приводить в смятение; смущать; расстраивать</span>)<span class="btext">.</span></p><br><p class="btext">Hull [hʌl], virulent ['vɪrul(ə)nt], bull [bul], afraid [ə'freɪd], distract [dɪ'strækt]</p><br><p class="btext">There was a Young Lady of Hull,</p><p class="btext">Who was chased by a virulent bull;</p><p class="btext">But she seized on a spade,</p><p class="btext">And called out, 'Who's afraid?'</p><p class="btext">Which distracted that virulent bull.</p><br><h4>74</h4><br><p><span class="btext">There was an Old Man of Whitehaven</span>
+(был /как-то/ старик из Уайтхейвена /город в Шотландии/)<span class="btext">,</span></p><p><span class="btext">Who danced a quadrille with a raven</span>
+(который танцевал кадриль с вороном)<span class="btext">;</span></p><p><span class="btext">But they said, 'It's absurd</span>
+(но люди сказали: Это нелепо/неразумно;
+<span class="f-coni">absurd — нелепый, абсурдный; смехотворный</span>)<span class="btext">.</span></p><p><span class="btext">To encourage this bird</span>
+(потакать этой птице;
+<span class="f-coni">to encourage — ободрять; поощрять, поддерживать</span>)<span class="btext">!'</span></p><p><span class="btext">So they smashed that Old Man of Whitehaven</span>
+(поэтому они прибили этого старика из Уайтхейвена)<span class="btext">.</span></p><br><p class="btext">quadrille [kwə'drɪl], raven I ['reɪv(ə)n], absurd [əb'sɜ:d], encourage [ɪn'kʌrɪʤ]</p><br><p class="btext">There was an Old Man of Whitehaven,</p><p class="btext">Who danced a quadrille with a raven;</p><p class="btext">But they said, 'It's absurd</p><p class="btext">To encourage this bird!'</p><p class="btext">So they smashed that Old Man of Whitehaven.</p><br><h4>75</h4><br><p><span class="btext">There was an Old Man of Leghorn</span>
+(был /как-то/ старик из Ливорно /город и порт в Италии/)<span class="btext">,</span></p><p><span class="btext">The smallest that ever was born</span>
+(самый маленький, что когда-либо был рожден)<span class="btext">;</span></p><p><span class="btext">But quickly snapped up he</span>
+(но быстро /был/ схвачен он;
+<span class="f-coni">to snap up — подхватывать, схватить; to snap — щелкать; закрывать, захлопывать с щелчком; смыкать челюсти</span>)<span class="btext">.</span></p><p><span class="btext">Was once by a puppy</span>
+(однажды щенком)<span class="btext">,</span></p><p><span class="btext">Who devoured that Old Man of Leghorn</span>
+(который поглотил этого старика из Ливорно;
+<span class="f-coni">to devour — пожирать; поглощать</span>)<span class="btext">.</span></p><br><p class="btext">puppy ['pʌpɪ], devour [dɪ'vauə]</p><br><p class="btext">There was an Old Man of Leghorn,</p><p class="btext">The smallest that ever was born;</p><p class="btext">But quickly snapped up he</p><p class="btext">Was once by a puppy,</p><p class="btext">Who devoured that Old Man of Leghorn.</p><br><h4>76</h4><br><p><span class="btext">There was an Old Man of the Hague</span>
+(был /как-то/ старик из Гааги /город в Голландии/)<span class="btext">,</span></p><p><span class="btext">Whose ideas were excessively vague</span>
+(чьи идеи были крайне неопределенны/расплывчаты)<span class="btext">;</span></p><p><span class="btext">He built a balloon</span>
+(он построил /воздушный/ шар;
+<span class="f-coni">to build; balloon = air balloon — воздушный шар; неуправляемый аэростат; шар-зонд</span>)<span class="btext">.</span></p><p><span class="btext">To examine the moon</span>
+(чтобы изучать луну)<span class="btext">,</span></p><p><span class="btext">That deluded Old Man of the Hague</span>
+(которая ввела в заблуждение старика из Гааги;
+<span class="f-coni">to delude — обманывать, вводить в заблуждение</span>)<span class="btext">.</span></p><br><p class="btext">Hague [heɪg], idea [aɪ'dɪə], vague [veɪg], balloon [bə'lu:n], delude [dɪ'lu:d]</p><br><p class="btext">There was an Old Man of the Hague,</p><p class="btext">Whose ideas were excessively vague;</p><p class="btext">He built a balloon</p><p class="btext">To examine the moon,</p><p class="btext">That deluded Old Man of the Hague.</p><br><h4>77</h4><br><p><span class="btext">There was an Old Man of Jamaica</span>
+(был /как-то/ старик с Ямайки /остров в архипелаге Большие Антильские острова, в Вест-Индии/)<span class="btext">,</span></p><p><span class="btext">Who suddenly married a Quaker</span>
+(который неожиданно женился на Квакерше;
+<span class="f-coni">Quaker — квакер /последователь протестантского религиозного течения, проповедующего пацифизм и благотворительность; возникло в Англии во второй половине 17 в./</span>)<span class="btext">;</span></p><p><span class="btext">But she cried out, 'Alack</span>
+(но она вскликнула: Увы)<span class="btext">!</span></p><p><span class="btext">I have married a black</span>
+(я вышла замуж за черного)<span class="btext">!'</span></p><p><span class="btext">Which distressed that Old Man of Jamaica</span>
+(что причинило горе/страдание этому старику с Ямайки;
+<span class="f-coni">distress — физическая боль, недомогание; горе, несчастье, душевное страдание; to distress — причинять физическую боль; причинять страдание; мучить, терзать</span>)<span class="btext">.</span></p><br><p class="btext">Jamaica [ʤə'meɪkə], Quaker ['kweɪkə], alack [ə'læk], distress [dɪ'stres]</p><br><p class="btext">There was an Old Man of Jamaica,</p><p class="btext">Who suddenly married a Quaker;</p><p class="btext">But she cried out, 'Alack!</p><p class="btext">I have married a black!'</p><p class="btext">Which distressed that Old Man of Jamaica.</p><br><h4>78</h4><br><p><span class="btext">There was an Old Person of Dutton</span>
+(был /как-то/ старик из Даттона /деревня в графстве Чешир/)<span class="btext">,</span></p><p><span class="btext">Whose head was as small as a button</span>
+(голова которого была так мала, как пуговица)<span class="btext">,</span></p><p><span class="btext">So, to make it look big</span>
+(поэтому, чтобы заставить её смотреться/выглядеть большой)<span class="btext">,</span></p><p><span class="btext">He purchased a wig</span>
+(он приобрел парик)<span class="btext">,</span></p><p><span class="btext">And rapidly rushed about Dutton</span>
+(и быстро носился по Даттону)<span class="btext">.</span></p><br><p class="btext">small [smɔ:l], button [bʌtn], look [luk], rapidly ['ræpɪdlɪ]</p><br><p class="btext">There was an Old Person of Dutton,</p><p class="btext">Whose head was as small as a button,</p><p class="btext">So, to make it look big,</p><p class="btext">He purchased a wig,</p><p class="btext">And rapidly rushed about Dutton.</p><br><h4>79</h4><br><p><span class="btext">There was a Young Lady of Tyre</span>
+(была /как-то/ юная леди из Тира /древний порт в южном Ливане/)<span class="btext">,</span></p><p><span class="btext">Who swept the loud chords of a lyre</span>
+(которая трогала громкие струны лиры;
+<span class="f-coni">to sweep — сметать, подметать; касаться, дотрагиваться, проводить /рукой/: to sweep the guitar — трогать струны гитары</span>)<span class="btext">;</span></p><p><span class="btext">At the sound of each sweep</span>
+(при звуке каждого прикосновения)<span class="btext">.</span></p><p><span class="btext">She enraptured the deep</span>
+(она восхищала/приводила в восторг пучину;
+<span class="f-coni">deep — глубокий; the deep — морская пучина; море, океан; to enrapture — восхищать, приводить в восторг, восторгать; захватывать</span>)<span class="btext">,</span></p><p><span class="btext">And enchanted the city of Tyre</span>
+(и очаровывала город Тир)<span class="btext">.</span></p><br><p class="btext">Tyre ['tʌɪə], chord I [kɔ:d], sound [saund], enrapture [ɪn'ræpʧə], enchant [ɪn'ʧɑ:nt]</p><br><p class="btext">There was a Young Lady of Tyre,</p><p class="btext">Who swept the loud chords of a lyre;</p><p class="btext">At the sound of each sweep</p><p class="btext">She enraptured the deep,</p><p class="btext">And enchanted the city of Tyre.</p><br><h4>80</h4><br><p><span class="btext">There was an Old Man who said, 'Hush</span>
+(был /как-то/ старик, который сказал: Тсс)<span class="btext">!</span></p><p><span class="btext">I perceive a young bird in this bush</span>
+(я замечаю молодую птицу в этом кусте;
+<span class="f-coni">to perceive — воспринимать; ощущать, различать, чувствовать</span>)<span class="btext">!'</span></p><p><span class="btext">When they said, 'Is it small</span>
+(когда люди спросили: Она маленькая)<span class="btext">?'</span></p><p><span class="btext">He replied, 'Not at all</span>
+(он ответил: Вовсе нет)<span class="btext">!</span></p><p><span class="btext">It is four times as big as the bush</span>
+(она в четыре раза больше, чем куст)<span class="btext">!'</span></p><br><p class="btext">hush [hʌʃ], perceive [pə'si:v]</p><br><p class="btext">There was an Old Man who said, 'Hush!</p><p class="btext">I perceive a young bird in this bush!'</p><p class="btext">When they said, 'Is it small?'</p><p class="btext">He replied, 'Not at all!</p><p class="btext">It is four times as big as the bush!'</p><br><h4>81</h4><br><p><span class="btext">There was an Old Man of the East</span>
+(был /как-то/ старик с Востока)<span class="btext">,</span></p><p><span class="btext">Who gave all his children a feast</span>
+(который задал пир всем своим детям)<span class="btext">;</span></p><p><span class="btext">But they all ate so much</span>
+(но они все ели так много)<span class="btext">.</span></p><p><span class="btext">And their conduct was such</span>
+(и их поведение было таким)<span class="btext">.</span></p><p><span class="btext">That it killed that Old Man of the East</span>
+(что это убило этого старика с Востока)<span class="btext">.</span></p><br><p class="btext">feast [fi:st], conduct ['kɔndʌkt]</p><br><p class="btext">There was an Old Man of the East,</p><p class="btext">Who gave all his children a feast;</p><p class="btext">But they all ate so much</p><p class="btext">And their conduct was such</p><p class="btext">That it killed that Old Man of the East.</p><br><h4>82</h4><br><p><span class="btext">There was an Old Man of Kamschatka</span>
+(был /как-то/ старик с Камчатки)<span class="btext">,</span></p><p><span class="btext">Who possessed a remarkable fat cur</span>
+(который владел примечательной толстой дворняжкой;
+<span class="f-coni">remarkable — замечательный, выдающийся, поразительный</span>)<span class="btext">;</span></p><p><span class="btext">His gait and his waddle</span>
+(ее поступь и походка вразвалку;
+<span class="f-coni">to waddle — ходить раскачиваясь, ковылять /как утка/; раскачивающаяся походка, походка вразвалочку</span>)<span class="btext">.</span></p><p><span class="btext">Were held as a model</span>
+(держались/признавались как модель/образец;
+<span class="f-coni">to hold — держать</span>)<span class="btext">.</span></p><p><span class="btext">To all the fat dogs in Kamschatka</span>
+(для всех толстых собак на Камчатке)<span class="btext">.</span></p><br><p class="btext">possess [pə'zes], remarkable [rɪ'mɑ:kəbl], waddle [wɔdl], model ['mɔd(ə)l]</p><br><p class="btext">There was an Old Man of Kamschatka,</p><p class="btext">Who possessed a remarkable fat cur;</p><p class="btext">His gait and his waddle</p><p class="btext">Were held as a model</p><p class="btext">To all the fat dogs in Kamschatka.</p><br><h4>83</h4><br><p><span class="btext">There was an Old Man of the coast</span>
+(был /как-то/ старик с побережья;
+<span class="f-coni">coast — морское побережье</span>)<span class="btext">,</span></p><p><span class="btext">Who placidly sat on a post</span>
+(который спокойно/мирно сидел на столбе;
+<span class="f-coni">placid — безмятежный, мирный, спокойный, тихий; post — мачта, подпорка, свая, стойка; столб</span>)<span class="btext">;</span></p><p><span class="btext">But when it was cold</span>
+(но когда было холодно)<span class="btext">.</span></p><p><span class="btext">He relinquished his hold</span>
+(он ослабил свою хватку;
+<span class="f-coni">to relinquish — оставлять, отступать, сдавать территорию; ослаблять /хватку/, разжимать /руки/, выпускать /из рук/</span>)<span class="btext">.</span></p><p><span class="btext">And called for some hot buttered toast</span>
+(и попросил несколько горячих масляных = со сливочным маслом тостов;
+<span class="f-coni">toast — гренок, тост /ломтик хлеба, подрумяненный на огне/</span>)<span class="btext">.</span></p><br><p class="btext">coast [kəust], placid ['plæsɪd], post [pəust], relinquish [rɪ'lɪŋkwɪʃ], toast [təust]</p><br><p class="btext">There was an Old Man of the coast,</p><p class="btext">Who placidly sat on a post;</p><p class="btext">But when it was cold</p><p class="btext">He relinquished his hold</p><p class="btext">And called for some hot buttered toast.</p><br><h4>84</h4><br><p><span class="btext">There was an Old Person of Bangor</span>
+(был /как-то/ старик из Бангора /город в Уэльсе/)<span class="btext">,</span></p><p><span class="btext">Whose face was distorted with anger</span>
+(лицо которого было искажено гневом/яростью;
+<span class="f-coni">anger — гнев, злость, ярость; раздражение</span>)<span class="btext">!</span></p><p><span class="btext">He tore off his boots</span>
+(он сорвал /с себя/ свои ботинки;
+<span class="f-coni">to tear off</span>)<span class="btext">,</span></p><p><span class="btext">And subsisted on roots</span>
+(и существовал/кормился корнями)<span class="btext">,</span></p><p><span class="btext">That irascible Person of Bangor</span>
+(этот раздражительный/вспыльчивый человек из Бангора)<span class="btext">.</span></p><br><p class="btext">Bangor ['bæŋgə], distort [dɪ'stɔ:t], anger ['æŋgə], subsist [səb'sɪst], irascible [ɪ'ræsəbl]</p><br><p class="btext">There was an Old Person of Bangor,</p><p class="btext">Whose face was distorted with anger!</p><p class="btext">He tore off his boots,</p><p class="btext">And subsisted on roots,</p><p class="btext">That irascible Person of Bangor.</p><br><h4>85</h4><br><p><span class="btext">There was an Old Man with a beard</span>
+(был /как-то/ старик с бородой)<span class="btext">,</span></p><p><span class="btext">Who sat on a horse when he reared</span>
+(сидел на коне, когда тот встал на дыбы)<span class="btext">;</span></p><p><span class="btext">But they said, "Never mind</span>
+(но люди сказали: Не волнуйся)<span class="btext">!</span></p><p><span class="btext">You will fall off behind</span>
+(ты свалишься/упадешь /с коня/ сзади)<span class="btext">,</span></p><p><span class="btext">You propitious Old Man with a beard</span>
+(ты, добродушный старик с бородой;
+<span class="f-coni">propitious — благосклонный, благожелательный</span>)<span class="btext">!"</span></p><br><p class="btext">beard [bɪəd], rear [rɪə], behind [bɪ'haɪnd], propitious [prə'pɪʃəs]</p><br><p class="btext">There was an Old Man with a beard,</p><p class="btext">Who sat on a horse when he reared;</p><p class="btext">But they said, "Never mind!</p><p class="btext">You will fall off behind,</p><p class="btext">You propitious Old Man with a beard!"</p><br><h4>86</h4><br><p><span class="btext">There was an Old Man of the West</span>
+(был /как-то/ старик с Запада)<span class="btext">,</span></p><p><span class="btext">Who never could get any rest</span>
+(который никогда не мог получить отдых = отдохнуть)<span class="btext">;</span></p><p><span class="btext">So they set him to spin</span>
+(поэтому его запустили крутиться;
+<span class="f-coni">to spin — прясть, сучить /шерсть/; крутиться, вертеться: to spin like a top — кружиться как волчок</span>)<span class="btext">.</span></p><p><span class="btext">On his nose and chin</span>
+(на носу и на подбородке)<span class="btext">,</span></p><p><span class="btext">Which cured that Old Man of the West</span>
+(что вылечило этого старика с Запада)<span class="btext">.</span></p><br><p class="btext">could [kud], cure [kjuə]</p><br><p class="btext">There was an Old Man of the West,</p><p class="btext">Who never could get any rest;</p><p class="btext">So they set him to spin</p><p class="btext">On his nose and chin,</p><p class="btext">Which cured that Old Man of the West.</p><br><h4>87</h4><br><p><span class="btext">There was an Old Person of Anerley</span>
+(был /как-то/ старик из Эйнерли /один из районов южного Лондона/)<span class="btext">,</span></p><p><span class="btext">Whose conduct was strange and unmannerly</span>
+(поведение которого было странным и невоспитанным: «лишенным манер»;
+<span class="f-coni">manner — манера, поведение</span>)<span class="btext">;</span></p><p><span class="btext">He rushed down the Strand</span>
+(он пронесся вниз на Стрэнду /улица Лондона/)<span class="btext">.</span></p><p><span class="btext">With a pig in each hand</span>
+(со свиньей в каждой руке)<span class="btext">,</span></p><p><span class="btext">But returned in the evening to Anerley</span>
+(но вернулся вечером в Эйнерли)<span class="btext">.</span></p><br><p class="btext">strange [streɪnʤ], unmannerly [ʌn'mænəlɪ], return [rɪ'tɜ:n]</p><br><p class="btext">There was an Old Person of Anerley,</p><p class="btext">Whose conduct was strange and unmannerly;</p><p class="btext">He rushed down the Strand</p><p class="btext">With a pig in each hand,</p><p class="btext">But returned in the evening to Anerley.</p><br><h4>88</h4><br><p><span class="btext">There was a Young Lady of Troy</span>
+(была /как-то/ юная леди из Трои)<span class="btext">,</span></p><p><span class="btext">Whom several large flies did annoy</span>
+(к которой /в самом деле/ приставали несколько больших мух;
+<span class="f-coni">to annoy — раздражать, сердить; досаждать, донимать, допекать</span>)<span class="btext">;</span></p><p><span class="btext">Some she killed with a thump</span>
+(некоторых /из них/ она убила ударом/хлопком;
+<span class="f-coni">thump — тяжёлый удар /кулаком, дубинкой/; глухой звук /удара/; глухой шум</span>)<span class="btext">,</span></p><p><span class="btext">Some she drowned at the pump</span>
+(некоторых она утопила возле насоса;
+<span class="f-coni">to drown — тонуть; топить; pump — насос; помпа</span>)<span class="btext">,</span></p><p><span class="btext">And some she took with her to Troy</span>
+(а некоторых она взяла с собой в Трою)<span class="btext">.</span></p><br><p class="btext">annoy [ə'nɔɪ], thump [θʌmp], drown [draun]</p><br><p class="btext">There was a Young Lady of Troy,</p><p class="btext">Whom several large flies did annoy;</p><p class="btext">Some she killed with a thump,</p><p class="btext">Some she drowned at the pump,</p><p class="btext">And some she took with her to Troy.</p><br><h4>89</h4><br><p><span class="btext">There was an Old Person of Berlin</span>
+(был /как-то/ старик из Берлина)<span class="btext">,</span></p><p><span class="btext">Whose form was uncommonly thin</span>
+(строение тела которого было необычайно тонким;
+<span class="f-coni">common — общий, всеобщий; общепринятый, распространённый; обыкновенный, простой</span>)<span class="btext">;</span></p><p><span class="btext">Till he once, by mistake</span>
+(пока он однажды по ошибке)<span class="btext">,</span></p><p><span class="btext">Was mixed up in a cake</span>
+(/не/ был замешан в торт)<span class="btext">,</span></p><p><span class="btext">So they baked that Old Man of Berlin</span>
+(так что этого старика из Берлина испекли)<span class="btext">.</span></p><br><p class="btext">Berlin I [bɜ'lɪn], uncommonly [ʌn'kɔmənlɪ], mistake [mɪ'steɪk]</p><br><p class="btext">There was an Old Person of Berlin,</p><p class="btext">Whose form was uncommonly thin;</p><p class="btext">Till he once, by mistake,</p><p class="btext">Was mixed up in a cake,</p><p class="btext">So they baked that Old Man of Berlin.</p><br><h4>90</h4><br><p><span class="btext">There was an Old Person of Spain</span>
+(был /как-то/ старик из Испании)<span class="btext">,</span></p><p><span class="btext">Who hated all trouble and pain</span>
+(который ненавидел какие-либо: «все/всякие» неприятности и боль;
+<span class="f-coni">trouble — беспокойство, волнение, тревога; беда, злоключение, неприятность, горе</span>)<span class="btext">;</span></p><p><span class="btext">So he sat on a chair</span>
+(поэтому он сидел на стуле;
+<span class="f-coni">sit — сидеть</span>)<span class="btext">,</span></p><p><span class="btext">With his feet in the air</span>
+(с ногами в воздухе;
+<span class="f-coni">foot — нога /ступня/</span>)<span class="btext">,</span></p><p><span class="btext">That umbrageous Old Person of Spain</span>
+(этот мнительный/недоверчивый старик из Испании;
+<span class="f-coni">umbrageous — тенистый: umbrageous tree — тенистое дерево; обидчивый, подозрительный</span>)<span class="btext">.</span></p><br><p class="btext">Spain [speɪn], trouble [trʌbl], chair [ʧeə], air [eə], umbrageous [ʌm'breɪʤəs]</p><br><p class="btext">There was an Old Person of Spain,</p><p class="btext">Who hated all trouble and pain;</p><p class="btext">So he sat on a chair,</p><p class="btext">With his feet in the air,</p><p class="btext">That umbrageous Old Person of Spain.</p><br><h4>91</h4><br><p><span class="btext">There was a Young Lady of Russia</span>
+(была /как-то/ юная леди из России)<span class="btext">,</span></p><p><span class="btext">Who screamed so that no one could hush her</span>
+(которая вопила так, что никто не мог успокоить ее;
+<span class="f-coni">to scream — пронзительно кричать, вопить, визжать; to hush — водворять тишину; утихомиривать; hush! — ш-ш!, тс!, тише!, замолчи!</span>)<span class="btext">;</span></p><p><span class="btext">Her screams were extreme</span>
+(ее крики были чрезвычайными;
+<span class="f-coni">extreme — самый отдалённый, крайний, предельный; непомерный, чрезвычайный, чрезмерный</span>)<span class="btext">, —</span></p><p><span class="btext">No one heard such a scream</span>
+(никто не слышал подобного вопля)<span class="btext">.</span></p><p><span class="btext">As was screamed by that Lady from Russia</span>
+(каковым был выкрикиваемый этой леди из России)<span class="btext">.</span></p><br><p class="btext">Russia ['rʌʃə], scream [skri:m], extreme [ɪks'tri:m], heard [hɜ:d]</p><br><p class="btext">There was a Young Lady of Russia,</p><p class="btext">Who screamed so that no one could hush her;</p><p class="btext">Her screams were extreme,--</p><p class="btext">No one heard such a scream</p><p class="btext">As was screamed by that Lady from Russia.</p><br><h4>92</h4><br><p><span class="btext">There was an Old Man who said, 'Well</span>
+(был /как-то/ старик, который сказал: Хорошо/ну что же)<span class="btext">!</span></p><p><span class="btext">Will nobody answer this bell</span>
+(никто не ответит на звонок;
+<span class="f-coni">bell — колокол; колокольчик; бубенчик; колокол, отсчитывающий время /на башенных часах/; /= doorbell/ звонок</span>)<span class="btext">?</span></p><p><span class="btext">I have pulled day and night</span>
+(я дергал день и ночь;
+<span class="f-coni">to pull — тянуть, тащить</span>)<span class="btext">,</span></p><p><span class="btext">Till my hair has grown white</span>
+(пока мои волосы не стали белыми = седыми;
+<span class="f-coni">to grow — расти; становиться</span>)<span class="btext">,</span></p><p><span class="btext">But nobody answers this bell</span>
+(но никто не отвечает на звонок)<span class="btext">!'</span></p><br><p class="btext">nobody ['nəubədɪ], answer ['ɑ:nsə], pull [pul], grown [grəun]</p><br><p class="btext">There was an Old Man who said, 'Well!</p><p class="btext">Will nobody answer this bell?</p><p class="btext">I have pulled day and night,</p><p class="btext">Till my hair has grown white,</p><p class="btext">But nobody answers this bell!'</p><br><h4>93</h4><br><p><span class="btext">There was a Young Lady of Wales</span>
+(была /как-то/ юная леди из Уэльса)<span class="btext">,</span></p><p><span class="btext">Who caught a large fish without scales</span>
+(которая поймала большую рыбу без чешуи;
+<span class="f-coni">to catch — ловить, поймать; scale — чешуйка</span>)<span class="btext">;</span></p><p><span class="btext">When she lifted her hook</span>
+(когда она подняла свой крючок)<span class="btext">.</span></p><p><span class="btext">She exclaimed, 'Only look</span>
+(она воскликнула: /Вы/ только посмотрите)<span class="btext">!'</span></p><p><span class="btext">That ecstatic Young Lady of Wales</span>
+(эта восторженная юная леди из Уэльса)<span class="btext">.</span></p><br><p class="btext">Wales [weɪlz], caught [kɔ:t], ecstatic [ɪk'stætɪk]</p><br><p class="btext">There was a Young Lady of Wales,</p><p class="btext">Who caught a large fish without scales;</p><p class="btext">When she lifted her hook</p><p class="btext">She exclaimed, 'Only look!'</p><p class="btext">That ecstatic Young Lady of Wales.</p><br><h4>94</h4><br><p><span class="btext">There was an Old Person of Cheadle</span>
+(был /как-то/ старик из Чидла /городок в графстве Стаффордшир/)<span class="btext">,</span></p><p><span class="btext">Who was put in the stocks by the beadle</span>
+(который был помещен в колодки церковным сторожем)<span class="btext">.</span></p><p><span class="btext">For stealing some pigs</span>
+(за кражу нескольких свиней;
+<span class="f-coni">to steal — воровать, красть</span>)<span class="btext">,</span></p><p><span class="btext">Some coats, and some wigs</span>
+(нескольких курток и нескольких париков)<span class="btext">,</span></p><p><span class="btext">That horrible person of Cheadle</span>
+(этот ужасный человек из Чидла)<span class="btext">.</span></p><br><p class="btext">steal [sti:l], coat [kəut]</p><br><p class="btext">There was an Old Person of Cheadle,</p><p class="btext">Who was put in the stocks by the beadle</p><p class="btext">For stealing some pigs,</p><p class="btext">Some coats, and some wigs,</p><p class="btext">That horrible person of Cheadle.</p><br><h4>95</h4><br><p><span class="btext">There was a Young Lady of Welling</span>
+(была /как-то/ юная леди из Уэллинга /район юго-восточного Лондона/)<span class="btext">,</span></p><p><span class="btext">Whose praise all the world was a-telling</span>
+(чье восхваление весь мир говорил = которую все восхваляли;
+<span class="f-coni">praise — похвала; восхваление</span>)<span class="btext">;</span></p><p><span class="btext">She played on a harp</span>
+(она играла на арфе)<span class="btext">,</span></p><p><span class="btext">And caught several carp</span>
+(и поймала несколько карпов)<span class="btext">,</span></p><p><span class="btext">That accomplished Young Lady of Welling</span>
+(эта искусная/талантливая юная леди из Уэллинга;
+<span class="f-coni">to accomplish — совершать, выполнять; достигать совершенства; accomplished — завершённый, совершённый; законченный, полный, совершенный; получивший хорошее образование; воспитанный; культурный: she is very accomplished — у неё множество талантов</span>)<span class="btext">.</span></p><br><p class="btext">praise [preɪz], several ['sev(ə)r(ə)l], accomplished [ə'kɔmplɪʃt]</p><br><p class="btext">There was a Young Lady of Welling,</p><p class="btext">Whose praise all the world was a-telling;</p><p class="btext">She played on a harp,</p><p class="btext">And caught several carp,</p><p class="btext">That accomplished Young Lady of Welling.</p><br><h4>96</h4><br><p><span class="btext">There was an Old Person of Tartary</span>
+(был /как-то/ старик из Татарии)<span class="btext">,</span></p><p><span class="btext">Who divided his jugular artery</span>
+(который рассек свою яремную вену;
+<span class="f-coni">to divide — делить, разделять; рассекать; jugular — шейный; jugular vein — яремная вена; artery — артерия</span>)<span class="btext">;</span></p><p><span class="btext">But he screeched to his wife</span>
+(но он прохрипел своей жене;
+<span class="f-coni">to screech — визжать или кричать пронзительным голосом; скрипеть, визжать, скрежетать</span>)<span class="btext">,</span></p><p><span class="btext">And she said, 'Oh, my life</span>
+(и она сказала: О, моя жизнь)<span class="btext">!</span></p><p><span class="btext">Your death will be felt by all Tartary</span>
+(твоя смерть будет переживаема = оплакиваема всей Татарией;
+<span class="f-coni">to feel — трогать; чувствовать, испытывать</span>)<span class="btext">!'</span></p><br><p class="btext">Tartary ['tɑ:təri], divide [dɪ'vaɪd], jugular ['ʤʌgjələ], artery ['ɑ:tərɪ], death [deθ]</p><br><p class="btext">There was an Old Person of Tartary,</p><p class="btext">Who divided his jugular artery;</p><p class="btext">But he screeched to his wife,</p><p class="btext">And she said, 'Oh, my life!</p><p class="btext">Your death will be felt by all Tartary!'</p><br><h4>97</h4><br><p><span class="btext">There was an Old Person of Chester</span>
+(был /как-то/ старик из Честера /город в Англии, графство Чешир/)<span class="btext">,</span></p><p><span class="btext">Whom several small children did pester</span>
+(которому докучало несколько маленьких детей;
+<span class="f-coni">to pester — докучать, надоедать, донимать, допекать</span>)<span class="btext">;</span></p><p><span class="btext">They threw some large stones</span>
+(они кидали большие камни;
+<span class="f-coni">to throw — кидать</span>)<span class="btext">,</span></p><p><span class="btext">Which broke most of his bones</span>
+(что сломало большую часть его костей;
+<span class="f-coni">to break — ломать, разбивать</span>)<span class="btext">,</span></p><p><span class="btext">And displeased that Old Person of Chester</span>
+(и было неприятно этому старику из Честера/рассердило этого старика из Честера;
+<span class="f-coni">to displease — вызывать недовольство, сердить, раздражать; быть неприятным, не нравиться, быть не по вкусу</span>)<span class="btext">.</span></p><br><p class="btext">threw [θru:], break I [breɪk], displease [dɪs'pli:z]</p><br><p class="btext">There was an Old Person of Chester,</p><p class="btext">Whom several small children did pester;</p><p class="btext">They threw some large stones,</p><p class="btext">Which broke most of his bones,</p><p class="btext">And displeased that Ols Person of Chester.</p><br><h4>98</h4><br><p><span class="btext">There was an Old Man with a owl</span>
+(был /как-то/ старик с совой)<span class="btext">,</span></p><p><span class="btext">Who continued to bother and howl</span>
+(который продолжал/которая продолжала беспокоиться и завывать;
+<span class="f-coni">to bother — беспокоиться, волноваться; to howl — выть, завывать, стонать /например, о волке/; to howl with pain — выть от боли; плакать, рыдать, реветь /о ребёнке/</span>)<span class="btext">;</span></p><p><span class="btext">He sat on a rail</span>
+(он сидел на ограде)<span class="btext">.</span></p><p><span class="btext">And imbibed bitter ale</span>
+(и поглощал горький эль;
+<span class="f-coni">to imbibe — впитывать /жидкость/; /ирон./ пить; употреблять алкоголь</span>)<span class="btext">,</span></p><p><span class="btext">Which refreshed that Old Man and his owl</span>
+(что подкрепило: «освежило» этого старика и его сову)<span class="btext">.</span></p><br><p class="btext">owl [aul], continue [kən'tɪnju:], bother ['bɔðə], howl [haul], imbibe [ɪm'baɪb], refresh [rɪ'freʃ]</p><br><p class="btext">There was an Old Man with a owl,</p><p class="btext">Who continued to bother and howl;</p><p class="btext">He sat on a rail</p><p class="btext">And imbibed bitter ale,</p><p class="btext">Which refreshed that Old Man and his owl.</p><br><h4>99</h4><br><p><span class="btext">There was an Old Person from Gretna</span>
+(был /как-то/ старик из Гретны<a class="marginalias" id="marginalias2" href="#m-definition2">[2]</a>/деревня в Шотландии/)<span class="btext">,</span></p><p><span class="btext">Who rushed down the crater of Etna</span>
+(который устремился = сбежал вниз кратера Этны)<span class="btext">;</span></p><p><span class="btext">When they said, 'Is it hot</span>
+(когда его спросили: Горячо/жарко)<span class="btext">?'</span></p><p><span class="btext">He replied, 'No, it's not</span>
+(он ответил: Нет, не жарко)<span class="btext">!'</span></p><p><span class="btext">That mendacious Old Person of Gretna</span>
+(этот лживый старик из Гретны)<span class="btext">.</span></p><br><p class="btext">crater ['kreɪtə], mendacious [men'deɪʃəs]</p><br><p class="btext">There was an Old Person from Gretna,</p><p class="btext">Who rushed down the crater of Etna;</p><p class="btext">When they said, 'Is it hot?'</p><p class="btext">He replied, 'No, it's not!'</p><p class="btext">That mendacious Old Person of Gretna.</p><br><h4>100</h4><br><p><span class="btext">There was a Young Lady of Sweden</span>
+(была /как-то/ юная леди из Швеции)<span class="btext">,</span></p><p><span class="btext">Who went by the slow train to Weedon</span>
+(которая отправилась медленным поездом в Уидон /деревня в графстве Нортгемптоншир/)<span class="btext">;</span></p><p><span class="btext">When they cried, 'Weedon Station</span>
+(когда прокричали: Станция Уидон)<span class="btext">!'</span></p><p><span class="btext">She made no observation</span>
+(она не обратила внимания: «не сделала наблюдения»)<span class="btext">.</span></p><p><span class="btext">But thought</span>
+(а: «но» подумала;
+<span class="f-coni">to think — думать</span>)
+<span class="btext"> she should go back to Sweden</span>
+(/что/ ей следует поехать назад = вернуться в Швецию)<span class="btext">.</span></p><br><p class="btext">Sweden ['swi:d(ə)n], station ['steɪʃ(ə)n], observation [ɔbzə'veɪʃ(ə)n]</p><br><p class="btext">There was a Young Lady of Sweden,</p><p class="btext">Who went by the slow train to Weedon;</p><p class="btext">When they cried, 'Weedon Station!'</p><p class="btext">She made no observation</p><p class="btext">But thought she should go back to Sweden.</p><br><h4>101</h4><br><p><span class="btext">There was a Young Girl of Majorca</span>
+(была /как-то/ юная девушка с /острова/ Майорки /остров в Средиземном море, принадлежит Испании/)<span class="btext">,</span></p><p><span class="btext">Whose aunt was a very fast walker</span>
+(тетя которой была очень быстрым ходоком)<span class="btext">;</span></p><p><span class="btext">She walked seventy miles</span>
+(она прошла 70 миль)<span class="btext">,</span></p><p><span class="btext">And leaped fifteen stiles</span>
+(и перепрыгнула /через/ 15 заборов;
+<span class="f-coni">stile — ступеньки для перехода через ограждение /забор, стену/; перелаз</span>)<span class="btext">,</span></p><p><span class="btext">Which astonished that Girl of Majorca</span>
+(что изумило/удивило эту девушку с Майорки)<span class="btext">.</span></p><br><p class="btext">Majorca [mə'ʤɔ:kə], aunt [ɑ:nt], fast [fɑ:st], astonish [ə'stɔnɪʃ]</p><br><p class="btext">There was a Young Girl of Majorca,</p><p class="btext">Whose aunt was a very fast walker;</p><p class="btext">She walked seventy miles,</p><p class="btext">And leaped fifteen stiles,</p><p class="btext">Which astonished that Girl of Majorca.</p><br><h4>102</h4><br><p><span class="btext">There was an Old Man of the Cape</span>
+(был /как-то/ старик с Мыса Доброй Надежды;
+<span class="f-coni">the Cape = the Cape of Good Hope — Мыс Доброй Надежды /на юге Африки/</span>)<span class="btext">,</span></p><p><span class="btext">Who possessed a large Barbary ape</span>
+(который владел большой бесхвостой /африканской/ обезьяной= был хозяином…)<span class="btext">,</span></p><p><span class="btext">Till the ape one dark night</span>
+(пока обезьяна, одной темной ночью)<span class="btext">.</span></p><p><span class="btext">Set the house all alight</span>
+(/не/ подожгла весь дом;
+<span class="f-coni">to set — помещать /в какое-либо положение/, приводить /в какое-либо состояние/; alight — зажжённый; горящий</span>)<span class="btext">,</span></p><p><span class="btext">Which burned that Old Man of the Cape</span>
+(что сожгло этого старика с Мыса Доброй Надежды)<span class="btext">.</span></p><br><p class="btext">possess [pə'zes], Barbary ['bɑ:bəri] alight [ə'laɪt]</p><br><p class="btext">There was an Old Man of the Cape,</p><p class="btext">Who possessed a large Barbary ape,</p><p class="btext">Till the ape one dark night</p><p class="btext">Set the house all alight,</p><p class="btext">Which burned that Old Man of the Cape.</p><br><h4>103</h4><br><p><span class="btext">There was an Old Lady of Prague</span>
+(была /как-то/ пожилая леди из Праги)<span class="btext">,</span></p><p><span class="btext">Whose language was horribly vague</span>
+(чей язык был ужасно расплывчат = чьи речи были страшно неопределенными;
+<span class="f-coni">vague — неопределённый, неясный, смутный</span>)<span class="btext">;</span></p><p><span class="btext">When they said, 'Are these caps</span>
+(когда спрашивали: Это шапки)<span class="btext">?'</span></p><p><span class="btext">She answered, 'Perhaps</span>
+(она отвечала: Возможно)<span class="btext">!'</span></p><p><span class="btext">That oracular Lady of Prague</span>
+(эта непогрешимая/оракульская леди из Праги;
+<span class="f-coni">oracular — вещий, пророческий; оракульский; мудрый, всезнающий; непогрешимый /о высказывании, человеке/; загадочный, непонятный, неясный; двусмысленный</span>)<span class="btext">.</span></p><br><p class="btext">Prague [prɑ:g], language ['læŋgwɪʤ], vague [veɪg], perhaps [pə'hæps], oracular [ɔ'rækjələ]</p><br><p class="btext">There was an Old Lady of Prague,</p><p class="btext">Whose language was horribly vague;</p><p class="btext">When they said, 'Are these caps?'</p><p class="btext">She answered, 'Perhaps!'</p><p class="btext">That oracular Lady of Prague.</p><br><h4>104</h4><br><p><span class="btext">There was an Old Person of Sparta</span>
+(был /как-то/ старик из Спарты)<span class="btext">,</span></p><p><span class="btext">Who had twenty-one sons and one 'darter'</span>
+(у которого был 21 сын и одна дочь;
+<span class="f-coni">darter /просторечие/ — от daughter</span>)<span class="btext">;</span></p><p><span class="btext">He fed them on snails</span>
+(он кормил их улитками;
+<span class="f-coni">to feed — питать, кормить</span>)<span class="btext">,</span></p><p><span class="btext">And weighed them in scales</span>
+(и взвешивал их на весах)<span class="btext">,</span></p><p><span class="btext">That wonderful Person of Sparta</span>
+(этот удивительный/поразительный человек из Спарты)<span class="btext">.</span></p><br><p class="btext">son [sʌn], daughter ['dɔ:tə], weigh [weɪ], wonderful ['wʌndəf(ə)l]</p><br><p class="btext">There was an Old Person of Sparta,</p><p class="btext">Who had twenty-one sons and one 'darter';</p><p class="btext">He fed them on snails,</p><p class="btext">And weighed them in scales,</p><p class="btext">That wonderful Person of Sparta.</p><br><h4>105</h4><br><p><span class="btext">There was an Old Man at a casement</span>
+(был /как-то/ старик в створном окне;
+<span class="f-coni">casement — створный оконный переплёт; оконная створка</span>)<span class="btext">,</span></p><p><span class="btext">Who held up his hands in amazement</span>
+(который всплеснул руками в изумлении: «который держал = поднял руки вверх в изумлении»;
+<span class="f-coni">to hold — держать</span>)<span class="btext">;</span></p><p><span class="btext">When they said, 'Sir, you'll fall</span>
+(когда /ему/ сказали: Сэр, вы упадете)<span class="btext">!'</span></p><p><span class="btext">He replied, 'Not at all</span>
+(он ответил: Вовсе нет)<span class="btext">!'</span></p><p><span class="btext">That incipient Old Man at a casement</span>
+(этот начальный = неопытный старик в створном окне;
+<span class="f-coni">incipient — начинающийся, появляющийся, зарождающийся; исходный, начальный</span>)<span class="btext">.</span></p><br><p class="btext">casement ['keɪsmənt], incipient [ɪn'sɪpɪənt], amazement [ə'meɪzmənt]</p><br><p class="btext">There was an Old Man at a casement,</p><p class="btext">Who held up his hands in amazement;</p><p class="btext">When they said, 'Sir, you'll fall!'</p><p class="btext">He replied, 'Not at all!'</p><p class="btext">That incipient Old Man at a casement.</p><br><h4>106</h4><br><p><span class="btext">There was an Old Person of Burton</span>
+(был /как-то/ старик из Бёртона /город в графстве Стаффордшир/)<span class="btext">,</span></p><p><span class="btext">Whose answers were rather uncertain</span>
+(чьи ответы были довольно неопределенными/неточными;
+<span class="f-coni">certain — точный, определённый</span>)<span class="btext">;</span></p><p><span class="btext">When they said, 'How d'ye do</span>
+(когда его спросили: Как вы поживаете = здравствуйте /формула при знакомстве/;
+<span class="f-coni">d'ye = do you</span>)<span class="btext">?'</span></p><p><span class="btext">He replied, 'Who are you</span>
+(он ответил: Кто вы)<span class="btext">?'</span></p><p><span class="btext">That distressing Old Person of Burton</span>
+(этот огорчительный/неприятный старик из Бёртона;
+<span class="f-coni">to distress — причинять физическую боль; причинять страдание, горе</span>)<span class="btext">.</span></p><br><p class="btext">rather ['rɑ:ðə], uncertain [ʌn'sɜ:t(ə)n], distressing [dɪs'tresɪŋ]</p><br><p class="btext">There was an Old Person of Burton,</p><p class="btext">Whose answers were rather uncertain;</p><p class="btext">When they said, 'How d'ye do?'</p><p class="btext">He replied, 'Who are you?'</p><p class="btext">That distressing Old Person of Burton.</p><br><h4>107</h4><br><p><span class="btext">There was an Old Person of Ems</span>
+(был /как-то/ старик из Эмса /город в Германии/)<span class="btext">,</span></p><p><span class="btext">Who casually fell in the Thames</span>
+(который случайно упал в Темзу /река в Великобритании, на которой стоит Лондон/;
+<span class="f-coni">to fall</span>)<span class="btext">;</span></p><p><span class="btext">And when he was found</span>
+(и когда он был найден;
+<span class="f-coni">to find — находить</span>)<span class="btext">.</span></p><p><span class="btext">They said he was drowned</span>
+(/то/ сказали, что он был утонувшим = что утонул)<span class="btext">,</span></p><p><span class="btext">That unlucky Old Person of Ems</span>
+(этот невезучий/назадачливый старик из Эмса;
+<span class="f-coni">luck — удача; unlucky — неудачный; неудачливый; несчастливый</span>)<span class="btext">.</span></p><br><p class="btext">casually ['kæʒjuəlɪ], Thames [temz], found [faund], unlucky [ʌn'lʌkɪ]</p><br><p class="btext">There was an Old Person of Ems,</p><p class="btext">Who casually fell in the Thames;</p><p class="btext">And when he was found</p><p class="btext">They said he was drowned,</p><p class="btext">That unlucky Old Person of Ems.</p><br><h4>108</h4><br><p><span class="btext">There was an Old Person of Ewell</span>
+(был /как-то/ старик из Юэлла /городок в графстве Саррей/)<span class="btext">,</span></p><p><span class="btext">Who chiefly subsisted on gruel</span>
+(который главный образом кормился жидкой овсянкой/жил на жидкой овсянной каше;
+<span class="f-coni">chiefly — главным образом, особенно, в основном; chief — главный; основной; to subsist — существовать; gruel — жидкая /овсяная/ каша</span>)<span class="btext">;</span></p><p><span class="btext">But to make it more nice</span>
+(чтобы сделать ее лучше, вкуснее)<span class="btext">.</span></p><p><span class="btext">He inserted some mice</span>
+(он поместил/добавил несколько мышей;
+<span class="f-coni">to insert — вставлять, вкладывать; mouse — мышь</span>)<span class="btext">,</span></p><p><span class="btext">Which refreshed that Old Person of Ewell</span>
+(что подкрепило/освежило этого старика из Юэлла)<span class="btext">.</span></p><br><p class="btext">chiefly ['ʧi:flɪ], subsist [səb'sɪst], gruel [gru:əl], insert [ɪn'sɜ:t]</p><br><p class="btext">There was an Old Person of Ewell,</p><p class="btext">Who chiefly subsisted on gruel;</p><p class="btext">But to make it more nice</p><p class="btext">He inserted some mice,</p><p class="btext">Which refreshed that Old Person of Ewell.</p><br><h4>109</h4><br><p><span class="btext">There was a Young Lady of Parma</span>
+(была /как-то/ юная леди из Пармы /город в Италии/)<span class="btext">,</span></p><p><span class="btext">Whose conduct grew calmer and calmer</span>
+(чье поведение становилось спокойнее и спокойнее/тише и тише)<span class="btext">;</span></p><p><span class="btext">When they said, 'Are you dumb</span>
+(когда спросили: Ты немая)<span class="btext">?'</span></p><p><span class="btext">She merely said, 'Hum</span>
+(она только/единственно сказала: Хм!;
+<span class="f-coni">merely — только, просто; единственно</span>)<span class="btext">!'</span></p><p><span class="btext">That provoking Young Lady of Parma</span>
+(эта вызывающая юная леди из Пармы;
+<span class="f-coni">provoking — раздражающий; досадный; неприятный; to provoke — вызывать, возбуждать; провоцировать; раздражать, сердить; бесить, приводить в ярость</span>)<span class="btext">.</span></p><br><p class="btext">dumb [dʌm] merely ['mɪəlɪ], hum [hʌm], provoking [prə'vəukɪŋ]</p><br><p class="btext">There was a Young Lady of Parma,</p><p class="btext">Whose conduct grew calmer and calmer;</p><p class="btext">When they said, 'Are you dumb?'</p><p class="btext">She merely said, 'Hum!'</p><p class="btext">That provoking Young Lady of Parma.</p><br><h4>110</h4><br><p><span class="btext">There was an Old Man of Aosta</span>
+(был /как-то/ старик из Аосты /город в Италии/)<span class="btext">,</span></p><p><span class="btext">Who possessed a large cow, but he lost her</span>
+(который владел большой коровой, но потерял ее;
+<span class="f-coni">to lose — терять, утрачивать, лишаться</span>)<span class="btext">;</span></p><p><span class="btext">But they said, 'Don't you see</span>
+(но /ему/ сказали: Ты /разве/ не видишь)<span class="btext">.</span></p><p><span class="btext">She has rushed up a tree</span>
+(/что/ она бросилась/залезла на дерево)<span class="btext">?</span></p><p><span class="btext">You invidious Old Man of Aosta</span>
+(ты, несправедливый старик из Аосты;
+<span class="f-coni">invidious — вызывающий враждебное чувство, зависть; несправедливый, пристрастный</span>)<span class="btext">!'</span></p><br><p class="btext">Aosta [ɑ:'ɔstə], cow [kau], lost [lɔst], invidious [ɪn'vɪdɪəs]</p><br><p class="btext">There was an Old Man of Aosta,</p><p class="btext">Who possessed a large cow, but he lost her;</p><p class="btext">But they said, 'Don't you see</p><p class="btext">She has rushed up a tree?</p><p class="btext">You invidious Old Man of Aosta!'</p><br><h4>111</h4><br><p><span class="btext">There was an Old Man, on whose nose</span>
+(был /как-то/ старик, на чьем носе)<span class="btext">,</span></p><p><span class="btext">Most birds of the air could repose</span>
+(многие птицы небесные могли передохнуть;
+<span class="f-coni">to repose — отдыхать, ложиться отдохнуть</span>)<span class="btext">;</span></p><p><span class="btext">But they all flew away</span>
+(но они все улетели;
+<span class="f-coni">to fly — летать</span>)<span class="btext">.</span></p><p><span class="btext">At the closing of day</span>
+(к концу: «завершению» дня;
+<span class="f-coni">to close — закрывать; завершать</span>)<span class="btext">,</span></p><p><span class="btext">Which relieved that Old Man and his nose</span>
+(что облегчило/освободило старика и его нос;
+<span class="f-coni">to relieve — облегчать; освобождать; помогать</span>)<span class="btext">.</span></p><br><p class="btext">repose [rɪ'pəuz], flew [flu:], closing ['kləuzɪŋ], relieve [rɪ'li:v]</p><br><p class="btext">There was an Old Man, on whose nose,</p><p class="btext">Most birds of the air could repose;</p><p class="btext">But they all flew away</p><p class="btext">At the closing of day,</p><p class="btext">Which relieved that Old Man and his nose.</p><br><h4>112</h4><br><p><span class="btext">There was a Young Lady of Clare</span>
+(была /как-то/ юная леди из Клэра /графство в Ирландии, в провинции Манстер/)<span class="btext">,</span></p><p><span class="btext">Who was sadly pursued by a bear</span>
+(которая, к сожалению, преследовалась медведем;
+<span class="f-coni">sadly — печально; прискорбно; достойно сожаления; ужасно; к сожалению; sad — грустный, печальный; to pursue — преследовать</span>)<span class="btext">;</span></p><p><span class="btext">When she found she was tired</span>
+(когда она обнаружила, /что/ она была уставшей = что устала;
+<span class="f-coni">to find — находить, обнаруживать</span>)<span class="btext">,</span></p><p><span class="btext">She abruptly expired</span>
+(она внезапно скончалась)<span class="btext">,</span></p><p><span class="btext">That unfortunate Lady of Clare</span>
+(эта неудачливая юная леди из Клэра;
+<span class="f-coni">unfortunate — неудачливый; несчастливый</span>)<span class="btext">.</span></p><br><p class="btext">Clare [kleə], pursue [pə'sju:], bear [beə], tired ['taɪəd], expire [ɪk'spaɪə], unfortunate [ʌn'fɔ:ʧ(ə)nət]</p><br><p class="btext">There was a Young Lady of Clare,</p><p class="btext">Who was sadly pursued by a bear;</p><p class="btext">When she found she was tired,</p><p class="btext">She abruptly expired,</p><p class="btext">That unfortunate Lady of Clare.</p><br><h4>113</h4><br><p><span class="btext">There was an Old Man of Kildare</span>
+(был /как-то/ старик из Килдэра /город и графство в Ирландии/)<span class="btext">,</span></p><p><span class="btext">Who climbed into a very old chair</span>
+(который забрался на очень старый стул/в очень старое кресло;
+<span class="f-coni">to climb — взбираться, влезать, карабкаться, подниматься</span>)<span class="btext">;</span></p><p><span class="btext">When he said, — "Here I stays, —</span>
+(когда он сказал: Здесь я останусь;
+<span class="f-coni">I stays = I stay</span>)<span class="btext">.</span></p><p><span class="btext">till the end of my days</span>
+(до конца моих дней)<span class="btext">,"</span></p><p><span class="btext">That immovable Man of Kildare</span>
+(этот неподвижный/непреклонный старик из Килдэра;
+<span class="f-coni">to move — двигать; immovable — неподвижный, недвижимый; непоколебимый, непреклонный, стойкий</span>)<span class="btext">.</span></p><br><p class="btext">Kildare [kɪl'deə], climb [klaɪm], immovable [ɪ'mu:vəbl]</p><br><p class="btext">There was an Old Man of Kildare,</p><p class="btext">Who climbed into a very old chair;</p><p class="btext">When he said, — "Here I stays, —</p><p class="btext">till the end of my days,"</p><p class="btext">That immovable Man of Kildare.</p><br><h4>114</h4><br><p><span class="btext">There was an Old Man of New York</span>
+(был /как-то/ старик из Нью-Йорка)<span class="btext">,</span></p><p><span class="btext">Who murdered himself with a fork</span>
+(который убил себя вилкой)<span class="btext">;</span></p><p><span class="btext">But nobody cried</span>
+(но никто не плакал;
+<span class="f-coni">to cry — кричать; вопить; плакать</span>)<span class="btext">.</span></p><p><span class="btext">Though he very soon died</span>
+(хотя он очень скоро умер;
+<span class="f-coni">to die</span>)<span class="btext">, —</span></p><p><span class="btext">For that silly Old Man of New York</span>
+(из-за этого глупого старика из Нью-Йорка)<span class="btext">.</span></p><br><p class="btext">murder ['mɜ:də], soon [su:n], die [daɪ]</p><br><p class="btext">There was an Old Man of New York,</p><p class="btext">Who murdered himself with a fork;</p><p class="btext">But nobody cried</p><p class="btext">Though he very soon died,-</p><p class="btext">For that silly Old Man of New York.</p><br><h4>115</h4><br><p><span class="btext">There was an Old Sailor of Compton</span>
+(был /как-то/ старый матрос из Комптона /пригород Плимута, графство Девоншир/)<span class="btext">,</span></p><p><span class="btext">Whose vessel a rock it once bump'd on</span>
+(чье судно на гору однажды наскочило)<span class="btext">;</span></p><p><span class="btext">The shock was so great</span>
+(удар был столь велик)<span class="btext">,</span></p><p><span class="btext">That it damaged the pate</span>
+(что он повредил башку;
+<span class="f-coni">pate — /разг./ башка, голова</span>)<span class="btext">,</span></p><p><span class="btext">Of that singular Sailor of Compton</span>
+(этого единственного в своем роде/странного матроса из Кэмптона;
+<span class="f-coni">singular — единичный, единственный в своем роде, уникальный; необычный, своеобразный, странный</span>)<span class="btext">.</span></p><p><span class="btext">There was an Old Sailor of Compton,</span></p><p><span class="btext">Whose vessel a rock it once bump'd on;</span></p><p><span class="btext">The shock was so great,</span></p><p><span class="btext">That it damaged the pate,</span></p><p><span class="btext">Of that singular Sailor of Compton.</span></p></section><h3 id="Сноски">Сноски</h3><br><p class="marginalias-definition" id="m-definition1"><a href="#marginalias1">[1]</a><span>Guy — Гай Фокс (наиболее активный участник Порохового Заговора, его чучело сжигается 5-го ноября — в годовщину раскрытия заговора)</span></p><p class="marginalias-definition" id="m-definition2"><a href="#marginalias2">[2]</a><span>Gretna Green — Гретна-Грин, пограничная шотландская деревня, где ранее заключались браки между специально приезжавшими из Англии молодыми парами, в Гретна-Грин бракосочетание совершалось без соблюдения всех установленных английским законом формальностей. Это название часто используется в выражении: Gretna Green marriage свадьба "с побегом".</span></p></div></div></div><!-- ↓↓↓ modules: bbp (start) ↓↓↓--><div class="bbp"><div class="bbp__btns-wrapper"><div class="bbp__btn" id="bookmark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M336 0H48C21.49 0 0 21.49 0 48v464l192-112 192 112V48c0-26.51-21.49-48-48-48zm0 428.43l-144-84-144 84V54a6 6 0 0 1 6-6h276c3.314 0 6 2.683 6 5.996V428.43z"></path></svg></div><div class="bbp__btn" id="selectText"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg></div><div class="bbp__btn" id="options"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 2.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path></svg></div><div class="bbp__btn" id="goHome"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg></div><div class="bbp__btn" id="scrollUp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg></div><div class="bbp__btn" id="scrollDown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></div><div class="bbp__btn" id="scrollTop"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg></div></div><div class="bbp__oa bbp__oa_colors"><div class="bbp__oa-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"></path></svg><span>Виділення тексту</span></div><div class="bbp__oa-body"><div class="bbp__color-field"><div class="selected selected_red" data-select="red">Абв</div><div class="selected selected_tomato" data-select="tomato">Абв</div><div class="selected selected_springgreen" data-select="springgreen">Абв</div><div class="selected selected_yellowgreen" data-select="yellowgreen">Абв</div><div class="selected selected_black" data-select="black">Абв</div><div class="selected selected_black-corrector" data-select="black-corrector">Абв</div><div class="selected selected_yellow" data-select="yellow">Абв</div><div class="selected selected_turquoise" data-select="turquoise">Абв</div><div class="selected selected_steelblue" data-select="steelblue">Абв</div><div class="selected selected_rebeccapurple" data-select="rebeccapurple">Абв</div><div class="selected selected_white" data-select="white">Абв</div><div class="selected selected_white-corrector" data-select="white-corrector">Абв</div><div class="selected selected_overscored" data-select="overscored">Абв</div><div class="selected selected_underscored" data-select="underscored">Абв</div><div class="selected selected_double-underscored" data-select="double-underscored">Абв</div><div class="selected selected_dotted-underscored" data-select="dotted-underscored">Абв</div><div class="selected selected_dashed-underscored" data-select="dashed-underscored">Абв</div><div class="selected selected_wavy-underscored" data-select="wavy-underscored">Абв</div></div></div></div><div class="bbp__oa bbp__oa_options"><div class="bbp__oa-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path></svg><span>Налаштування</span></div><div class="bbp__oa-body"><div class="bbp__oa-subheader">Шрифт</div><div class="bbp__oa-block"><div class="bbp__oa-options-name">розмір:</div><div class="bbp__oa-options-param"><div class="bbp__oa-btns-wrapper"></div><button class="bbp__oa-param-btn fontSize" type="button" data-behavior="+"><span>+</span></button><button class="bbp__oa-param-btn fontSize" type="button" data-behavior="-"><span>-</span></button></div><div class="bbp__oa-options-result fontSizeIndicator">20</div></div><div class="bbp__oa-block"><div class="bbp__oa-options-name">тип:</div><div class="bbp__oa-options-param"><div class="bbp__oa-options-font-wrapper"><div class="bbp__oa-options-font-current-name">gost</div><div class="bbp__oa-options-font-list"><div class="bbp__oa-options-font-item">arial</div><div class="bbp__oa-options-font-item">consola</div><div class="bbp__oa-options-font-item">gost</div><div class="bbp__oa-options-font-item">roboto</div><div class="bbp__oa-options-font-item">segoe</div><div class="bbp__oa-options-font-item">times new roman</div><div class="bbp__oa-options-font-item">bulgaria</div></div></div></div><div class="bbp__oa-options-result fontNameIndicator">gost</div></div><div class="bbp__oa-block"><div class="bbp__oa-options-name">колір:</div><div class="bbp__oa-options-param"><input class="textColorInput" type="color"></div><div class="bbp__oa-options-result fontColorIndicator">#123456</div></div><div class="bbp__oa-subheader">Тло</div><div class="bbp__oa-block"><div class="bbp__oa-options-name">колір:</div><div class="bbp__oa-options-param"><input class="pageColorInput" type="color"></div><div class="bbp__oa-options-result pageColorIndicator">#123456</div></div><div class="bbp__oa-block_display">А ба ба га ла ма га</div></div></div></div><!-- ↑↑↑ modules: bbp (end) ↑↑↑--></main><div id="lightning-conductor" style="display:none"></div></body></html>
