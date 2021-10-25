@@ -851,54 +851,54 @@
       genre  : "метод Франка: англ.мова"
     },
     {
-    //   id     : "00121",
-    //   author : "Theodore Dreiser",
-    //   name   : "Will You Walk Into My Parlor?",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00122",
-    //   author : "David Herbert Lawrence",
-    //   name   : "The Shadow in the Rose Garden and Other Stories",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00123",
-    //   author : "John William Smith",
-    //   name   : "Longer Wacky Stories With Twist Endings",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00124",
-    //   author : "William Wymark Jacobs",
-    //   name   : "A Love Passage and Other Stories",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00125",
-    //   author : "Bram Stoker",
-    //   name   : "Dracula's Guest and Other Weird Stories",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00126",
-    //   author : "Ernest Hemingway",
-    //   name   : "The Old Man And The Sea",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00127",
-    //   author : "Wilkie Collins",
-    //   name   : "The Dream Woman",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+      id     : "00121",
+      author : "Theodore Dreiser",
+      name   : "Will You Walk Into My Parlor?",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00122",
+      author : "David Herbert Lawrence",
+      name   : "The Shadow in the Rose Garden and Other Stories",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00123",
+      author : "John William Smith",
+      name   : "Longer Wacky Stories With Twist Endings",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00124",
+      author : "William Wymark Jacobs",
+      name   : "A Love Passage and Other Stories",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00125",
+      author : "Bram Stoker",
+      name   : "Dracula's Guest and Other Weird Stories",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00126",
+      author : "Ernest Hemingway",
+      name   : "The Old Man And The Sea",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00127",
+      author : "Wilkie Collins",
+      name   : "The Dream Woman",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00128",
     //   author : "Oscar Wilde",
