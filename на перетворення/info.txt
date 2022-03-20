@@ -1,0 +1,44 @@
+block audio
+  .wjs-scrollfix(data-scrollfix='66')
+    .wjs-scrollfix__content
+      audio(src='../../audio/.mp3' controls style='width:100%')
+
+
+„ «
+“ »
+
+
+
+склейка аудіо: https://audio-joiner.com/ru/
+обрізка аудіо: https://mp3cut.net/ru/
+
+
+структура LocalStorage:
+======================
+myBooks: {
+            gS: {                         // generalSettings
+              bLT: 'b' / 's',             // bookListType: 'big' / 'small'
+              bST: 'a' / 'n' / 'g' / 'i', // bookSortType: 'author' / 'name' / 'genre' / 'id'
+              bFS: {                      // booksFontSettings
+                n   : '',                 // name
+                s   : '',                 // size
+                c   : '',                 // color
+                bgC : ''                  // bgColor
+              }
+            },
+            b: {                          // books
+              [id]: {
+                bookmark   : [tag, number],
+                selections : [{
+                                parent      : [],
+                                markedClass : '',
+                                start       : [],
+                                end         : []
+                              },
+                              {...},
+                              ...,
+                              {}
+                             ]
+              }
+            }
+          }
