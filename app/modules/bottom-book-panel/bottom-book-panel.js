@@ -95,6 +95,14 @@
 
             // визначаємо тег елементу і його порядковий номер у масиві однотипних елементів
             let DOMelemTagName = DOMelem.tagName.toLowerCase();
+
+            // відсіюємо аудіодоріжки
+            if (DOMelemTagName == 'audio') {
+              topCoord += DOMelem.offsetHeight;
+              DOMelem   = document.elementFromPoint(leftCoord,topCoord);
+              DOMelemTagName = DOMelem.tagName.toLowerCase();
+            }
+
             let arrOfTags      = document.querySelectorAll('#book ' + DOMelemTagName);
             let sequenceNumber;
             for(let i = 0; i < arrOfTags.length; i++) {
@@ -122,8 +130,9 @@
             let href = location.href;
             let position = href.indexOf('books');
             if ( position != -1 ) {
-              location.href = href.slice(0, position) + href.slice(position+12);
+              location.href = location.origin;
             }
+
             break;
           case 'scrollUp':
             scrollingWindow('scrollUp');

@@ -906,27 +906,27 @@
     //   markers : [],
     //   genre  : "метод Франка: англ.мова"
     // },
-    // {
-    //   id     : "00129",
-    //   author : "Thomas Hardy",
-    //   name   : "The Distracted Preacher",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00130",
-    //   author : "Jonathan Swift",
-    //   name   : "Gulliver's Travels",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00131",
-    //   author : "Henry James",
-    //   name   : "Daisy Miller",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+    {
+      id     : "00129",
+      author : "Thomas Hardy",
+      name   : "The Distracted Preacher",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00130",
+      author : "Jonathan Swift",
+      name   : "Gulliver's Travels",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00131",
+      author : "Henry James",
+      name   : "Daisy Miller",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00132",
     //   author : "Alexander Alan Milne",
@@ -941,69 +941,69 @@
     //   markers : [],
     //   genre  : "метод Франка: англ.мова"
     // },
-    // {
-    //   id     : "00134",
-    //   author : "Arthur Conan Doyle",
-    //   name   : "Silver Blaze",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00135",
-    //   author : "Robert Louis Stevenson",
-    //   name   : "The Suicide Club",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00136",
-    //   author : "Francis Scott Fitzgerald",
-    //   name   : "Jacob's Ladder and Other Stories",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00137",
-    //   author : "Walter Scott",
-    //   name   : "Ivanhoe",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00138",
-    //   author : "Saki",
-    //   name   : "Shock Tactics And Other Stories",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00139",
-    //   author : "Robert Louis Stevenson",
-    //   name   : "The Rajah's Diamond",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00140",
-    //   author : "Graham Greene",
-    //   name   : "The Third Man",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00141",
-    //   author : "John Steinbeck",
-    //   name   : "Of Mice And Men",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
-    // {
-    //   id     : "00142",
-    //   author : "Robert Louis Stevenson",
-    //   name   : "The strange case of dr. Jekyll and mr. Hyde",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+    {
+      id     : "00134",
+      author : "Arthur Conan Doyle",
+      name   : "Silver Blaze",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00135",
+      author : "Robert Louis Stevenson",
+      name   : "The Suicide Club",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00136",
+      author : "Francis Scott Fitzgerald",
+      name   : "Jacob's Ladder and Other Stories",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00137",
+      author : "Walter Scott",
+      name   : "Ivanhoe",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00138",
+      author : "Saki",
+      name   : "Shock Tactics And Other Stories",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00139",
+      author : "Robert Louis Stevenson",
+      name   : "The Rajah's Diamond",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00140",
+      author : "Graham Greene",
+      name   : "The Third Man",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00141",
+      author : "John Steinbeck",
+      name   : "Of Mice And Men",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
+    {
+      id     : "00142",
+      author : "Robert Louis Stevenson",
+      name   : "The strange case of dr. Jekyll and mr. Hyde",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00143",
     //   author : "Jane Austen",
@@ -1011,13 +1011,13 @@
     //   markers : [],
     //   genre  : "метод Франка: англ.мова"
     // },
-    // {
-    //   id     : "00144",
-    //   author : "Oscar Wilde",
-    //   name   : "The Star-Child And Other Legends",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+    {
+      id     : "00144",
+      author : "Oscar Wilde",
+      name   : "The Star-Child And Other Legends",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00145",
     //   author : "John William Smith",
@@ -1025,13 +1025,13 @@
     //   markers : [],
     //   genre  : "метод Франка: англ.мова"
     // },
-    // {
-    //   id     : "00146",
-    //   author : "George Bernard Shaw",
-    //   name   : "Pygmalion",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+    {
+      id     : "00146",
+      author : "George Bernard Shaw",
+      name   : "Pygmalion",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00147",
     //   author : "Walter Brandon Thomas",
@@ -1046,13 +1046,13 @@
     //   markers : [],
     //   genre  : "метод Франка: англ.мова"
     // },
-    // {
-    //   id     : "00149",
-    //   author : "noname",
-    //   name   : "Japanese Tales",
-    //   markers : [],
-    //   genre  : "метод Франка: англ.мова"
-    // },
+    {
+      id     : "00149",
+      author : "noname",
+      name   : "Japanese Tales",
+      markers : [],
+      genre  : "метод Франка: англ.мова"
+    },
     // {
     //   id     : "00150",
     //   author : "Jack London",

@@ -18,7 +18,6 @@
 /* ↓↓↓ functions declaration ↓↓↓ */
 
 function wSetScrollFix() {
-        console.log("trololo2");
   if ( !document.querySelector('.wjs-scrollfix') ) return;
 
   let arrOfScrollFixElements = document.querySelectorAll('.wjs-scrollfix');

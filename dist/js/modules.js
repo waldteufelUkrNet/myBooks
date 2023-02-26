@@ -95,6 +95,14 @@
 
             // визначаємо тег елементу і його порядковий номер у масиві однотипних елементів
             let DOMelemTagName = DOMelem.tagName.toLowerCase();
+
+            // відсіюємо аудіодоріжки
+            if (DOMelemTagName == 'audio') {
+              topCoord += DOMelem.offsetHeight;
+              DOMelem   = document.elementFromPoint(leftCoord,topCoord);
+              DOMelemTagName = DOMelem.tagName.toLowerCase();
+            }
+
             let arrOfTags      = document.querySelectorAll('#book ' + DOMelemTagName);
             let sequenceNumber;
             for(let i = 0; i < arrOfTags.length; i++) {
@@ -122,8 +130,9 @@
             let href = location.href;
             let position = href.indexOf('books');
             if ( position != -1 ) {
-              location.href = href.slice(0, position) + href.slice(position+12);
+              location.href = location.origin;
             }
+
             break;
           case 'scrollUp':
             scrollingWindow('scrollUp');
@@ -591,6 +600,26 @@
 
 
 // https://stackoverflow.com/questions/6520192/how-to-get-the-text-node-of-an-element
+"use strict";
+// loader module
+////////////////////////////////////////////////////////////////////////////////
+/* ↓↓↓ LOADER ↓↓↓ */
+  let loader = document.querySelector('.loader');
+  let bookInner = document.querySelector('#book');
+
+  bookInner.style.overflow = 'hidden';
+
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      loader.classList.remove('loader_active');
+      bookInner.style.overflow = '';
+    },1000);
+  });
+/* ↑↑↑ /LOADER ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
+/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
+/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
+////////////////////////////////////////////////////////////////////////////////
 // "use strict";
 // // consol module
 // ////////////////////////////////////////////////////////////////////////////////
@@ -616,26 +645,6 @@
 //   };
 // /* ↑↑↑ /??? ↑↑↑ */
 // ////////////////////////////////////////////////////////////////////////////////
-"use strict";
-// loader module
-////////////////////////////////////////////////////////////////////////////////
-/* ↓↓↓ LOADER ↓↓↓ */
-  let loader = document.querySelector('.loader');
-  let bookInner = document.querySelector('#book');
-
-  bookInner.style.overflow = 'hidden';
-
-  window.addEventListener('load', function(){
-    setTimeout(function(){
-      loader.classList.remove('loader_active');
-      bookInner.style.overflow = '';
-    },1000);
-  });
-/* ↑↑↑ /LOADER ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
-/* ↓↓↓ FUNCTIONS DECLARATION ↓↓↓ */
-/* ↑↑↑ /FUNCTIONS DECLARATION ↑↑↑ */
-////////////////////////////////////////////////////////////////////////////////
 "use strict";
 // top-book-panel module
 ////////////////////////////////////////////////////////////////////////////////

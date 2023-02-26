@@ -149,6 +149,7 @@
   exports.startWatch = startWatch;
 
   exports.default = series(modulesSass, filesSass, modulesJs, filesJs, booksPug, indexPug, parallel(startBrowserSync, startWatch));
+  exports.devNoBooks = series(modulesSass, filesSass, modulesJs, filesJs, indexPug, parallel(startBrowserSync, startWatch));
 
   // чищення каталогу dist
   function clean(done) {
